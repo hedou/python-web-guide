@@ -462,11 +462,14 @@ Git
     # 防止http协议每次都要输入密码：
     git config --global credential.helper 'cache --timeout=36000000'      #秒数
 
-    # 暂存和恢复
+    # 暂存和恢复，当我们需要切分支又暂时不想 git add，可以先把目前的修改咱存起来
     git stash
     git stash apply
     git stash apply stash@{1}
     git stash pop # 重新应用储藏并且从堆栈中移走
+    # 显示 git stash 内容 https://stackoverflow.com/questions/7677736/git-diff-against-a-stash
+    git stash show -p  # see the most recent stash
+    git stash show -p stash@{1}
 
     # 删除远程分之
     git push origin --delete {the_remote_branch}
@@ -664,6 +667,9 @@ vim
    # 也可以使用下边的工具用 Jupyter 做 slideshow，最大的特点是直接在浏览器里敲代码交互演示
    # Reveal.js - Jupyter/IPython Slideshow Extension, also known as live_reveal
    # https://github.com/damianavila/RISE
+
+   # 更推荐使用 reveal-md
+   reveal-md slides.md -w
 
 
 PPT
