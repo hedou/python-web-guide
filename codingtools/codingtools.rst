@@ -55,7 +55,7 @@ Mac 终端快速配置
 - 安装iterm2 替代难看的原生终端
 - 安装 home brew 方便装各种工具
 - 安装 oh-my-zsh or fish
-- 安装 oh-my-zsh 主题 powerlevel9k 或者 spaceship。或者异步的更快的 https://github.com/romkatv/powerlevel10k 常见主题有(pure, powerlevel9k, spaceship)
+- 安装 oh-my-zsh 主题 powerlevel9k 或者 spaceship。推荐使用异步的更快的 https://github.com/romkatv/powerlevel10k。 常见其他主题有(pure, powerlevel9k, spaceship)
 - 安装 vim / spacevim /neovim
 - 最好安装 tmux 用来替代iterm2 分屏
 - 按需安装 htop/autojump/z/fzf/ag 等命令行工具(使用 brew 可以安装)
@@ -234,16 +234,16 @@ ZMap: 是密歇根大学研究人员发布的软件，可以在千兆网络条�
 后台管理
 --------------------------------------
 - Ant Design Pro: 基于 react 的后台管理方案
-- flask-admin/Django admin: 框架自带的后台管理
+- flask-admin/Django admin: 框架自带的后台管理。flask-admin 也有类似功能
 
 RPC
 --------------------------------------
-- thrift: facebook 开源的 rpc 框架
+- thrift: facebook 开源的 rpc 框架，很多大公司在使用
 - grpc: grpc是一个高性能、开源和通用的 RPC 框架，面向移动和 HTTP/2 设计。目前提供 C、Java 和 Go 语言版本，分别是：grpc, grpc-java, grpc-go. 其中 C 版本支持 C, C++, Node.js, Python, Ruby, Objective-C, PHP 和 C# 支持. https://github.com/grpc/grpc
 
 Rest
 --------------------------------------
-- 随便搜吧，各种框架都有，一大把
+- 随便搜吧，各种框架都有，一大把。比如 flask-restful 等。
 
 数据处理
 --------------------------------------
