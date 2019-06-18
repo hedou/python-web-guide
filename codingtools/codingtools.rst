@@ -80,7 +80,7 @@ Git 相关
 
 Chrome 插件
 --------------------------------------
-- vimium: chrome 插件，可以用 vim 的方式操作浏览器，很方便，不用鼠标也能完成大部分操作。替代品：SurfingKeys, Cvim
+- vimium: chrome 插件，可以用 vim 的方式操作浏览器，很方便，不用鼠标也能完成大部分操作。更强大替代品：SurfingKeys, Cvim
 - FE助手：前端插件，Json 格式化等很多有用的工具
 - Octotree: Chrome github 浏览插件，可以把 github 项目的目录树结构展示出来，非常方便
 - Github Hovercard: 可以在浏览 github 的时候展示一些链接信息，比如可以查看作者的个人页

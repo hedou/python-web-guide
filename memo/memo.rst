@@ -787,3 +787,21 @@ Curl
 * `《slide show》 <http://slideshow-s9.github.io/>`_
 * `《markdown sheet》 <http://commonmark.org/help/>`_
 * `《CONQUERING THE COMMAND LINE》 <http://conqueringthecommandline.com/book/>`_
+
+
+HHKB
+-------------------------------------------------------------
+
+Mac 使用 Fn+Esc 休眠
+
+mac 使用 Karabiner-Elements  改键配置
+
+https://github.com/tekezo/Karabiner-Elements
+
+https://www.jianshu.com/p/47d5de7f12bc
+
+配置文件放置位置在 https://github.com/PegasusWang/linux_config/blob/master/mac_karabiner/wasd.json
+
+~/.config/karabiner/assets/complex_modifications/wasd.json
+
+这里我把 right_command + WASD 修改成上下左右，方便 HHKB 方向键移动，默认的 HHKB 方向键不方便。
