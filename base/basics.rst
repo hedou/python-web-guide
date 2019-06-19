@@ -160,7 +160,7 @@ web 后端工程师的主要工作职责是实现网站、app 业务后端逻辑
 推荐一些文章供参考:
 
 
-* `《2018 Python Web 学习路线图[视频]》 <https://zhuanlan.zhihu.com/p/36267942>`_
+* `《Python Web 学习路线图[视频]》 <https://zhuanlan.zhihu.com/p/36267942>`_
 * `《全栈增长工程师指南》 <https://github.com/phodal/growth-ebook>`_
 * `《web开发路线图》 <http://skill.phodal.com/>`_
 * `《后端都要学习什么？》 <https://www.zhihu.com/question/24952874>`_
