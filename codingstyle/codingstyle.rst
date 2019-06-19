@@ -102,7 +102,7 @@ Python的世界里你会听到这个词"Pythonic"，大概就是指代码符合P
 
 
 Python有一些语法上的坑，比如默认参数只计算一次，不要使用可变类型作为默认参数等，看多了写多了就知道了。尤其是可变类型作为函数参数传入后被改变的情况（函数尽量不要有副作用,这里副作用指的就是修改了传入的可变参数的值），尤其要注意。
-一些参考帮助写出Pythonic的代码（注意pythonic 不是要你炫耀奇淫技巧，维护起来心累）:
+一些参考帮助写出Pythonic的代码（注意pythonic 不是要你炫耀奇淫技巧，很多小白不会注意可读性和可维护性，控制复杂度，用动态语言各种瞎搞，维护起来心累）:
 
 
 * `《Transforming Code into Beautiful, Idiomatic Python》 <https://gist.github.com/JeffPaine/6213790>`_
