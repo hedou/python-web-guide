@@ -644,6 +644,9 @@ vim
    # 使用场景：比如在当前函数里使用了logging，发现logging import，我会跳转到文件头去 import logging，编辑完后进入normal模式使用  `` 就可以跳转到之前编辑位置
    `` which will bring you back to where the cursor was before you made your last jump. See :help `` for more information.
 
+   # 如何编辑远程服务器文件, https://superuser.com/questions/403664/how-can-i-copy-and-paste-text-out-of-a-remote-vim-to-a-local-vim
+   :e scp://user@host/relative/path/from/home.txt
+
 
 * `《vim cheet sheet》 <https://vim.rtorr.com/lang/zh_cn/>`_
 
