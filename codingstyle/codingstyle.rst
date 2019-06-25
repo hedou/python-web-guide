@@ -810,6 +810,15 @@ Python 做业务后端的优缺点分析
 - 2 To Tactical Code Reviews
 - 1 Reduce State & State Mutation
 
+
+技术氛围建设
+------------------------------------
+
+- code review。通过结对编程或者code review可以快速让新人适应新的开发团队，统一开发风格。
+- 技术分享。每周技术分享，打造学习型团队。
+- one on one : 每周一对一小组 leader 谈话，及时发现技术或者业务上的问题。
+
+
 Think more, type less. Aim for minimalism, fewer states, less mutability, and just enough code for the known, relevant parts of the problem.
 
 
