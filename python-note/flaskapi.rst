@@ -71,9 +71,15 @@ ___________________________________
             print(request.data)
             return {"id": 1}
 
+
+    class Ping(Resource):
+        def get(self):
+            return 'pong'
+
     ##
     # Actually setup the Api resource routing here
     ##
+    api.add_resource(Ping, '/')
     api.add_resource(TodoList, '/todos')
     api.add_resource(Todo, '/todos/<todo_id>')
     api.add_resource(TaskList, '/tasks')
