@@ -9,6 +9,7 @@ ___________________________________
 
 .. code-block:: python
 
+    # pip install flask Flask-RESTful
     from flask import Flask
     from flask_restful import reqparse, abort, Api, Resource
     from flask import request
@@ -86,4 +87,4 @@ ___________________________________
 
 
     if __name__ == '__main__':
-        app.run(debug=True)  # port =5000
+        app.run(debug=True)  # port=5000
