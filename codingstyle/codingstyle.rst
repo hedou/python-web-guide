@@ -178,6 +178,8 @@ update: 经验表明，TDD未必是必要的，但是单元测试是很必要的
 
 `《Unix 编程艺术》 <https://book.douban.com/subject/1467587/>`_   如果你有时间可以当成小说看看，感觉有点宗教主义
 
+`《The Elements of Programming Style》https://en.wikipedia.org/wiki/The_Elements_of_Programming_Style>`_
+
 
 还有OOP那一套(封装、继承、多态)，当你设计一个类的时候需要有所注意(SOLID原则):
 
