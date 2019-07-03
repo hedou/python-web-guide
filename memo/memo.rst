@@ -456,7 +456,7 @@ Git
     git log --since=1.days --committer=PegasusWang --author=PegasusWang
     git diff commit1 commit2
 
-    # 冲突以后使用远端的版本：
+    # 冲突以后使用远端的版本： NOTE：注意在 git merge 和 git rebase 中 ours/theirs 含义相反
     git checkout --theirs templates/efmp/campaign.mako
 
     # 防止http协议每次都要输入密码：
