@@ -457,6 +457,9 @@ Git
     git diff commit1 commit2
 
     # 冲突以后使用远端的版本： NOTE：注意在 git merge 和 git rebase 中 ours/theirs 含义相反
+    # rebase 场景下，theirs 实际表示的是当前分之
+    # merge 场景下相反，theirs 表示的确是远端分之
+    # https://stackoverflow.com/questions/16825849/choose-git-merge-strategy-for-specific-files-ours-mine-theirs
     git checkout --theirs templates/efmp/campaign.mako
 
     # 防止http协议每次都要输入密码：
