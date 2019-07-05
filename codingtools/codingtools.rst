@@ -332,3 +332,46 @@ HTML Presentation Tools
 --------------------------------------
 
 - coggle.it: 一款免费的在线思维导图工具 https://coggle.it/
+
+
+Linux network debug Tools
+--------------------------------------
+- ping：特定域名的 ip 是否可达。ping send ICMP echo request
+
+  - ping google.com
+  - ping -c 3 google.com
+
+- dig/host: get DNS records。用来替代 nslookup
+
+  - dig google.com 默认返回 A 记录
+  - dig google.com MX
+  - dig -x 8.8.8.8 反向查询
+  - host -a google.com 类似dig
+  - host 8.8.8.8
+
+- route: shows and manipulate ip routing table
+- traceroute 诊断网络延迟。诊断到目标路径的设备延迟
+
+  - traceroute google.com  命令返回的星号指示丢失包
+  - traceroute -n google.com , to avoid reverse dns lookup use -n
+  - traceroute -I google.com, send ICMP packet (default UDP, -T TCP, some servers block UDP)
+
+- mtr, realtime tracing
+- ss, checking connection performance
+- arp, view the arp table
+- tcpdump, packet analysis
+
+  - tcpdump -i <network_device> tcp
+  - tcpdump -i <network_device> port 80
+  - tcpdump -c 20 -i <network_device> port 80 , -c number of events
+  - tcpdump -c 20 -i <network_device> src XXX.XXX.XXX.XXX
+  - ifconfig, you can obtain the device naems likes this
+  - tcpdump -w /path/ -i <network_device>, tcpdump to a file
+  - tcmpdump -r /path
+
+- netstat, network statisic,  display connection info, routing table information etc
+- lsof: lsof -i:8000
+
+- https://likegeeks.com/linux-network-commands/
+- https://unix.stackexchange.com/questions/50098/linux-network-troubleshooting-and-debugging
+- https://www.tecmint.com/linux-network-configuration-and-troubleshooting-commands/
