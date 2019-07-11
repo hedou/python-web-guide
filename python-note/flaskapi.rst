@@ -4,6 +4,53 @@
 用来测试接口的 flask server
 ========================================
 
+Restful规范
+___________________________________
+
+.. code-block:: python
+
+    """
+    RESTFul url 规范，参考：http://www.pythondoc.com/flask-restful/second.html
+
+    ==========  ===============================================  =============================
+    HTTP 方法   URL                                              动作
+    ==========  ===============================================  ==============================
+    GET         http://[hostname]/todo/api/v1.0/tasks            检索任务列表
+    GET         http://[hostname]/todo/api/v1.0/tasks/[task_id]  检索某个任务
+    POST        http://[hostname]/todo/api/v1.0/tasks            创建新任务
+    PUT         http://[hostname]/todo/api/v1.0/tasks/[task_id]  更新任务
+    DELETE      http://[hostname]/todo/api/v1.0/tasks/[task_id]  删除任务
+    ==========  ================================================ =============================
+
+
+    命名规范：
+
+    # 我们使用 SomeListHandler 命名而不是复数形式方便区分，比如 VideosHandler 和 VideoHandler 不容易区分
+    """
+    class TaskListHandler(BaseHandler):
+        def get(self):
+            """获取列表"""
+            pass
+
+        def post(self):
+            """创建一条新的记录"""
+            pass
+
+
+    class TaskHandler(BaseHandler):
+        def get(self, _id):
+            """获取一条记录的信息"""
+            pass
+
+        def put(self, _id):
+            """更新一条记录的信息"""
+            pass
+
+        def delete(self, _id):
+            """删除一条记录"""
+            pass
+
+
 测试 server
 ___________________________________
 
@@ -88,3 +135,6 @@ ___________________________________
 
     if __name__ == '__main__':
         app.run(debug=True)  # port=5000
+
+
+
