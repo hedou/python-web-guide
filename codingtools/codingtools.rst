@@ -128,11 +128,15 @@ Chrome 开发者插件
 - bitbucket: 类似 github，好处是支持免费的私有仓库。当你不想共享代码的时候可以用
 
 
-脚手架
+项目模板脚手架
 --------------------------------------
+微服务化的时代经常需要创建很多类似的项目代码模板，这个时候项目脚手架就分方便了。
+统一的项目模板对于运维和开发都比较重要，有利于降低维护成本。
+
 - cookiecutter: 一系列项目模板生成工具，懒人必备。https://github.com/audreyr/cookiecutter。笔者之前内部项目就直接用 flask-cookiecutter 直接生成的。
 - yeoman: http://yeoman.io/generators/ 前端项目模板生成工具
 - ant-design: 后端管理后台项目解决方案 https://ant.design/docs/react/practical-projects-cn
+
 
 持续集成
 --------------------------------------
@@ -160,7 +164,7 @@ DSL
 - tox
 - mock: mocking makes unit testing easier
 
-文档工具
+文档写书工具
 --------------------------------------
 - google doc/石墨: 支持多人协作编辑
 - gitbook + markdown: 可以写文档或电子书
@@ -168,14 +172,14 @@ DSL
 - sphinx + readthedoc(或者 mkdocs，支持 markdown) （代码即文档），python 项目很多在用这个生成文档。这本小书就是这么写出来的。`编写《Redis 设计与实现》时用到的工具 <http://blog.huangz.me/diary/2013/tools-for-writing-redisbook.html>`_
 - swagger/apidocjs: 适合写 restful 文档。如果使用 grpc 可以直接生成。
 - jupyter(ipython) notebook，可以做笔记或者代码演示或者ppt，支持rst，md等格式，搞数据科学的人用得比较多，配合 RISE (https://github.com/damianavila/RISE) 可以做代码交互式 slideshow，非常好的工具
-- Confluence: 适合作为团队的项目文档工具，团队大了以后文档还是很重要的。
-- vimwiki/emacs org-mode: 依赖于vim/emacs 编辑器，可以做个人笔记，不过笔者还是比较倾向于独立于编辑器的工具。
+- Confluence: 适合作为团队的项目文档工具，团队大了以后文档还是很重要的
+- vimwiki/emacs org-mode: 依赖于vim/emacs 编辑器，可以做个人笔记，不过笔者还是比较倾向于独立于编辑器的工具
 - Graphviz: 通过编写代码来生成图片 http://graphviz.org/
 - pandoc: 用于各种格式文档之间的转换，比如 html->markdown, html->rst, markdown->rst
 
 静态博客工具
 --------------------------------------
-静态建站工具允许我们用 github pages 建立静态博客，省去了服务器的费用。笔者的 http://ningning.today 就是基于 hexo 搭建
+静态建站工具允许我们用 github pages 建立静态博客，省去了服务器的费用。笔者的 https://pegasuswang.github.io 就是基于 hexo 搭建
 
 - hexo: 基于 nodejs 编写的静态博客工具 https://hexo.io/zh-cn/
 
@@ -227,6 +231,7 @@ DSL
 异步任务框架
 --------------------------------------
 - celery: python 社区一个流行的异步任务框架
+- machinery: golang 的异步任务框架 https://github.com/RichardKnop/machinery
 
 端口扫描
 --------------------------------------
@@ -234,7 +239,7 @@ ZMap: 是密歇根大学研究人员发布的软件，可以在千兆网络条�
 
 后台管理
 --------------------------------------
-- Ant Design Pro: 基于 react 的后台管理方案
+- Ant Design Pro: 基于 react 的后台管理方案，可以用来快速搭建后台运营 or 管理
 - flask-admin/Django admin: 框架自带的后台管理。flask-admin 也有类似功能
 
 RPC
