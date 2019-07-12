@@ -23,7 +23,7 @@ web的学习路线，主要包括概念介绍，参考书籍，开发工具和�
 本课程提供了详细的Python后端知识大纲和常考面试题，帮助自学的同学就业。
 
 注意：Python 不适合工程管理不完善的团队构建大型项目。如果贵团队没有编码规范、单元测试、静态检测、持续集成、文档注释中的一个或者几个，请慎用动态语言。
-如果因为网络原因打不开 readthedoc 网站，您可以参考下方快速上手使用 sphinx 本地构建电子书访问。
+如果因为某些网络原因打不开 readthedoc 网站，您可以参考下方快速上手使用 sphinx 本地构建电子书访问。
 
 
 .. image:: https://readthedocs.org/projects/z42/badge/?version=latest
@@ -40,10 +40,10 @@ web的学习路线，主要包括概念介绍，参考书籍，开发工具和�
     python3 -m http.server  # 启动一个本地文件服务器，或者 python2 用 python -m SimpleHTTPServer
     # 之后打开 http://127.0.0.1:8000/ 即可本地访问电子书
 
-    # 推荐使用方式 2，加入了 sphinx-autobuild 自动编辑刷新
+    # 方式2(推荐)：加入 sphinx-autobuild 自动编辑刷新
     git clone https://github.com/PegasusWang/python-web-guide.git    # 协作请fork一份你自己的地址
-    pip install -r requeirements.txt  # 安装 Sphinx==1.3.4, sphinx-autobuild
-    make serve  # 之后打开 http://127.0.0.1:8000/ 即可本地访问电子书，编辑直接自动刷新浏览器
+    pip install -r requirements.txt  # 安装 Sphinx==1.3.4, sphinx-autobuild
+    make serve  # 之后打开 http://127.0.0.1:8000/ 即可本地访问电子书，编辑保存直接自动刷新浏览器
 
 文档采用rst格式书写，用 `readthedocs <https://readthedocs.org/>`_ 托管。一个快速的rst语法demo `教程 <http://azuwis.github.io/sphinx_demo/demo.html>`_。 如果使用vim编写可以使用rst插件 `riv.vim <https://github.com/Rykka/riv.vim>`_ 配合 `InstantRst <https://github.com/Rykka/InstantRst>`_ 本地预览，定期pull一下拉取更新。
 欢迎你fork一份然后添加自己的章节，本书主要面对经验尚浅的同学作为自学的指导手册，并非速成指南，内容来自笔者日常学习和工作经验总结。
