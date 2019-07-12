@@ -563,6 +563,21 @@ Git
     git checkout -- <file>
 
 
+    # git 如何使用不同的 committer，除了每个项目和全局可以设置 gitconfig 里的 user 外，可以使用如下方式
+    # https://stackoverflow.com/questions/4220416/can-i-specify-multiple-users-for-myself-in-gitconfig
+    # global config ~/.gitconfig
+    [user]
+        name = John Doe
+        email = john@doe.tld
+
+    [includeIf "gitdir:~/work/"]
+        path = ~/work/.gitconfig
+
+    # ~/work/.gitconfig
+    [user]
+        email = john.doe@company.tld
+
+
 Git工作流
 ------------
 
@@ -798,13 +813,11 @@ Curl
 HHKB
 -------------------------------------------------------------
 
-Mac 使用 Fn+Esc 休眠
-
+Mac 使用 Fn+Esc 休眠。
 mac 使用 Karabiner-Elements  改键配置
 
-https://github.com/tekezo/Karabiner-Elements
-
-https://www.jianshu.com/p/47d5de7f12bc
+- https://github.com/tekezo/Karabiner-Elements
+- https://www.jianshu.com/p/47d5de7f12bc
 
 配置文件放置位置在 https://github.com/PegasusWang/linux_config/blob/master/mac_karabiner/wasd.json
 
