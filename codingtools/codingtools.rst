@@ -281,6 +281,10 @@ Profiler
 - Medis: redis client 工具
 - MongoChef: Mongodb 客户端工具
 
+- gen: 根据 mysql 生成 golang gorm model。https://github.com/smallnest/gen
+- sqlacodegen: 从 mysql 生成python sqlalchemy model定义。https://github.com/agronholm/sqlacodegen
+
+
 绘图工具
 --------------------------------------
 - processon: http://processon.com/ 使用了下感觉还不错，基本能满足需求
