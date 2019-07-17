@@ -250,7 +250,7 @@ RPC
 Rest
 --------------------------------------
 - Django Rest Framework: https://www.django-rest-framework.org/
-- Flask-Restful: https://flask-restful.readthedocs.io/
+- Flask-Restful: https://flask-restful.readthedocs.io/ ，可以用 cookiecutter-flask-restful 快速启动一个 restful 后端项目
 - GRPC: https://github.com/grpc-ecosystem
 
 
