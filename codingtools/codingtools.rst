@@ -210,6 +210,9 @@ DSL
 - httpbin.org
 - curl/requests 互相转化: https://github.com/oeegor/curlify https://github.com/spulec/uncurl
 
+调试小技巧：使用 chrome 开发者工具右键请求点击copy as curl，然后可以用 uncurl 转成 requests请求调试代码。
+
+
 抓包和下载工具
 --------------------------------------
 - mitmproxy: 用 python 实现的终端命令行抓包工具，可以将请求直接导出成 curl 请求，python 代码甚至 locust 测试脚本，非常方便，笔者经常用来抓包和调试。
