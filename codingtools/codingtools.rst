@@ -182,6 +182,7 @@ DSL
 静态建站工具允许我们用 github pages 建立静态博客，省去了服务器的费用。笔者的 https://pegasuswang.github.io 就是基于 hexo 搭建
 
 - hexo: 基于 nodejs 编写的静态博客工具 https://hexo.io/zh-cn/
+- hugo: https://gohugo.io/ 博客建站工具
 
 日志、异常收集工具
 --------------------------------------
