@@ -226,16 +226,16 @@ Web 开发常用 Python 库
 列举平常开发常用的一些库和框架(你可以很容易 google 到它们的用法)，你不必一开始就掌握它们，但需要的时候了解它们的用法会大大提升你的开发效率，
 在开发工具章节我还会列举到更多能够提升开发效率的工具。
 
-- web 框架：Django/Flask/Tornado
+- web/restful 框架：Django/Flask/Tornado
 - ORM: sqlalchemy, Peewee
-- 表单验证：WTForms
+- 表单验证：WTForms, marshmallow
 - 数据处理和分析：Numpy, Pandas, Matplotlib
 - 异步：celery, asyncio, tornado
 - 并发：gevent, threading, concurrent.futures
-- 部署：uwsgi, gunicorn
+- 部署：uwsgi, gunicorn(推荐)
 - html 处理: lxml, beautifulsoup
 - 爬虫：requests, Scrapy
-- 单元测试：unittest, nose, pytest
+- 单元测试：unittest, nose, pytest(推荐)
 - 图片处理：pillow
 - python2/3 兼容：six, 2to3
 - 代码检测：autopep8, pylint, flake8, mypy(python3)
