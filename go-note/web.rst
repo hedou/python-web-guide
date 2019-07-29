@@ -30,6 +30,9 @@ Go 调试器dlv
 
 .. code-block:: shell
 
+   # 断点
+   b main.main
+
    # go get -u github.com/derekparker/delve/cmd/dlv
    dlv debug main.go
 
@@ -40,6 +43,14 @@ Go 调试器dlv
    # 搜索函数，打断点
    funcs FuncName
 
+https://yq.aliyun.com/articles/57578
+
+
 Go Books
 ---------------------------------------------------------------
 - https://github.com/dariubs/GoBooks
+
+
+Go vs. Python
+---------------------------------------------------------------
+- http://govspy.peterbe.com/
