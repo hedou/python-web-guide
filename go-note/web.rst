@@ -15,8 +15,20 @@ GOPROXY 代理
 export GOPROXY=https://goproxy.io
 
 
-Web框架
+Web/RPC框架
 --------------------------------------------------
+
+- gin
+- grpc
+
+
+Go package
+--------------------------------------------------
+- https://awesome-go.com/
+
+Go项目Layout
+--------------------------------------------------
+- https://github.com/golang-standards/project-layout
 
 
 单元测试
@@ -54,3 +66,12 @@ Go Books
 Go vs. Python
 ---------------------------------------------------------------
 - http://govspy.peterbe.com/
+
+
+Go Best practice
+---------------------------------------------------------------
+- https://peter.bourgon.org/go-best-practices-2016/
+- https://dave.cheney.net/practical-go/presentations/qcon-china.html
+
+
+- https://12factor.net/zh_cn/

@@ -145,6 +145,10 @@ Chrome 开发者插件
 - Jenkins
 - Sonar: https://www.sonarqube.org/ 代码质量管理
 
+配置中心
+--------------------------------------
+- Apollo: https://github.com/ctripcorp/apollo
+
 Api 工具
 --------------------------------------
 - checklist: http://python.apichecklist.com/
