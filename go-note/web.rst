@@ -77,6 +77,8 @@ Go Best practice
 ---------------------------------------------------------------
 - https://peter.bourgon.org/go-best-practices-2016/
 - https://dave.cheney.net/practical-go/presentations/qcon-china.html
+- https://golang.org/doc/effective_go.html
+- https://talks.golang.org/2013/bestpractices.slide
 
 
 - https://12factor.net/zh_cn/
