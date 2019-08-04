@@ -235,7 +235,7 @@ API gateway
 
 Proxy
 --------------------------------------
-- proxychains-ng: 把socks5 转成 http代理
+- proxychains-ng/privoxy: 把socks5 转成 http代理
 
 
 爬虫相关
