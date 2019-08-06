@@ -75,8 +75,9 @@ Git 相关
 - gitx(mac):方便查看代码提交历史，便于了解整个代码仓库是怎样一步步构建的。http://gitx.frim.nl/user_manual.html
 - tig: text-mode interface for git. 喜欢命令行的可以尝试下。 https://github.com/jonas/tig
 - git-extras: 提供了很多方便的 git 工具，比如 git summary 可以输出代码的提交统计。https://github.com/tj/git-extras
-- git-cz: https://github.com/commitizen/cz-cli 用来统一 git commmit 提交信息，代替 gitmessage
+- git-cz: https://github.com/commitizen/cz-cli 用来统一 git commmit 提交信息，代替 gitmessage。参考文章：https://juejin.im/post/5afc5242f265da0b7f44bee4
 - pre-commit: git pre commit 工具。 https://pre-commit.com/
+- gitignore.io: 搜索ignore文件模板。https://www.gitignore.io
 
 
 Chrome 开发者插件
