@@ -48,7 +48,6 @@ Go 调试器dlv
 
 .. code-block:: shell
 
-
    # 搜索函数，打断点
    funcs FuncName
 
@@ -85,3 +84,12 @@ Go Best practice
 
 
 - https://12factor.net/zh_cn/
+
+Go List import
+---------------------------------------------------------------
+
+.. code-block:: shell
+
+   # https://pmcgrath.net/how-to-get-golang-package-import-list
+   go list -f '{{range $imp := .Imports}}{{printf "%s\n" $imp}}{{end}}' | sort
+   go list -f '{{range $dep := .Deps}}{{printf "%s\n" $dep}}{{end}}' | xargs go list -f '{{if not .Standard}}{{.ImportPath}}{{end}}'
