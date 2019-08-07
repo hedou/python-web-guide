@@ -8,6 +8,7 @@ go语言
 
 `The-way-to-go <https://github.com/Unknwon/the-way-to-go_ZH_CN>`_
 `golang-developer-roadmap <https://github.com/Alikhll/golang-developer-roadmap>`_
+`How to Write Go Code <https://golang.org/doc/code.html>`_
 
 
 Go文档查询
@@ -47,6 +48,10 @@ Go 调试器dlv
 
 .. code-block:: shell
 
+
+   # 搜索函数，打断点
+   funcs FuncName
+
    # 断点
    b main.main
 
@@ -57,10 +62,8 @@ Go 调试器dlv
    # https://github.com/go-delve/delve/issues/562
    dlv debug ./cmd/unit-assignment-cli/main.go -- server
 
-   # 搜索函数，打断点
-   funcs FuncName
 
-https://yq.aliyun.com/articles/57578
+- https://yq.aliyun.com/articles/57578
 
 
 Go Books
