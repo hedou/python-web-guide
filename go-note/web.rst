@@ -28,13 +28,20 @@ Web/RPC框架
 - grpc
 
 
+微服务
+--------------------------------------------------
+- go kit: https://github.com/go-kit/kit
+- kratos: https://github.com/bilibili/kratos B站go微服务框架
+
 Go package
 --------------------------------------------------
 - https://awesome-go.com/
+- https://go-search.org/search?q=redis
 
 Go项目Layout
 --------------------------------------------------
 - https://github.com/golang-standards/project-layout
+- https://zhengyinyong.com/go-project-layout-design.html
 
 
 单元测试
@@ -93,3 +100,10 @@ Go List import
    # https://pmcgrath.net/how-to-get-golang-package-import-list
    go list -f '{{range $imp := .Imports}}{{printf "%s\n" $imp}}{{end}}' | sort
    go list -f '{{range $dep := .Deps}}{{printf "%s\n" $dep}}{{end}}' | xargs go list -f '{{if not .Standard}}{{.ImportPath}}{{end}}'
+
+Go 技术雷达
+---------------------------------------------------------------
+- web: gin
+- rpc: grpc
+- mysql orm: gorm
+- redis: go-redis
