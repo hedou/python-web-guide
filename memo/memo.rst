@@ -449,7 +449,7 @@ Git
         cmd = /usr/local/bin/charm merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
 
     # https://stackoverflow.com/questions/34549040/git-not-displaying-unicode-file-names
-    # git 显示中文文件名
+    # git 显示中文文件名，如果你的文件名有中文会好看很多
     git config --global core.quotePath false
 
     # 用来review：
