@@ -10,6 +10,7 @@ go语言
 `The-way-to-go <https://github.com/Unknwon/the-way-to-go_ZH_CN>`_
 `golang-developer-roadmap <https://github.com/Alikhll/golang-developer-roadmap>`_
 `How to Write Go Code <https://golang.org/doc/code.html>`_
+`Learning-golang <https://github.com/developer-learning/learning-golang>`_
 
 
 Go文档查询
