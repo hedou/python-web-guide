@@ -46,10 +46,14 @@ Go项目Layout
 - https://zhengyinyong.com/go-project-layout-design.html
 
 
-单元测试
+单元测试(unittest)
 --------------------------------------------------
 
 `GoMock框架使用指南 <https://www.jianshu.com/p/f4e773a1b11f>`_
+
+- testing: 内置库
+- github.com/stretchr/testify/assert: 用来做断言 assert 方便
+- github.com/alicebob/miniredis 可以用来 mock redis，无需启动真实的 resdis server
 
 
 Go 调试器dlv
@@ -91,7 +95,6 @@ Go Best practice
 - https://golang.org/doc/effective_go.html
 - https://talks.golang.org/2013/bestpractices.slide
 
-
 - https://12factor.net/zh_cn/
 
 Go List import
@@ -108,4 +111,4 @@ Go 技术雷达
 - web: gin
 - rpc: grpc
 - mysql orm: gorm
-- redis: go-redis
+- redis: go-redis/redigo
