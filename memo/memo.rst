@@ -207,6 +207,9 @@ Mac
    # 如何在文件更新之后自动刷新浏览器，需要首先 pip 安装 when-changed
    alias flush_watch_refresh_chrome=" when-changed -v -r -1 -s ./ osascript -e 'tell application \"Google Chrome\" to tell the active tab of its first window to reload' "
 
+   # 如何启用三指拖移(新版本把改设置移动到了辅助功能，使用三指移动可以方便地移动窗口，一般我会启用提高效率)
+   辅助功能 -> 鼠标与触控板 -> 触控板选项 -> 启用拖移
+
 
 如何发送 mac 通知，可以用来做提示
 
