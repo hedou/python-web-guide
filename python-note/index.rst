@@ -11,3 +11,4 @@
     funny
     ffmpeg
     flaskapi
+    uncurl

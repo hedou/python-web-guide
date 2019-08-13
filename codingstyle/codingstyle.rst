@@ -175,11 +175,9 @@ update: 经验表明，TDD未必是必要的，但是单元测试是很必要的
 * 单元测试:F.I.R.S.T原则(Fast，Independent，Repeatable，Self-Validating，Timely)
 * ......还有的大家可以自己补充。我强烈建议新手或者自学的同学看《代码大全》或者《编程匠艺》之中的任何一本，带你快速入门。当然有些东西只是建议，编程中往往没有绝对正确(不要过度迷信某些所谓的实践和原则)，只有相对更优，No Silver Bullet，大家在实践中摸索吧。
 
-`《编程到底难在哪里？》 <https://www.zhihu.com/question/22508677>`_ 感觉对于业务后端来说，难就难在『变化』，需求总是在变，如何控制复杂度并且快速响应需求是一个很大的挑战
-
-`《Unix 编程艺术》 <https://book.douban.com/subject/1467587/>`_   如果你有时间可以当成小说看看，感觉有点宗教主义
-
-`《The Elements of Programming Style》https://en.wikipedia.org/wiki/The_Elements_of_Programming_Style>`_
+- `《编程到底难在哪里？》 <https://www.zhihu.com/question/22508677>`_ 感觉对于业务后端来说，难就难在『变化』，需求总是在变，如何控制复杂度并且快速响应需求是一个很大的挑战
+- `《Unix 编程艺术》 <https://book.douban.com/subject/1467587/>`_   如果你有时间可以当成小说看看，感觉有点宗教主义
+- `《The Elements of Programming Style》 <https://en.wikipedia.org/wiki/The_Elements_of_Programming_Style>`_
 
 
 还有OOP那一套(封装、继承、多态)，当你设计一个类的时候需要有所注意(SOLID原则):
