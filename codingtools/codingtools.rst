@@ -20,7 +20,7 @@
 - wemux: tmux 共享，https://github.com/zolrath/wemux
 - sshfs: 本地挂在服务器文件夹
 - tmate: https://tmate.io 终端共享工具，结对编程。很多现代化编辑器 vscode, atom 提供结对编程的插件。
-- asciinema: 终端会话记录工具。https://asciinema.org/
+- asciinema: 终端会话记录工具。https://asciinema.org/ 可以用来录制终端演示操作，而不用录屏。
 - oh-my-zsh。替代原生的bash shell，提供了好多方便的特性和漂亮主题，支持插件比如 zsh autocomplete。linux/mac下vim+tmux+zsh简直是绝配，甚至可以直接在服务器上方便地撸代码，跟本地开发体验没区别。
 - item2(mac)。替代原生的终端。https://medium.com/@RyanDavidson/make-your-terminal-more-colourful-and-productive-with-iterm2-and-zsh-11b91607b98c
 - brew(mac)。类似ubuntu下的apt-get，可以方便安转各种软件和工具。
