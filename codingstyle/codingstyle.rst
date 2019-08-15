@@ -300,6 +300,9 @@ python2 编码问题：
 - 基于代码行为测试，不要片面追求测试覆盖率。编写单测可以影响代码设计，不是为了测试而测试。一般难以测试的代码可能是复杂度太高，耦合比较大，有副作用（比如修改了传入的可变参数等）的，容易测试的代码往往是设计良好的代码。
 - 什么时候使用stub，什么时候使用 mock？网络请求和数据库查询在构造上一层测试(比如controller)的时候可以 mock 掉。
 
+* `《Writing Testable Code》 <http://misko.hevery.com/attachments/Guide-Writing%20Testable%20Code.pdf>`_
+
+
 日志相关:
 
 - 哪些地方需要打印日志？debug参数？记录用户行为？排查问题？记录哪些信息？
