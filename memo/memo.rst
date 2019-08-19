@@ -813,11 +813,11 @@ Curl
 * `《CONQUERING THE COMMAND LINE》 <http://conqueringthecommandline.com/book/>`_
 
 
-HHKB
+HHKB 静电容键盘
 -------------------------------------------------------------
 
-Mac 使用 Fn+Esc 休眠。
-mac 使用 Karabiner-Elements  改键配置
+Mac 可以用使用 Fn+Esc 休眠。
+如何使用 mac 使用 Karabiner-Elements  改键配置
 
 - https://github.com/tekezo/Karabiner-Elements
 - https://www.jianshu.com/p/47d5de7f12bc
@@ -827,3 +827,4 @@ mac 使用 Karabiner-Elements  改键配置
 ~/.config/karabiner/assets/complex_modifications/wasd.json
 
 这里我把 right_command + WASD 修改成上下左右，方便 HHKB 方向键移动，默认的 HHKB 方向键不方便。
+Karabiner-Elements 同时可以禁用内置键盘，配置在 Devices -> Advanced 里。
