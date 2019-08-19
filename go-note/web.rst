@@ -140,3 +140,8 @@ Go 技术雷达
 Go 底层实现
 ---------------------------------------------------------------
 - https://draveness.me/golang/concurrency/golang-context.html
+
+Go Profiler
+---------------------------------------------------------------
+- pprof
+- github.com/uber/go-troch: Flame graph profiler for Go programs
