@@ -40,12 +40,12 @@
 
 一些提升效率的建议：
 
-- 指法用对，练习盲打
+- 指法用对，练习盲打，提升敲击数字键的成功率
 - 熟悉你的开发工具，各种 IDE 或者编辑器快捷键。vim 等高度定制的编辑器允许你按照自己的习惯修改快捷键
-- 学习一门脚本语言（编写自动化脚本）
-- 多用键盘快捷键少用鼠标。修改系统键盘按键，比如 capslock 使用频率比较低，一般我改成了 ctrl 键，因为用开发工具频繁使用到 ctrl
+- 学习一门脚本语言（编写自动化脚本），编写你的命令行工具（一个可执行的 python 文件放到 bin 下就是一个命令行工具)
+- 多用键盘快捷键少用鼠标。修改系统键盘按键，比如 capslock 使用频率比较低，一般我改成了 ctrl 键，因为用开发工具频繁使用到 ctrl，改成 ctrl 之后效率提高不少，小指头也不疼啦。
 - 自动化（比如监听文件变动刷新浏览器、重启http服务等）
-- 用好终端和命令行工具（我建议你用 mac 或者 linux 系统，因为 server 大多跑的 linux，熟悉命令行会给你调试和面试带来便利）
+- 用好终端和命令行工具（我建议后端/运维等用 mac 或者 linux 系统，因为 server 大多跑的 linux，熟悉命令行会给你调试和面试带来便利）
 
 * `《使用vim+tmux+zsh+autojump高效工作》 <http://ningning.today/2016/11/09/tools/vim-tmux-zsh-autojump/>`_
 * `《玩转 vim 与 Terminal (视频)》 <https://zhuanlan.zhihu.com/vim-video>`_
@@ -286,7 +286,7 @@ Rest
 
 压测工具
 --------------------------------------
-- locust: python实现的压测工具。http://locust.io/， 有 web 界面
+- locust: 基于 python gevent 实现的压测工具。http://locust.io/， 有 web 界面，支持编写 python 脚本模拟测试，高度定制化。
 - ab
 - wrk
 
