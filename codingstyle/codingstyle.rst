@@ -851,6 +851,7 @@ Python 做业务后端的优缺点分析
 - 编码实现，使用公司规定的 git 工作流和编码规范开发，至少一个同事负责代码 review。
 - 单测+自测。项目最好有单测，接口自测。一般来说会有自己的开发环境来自测
 - 测试工程师提测（提测模板：包含需求背景，测试流程，期望结果等）
+- 压力测试。如果预估有相当大的访问压力，可以上线之前使用压力测试工具压测，防止线上出问题
 - bug 跟进和修复，复盘总结问题等。
 
 Think more, type less. Aim for minimalism, fewer states, less mutability, and just enough code for the known, relevant parts of the problem.
