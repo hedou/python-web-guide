@@ -286,15 +286,24 @@ Rest
 
 压测工具
 --------------------------------------
-- locust: 基于 python gevent 实现的压测工具。http://locust.io/， 有 web 界面，支持编写 python 脚本模拟测试，高度定制化。
+- locust: 基于 python gevent 实现的压测工具。http://locust.io/， 有 web 界面，支持编写 python 脚本模拟测试，高度定制化，推荐。
 - ab
 - wrk
+- siege
+- pts: 阿里云提供的一个压测工具。https://cn.aliyun.com/product/pts
 
 
 Profiler
---------------------------------------
+-------------------------------------------------------------------------
 - pyflame: https://github.com/uber/pyflame
 
+
+APM (Application Performance Management)
+-------------------------------------------------------------------------
+- Zipkin: https://link.zhihu.com/?target=https%3A//github.com/openzipkin/zipkin
+
+
+参考：https://www.zhihu.com/question/27994350
 
 数据库工具
 --------------------------------------

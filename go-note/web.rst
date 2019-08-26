@@ -144,4 +144,4 @@ Go 底层实现
 Go Profiler
 ---------------------------------------------------------------
 - pprof
-- github.com/uber/go-troch: Flame graph profiler for Go programs
+- github.com/uber/go-troch: Flame graph profiler for Go programs，火焰图工具，配合压测看性能瓶颈
