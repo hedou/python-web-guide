@@ -536,8 +536,9 @@ Git
     # then git push -f
     # git rebase --abort
 
-    # 全局 ignore, 对于不同编辑器协作的人比较有用，或者用来单独忽略一些自己建立的测试文件等
-    git config --global core.excludesfile ~/.gitignore_global
+    # 全局 ignore, 对于不同编辑器协作的人比较有用，或者用来单独忽略一些自己建立的测试文件等。
+    # NOTE: git 支持每个子文件夹下有一个自己的 .gitignore，文件路径也是相对当前文件夹
+    git config --global core.excludesfile ~/.gitignore_global  # 全局忽略一些文件
 
     # 拉取别人远程分支，在 .git/config 里配置好
     git fetch somebody somebranch
