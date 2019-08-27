@@ -28,11 +28,16 @@ Web/RPC框架
 - gin
 - grpc
 
-
 微服务
 --------------------------------------------------
+微服务框架：
+
 - go kit: https://github.com/go-kit/kit
 - kratos: https://github.com/bilibili/kratos B站go微服务框架
+
+微服务代码示例：
+
+- https://github.com/callistaenterprise/goblog go 微服务代码示例和博客，介绍了微服务各种基础组件
 
 Go package
 --------------------------------------------------
