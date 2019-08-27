@@ -38,3 +38,10 @@ Go tricks
     // +build linux,386 darwin,!cgo
 
 - https://golang.org/pkg/go/build/
+
+
+Go JSON 空值处理的一些坑
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+- https://www.sohamkamani.com/blog/golang/2018-07-19-golang-omitempty/
+- https://ethancai.github.io/2016/06/23/bad-parts-about-json-serialization-in-Golang/
