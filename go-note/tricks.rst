@@ -28,3 +28,13 @@ Go tricks
 
 - https://splice.com/blog/golang-verify-type-implements-interface-compile-time/
 - https://medium.com/@matryer/golang-tip-compile-time-checks-to-ensure-your-type-satisfies-an-interface-c167afed3aae
+
+
+编译 tag 的作用
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+.. code-block:: go
+
+    // +build linux,386 darwin,!cgo
+
+- https://golang.org/pkg/go/build/
