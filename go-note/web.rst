@@ -82,7 +82,7 @@ Go项目Layout
 - https://medium.com/@rosaniline/unit-testing-gorm-with-go-sqlmock-in-go-93cbce1f6b5b
 
 
-Go 调试器dlv
+Go 断点调试器dlv
 ---------------------------------------------------------------
 
 .. code-block:: shell
@@ -103,6 +103,9 @@ Go 调试器dlv
 
 - https://yq.aliyun.com/articles/57578
 
+Go Debug 调试工具
+---------------------------------------------------------------
+- go-spew: 用来打印一些复杂结构方便调试 https://github.com/davecgh/go-spew
 
 Go Books
 ---------------------------------------------------------------
