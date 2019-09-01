@@ -37,6 +37,7 @@ Web/RPC框架
 
 微服务代码示例：
 
+- https://dzone.com/users/3214037/eriklupander.html 介绍 go 微服务的一系列博客
 - https://github.com/callistaenterprise/goblog go 微服务代码示例和博客，介绍了微服务各种基础组件
 
 Go package
