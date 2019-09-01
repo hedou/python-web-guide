@@ -148,6 +148,7 @@ Go 技术雷达
 Go 底层实现
 ---------------------------------------------------------------
 - https://draveness.me/golang/concurrency/golang-context.html
+- https://github.com/tiancaiamao/go-internals/tree/master/zh
 
 Go Profiler
 ---------------------------------------------------------------
