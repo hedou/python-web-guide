@@ -29,6 +29,13 @@ Go tricks
 - https://splice.com/blog/golang-verify-type-implements-interface-compile-time/
 - https://medium.com/@matryer/golang-tip-compile-time-checks-to-ensure-your-type-satisfies-an-interface-c167afed3aae
 
+Go 运行单个测试文件报错 undefined？
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+执行命令时加入这个测试文件需要引用的源码文件，在命令行后方的文件都会被加载到command-line-arguments中进行编译
+
+- https://www.cnblogs.com/Detector/p/10010292.html
+- https://stackoverflow.com/questions/14723229/go-test-cant-find-function-in-a-same-package
 
 编译 tag 的作用
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
