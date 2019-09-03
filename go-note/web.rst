@@ -3,7 +3,7 @@
 Go入门
 =====================================================================
 
-go语言
+Go语言
 --------------------------------------------------
 
 - `A Tour of Go <https://tour.golang.org/welcome/1>`_
@@ -11,6 +11,12 @@ go语言
 - `golang-developer-roadmap <https://github.com/Alikhll/golang-developer-roadmap>`_
 - `How to Write Go Code <https://golang.org/doc/code.html>`_
 - `Learning-golang <https://github.com/developer-learning/learning-golang>`_
+
+
+Go idioms
+--------------------------------------------------
+- https://yourbasic.org/golang/switch-statement/
+
 
 Go文档查询
 --------------------------------------------------
