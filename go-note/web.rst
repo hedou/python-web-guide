@@ -19,6 +19,8 @@ Go文档查询
 
 GOPROXY 代理
 --------------------------------------------------
+如果有有一些库拉不下来又没有自己的代理，可以试试
+
 export GOPROXY=https://goproxy.io
 
 
@@ -88,10 +90,10 @@ Go 断点调试器dlv
 
 .. code-block:: shell
 
-   # 搜索函数，打断点
+   # 搜索函数，打断点，如果有同名函数的时候比较有用
    funcs FuncName
 
-   # 断点
+   # 打断点断点
    b main.main
 
    # go get -u github.com/derekparker/delve/cmd/dlv
