@@ -146,6 +146,7 @@ Go Best practice
 - https://golang.org/doc/effective_go.html
 - https://talks.golang.org/2013/bestpractices.slide
 - https://dave.cheney.net/practical-go
+- https://github.com/codeship/go-best-practices
 
 - https://12factor.net/zh_cn/
 - https://go-proverbs.github.io go谚语，类似 python 之禅
@@ -159,7 +160,7 @@ Go List import
    go list -f '{{range $imp := .Imports}}{{printf "%s\n" $imp}}{{end}}' | sort
    go list -f '{{range $dep := .Deps}}{{printf "%s\n" $dep}}{{end}}' | xargs go list -f '{{if not .Standard}}{{.ImportPath}}{{end}}'
 
-Go 技术雷达
+Go 常用框架
 ---------------------------------------------------------------
 - web: gin
 - rpc: grpc
@@ -176,3 +177,8 @@ Go Profiler
 ---------------------------------------------------------------
 - pprof
 - github.com/uber/go-troch: Flame graph profiler for Go programs，火焰图工具，配合压测看性能瓶颈
+
+Goroutines
+---------------------------------------------------------------
+- https://medium.com/@vigneshsk/how-to-write-high-performance-code-in-golang-using-go-routines-227edf979c3c
+- https://udhos.github.io/golang-concurrency-tricks/
