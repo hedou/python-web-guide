@@ -18,6 +18,13 @@ Go idioms
 - https://yourbasic.org/golang/switch-statement/
 
 
+Go 错误处理
+--------------------------------------------------
+- https://github.com/juju/errors
+- https://blog.golang.org/error-handling-and-go
+- https://dave.cheney.net/2016/04/27/dont-just-check-errors-handle-them-gracefully
+
+
 Go文档查询
 --------------------------------------------------
 - https://gowalker.org
