@@ -182,3 +182,7 @@ Goroutines
 ---------------------------------------------------------------
 - https://medium.com/@vigneshsk/how-to-write-high-performance-code-in-golang-using-go-routines-227edf979c3c
 - https://udhos.github.io/golang-concurrency-tricks/
+
+Go 内存泄露
+---------------------------------------------------------------
+- https://colobu.com/2019/08/28/go-memory-leak-i-dont-think-so/
