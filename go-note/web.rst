@@ -145,6 +145,7 @@ Go Best practice
 - https://dave.cheney.net/practical-go/presentations/qcon-china.html
 - https://golang.org/doc/effective_go.html
 - https://talks.golang.org/2013/bestpractices.slide
+- https://dave.cheney.net/practical-go
 
 - https://12factor.net/zh_cn/
 - https://go-proverbs.github.io go谚语，类似 python 之禅
