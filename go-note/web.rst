@@ -143,6 +143,7 @@ Go Best practice
 - https://talks.golang.org/2013/bestpractices.slide
 
 - https://12factor.net/zh_cn/
+- https://go-proverbs.github.io go谚语，类似 python 之禅
 
 Go List import
 ---------------------------------------------------------------
