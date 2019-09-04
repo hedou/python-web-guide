@@ -27,7 +27,7 @@
 - Alfred(mac): mac 下一款功能强大的工具，不过我一般只用它快速打开软件(比如直接输入app名前缀快速切换不同app)。可以用 python 编写一些自己的 workflow 提高效率(https://github.com/deanishe/alfred-workflow)，比如把时间戳转成日期等。 https://github.com/derimagia/awesome-alfred-workflows
 - Dash(mac): 强悍的文档查询工具。支持非常多编程语言和框架。windows 和 linux 可以用 Zeal。或者 https://devdocs.io/
 - devdocs.io: 文档查询工具
-- Karabiner-Elements(mac): 改键工具 https://github.com/tekezo/Karabiner-Elements 可以用来禁用内置键盘
+- Karabiner-Elements(mac): 改键工具 https://github.com/tekezo/Karabiner-Elements 也可以用来禁用内置键盘(mac自带修改capslock为 control)
 - autojump。方便在命令行里来回跳转目录。
 - Magnet/chunkwm/Amethyst 窗口管理辅助工具，拖拽窗口到屏幕边缘可以自动半屏， 全屏或者四分之一屏幕，还可以设定快捷键完成分屏，现在已经离不开magnet 分屏了。
 - tldr: 更好的man手册。linux 命令很多，而且linux 的 man 手册比较难用，可以用这个 tldr 替代。https://github.com/tldr-pages/tldr

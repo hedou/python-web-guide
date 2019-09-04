@@ -25,6 +25,10 @@ Go 错误处理
 - https://dave.cheney.net/2016/04/27/dont-just-check-errors-handle-them-gracefully
 
 
+Go日志实践
+--------------------------------------------------
+- https://imhanjm.com/2017/05/19/go%20logger%20日志实践/
+
 Go文档查询
 --------------------------------------------------
 - https://gowalker.org
