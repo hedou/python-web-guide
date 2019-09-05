@@ -166,6 +166,7 @@ Go 常用框架
 - rpc: grpc
 - mysql orm: gorm
 - redis: go-redis/redigo
+- 异步任务框架: https://github.com/RichardKnop/machinery
 
 
 Go 底层实现
