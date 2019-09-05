@@ -164,7 +164,7 @@ Go 常用框架
 ---------------------------------------------------------------
 - web: gin
 - rpc: grpc
-- mysql orm: gorm
+- mysql orm: gorm/sqlx
 - redis: go-redis/redigo
 - 异步任务框架: https://github.com/RichardKnop/machinery
 
