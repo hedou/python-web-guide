@@ -677,20 +677,20 @@ vim-go plugin Tips
 
 .. code-block:: vim
 
-  # 最近一直在开发机服务器上直接用 neovim+vim-go 写 golang，具有玩完备开发功能(vim-go借助各种go工具实现)
+  # 最近一直在开发机服务器上直接用 neovim+vim-go 写 golang，具有完备开发功能(vim-go借助各种go工具实现)
   # https://github.com/fatih/vim-go
   # https://github.com/fatih/vim-go-tutorial  # vim-go 官方教程，最好过一遍
-  let g:go_def_mode='godef'  # 有时候 gopls 有问题可以用 godef 跳转
+  let g:go_def_mode='godef'  # 有时候 gopls 有问题可以用 godef 跳转，默认用 gopls
 
   # 如何生成 interface 接口定义
   type S struct{}   # cursor 放在 S 上执行 :GoImpl io.Reader
 
   # 常用的方便命令(命令模式), 参考 https://github.com/fatih/vim-go/blob/master/doc/vim-go.txt
   :GoRename 快速重构名字
-  :GoImpl 为 struct 生成接口函数定义
+  :GoImpl 为 struct 生成接口函数定义。如果一个 interface 有很多需要实现的函数，比较方便
   :GoTest 执行单测
-  :GoAddTags/GoRemoveTags json 快速给 struct field 增加 json tag，支持 visual 模式多选
-  :GoKeyify 把无名称初始化的 struct literals 转成包含字段名的
+  :GoAddTags GoRemoveTags json 快速给 struct field 增加 json tag，支持 visual 模式多选
+  :GoKeyify 把无名称初始化的 struct literals 转成包含字段名的初始化方式
   :GoIfErr 生成 if err 返回值(或者用 snippets)
 
 
