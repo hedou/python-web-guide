@@ -822,6 +822,7 @@ Mac 可以用使用 Fn+Esc 休眠。
 
 - https://github.com/tekezo/Karabiner-Elements
 - https://www.jianshu.com/p/47d5de7f12bc
+- https://madogiwa.github.io/KE-complex_modifications/
 
 配置文件放置位置在 https://github.com/PegasusWang/linux_config/blob/master/mac_karabiner/wasd.json
 
