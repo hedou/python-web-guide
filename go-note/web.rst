@@ -12,6 +12,10 @@ Go语言
 - `How to Write Go Code <https://golang.org/doc/code.html>`_
 - `Learning-golang <https://github.com/developer-learning/learning-golang>`_
 
+Go Books
+---------------------------------------------------------------
+- https://github.com/dariubs/GoBooks
+
 
 Go idioms
 --------------------------------------------------
@@ -127,10 +131,6 @@ Go Debug 调试工具
 ---------------------------------------------------------------
 - go-spew: 用来打印一些复杂结构方便调试 https://github.com/davecgh/go-spew
 
-Go Books
----------------------------------------------------------------
-- https://github.com/dariubs/GoBooks
-
 
 Go vs. Python
 ---------------------------------------------------------------
@@ -164,9 +164,13 @@ Go 常用框架
 ---------------------------------------------------------------
 - web: gin
 - rpc: grpc
-- mysql orm: gorm/sqlx
-- redis: go-redis/redigo
-- 异步任务框架: https://github.com/RichardKnop/machinery
+- mysql orm: gorm, sqlx
+- redis: go-redis, redigo
+- 异步任务框架: machinery
+- 熔断：hytrix-go
+- 限流: ulule/limiter
+- 日志: logrus
+- 调试：go-spew
 
 
 Go 底层实现
