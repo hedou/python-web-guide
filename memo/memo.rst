@@ -669,8 +669,21 @@ vim
    # 如何编辑远程服务器文件, https://superuser.com/questions/403664/how-can-i-copy-and-paste-text-out-of-a-remote-vim-to-a-local-vim
    :e scp://user@host/relative/path/from/home.txt
 
-
 * `《vim cheet sheet》 <https://vim.rtorr.com/lang/zh_cn/>`_
+
+
+vim-go plugin Tips
+-----------------------
+
+.. code-block:: vim
+
+  # https://github.com/fatih/vim-go  最近一直在开发机上用 neovim+vim-go写golang，感觉用着还不错
+  # https://github.com/fatih/vim-go-tutorial
+  let g:go_def_mode='godef'  # 有时候 gopls 有问题可以用 godef 跳转
+
+  # 如何生成 interface 接口定义
+  type S struct{}   # cursor 放在 S 上执行 :GoImpl io.Reader
+
 
 用markdown文件制作html ppt
 -------------------------------------------------------------
