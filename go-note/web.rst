@@ -11,6 +11,7 @@ Go语言
 - `golang-developer-roadmap <https://github.com/Alikhll/golang-developer-roadmap>`_
 - `How to Write Go Code <https://golang.org/doc/code.html>`_
 - `Learning-golang <https://github.com/developer-learning/learning-golang>`_
+- `Build Web Application With Golang <https://github.com/astaxie/build-web-application-with-golang>`_
 
 Go Books
 ---------------------------------------------------------------
@@ -170,7 +171,7 @@ Go 常用框架
 - rpc: grpc
 - mysql orm: gorm, sqlx
 - redis: go-redis, redigo
-- 异步任务框架: machinery
+- 异步任务框架: machinery/gocelery
 - 熔断：hytrix-go
 - 限流: ulule/limiter
 - 日志: logrus
@@ -186,6 +187,8 @@ Go Profiler
 ---------------------------------------------------------------
 - pprof
 - github.com/uber/go-troch: Flame graph profiler for Go programs，火焰图工具，配合压测看性能瓶颈
+
+- https://cizixs.com/2017/09/11/profiling-golang-program/
 
 Goroutines
 ---------------------------------------------------------------
