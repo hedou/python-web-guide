@@ -19,7 +19,7 @@ Go tricks
 
     // for pointers to struct
     type MyType struct{}
-    var _ MyInterface = (*MyType)(nil)
+    var _ MyInterface = (*MyType)(nil)  // 很多源码中可以看到这种写法，但是一开始感觉有点奇怪
     // for struct literals
     var _ MyInterface = MyType{}
     // for other types - just create some instance
@@ -47,7 +47,7 @@ Go 运行单个测试文件报错 undefined？
 - https://golang.org/pkg/go/build/
 
 
-Go JSON 空值处理的一些坑
+Go JSON 空值处理的一些坑，看示例
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 .. code-block:: go
@@ -185,3 +185,9 @@ Go JSON 空值处理的一些坑
 
 - https://www.sohamkamani.com/blog/golang/2018-07-19-golang-omitempty/
 - https://ethancai.github.io/2016/06/23/bad-parts-about-json-serialization-in-Golang/
+
+redio tricks
+--------------------------------------------------
+注意设置超时时间。
+
+- https://ms2008.github.io/2019/07/04/golang-redis-deadlock/
