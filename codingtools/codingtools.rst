@@ -338,7 +338,7 @@ APM (Application Performance Management)
 - 键盘垫：长时间使用键盘手腕压力比较大，可以考虑买一个几十块的软垫放在键盘下边。
 - 主动降噪耳机和音乐：选择类似于《阿尔法波高效记忆音乐》《巴洛克学习音乐》等，能帮助你隔绝噪音，或者你可以在youtube/网易云音乐等搜索到很多类似工作或学习音乐(优美钢琴曲)。反正笔者听歌的时候会想歌词反而会打扰思路，一般就是听这种不怎么让你瞎想的音乐。降噪耳机如果不差钱可以考虑主动降噪耳机(WI1000X/QC30)，效果好一些，网上也有一些对比视频。对于嘈杂的工作环境来说，绝对是一个非常值得的投资。
 - 海露人工泪液/湿房镜/防蓝光镜片: 缓解干眼症
-- 人体工学座椅，鼠标，键盘灯，土豪必备
+- 人体工学座椅/鼠标/键盘，土豪必备
 
 
 视频课程录制
@@ -407,7 +407,10 @@ Linux network debug Tools
   - traceroute -I google.com, send ICMP packet (default UDP, -T TCP, some servers block UDP)
 
 - mtr, realtime tracing
-- ss, checking connection performance
+- ss(socket statistics), checking connection performance。socket 统计，比netstat快，利用了 tcp_diag
+
+   - https://www.cnblogs.com/peida/archive/2013/03/11/2953420.html
+
 - arp, view the arp table
 - tcpdump, packet analysis
 
@@ -421,6 +424,8 @@ Linux network debug Tools
 
 - netstat, network statisic,  display connection info, routing table information etc
 - lsof: lsof -i:8000
+
+参考：
 
 - https://likegeeks.com/linux-network-commands/
 - https://unix.stackexchange.com/questions/50098/linux-network-troubleshooting-and-debugging
