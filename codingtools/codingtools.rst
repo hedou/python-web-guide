@@ -70,6 +70,11 @@ https://github.com/bhilburn/powerlevel9k/wiki/Show-Off-Your-Config
 - http://www.speedcoder.net/
 
 
+Mac 屏保软件
+--------------------------------------
+- https://github.com/JohnCoates/Aerial
+- https://github.com/packagesdev/savehollywood
+
 Git 相关
 --------------------------------------
 - gitx(mac):方便查看代码提交历史，便于了解整个代码仓库是怎样一步步构建的。http://gitx.frim.nl/user_manual.html
