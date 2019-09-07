@@ -700,6 +700,7 @@ vim-go plugin Tips
   :GoIfErr 生成 if err 返回值(或者用 snippets)
   :GoImplements 找到实现当前 interface 的 struct
   :GoCallers 找到当前函数被调用的地点
+  :GoChannelPeers 寻找可能的 channel 发送和接收点
 
 
 用markdown文件制作html ppt
