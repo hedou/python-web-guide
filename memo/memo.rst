@@ -425,7 +425,11 @@ Tmux
            tmux -2 new-session -s $WHOAMI
        fi
    fi
-
+   # 或者
+   if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
+       SESSION_NAME="sessionname"
+       tmux attach-session -t $SESSION_NAME || tmux new-session -s $SESSION_NAME
+   fi
 
 SSH
 -------------------------------------------------------------
