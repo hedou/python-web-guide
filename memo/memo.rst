@@ -690,6 +690,8 @@ vim-go plugin Tips
   type S struct{}   # cursor 放在 S 上执行 :GoImpl io.Reader
 
   # 常用的方便命令(命令模式), 参考 https://github.com/fatih/vim-go/blob/master/doc/vim-go.txt
+  :GoFmt 格式化，你可以配置 vim-go 直接保存自动执行格式化或者直接执行 GoImports
+  :GoRun, GoTest, GoTestFunc
   :GoRename 快速重构名字
   :GoImpl 为 struct 生成接口函数定义。如果一个 interface 有很多需要实现的函数，比较方便
   :GoTest 执行单测
