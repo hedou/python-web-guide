@@ -550,7 +550,7 @@ Git
 
     # prune all the dead branches from all the remotes
     # https://stackoverflow.com/questions/17933401/how-do-i-remove-deleted-branch-names-from-autocomplete?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
-    git fetch --prune --all
+    git fetch --prune --all # 清理本地本删除的远程分之，补全的时候很干净，没有已经删除的分之
 
     # https://stackoverflow.com/questions/1274057/how-to-make-git-forget-about-a-file-that-was-tracked-but-is-now-in-gitignore
     # https://wildlyinaccurate.com/git-ignore-changes-in-already-tracked-files/
