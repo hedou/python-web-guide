@@ -12,6 +12,14 @@ go初学者常见错误
 Go tricks
 --------------------------------------------------
 
+golang cannot refer to unexported field or method
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+小写开头只能被本 package 访问
+
+- https://stackoverflow.com/questions/24487943/invoke-golang-struct-function-gives-cannot-refer-to-unexported-field-or-method
+
+
 如何编译期间检查是否实现接口？
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
