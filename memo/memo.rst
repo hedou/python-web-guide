@@ -689,6 +689,12 @@ vim-go plugin Tips
   # 如何生成 interface 接口定义
   type S struct{}   # cursor 放在 S 上执行 :GoImpl io.Reader
 
+  # 跳转到接口的实现 https://github.com/fatih/vim-go/issues/820
+  :GoDef (或ctrl+]) 跳转到定义，但是如果是接口实现只能跳转到 interface 定义而非 struct 实现。
+  :GoCallees 从函数调用处跳转到接口的真正实现，而不是接口定义 (方法调用点 -> struct 方法实现)
+  :GoCallers 找到当前函数被调用的地点
+  :GoImplements 跳转到该函数实现的接口定义处 (struct 方法定义 -> interface 定义)
+
   # 常用的方便命令(命令模式Tab补全), 参考 https://github.com/fatih/vim-go/blob/master/doc/vim-go.txt
   :GoFmt 格式化，你可以配置 vim-go 直接保存自动执行格式化或者直接执行 GoImports
   :GoRun, GoTest, GoTestFunc 运行代码和单测
@@ -698,8 +704,6 @@ vim-go plugin Tips
   :GoAddTags GoRemoveTags json 快速给 struct field 增加 json tag，支持 visual 模式多选
   :GoKeyify 把无名称初始化的 struct literals 转成包含字段名的初始化方式
   :GoIfErr 生成 if err 返回值(或者用 snippets)
-  :GoImplements 找到实现当前 interface 的 struct
-  :GoCallers 找到当前函数被调用的地点
   :GoChannelPeers 寻找可能的 channel 发送和接收点
 
 
