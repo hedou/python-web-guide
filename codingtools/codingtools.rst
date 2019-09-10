@@ -434,6 +434,7 @@ Linux network debug Tools
   - ifconfig, you can obtain the device naems likes this
   - tcpdump -w /path/ -i <network_device>, tcpdump to a file
   - tcmpdump -r /path
+  - sudo tcpdump -i lo0 port 6379 -nnX -vvv -A  # 本地 redis 抓包
 
 - netstat, network statisic,  display connection info, routing table information etc
 - lsof: lsof -i:8000
