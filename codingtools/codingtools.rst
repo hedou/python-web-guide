@@ -236,8 +236,9 @@ API gateway
 
 抓包和下载工具
 --------------------------------------
-- mitmproxy: 用 python 实现的终端命令行抓包工具，可以将请求直接导出成 curl 请求，python 代码甚至 locust 测试脚本，非常方便，笔者经常用来抓包和调试。
-- charles: 抓包软件(收费)
+- mitmproxy: 用 python 实现的终端命令行http抓包工具，可以将请求直接导出成 curl 请求，python 代码甚至 locust 测试脚本，非常方便，笔者经常用来抓包和调试。
+- charles: mac下的 http抓包软件(收费)
+- wireshark: 支持 tcp 抓包
 
 Proxy
 --------------------------------------
