@@ -389,6 +389,12 @@ HTML Presentation Tools
 
 - coggle.it: 一款免费的在线思维导图工具 https://coggle.it/
 
+电子阅读器
+--------------------------------------
+笔者使用的 Kindle 和 国产的大屏幕 Boox
+
+- Koreader: http://koreader.rocks/ 一款支持多种主流电子书格式的开源电子书阅读器，支持Kindle/Android等
+- calibre: https://calibre-ebook.com 跨平台的电子书管理和阅读软件
 
 Linux network debug Tools
 --------------------------------------
