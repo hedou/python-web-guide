@@ -397,6 +397,10 @@ HTML Presentation Tools
 - Koreader: http://koreader.rocks/ 一款支持多种主流电子书格式的开源电子书阅读器，支持Kindle/Android等
 - calibre: https://calibre-ebook.com 跨平台的电子书管理和阅读软件
 
+参考：
+
+* `《Kobo Aura One刷机折腾记录：激活、安装koreader、中英字体、字典》 <http://www.dealwithem.com/3457282/>`_
+
 Linux network debug Tools
 --------------------------------------
 - ping：特定域名的 ip 是否可达。ping send ICMP echo request
