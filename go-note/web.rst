@@ -179,8 +179,8 @@ Go 常用框架
 
 使用：
 
-- https://zhuanlan.zhihu.com/p/22803609
-
+- https://zhuanlan.zhihu.com/p/22803609 redigo demo
+- https://github.com/smallnest/gen gorm struct 生成工具
 
 Go 底层实现
 ---------------------------------------------------------------
