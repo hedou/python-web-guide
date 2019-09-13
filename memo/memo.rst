@@ -438,6 +438,9 @@ SSH
 
    # https://superuser.com/questions/98562/way-to-avoid-ssh-connection-timeout-freezing-of-gnome-terminal/98565#98565
    Press Enter, ~, . one after the other to disconnect from a frozen session.
+   # https://unix.stackexchange.com/questions/176547/copy-only-file-details-file-name-size-time-from-remote-machine-in-unix
+   ssh remotemachine  "ls -l /opt/apache../webapps/Context"
+   # 使用 paramiko  库可以实现 ssh client 功能
 
 Git
 -------------------------------------------------------------
