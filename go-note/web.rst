@@ -177,6 +177,7 @@ Go List import
 Go 常用框架
 ---------------------------------------------------------------
 - web: gin
+- 配置解析: viper
 - rpc: grpc
 - mysql orm: gorm, sqlx
 - redis: go-redis, redigo
@@ -190,6 +191,7 @@ Go 常用框架
 
 - https://zhuanlan.zhihu.com/p/22803609 redigo demo
 - https://github.com/smallnest/gen gorm struct 生成工具
+- https://blog.biezhi.me/2018/10/load-config-with-viper.html viper 解析配置
 
 Go 底层实现
 ---------------------------------------------------------------
