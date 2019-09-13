@@ -520,7 +520,7 @@ Fabric
            get(remote_path, local_path)
            local("chmod +x {}".format(local_path))
        else:
-           print(Bcolors.HEADER + local_path + " not change")
+           print(Bcolors.HEADER + local_path + " not change" + Bcolors.ENDC)
 
 
 Git
