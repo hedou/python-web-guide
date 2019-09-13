@@ -470,6 +470,17 @@ Fabric
   1. http://www.bjhee.com/fabric.html
   """
 
+  class Bcolors:
+      HEADER = '\033[95m'
+      OKBLUE = '\033[94m'
+      OKGREEN = '\033[92m'
+      WARNING = '\033[93m'
+      FAIL = '\033[91m'
+      ENDC = '\033[0m'
+      BOLD = '\033[1m'
+      UNDERLINE = '\033[4m'
+
+
   env.hosts = ['dev']
   env.use_ssh_config = True
   env.password = ""
@@ -505,10 +516,11 @@ Fabric
        remote_path = "/user/work/UploadServer"
        local_path = "./UploadServer"
        if is_change(remote_path, local_path):  # 变化了就复制到本地 get(remote, local)，存在会覆盖
+           print(Bcolors.WARNING + "===========%s file changed=========" + Bcolors.ENDC)
            get(remote_path, local_path)
            local("chmod +x {}".format(local_path))
        else:
-           print(local_path + " not change")
+           print(Bcolors.HEADER + local_path + " not change")
 
 
 Git
