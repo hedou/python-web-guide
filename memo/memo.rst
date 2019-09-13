@@ -441,6 +441,54 @@ SSH
    # https://unix.stackexchange.com/questions/176547/copy-only-file-details-file-name-size-time-from-remote-machine-in-unix
    ssh remotemachine  "ls -l /opt/apache../webapps/Context"
    # 使用 paramiko  库可以实现 ssh client 功能
+   # https://www.digitalocean.com/community/tutorials/how-to-use-fabric-to-automate-administration-tasks-and-deployments
+
+
+Fabric
+-------------------------------------------------------------
+
+.. code-block:: python
+
+  # -*- coding: utf-8 -*-
+  import os
+  from fabric.api import run, env, get  # pip install fabric==1.14.0
+
+  """
+  需求：经常忘记开发机 build 完go 二进制文件以后 scp 到本地，导致有时候部署还是老的二进制文件(特殊阶段没有持续集成)。
+
+  功能：
+  实现监听开发机的二进制文件变动，每一次和本地文件对比，如果有开发机二进制文件大小变了，就拷贝到本地来。
+
+  # brew install watch
+  mac 下用 watch 用来定期执行命令 watch -n 60 ls
+
+  比如每分钟检查一下开发机上的 Server 是否重新 build 了，然后拉取到本地，可以执行
+  watch -n 60 fab monitor
+
+  1. http://www.bjhee.com/fabric.html
+  """
+
+  env.hosts = ['dev']
+  env.use_ssh_config = True
+  env.password = "password"
+
+
+  def who():
+       run('whoami')
+
+  def monitor():
+       remote_path = "/user/work/somdir/Server"
+       # stat 执行得到文件的字节数，然后转成 int 和本地文件大小比对
+       output = run("""stat -c "%s" {}""".format(remote_path))
+       binsize = int(output)
+
+       local_path = './Server'
+       local_binsize = os.path.getsize(local_path)
+
+       is_change = (binsize == local_binsize)  # 通过比对文件大小判断是否改变了(一般代码变动之后重新 build 文件大小会变)
+       if is_change:  # 变化了就复制到本地 get(remote, local)，存在会覆盖
+           get(remote_path, local_path)
+
 
 Git
 -------------------------------------------------------------
