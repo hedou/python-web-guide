@@ -19,6 +19,14 @@ golang cannot refer to unexported field or method
 
 - https://stackoverflow.com/questions/24487943/invoke-golang-struct-function-gives-cannot-refer-to-unexported-field-or-method
 
+Can't load package
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+同一个 folder 不要存在不同 package，否则 can't load package
+
+package is folder.  package name is folder name.  package path is folder path.
+
+- https://studygolang.com/articles/8312
+
 
 如何编译期间检查是否实现接口？
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
