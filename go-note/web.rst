@@ -56,6 +56,11 @@ Web/RPC框架
 - gin
 - grpc
 
+Gin example
+--------------------------------------------------
+- https://github.com/vsouza/go-gin-boilerplate
+- https://github.com/gothinkster/golang-gin-realworld-example-app
+
 微服务
 --------------------------------------------------
 微服务框架：

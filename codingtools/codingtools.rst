@@ -95,6 +95,9 @@ Chrome 开发者插件
 - Onetab: 用来整合 chrome tab到一个页面，如果打开了太多窗口特别占用资源的时候可以使用
 - [LGTM](https://chrome.google.com/webstore/detail/lgtm/oeacdmeoegfagkmiecjjikpfgebmalof): 有些开发过程中，需要一个同事review 代码后评价 LGTM(Looks Good To Me)才能 merge 代码，这里是图片版的 LGTM
 
+代码工具
+--------------------------------------
+- codelf: https://github.com/unbug/codelf 不会命名？变量名查询神器
 
 代码辅助和检测工具
 --------------------------------------
@@ -191,6 +194,12 @@ DSL
 - vimwiki/emacs org-mode: 依赖于vim/emacs 编辑器，可以做个人笔记，不过笔者还是比较倾向于独立于编辑器的工具
 - Graphviz: 通过编写代码来生成图片 http://graphviz.org/
 - pandoc: 用于各种格式文档之间的转换，比如 html->markdown, html->rst, markdown->rst
+
+Swagger 工具
+--------------------------------------
+- swagger编辑器: https://swagger.io/tools/swagger-editor/
+- swagger-edit: https://github.com/huan/swagger-edit 本地编写文件预览，可以用自己喜欢的编辑器了（依赖 docker)
+
 
 静态博客工具
 --------------------------------------
