@@ -12,6 +12,7 @@ Go语言
 - `How to Write Go Code <https://golang.org/doc/code.html>`_
 - `Learning-golang <https://github.com/developer-learning/learning-golang>`_
 - `Build Web Application With Golang <https://github.com/astaxie/build-web-application-with-golang>`_
+- `Go 高级编程 <https://chai2010.cn/advanced-go-programming-book/>`_
 
 Go Books
 ---------------------------------------------------------------
