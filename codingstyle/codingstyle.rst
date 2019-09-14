@@ -322,6 +322,12 @@ ORM和Mysql数据库相关：
 * `《MySQL互联网业务数据库设计规范》 <https://www.verynull.com/2017/02/18/MySQL%E4%BA%92%E8%81%94%E7%BD%91%E4%B8%9A%E5%8A%A1%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/>`_
 * `《Mysql高性能优化规范建议》 <https://www.cnblogs.com/huchong/p/10219318.html>`_
 
+HTTP相关：
+
+- 注意处理请求头 content-type 里 "application/json" 和  "application/x-www-form-urlencoded" 区别，一般框架会封装好
+
+* `《四种常见的 POST 提交数据方式》 <https://imququ.com/post/four-ways-to-post-data-in-http.html>`_
+
 Redis相关:
 
 - Redis key 命名尽量能够体现出含义，但是也要注意过长的 key 影响内存占用
