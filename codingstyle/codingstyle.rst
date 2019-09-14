@@ -325,8 +325,10 @@ ORM和Mysql数据库相关：
 HTTP相关：
 
 - 注意处理请求头 content-type 里 "application/json" 和  "application/x-www-form-urlencoded" 区别，一般框架会封装好
+- 注意跨域 cors 处理，一般也是封装到框架。
 
 * `《四种常见的 POST 提交数据方式》 <https://imququ.com/post/four-ways-to-post-data-in-http.html>`_
+* `《HTTP访问控制(CORS)》 <https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS>`_
 
 Redis相关:
 

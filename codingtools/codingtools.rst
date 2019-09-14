@@ -412,6 +412,8 @@ HTML Presentation Tools
 
 Linux network debug Tools
 --------------------------------------
+注意：dig/nslookup 等直接请求 dns server，会忽略 etc/hosts
+
 - ping：特定域名的 ip 是否可达。ping send ICMP echo request
 
   - ping google.com
