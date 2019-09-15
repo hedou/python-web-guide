@@ -357,7 +357,7 @@ APM (Application Performance Management)
 - 人体工学座椅/鼠标/键盘，土豪必备
 - 海露人工泪液/湿房镜/防蓝光镜片: 缓解干眼症
 
-视频课程录制
+视频课程录制(vlog工具)
 --------------------------------------
 在 mac 下录制了一些 vim 和 python 的视频教程，记录下使用到的一些硬件和软件工具，硬件工具均可网购，部分软件收费：
 
@@ -378,6 +378,7 @@ APM (Application Performance Management)
 - 课件制作: PowerPoint, Keynote, AxeSlide, Focusky 等
 - Mousepose: 鼠标高亮增强工具。演示的时候可以高亮部分区域，其他部分置灰
 - 免费字体：思源字体(思源宋体、思源黑体)；站酷字体；
+- canva: 一个好用的封面设计网站 https://www.canva.com
 
 
 HTML Presentation Tools
