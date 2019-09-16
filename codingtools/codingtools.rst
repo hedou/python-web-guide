@@ -185,7 +185,7 @@ DSL
 文档写书工具
 --------------------------------------
 - google doc/石墨: 支持多人协作编辑
-- gitbook + markdown: 可以写文档或电子书
+- gitbook + markdown: 可以写文档或电子书，托管到 github 上，可以生成 pdf。
 - doocer: http://doocer.com/ 写 kindle 电子书工具
 - sphinx + readthedoc(或者 mkdocs，支持 markdown) （代码即文档），python 项目很多在用这个生成文档。这本小书就是这么写出来的。`编写《Redis 设计与实现》时用到的工具 <http://blog.huangz.me/diary/2013/tools-for-writing-redisbook.html>`_
 - swagger/apidocjs: 适合写 restful 文档。如果使用 grpc 可以直接生成。
@@ -363,7 +363,7 @@ APM (Application Performance Management)
   - HHKB: 码农神器，不过不用 vim，非 linux/unix 用户慎用。没有方向键和F区
   - 宁芝（niz）PLUM普拉姆静电容键盘: 同静电容键盘，键位更多，适合大众用户
   - 阿米洛（Varmilo） 苹果MAC双系统机械键盘: 机械键盘，适合 mac
-  - Poker2: 键位类似 HHKB，同样是迷你键盘，可以替代 HHKB
+  - Poker2: 键位类似 HHKB，同样是迷你键盘，可以替代 HHKB，笔者之前长期使用
 
 视频课程录制(vlog工具)
 --------------------------------------
