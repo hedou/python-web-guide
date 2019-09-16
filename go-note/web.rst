@@ -187,6 +187,7 @@ Go 常用框架
 - 限流: ulule/limiter
 - 日志: logrus
 - 调试：go-spew
+- 图片处理：https://github.com/h2non/imaginary
 
 使用：
 
