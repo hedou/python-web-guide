@@ -175,9 +175,10 @@ Go List import
    go list -f '{{range $imp := .Imports}}{{printf "%s\n" $imp}}{{end}}' | sort
    go list -f '{{range $dep := .Deps}}{{printf "%s\n" $dep}}{{end}}' | xargs go list -f '{{if not .Standard}}{{.ImportPath}}{{end}}'
 
+
 Go 常用框架
 ---------------------------------------------------------------
-- web: gin
+- web: gin/grpc/beego
 - 配置解析: viper
 - rpc: grpc
 - mysql orm: gorm, sqlx
