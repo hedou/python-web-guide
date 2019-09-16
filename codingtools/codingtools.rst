@@ -299,7 +299,7 @@ Rest
 - matplotlib: python 绘图。数据可视化有很多其他 python 和前端解决方案
 
 
-压测工具
+压测(benchmark)工具
 --------------------------------------
 - locust: 基于 python gevent 实现的压测工具。http://locust.io/， 有 web 界面，支持编写 python 脚本模拟测试，高度定制化，推荐。
 - ab
@@ -307,6 +307,9 @@ Rest
 - siege
 - pts: 阿里云提供的一个压测工具。https://cn.aliyun.com/product/pts
 
+一些 web 框架的压测结果：
+
+- https://github.com/the-benchmarker/web-frameworks
 
 Profiler
 -------------------------------------------------------------------------
