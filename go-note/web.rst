@@ -65,8 +65,13 @@ Web/RPC框架
 
 Gin example
 --------------------------------------------------
+- https://github.com/EDDYCJY/go-gin-example
 - https://github.com/vsouza/go-gin-boilerplate
 - https://github.com/gothinkster/golang-gin-realworld-example-app
+
+博客:
+
+- https://segmentfault.com/a/1190000013808421  gin 连载博客
 
 微服务
 --------------------------------------------------
@@ -180,12 +185,13 @@ Go List import
 
 Go 常用框架
 ---------------------------------------------------------------
-- web: gin/grpc/beego
+- web: gin, grpc, beego
 - 配置解析: viper
 - rpc: grpc
 - mysql orm: gorm, sqlx
+- id生成器: rx/xid
 - redis: go-redis, redigo
-- 异步任务框架: machinery/gocelery
+- 异步任务框架: machinery, gocelery
 - 熔断：hytrix-go
 - 限流: ulule/limiter
 - 日志: logrus
