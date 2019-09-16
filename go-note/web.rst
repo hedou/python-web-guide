@@ -60,6 +60,7 @@ Web/RPC框架
 个人推荐使用 gin，当然你可以参考一下 star 选择别的框架
 
 - https://github.com/gin-gonic/contrib gin各种组件
+- https://github.com/e421083458/gin_scaffold gin 脚手架
 - https://github.com/mingrammer/go-web-framework-stars
 
 Gin example
