@@ -187,6 +187,8 @@ Go List import
 
 Go 常用框架
 ---------------------------------------------------------------
+技术选型一般选择开发稳定，更新快，生态相对成熟，star 数量较高的库，坑少一点。
+
 - web: gin, grpc, beego
 - 配置解析: viper
 - rpc: grpc
@@ -196,7 +198,7 @@ Go 常用框架
 - 异步任务框架: machinery, gocelery
 - 熔断：hytrix-go
 - 限流: ulule/limiter
-- 日志: logrus
+- 日志: logrus/zap/mumberjack
 - 调试：go-spew
 - 图片处理：https://github.com/h2non/imaginary
 
