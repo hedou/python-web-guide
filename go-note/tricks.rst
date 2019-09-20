@@ -19,6 +19,13 @@ golang cannot refer to unexported field or method
 
 - https://stackoverflow.com/questions/24487943/invoke-golang-struct-function-gives-cannot-refer-to-unexported-field-or-method
 
+访问其它Go package中的私有函数(不推荐)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+可以写一个公有函数暴露私有方法，不过一般私有方法都是希望隐藏的，就像 python 的下划线虽然不强制，但是不推荐使用。
+
+- https://colobu.com/2017/05/12/call-private-functions-in-other-packages/
+
 Can't load package
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 同一个 folder 不要存在不同 package，否则 can't load package
