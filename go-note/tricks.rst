@@ -69,6 +69,26 @@ Go 运行单个测试文件报错 undefined？
 
 - https://golang.org/pkg/go/build/
 
+Application auto build versioning
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+给 build 的二进制文件加上版本号
+
+.. code-block:: go
+
+    // +build linux,386 darwin,!cgo
+    package main
+
+    import "fmt"
+    var xyz string
+    func main() {
+        fmt.Println(xyz)
+    }
+    // $ go run -ldflags "-X main.xyz=abc" main.go
+    // go build -ldflags "-X main.minversion=`date -u +.%Y%m%d.%H%M%S`" service.go
+
+- https://stackoverflow.com/questions/11354518/application-auto-build-versioning
+
 
 Go JSON 空值处理的一些坑，看示例
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
