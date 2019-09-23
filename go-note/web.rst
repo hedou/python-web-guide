@@ -198,7 +198,7 @@ Go 常用框架
 - redis: go-redis, redigo
 - 异步任务框架: machinery, gocelery
 - 熔断：hytrix-go
-- 限流: ulule/limiter
+- 限流: ulule/limiter, didip/tollbooth
 - 日志: logrus/zap/mumberjack
 - 调试：go-spew
 - 图片处理：https://github.com/h2non/imaginary
