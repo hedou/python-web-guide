@@ -334,6 +334,7 @@ Redis相关:
 
 - Redis key 命名尽量能够体现出含义，但是也要注意过长的 key 影响内存占用
 - 使用 redis 之前最好先根据 qps和内存占用做一个简单预估，防止线上出问题
+- 使用集群 redis 应该注意防止大 key 产生，注意有些命令的限制(比如一些云 redi 产品限制 lua 脚本和非 watch事务 执行)
 
 * `《REDIS内存容量的预估和优化》 <https://searchdatabase.techtarget.com.cn/7-20218/>`_
 * `《阿里云 Redis 开发规范》 <https://yq.aliyun.com/articles/531067>`_

@@ -87,6 +87,7 @@ gin 实战博客:
 
 - https://dzone.com/users/3214037/eriklupander.html 介绍 go 微服务的一系列博客
 - https://github.com/callistaenterprise/goblog go 微服务代码示例和博客，介绍了微服务各种基础组件
+- https://github.com/yun-mu/MicroServicePractice 微服务实践
 
 Go package
 --------------------------------------------------
