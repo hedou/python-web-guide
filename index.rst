@@ -17,5 +17,6 @@
     devtools/index
     python-note/index
     go-note/index
+    distribute/index
     memo/*
     *
