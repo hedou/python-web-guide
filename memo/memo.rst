@@ -37,9 +37,12 @@ Python
    cat some.json | python -m json.tool
 
 
-Pip
+pip/easy_install
 ---------------------------------------------------------------
 .. code-block:: python
+
+   # 服务器上有时候没有 root 权限可以试试
+   # https://stackoverflow.com/questions/7465445/how-to-install-python-modules-without-root-access
 
    # https://stackoverflow.com/questions/12332975/installing-python-module-within-code
    # pip install
