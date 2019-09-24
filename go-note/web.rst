@@ -189,7 +189,7 @@ Go List import
 
 Go 常用框架
 ---------------------------------------------------------------
-技术选型一般选择开发稳定，更新快，生态相对成熟，star 数量较高的库，坑少一点。
+技术选型一般选择接口稳定，更新快，生态相对成熟，star 数量较高，用户广泛的库，坑少一点。
 
 - web: gin, grpc, beego
 - 配置解析: viper
@@ -200,7 +200,7 @@ Go 常用框架
 - cache(in memory): patrickmn/go-cache
 - 异步任务框架: machinery, gocelery
 - 定时任务：robfig/cron
-- 熔断：hytrix-go
+- 熔断：hystrix-go
 - 限流: ulule/limiter, didip/tollbooth
 - 日志: logrus, zap, mumberjack
 - 调试：go-spew
