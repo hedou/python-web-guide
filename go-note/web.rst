@@ -197,6 +197,7 @@ Go 常用框架
 - mysql orm: gorm, sqlx
 - id生成器: rx/xid
 - redis: go-redis, redigo
+- cache(in memory): patrickmn/go-cache
 - 异步任务框架: machinery, gocelery
 - 定时任务：robfig/cron
 - 熔断：hytrix-go
