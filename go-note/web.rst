@@ -198,11 +198,12 @@ Go 常用框架
 - id生成器: rx/xid
 - redis: go-redis, redigo
 - 异步任务框架: machinery, gocelery
+- 定时任务：robfig/cron
 - 熔断：hytrix-go
 - 限流: ulule/limiter, didip/tollbooth
-- 日志: logrus/zap/mumberjack
+- 日志: logrus, zap, mumberjack
 - 调试：go-spew
-- 图片处理：https://github.com/h2non/imaginary
+- 图片处理：h2non/imaginary
 
 使用：
 
