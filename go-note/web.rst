@@ -192,6 +192,7 @@ Go 常用框架
 技术选型一般选择接口稳定，更新快，生态相对成熟，star 数量较高，用户广泛的库，坑少一点。
 
 - web: gin, grpc, beego
+- 参数验证：go-playground/validator
 - 配置解析: viper
 - rpc: grpc
 - mysql orm: gorm, sqlx
