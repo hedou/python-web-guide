@@ -22,6 +22,7 @@ Go 开发工具
 ---------------------------------------------------------------
 - Goland
 - vim/Neovim + vim-go
+- https://github.com/fedir/go-tooling-cheat-sheet/blob/master/go-tooling-cheat-sheet.pdf
 
 博客:
 
