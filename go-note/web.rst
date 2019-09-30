@@ -211,6 +211,7 @@ Go 常用框架
 - 日志: logrus, zap, mumberjack
 - 调试：go-spew
 - 图片处理：h2non/imaginary
+- 网络编程：fatih/pool
 
 使用：
 
