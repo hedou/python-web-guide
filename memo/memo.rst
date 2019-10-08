@@ -760,6 +760,9 @@ vim
    # 如何编辑远程服务器文件, https://superuser.com/questions/403664/how-can-i-copy-and-paste-text-out-of-a-remote-vim-to-a-local-vim
    :e scp://user@host/relative/path/from/home.txt
 
+   # 跳转
+   g<c-]> # list all match tag
+
 * `《vim cheet sheet》 <https://vim.rtorr.com/lang/zh_cn/>`_
 
 
