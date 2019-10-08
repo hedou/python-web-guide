@@ -72,7 +72,7 @@ Go 运行单个测试文件报错 undefined？
 Application auto build versioning
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-给 build 的二进制文件加上版本号
+给 build 的二进制文件加上版本号，注意如果命令中输出有空格，需要加上单引号
 
 .. code-block:: go
 
@@ -86,6 +86,7 @@ Application auto build versioning
     }
     // $ go run -ldflags "-X main.xyz=abc" main.go
     // go build -ldflags "-X main.minversion=`date -u +.%Y%m%d.%H%M%S`" service.go
+    // go build  -ldflags "-X 'main.time=$(date -u --rfc-3339=seconds)' -X 'main.git=$(git log --pretty=format:"%h" -1)'"  main.go
 
 - https://stackoverflow.com/questions/11354518/application-auto-build-versioning
 
