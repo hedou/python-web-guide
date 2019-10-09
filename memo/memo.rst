@@ -945,6 +945,8 @@ Capture -> Options -> lo0 抓本地 127.0.0.1 包。筛选 tcp.port == 6379 抓 
 抓包后点击一条选择右键 Follow -> TCP Stream 就可以查看 tcp 包发送的文本内容。
 
 抓包iOS: 输入 rvictl -s 设备[udid]。格式是rvictl -s [设备udid]，设备的udid可以通过itunes或者itools获取
+`system_profiler SPUSBDataType | grep "Serial Number:.*" | sed s#".*Serial Number: "##`
+
 
 - https://serverfault.com/questions/22990/is-there-a-way-to-get-wireshark-to-capture-packets-sent-from-to-localhost-on-win
 - https://www.jianshu.com/p/62f00db7be68
