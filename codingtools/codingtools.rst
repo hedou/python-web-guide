@@ -182,7 +182,7 @@ DSL
 - tox
 - mock: mocking makes unit testing easier
 
-文档写书工具
+文档/写书/笔记工具
 --------------------------------------
 - google doc/石墨: 支持多人协作编辑
 - gitbook + markdown: 可以写文档或电子书，托管到 github 上，可以生成 pdf。
@@ -194,6 +194,7 @@ DSL
 - vimwiki/emacs org-mode: 依赖于vim/emacs 编辑器，可以做个人笔记，不过笔者还是比较倾向于独立于编辑器的工具
 - Graphviz: 通过编写代码来生成图片 http://graphviz.org/
 - pandoc: 用于各种格式文档之间的转换，比如 html->markdown, html->rst, markdown->rst
+- Onenote: 微软出品笔记工具，手写和绘图功能很不错，笔者在一些教程里使用它来绘图演示
 
 Swagger 工具
 --------------------------------------
@@ -375,7 +376,7 @@ APM (Application Performance Management)
 
 视频课程录制(vlog工具)
 --------------------------------------
-在 mac 下录制了一些 vim 和 python 的视频教程，记录下使用到的一些硬件和软件工具，硬件工具均可网购，部分软件收费：
+在 mac 下录制了一些 vim 和 python 的视频教程(b 站或者知乎可以看到)，记录下使用到的一些硬件和软件工具，硬件工具均可网购，部分软件收费：
 
 - keycastr: mac 按键回显到屏幕，最近录制 vim 视频教程的时候有用到。https://github.com/keycastr/keycastr
 - youbute-dl: https://github.com/rg3/youtube-dl 命令行油管视频下载工具
@@ -389,13 +390,12 @@ APM (Application Performance Management)
 - HandBrake: 视频压缩工具，免费工具。直接从录屏工具导出的视频体积可能会非常大，推荐压缩后上传到网站
 - SketchBookPro/Deskscribble(收费): 白板/黑板工具，配合 wacom 手写板可以把屏幕当成黑板或者白板使用。模仿可汗学院的授课方式，笔者在讲述 Python 算法的课程里使用到。
 - Wacom 手绘板：用来实现屏幕手写，配合绘图或者白板软件当做黑板使用，方便手写做一些演示或者推导。
-- Blue yeti电容麦/铁三角Atr2100动圈麦：使用 mac 内置麦克风音频效果比较差，可以考虑专业的播客级麦克风，录制出来的视频声音要清楚很多。usb 麦克风即插即用，非常方便。动圈麦在嘈杂环境表现更好，不会收录杂音。
+- Blue yeti电容麦/Rode NT usb电容麦/铁三角Atr2100动圈麦：使用 mac 内置麦克风音频效果比较差，可以考虑专业的播客级麦克风，录制出来的视频声音要清楚很多。usb 麦克风即插即用，非常方便，但是灵敏底噪大。动圈麦在嘈杂环境表现更好，不会收录杂音。
 - VideoScribe: 制作手绘风格视频，提升视频趣味性。收费
 - 课件制作: PowerPoint, Keynote, AxeSlide, Focusky 等
 - Mousepose: 鼠标高亮增强工具。演示的时候可以高亮部分区域，其他部分置灰
-- 免费字体：思源字体(思源宋体、思源黑体)；站酷字体；
-- canva: 一个好用的封面设计网站 https://www.canva.com
-
+- 免费字体：思源字体(思源宋体、思源黑体)；站酷字体。视频中的一些字体可能要考虑版权问题，推荐使用无版权字体
+- canva: 一个好用的封面设计网站，可以用来涉及视频封面图 https://www.canva.com
 
 HTML Presentation Tools
 --------------------------------------
