@@ -180,6 +180,7 @@ Go Best practice
 - https://talks.golang.org/2013/bestpractices.slide
 - https://dave.cheney.net/practical-go
 - https://github.com/codeship/go-best-practices
+- https://github.com/uber-go/guide/blob/master/style.md   uber 的 go 规范
 
 - https://12factor.net/zh_cn/
 - https://go-proverbs.github.io go谚语，类似 python 之禅
