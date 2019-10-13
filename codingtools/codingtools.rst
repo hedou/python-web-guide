@@ -88,12 +88,16 @@ Git 相关
 Chrome 开发者插件
 --------------------------------------
 - vimium: chrome 插件，可以用 vim 的方式操作浏览器，很方便，不用鼠标也能完成大部分操作。更强大替代品：SurfingKeys, Cvim
+- wasavi: 想在网页编辑框使用 vim 可以试试这个插件。安装完之后使用 ctrl+enter 就可以了 https://github.com/akahuku/wasavi
 - FE助手：前端插件，Json 格式化等很多有用的工具
 - Octotree: Chrome github 浏览插件，可以把 github 项目的目录树结构展示出来，非常方便
 - Github Hovercard: 可以在浏览 github 的时候展示一些链接信息，比如可以查看作者的个人页
 - Momentum: 美化 Chrome 界面的插件，有很多漂亮的图片
 - Onetab: 用来整合 chrome tab到一个页面，如果打开了太多窗口特别占用资源的时候可以使用
 - [LGTM](https://chrome.google.com/webstore/detail/lgtm/oeacdmeoegfagkmiecjjikpfgebmalof): 有些开发过程中，需要一个同事review 代码后评价 LGTM(Looks Good To Me)才能 merge 代码，这里是图片版的 LGTM
+
+* `《在浏览器中嵌入 NeoVim，可使用本地配置》 <https://zhuanlan.zhihu.com/p/86027644>`_
+
 
 代码工具
 --------------------------------------
@@ -248,8 +252,8 @@ API gateway
 --------------------------------------
 - mitmproxy: 用 python 实现的终端命令行http抓包工具，可以将请求直接导出成 curl 请求，python 代码甚至 locust 测试脚本，非常方便，笔者经常用来抓包和调试。
 - charles: mac下的 http抓包软件(收费)
-- wireshark: 支持 tcp 抓包，对于一些使用自有协议的抓包，没法通过 http 请求抓包，可以使用 wireshark
-- tcpdump: 服务器抓包
+- wireshark: 支持 tcp 抓包，对于一些使用自有协议的抓包，没法通过 http 请求抓包，可以使用 wireshark。wireshark是学习网络协议的好帮手
+- tcpdump: 服务器命令行抓包工具
 
 参考:
 
