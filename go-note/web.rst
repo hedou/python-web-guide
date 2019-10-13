@@ -8,6 +8,7 @@ Go语言
 
 - `A Tour of Go <https://tour.golang.org/welcome/1>`_
 - `Go by Example <https://gobyexample.com>`_
+- `Learn Go with Tests <https://quii.gitbook.io/learn-go-with-tests/>`_
 - `The-way-to-go <https://github.com/Unknwon/the-way-to-go_ZH_CN>`_
 - `golang-developer-roadmap <https://github.com/Alikhll/golang-developer-roadmap>`_
 - `How to Write Go Code <https://golang.org/doc/code.html>`_
