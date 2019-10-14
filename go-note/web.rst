@@ -201,10 +201,9 @@ Go 常用框架
 技术选型一般选择接口稳定，更新快，生态相对成熟，star 数量较高，用户广泛的库，坑少一点。
 后前分离时代用 gin 之类的框架写app后台还是挺快的，但是感觉做并发不高的内部后台业务还是用脚本python/php之类的更快。
 
-- web: gin, grpc, beego
+- web/rpc框架: gin, grpc, beego
 - 参数验证：go-playground/validator
 - 配置解析: viper
-- rpc: grpc
 - mysql orm: gorm, sqlx
 - id生成器: rx/xid
 - redis: go-redis, redigo
@@ -238,7 +237,6 @@ Go Profiler
 ---------------------------------------------------------------
 - pprof
 - github.com/uber/go-troch: Flame graph profiler for Go programs，火焰图工具，配合压测看性能瓶颈
-
 - https://cizixs.com/2017/09/11/profiling-golang-program/
 
 Goroutines
