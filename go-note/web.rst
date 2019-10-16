@@ -210,7 +210,7 @@ Go 常用框架
 - cache(in memory): patrickmn/go-cache
 - 异步任务框架: machinery, gocelery
 - 定时任务：robfig/cron
-- 熔断：hystrix-go, eapache/go-resiliency
+- 熔断：hystrix-go, eapache/go-resiliency, cep21/circuit
 - 限流: ulule/limiter, didip/tollbooth
 - 日志: logrus, zap, mumberjack
 - 调试：go-spew
