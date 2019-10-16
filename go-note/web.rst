@@ -228,10 +228,11 @@ Go 常用框架
 - https://zhuanlan.zhihu.com/p/22803609 redigo demo
 - https://blog.biezhi.me/2018/10/load-config-with-viper.html viper 解析配置
 
-Go 底层实现
+Go 底层实现(源码)
 ---------------------------------------------------------------
 - https://draveness.me/golang/concurrency/golang-context.html
 - https://github.com/tiancaiamao/go-internals/tree/master/zh
+- https://zhuanlan.zhihu.com/p/80853548 深度解密Go语言之 scheduler
 
 Go Profiler
 ---------------------------------------------------------------
