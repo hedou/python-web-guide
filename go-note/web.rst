@@ -249,3 +249,8 @@ Go 内存泄露
 ---------------------------------------------------------------
 - https://go101.org/article/memory-leaking.html
 - https://colobu.com/2019/08/28/go-memory-leak-i-dont-think-so/
+
+Go源码阅读
+---------------------------------------------------------------
+
+.. image:: ../_image/goweb/gocode阅读.png
