@@ -3,7 +3,7 @@
 Go入门
 =====================================================================
 
-Go语言
+Go语言入门和深入
 --------------------------------------------------
 
 - `A Tour of Go <https://tour.golang.org/welcome/1>`_
@@ -15,6 +15,7 @@ Go语言
 - `Learning-golang <https://github.com/developer-learning/learning-golang>`_
 - `Build Web Application With Golang <https://github.com/astaxie/build-web-application-with-golang>`_
 - `Go 高级编程 <https://chai2010.cn/advanced-go-programming-book/>`_
+- `Go 101 <https://go101.org/article/101.html>`_ 包含了很多基础和高级主题
 
 Go Books
 ---------------------------------------------------------------
