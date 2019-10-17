@@ -11,4 +11,5 @@
     funny
     ffmpeg
     flaskapi
+    pdf
     uncurl
