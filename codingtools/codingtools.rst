@@ -339,6 +339,7 @@ APM (Application Performance Management)
 - mycli: mysql 命令行补全等。https://github.com/dbcli/mycli
 - MysqlWorkbench/Sequel Pro: mysql 客户端工具。
 - Navicat Premium: 强大的数据库管理工具，收费
+- pt-online-schema-change: mysql数据库变更工具
 - Medis: redis client 工具
 - MongoChef: Mongodb 客户端工具
 
