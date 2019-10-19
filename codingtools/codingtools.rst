@@ -378,6 +378,7 @@ APM (Application Performance Management)
   - 宁芝（niz）PLUM普拉姆静电容键盘: 同静电容键盘，键位更多，适合大众用户
   - 阿米洛（Varmilo） 苹果MAC双系统机械键盘: 机械键盘，适合 mac
   - Poker2: 键位类似 HHKB，同样是迷你键盘，可以替代 HHKB，笔者之前长期使用
+  - Filco Minila Air
 
 视频课程录制(vlog工具)
 --------------------------------------
