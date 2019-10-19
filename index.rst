@@ -16,7 +16,7 @@
     skillstack/index
     devtools/index
     python-note/index
-    microservice_distribute/index
     go-note/index
+    microservice_distribute/index
     memo/*
     *

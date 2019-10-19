@@ -25,7 +25,7 @@ pdf: latex
 	cd $(BUILD_DIR)/latex && pdflatex -interaction=nonstopmode tornado.tex
 
 clean:
-	rm -rf build
+	rm -rf $(BUILD_DIR)
 
 .PHONY: livehtml
 livehtml:
