@@ -424,7 +424,8 @@ HTML Presentation Tools
 
 电子阅读器
 --------------------------------------
-笔者使用的 Kindle 和 国产的大屏幕 Boox
+笔者使用的 Kindle 和 国产的大屏幕 Boox，目前小米生态的墨案也推出了大屏幕(10.3)存电子纸。
+当然你可以使用平板电脑，不过长时间对眼睛不太好。
 
 - Koreader: http://koreader.rocks/ 一款支持多种主流电子书格式的开源电子书阅读器，支持Kindle/Android等
 - calibre: https://calibre-ebook.com 跨平台的电子书管理和阅读软件
