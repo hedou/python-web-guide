@@ -22,7 +22,7 @@
 
 在分布式系统中，为了防止级联错误，导致服务血崩，经常需要使用断路器来保护系统。断路器原理如下：
 
-.. image:: ../_image/distribute/熔断器原理.png
+.. image:: ../_image/microservice_distribute/熔断器原理.png
 
 Netflix 开源的 Hystrix 是比较流行的开源实现，对应的有各种其他语言的实现，比如 Hystrix-go
 
