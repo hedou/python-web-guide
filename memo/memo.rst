@@ -267,6 +267,8 @@ Oh My Zsh
    # 如何复制上一条命令, https://apple.stackexchange.com/questions/110343/copy-last-command-in-terminal
    alias lcc='fc -ln -1 | awk "{\$1=\$1}1" ORS="" | pbcopy '
 
+   # 报错：_git:58: _git_commands: function definition file not found
+   # 解决方式：rm ~/.zcompdump*; rm ~/.zplug/zcompdump  # https://github.com/robbyrussell/oh-my-zsh/issues/3996
 
 
 Ubuntu相关
