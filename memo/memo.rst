@@ -202,7 +202,8 @@ Mac
 
    # 使用 rmtrash 删除到 trash，防止危险的 rm 删除命令找不回来。在 bashrc or zshrc alias rm='rmtrash '
    # 如果是 linux 用户，可以使用 safe-rm https://github.com/kaelzhang/shell-safe-rm
-   brew install rmtrash
+   # 删除的文件会放到 $HOME/.Trash 方便恢复
+   brew install rmtrash  # npm install -g safe-rm; alias rm='safe-rm'
 
    # 增加 terminal 光标移动速度, https://stackoverflow.com/questions/4489885/how-can-i-increase-the-cursor-speed-in-terminal
    #defaults write NSGlobalDomain KeyRepeat -int 1
