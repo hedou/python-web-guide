@@ -60,6 +60,17 @@ Go 运行单个测试文件报错 undefined？
 - https://www.cnblogs.com/Detector/p/10010292.html
 - https://stackoverflow.com/questions/14723229/go-test-cant-find-function-in-a-same-package
 
+如何判断一个空结构体(empty struct)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+.. code-block:: go
+
+    // 注意需要加上括号，否则 syntax error
+    // https://stackoverflow.com/questions/28447297/how-to-check-for-an-empty-struct
+    if (Session{}) == session  {
+        fmt.Println("is zero value")
+    }
+
 编译 tag 的作用
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
