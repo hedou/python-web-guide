@@ -241,6 +241,51 @@ Go JSON 空值处理的一些坑，看示例
 - https://www.sohamkamani.com/blog/golang/2018-07-19-golang-omitempty/
 - https://ethancai.github.io/2016/06/23/bad-parts-about-json-serialization-in-Golang/
 
+Go int/int64 和 string 转换示例
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+.. code-block:: go
+
+    package main
+
+    import (
+            "fmt"
+            "strconv"
+    )
+
+    func main() { // 测试 int 和 string(decimal) 互相转换的函数
+            // https://yourbasic.org/golang/convert-int-to-string/
+            // int -> string
+            sint := strconv.Itoa(97)
+            fmt.Println(sint, sint == "97")
+
+            // int64 -> string
+            sint64 := strconv.FormatInt(int64(97), 10)
+            fmt.Println(sint64, sint64 == "97")
+
+            // int64 -> string (hex)
+            sint64hex := strconv.FormatInt(int64(97), 16)
+            fmt.Println(sint64hex, sint64hex == "61")
+
+            // string -> int
+            _int, _ := strconv.Atoi("97")
+            fmt.Println(_int, _int == int(97))
+
+            // string -> int64
+            _int64, _ := strconv.ParseInt("97", 10, 64)
+            fmt.Println(_int64, _int64 == int64(97))
+
+            // https://stackoverflow.com/questions/30299649/parse-string-to-specific-type-of-int-int8-int16-int32-int64
+            // string -> int32，注意 parseInt 始终返回的是 int64，所以还是需要 int32(n) 强转一下
+            _int32, _ := strconv.ParseInt("97", 10, 32)
+            fmt.Println(_int32, int32(_int32) == int32(97))
+
+            // int -> int64 ，不会丢失精度
+            var n int = 97
+            fmt.Println(int64(n) == int64(97))
+    }
+
+
 redio tricks
 --------------------------------------------------
 默认是没有超时时间的，注意设置超时时间。
