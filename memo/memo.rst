@@ -533,6 +533,14 @@ Fabric
            print(Bcolors.HEADER + local_path + " not change" + Bcolors.ENDC)
 
 
+Makefile
+-------------------------------------------------------------
+
+.. code-block:: sh
+
+   # 如何设置子进程环境变量 https://stackoverflow.com/questions/23843106/how-to-set-child-process-environment-variable-in-makefile
+   test: export NODE_ENV = test
+
 Git
 -------------------------------------------------------------
 
