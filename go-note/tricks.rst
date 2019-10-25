@@ -288,6 +288,59 @@ Go int/int64 和 string 转换示例
 
 redio tricks
 --------------------------------------------------
-默认是没有超时时间的，注意设置超时时间。
+
+redis 连接超时
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+默认是没有超时时间的，注意设置超时时间（connect/read/write)。
 
 - https://ms2008.github.io/2019/07/04/golang-redis-deadlock/
+
+redis 单测如何 mock
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+reids mock 可以用 miniredis，以下是一个示例代码
+
+.. code-block:: go
+
+    package main
+
+    import (
+      "fmt"
+      "os"
+      "testing"
+
+      "github.com/alicebob/miniredis"
+      "github.com/go-redis/redis"
+      "github.com/stretchr/testify/assert"
+    )
+
+    var followImpl *Follow
+
+    func setupFollow() {
+      fmt.Println("setup")
+      mr, err := miniredis.Run()
+      if err != nil {
+        panic("init miniredis failed")
+      }
+      client := redis.NewClient(&redis.Options{
+        Addr: mr.Addr(),
+      })
+      _ = client.Set("key", "wang", 0).Err()
+      followImpl = &Follow{client: client}
+    }
+
+    func TestGet(t *testing.T) {
+      val, err := followImpl.Get("key")
+      followImpl.client.Set("key", "2", 0)
+      fmt.Println(val, err)
+      assert.Equal(t, val, "wang")
+    }
+
+    func TestPING(t *testing.T) {
+      PING()
+    }
+
+    func TestMain(m *testing.M) {
+      setupFollow()
+      code := m.Run()
+      os.Exit(code)
+    }

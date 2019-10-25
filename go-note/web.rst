@@ -116,9 +116,9 @@ Go项目Layout
 `如何写出优雅的 golang 代码 <https://draveness.me/golang-101>`_
 
 静态语言编写单测相比动态语言要难一些，动态语言中比如 python 可以很容易用 mock.patch 来做属性/方法替换。
-但是静态语言不行，一般难点在于如何去模拟外部依赖(比如数据库请求，redis 请求等)：
+但是静态语言不行，一般难点在于如何去模拟外部依赖(比如数据库/rpc请求，redis 请求等)：
 
-- 接口(go 推荐面向接口编程，否则你很难编写单测)
+- 接口(go 推荐面向接口编程，否则你很难使用 gomock 来编写单测)
 - mysql: 如何 mock 数据库请求。使用 sqlmock，或者编写 dao 层 interface，然后 mock 这个dao层接口
 - http: 使用 httpmock 来模拟请求返回值
 - redis: 这里我试了下 miniredis 比较好用，基于 go 实现，无需真实的 redis server
@@ -126,7 +126,7 @@ Go项目Layout
 也有一种方式在单测环境加入真实的db 和redis（比如 docker），然后单测读取测试环境的数据库来操作。
 这样的好处是可以不使用各种 mock 库，直接操作真实的 mysql，测试代码写起来也更方便。
 
-以下是用到的一些单测相关的库：
+以下是一些单测相关的库：
 
 - testing: 内置库
 - github.com/stretchr/testify/assert: 用来做断言 assert 方便
