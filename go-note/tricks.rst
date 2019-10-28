@@ -71,6 +71,25 @@ Go 运行单个测试文件报错 undefined？
         fmt.Println("is zero value")
     }
 
+go 如何实现函数默认值(go本身没提供)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+.. code-block:: go
+
+    // https://stackoverflow.com/questions/19612449/default-value-in-gos-method
+    // 可以通过传递零值或者 nil 的方式来判断。
+    // Both parameters are optional, use empty string for default value
+    func Concat1(a string, b int) string {
+      if a == "" {
+        a = "default-a"
+      }
+      if b == 0 {
+        b = 5
+      }
+
+      return fmt.Sprintf("%s%d", a, b)
+    }
+
 编译 tag 的作用
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
