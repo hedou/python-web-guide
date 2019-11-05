@@ -677,6 +677,9 @@ Git
     # then check out a copy from the index
     git checkout -- <file>
 
+    # git 注意不要把二进制大文件，视频文件等放入到版本库，可能会导致 .git 非常大，删了也无济于事
+   find . -executable -type f >>.gitignore # https://stackoverflow.com/questions/5711120/gitignore-without-binary-files
+
 
     # git 如何使用不同的 committer，除了每个项目和全局可以设置 gitconfig 里的 user 外，可以使用如下方式
     # https://stackoverflow.com/questions/4220416/can-i-specify-multiple-users-for-myself-in-gitconfig
