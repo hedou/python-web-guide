@@ -90,6 +90,14 @@ go 如何实现函数默认值(go本身没提供)
       return fmt.Sprintf("%s%d", a, b)
     }
 
+go 没有内置的 set 结构
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+go 目前没有提供泛型，也没提供一个统一的 set 数据结构。可以使用 map[string]bool 来模拟 set。
+或者使用第三方提供的 set 类型。
+
+- https://github.com/deckarep/golang-set
+- https://stackoverflow.com/questions/34018908/golang-why-dont-we-have-a-set-datastructure
+
 编译 tag 的作用
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
