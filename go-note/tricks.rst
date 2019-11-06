@@ -313,6 +313,26 @@ Go int/int64 和 string 转换示例
             fmt.Println(int64(n) == int64(97))
     }
 
+Go struct 如何设置默认值
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Go 的结构体成员没法直接设置默认值，使用的是每个类型的默认值，可以 New 构造函数里设置。
+
+.. code-block:: go
+
+    // https://stackoverflow.com/questions/37135193/how-to-set-default-values-in-go-structs
+    //Something is the structure we work with
+    type Something struct {
+         Text string
+         DefaultText string
+    }
+    // NewSomething create new instance of Something
+    func NewSomething(text string) Something {
+       something := Something{}
+       something.Text = text
+       something.DefaultText = "default text"
+       return something
+    }
+
 
 redio tricks
 --------------------------------------------------
