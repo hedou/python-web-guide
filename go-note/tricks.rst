@@ -333,6 +333,24 @@ Go 的结构体成员没法直接设置默认值，使用的是每个类型的�
        return something
     }
 
+Go 如何使用枚举值 Enum
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Go没有提供内置的枚举类型，不过可以使用自定义类型和常量值来实现枚举类型。
+并且还可以给自定义的类型定义方法。
+
+.. code-block:: go
+
+    type Base int
+
+    const (
+            A Base = iota
+            C
+            T
+            G
+    )
+
+- https://stackoverflow.com/questions/14426366/what-is-an-idiomatic-way-of-representing-enums-in-go
+- https://blog.learngoprogramming.com/golang-const-type-enums-iota-bc4befd096d3
 
 redio tricks
 --------------------------------------------------
