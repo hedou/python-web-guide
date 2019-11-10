@@ -30,6 +30,7 @@
 - Karabiner-Elements(mac): 改键工具 https://github.com/tekezo/Karabiner-Elements 也可以用来禁用内置键盘(mac自带修改capslock为 control)
 - autojump。方便在命令行里来回跳转目录。
 - Magnet/chunkwm/Amethyst 窗口管理辅助工具，拖拽窗口到屏幕边缘可以自动半屏， 全屏或者四分之一屏幕，还可以设定快捷键完成分屏，现在已经离不开magnet 分屏了。
+- Hammerspoon: 开源的mac窗口管理工具 https://github.com/Hammerspoon/hammerspoon
 - tldr: 更好的man手册。linux 命令很多，而且linux 的 man 手册比较难用，可以用这个 tldr 替代。https://github.com/tldr-pages/tldr
 - EditorConfig: http://editorconfig.org/ 用来统一编辑器配置。如果成员用不同的操作系统和编辑器，建议使用。尤其是对于 python 这种使用缩进的语言
 - mac-setup: https://github.com/sb2nov/mac-setup mac 下各种编程语言开发环境配置指引
