@@ -352,6 +352,13 @@ Go没有提供内置的枚举类型，不过可以使用自定义类型和常量
 - https://stackoverflow.com/questions/14426366/what-is-an-idiomatic-way-of-representing-enums-in-go
 - https://blog.learngoprogramming.com/golang-const-type-enums-iota-bc4befd096d3
 
+
+Go 如何断判非空字符串
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+标准库实际上 `len(s) != 0` 和 `s != ""` 都有使用，我个人倾向于 `s != ""` 看起来更清楚，区分其他容器类型判断的方式。
+
+
 redio tricks
 --------------------------------------------------
 
