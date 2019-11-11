@@ -160,6 +160,16 @@ Ipdb
    # 如果 pdb 里的内置命令和内置函数冲突了，可以加上 ! 使用内置函数
    !next(iter)
 
+Chrome(Mac)
+---------------------------------------------------------------
+.. code-block:: sh
+
+   # 使用 comamnd + l 可以立即定位到 url 输入框
+   # 使用 vimium 或者 surfingkeys 插件可以用 vim 的模式操作 chrome
+   # 用 vimium 如何不用鼠标从 url 输入框回到网页:
+   https://superuser.com/questions/324266/google-chrome-mac-set-keyboard-focus-from-address-bar-back-to-page/324267#324267
+   https://xavierchow.github.io/2016/03/07/vimium-leave-address-bar/
+
 Mac
 ---------------------------------------------------------------
 .. code-block:: python
