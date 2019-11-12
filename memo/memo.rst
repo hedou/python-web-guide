@@ -991,7 +991,11 @@ Capture -> Options -> lo0 抓本地 127.0.0.1 包。筛选 tcp.port == 6379 抓 
 HHKB 静电容键盘
 -------------------------------------------------------------
 
-Mac 可以用使用 Fn+Esc 休眠。
+- HHKB 开关我只打开了 2 （mac 模式），貌似网上有说打开开关 6 会出现无法唤醒的问题。
+- Mac 模式 HHKB 可以用使用 Fn+Esc 休眠。
+- 如何禁用内置键盘： Karabiner-Elements 同时可以禁用内置键盘，配置在 Devices -> Advanced， 勾选 Disable the built-in keyboard.
+- 网易云音乐切歌：使用 Fn + 7/8/9 分别是上一首，暂停和下一首
+
 如何使用 mac 使用 Karabiner-Elements  改键配置
 
 - https://github.com/tekezo/Karabiner-Elements
@@ -1004,4 +1008,4 @@ Mac 可以用使用 Fn+Esc 休眠。
 
 这里我把 right_command + WASD 修改成上下左右，方便 HHKB 方向键移动，默认的 HHKB 方向键不方便。
 
-如何禁用内置键盘： Karabiner-Elements 同时可以禁用内置键盘，配置在 Devices -> Advanced， 勾选 Disable the built-in keyboard.
+
