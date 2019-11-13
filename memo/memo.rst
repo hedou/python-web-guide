@@ -170,7 +170,7 @@ Chrome(Mac)
    https://superuser.com/questions/324266/google-chrome-mac-set-keyboard-focus-from-address-bar-back-to-page/324267#324267
    https://xavierchow.github.io/2016/03/07/vimium-leave-address-bar/
 
-Mac
+MacOS
 ---------------------------------------------------------------
 .. code-block:: python
 
@@ -252,7 +252,7 @@ Mac
    notify("开会啦", "Go Go Go !!!")
 
 
-Mac 蓝牙耳机
+Mac 蓝牙耳机(自用索尼 wi1000x)
 ---------------------------------------------------------------
 
 如何给Macbook Pro 开启 Apt-X 蓝牙音质 https://www.jianshu.com/p/a1efa561ed9e
@@ -287,7 +287,7 @@ Oh My Zsh
    # 解决方式：rm ~/.zcompdump*; rm ~/.zplug/zcompdump  # https://github.com/robbyrussell/oh-my-zsh/issues/3996
 
 
-Ubuntu相关
+Linux(centos/ubuntu)
 ---------------------------------------------------------------
 
 .. code-block:: python
