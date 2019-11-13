@@ -72,8 +72,7 @@ https://github.com/bhilburn/powerlevel9k/wiki/Show-Off-Your-Config
 --------------------------------------
 - https://typing.io/
 - https://www.keybr.com/
-- http://www.speedcoder.net/
-
+- http://www.speedcoder.net/  可以展示出来正确的指法
 
 Mac 屏保软件
 --------------------------------------
