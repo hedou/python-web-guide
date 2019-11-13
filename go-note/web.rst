@@ -204,6 +204,7 @@ Go 常用框架
 
 - web/rpc框架: gin, grpc, beego
 - 参数验证：go-playground/validator
+- json处理转换：go-simplejson/mapstructure
 - 配置解析: viper
 - mysql orm: gorm, sqlx
 - id生成器: rx/xid
