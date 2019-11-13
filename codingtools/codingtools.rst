@@ -7,34 +7,21 @@
 
   Do one thing, and do it well. - A principle of Unix philosopy
 
-工欲善其事，必先利其器(装逼工具)
+工欲善其事，必先利其器 开(装)发(逼)工具
 --------------------------------------------------
 
-- Pycharm。专业的python IDE，功能很强大，特别喜欢它的代码merge工具，不想被编辑器折腾死的推荐直接使用，五星级推荐。(除了内存占用大点)。如果你不喜欢折腾编辑器，请直接用 IDE，经常看见一些用裸编辑器写代码的，代码规范检测都没有。
-- vim。本人比较喜欢的编辑器，平常写代码、博客、文档等使用频繁，配上各种插件编辑效率很高。http://vimawesome.com/ 可以到这个上面安装排名靠前的那些插件，能够大大提高编辑效率，部分替代IDE(本人装了六七十个插件，满足各种变态的编辑需求)。其他优秀的编辑器sublime，atom，vscode，emacs等根据个人喜好来吧，不过vim等终端友好的编辑器方便在服务器上直接写代码，和本地体验一样，缺点就是补全和跳转支持不完善，对新人不友好，也可以 Pycharm  和 vim插件配合。(在google搜索python awesome等可以在github上搜索到一些awesome项目，总结了该语言很多技术工具)。网上还有很多牛人开源了自己的 dotfiles，我们可以参考下别人的 vimrc 配置。
-- neovim: 新时代的 vim，我在这个配置(https://github.com/PegasusWang/vim-config)上自定义了自己的配置，使用起来性能和反应速度上远超原生的老古董 vim，目前笔者已经全面迁移到 neovim，用着很爽。感兴趣可以关注笔者知乎专栏，我录了一些针对初学者的教学视频。
-- ranger: 用 vim 的方式管理文件，替代 mac 下难用的 finder。
-- oni: https://github.com/onivim/oni/ 构建在 neovim 上的 IDE。还有 VimR 等项目。
+- Pycharm(JB全家桶)。专业的python IDE，功能很强大，特别喜欢它的代码merge工具，不想被编辑器折腾死的推荐直接使用，五星级推荐。(除了内存占用大点)。如果你不喜欢折腾编辑器，请直接用 IDE，经常看见一些用裸编辑器写代码的，代码规范检测都没有。
 - meld/vimdiff/kdiff3: 跨平台的文件对比和冲突合并工具。
-- tmux/tmuxp。比screen好用，可以用来分屏，托管进程等，服务器端必备神器，ubuntu下基本就不用使用terminator之类的分屏工具了。最近看youtube视频还发现有人在服务器上使用tmux和vim结对编程，两个人同时attach到一个session里，基情四射。
-- wemux: tmux 共享，https://github.com/zolrath/wemux
-- sshfs: 本地挂在服务器文件夹
-- tmate: https://tmate.io 终端共享工具，结对编程。很多现代化编辑器 vscode, atom 提供结对编程的插件。
-- asciinema: 终端会话记录工具。https://asciinema.org/ 可以用来录制终端演示操作，而不用录屏。
-- oh-my-zsh。替代原生的bash shell，提供了好多方便的特性和漂亮主题，支持插件比如 zsh autocomplete。linux/mac下vim+tmux+zsh简直是绝配，甚至可以直接在服务器上方便地撸代码，跟本地开发体验没区别。
 - item2(mac)。替代原生的终端。https://medium.com/@RyanDavidson/make-your-terminal-more-colourful-and-productive-with-iterm2-and-zsh-11b91607b98c
-- brew(mac)。类似ubuntu下的apt-get，可以方便安转各种软件和工具。
 - Alfred(mac): mac 下一款功能强大的工具，不过我一般只用它快速打开软件(比如直接输入app名前缀快速切换不同app)。可以用 python 编写一些自己的 workflow 提高效率(https://github.com/deanishe/alfred-workflow)，比如把时间戳转成日期等。 https://github.com/derimagia/awesome-alfred-workflows
 - Dash(mac): 强悍的文档查询工具。支持非常多编程语言和框架。windows 和 linux 可以用 Zeal。或者 https://devdocs.io/
 - devdocs.io: 文档查询工具
 - Karabiner-Elements(mac): 改键工具 https://github.com/tekezo/Karabiner-Elements 也可以用来禁用内置键盘(mac自带修改capslock为 control)
-- autojump。方便在命令行里来回跳转目录。
 - Magnet/chunkwm/Amethyst/yabai 窗口管理辅助工具，拖拽窗口到屏幕边缘可以自动半屏， 全屏或者四分之一屏幕，还可以设定快捷键完成分屏，现在已经离不开magnet 分屏了。
 - Hammerspoon: 开源的mac窗口管理工具 https://github.com/Hammerspoon/hammerspoon
-- tldr: 更好的man手册。linux 命令很多，而且linux 的 man 手册比较难用，可以用这个 tldr 替代。https://github.com/tldr-pages/tldr
 - EditorConfig: http://editorconfig.org/ 用来统一编辑器配置。如果成员用不同的操作系统和编辑器，建议使用。尤其是对于 python 这种使用缩进的语言
-- mac-setup: https://github.com/sb2nov/mac-setup mac 下各种编程语言开发环境配置指引
 - CheatSheet: https://www.mediaatelier.com/CheatSheet/ 显示 mac 快捷键
+- mac-setup: https://github.com/sb2nov/mac-setup mac 下各种编程语言开发环境配置指引
 
 一定要有个趁手的开发工具(它甚至比你女朋友都重要)，不管是IDE还是编辑器，你程序员生涯的小半辈子都在和它打交道(提升编辑效率的秘诀在于多用键盘快捷键，少用鼠标，以及可以高度定制、和扩展功能的编辑器)。甚至编程字体你都要谨慎选取，比如字体可以很好区分'1', 'l', 'I', '0', 'O', 'S', '5'等易混淆字符，给浏览代码带来便利。如果使用的是mac可以google下 "Mac OS X development environment setup"，有惊喜呦。最后注意你用编辑器的话一定要用 pylint，pep8 检测插件，否则不遵守规范可能会导致用 IDE 打开项目后一堆警告(别人会想问候你祖宗的)。
 更多 mac 工具可以参考：https://github.com/jaywcjlove/awesome-mac 。搜 awesome-python 或者 awesome-flask 等有很多类似项目。
@@ -51,6 +38,23 @@
 * `《使用vim+tmux+zsh+autojump高效工作》 <http://ningning.today/2016/11/09/tools/vim-tmux-zsh-autojump/>`_
 * `《玩转 vim 与 Terminal (视频)》 <https://zhuanlan.zhihu.com/vim-video>`_
 * `《Mac 无鼠标编程指南（视频)》 <https://zhuanlan.zhihu.com/p/91031876>`_
+
+命令行工具
+--------------------------------------
+- vim。本人比较喜欢的编辑器，平常写代码、博客、文档等使用频繁，配上各种插件编辑效率很高。http://vimawesome.com/ 可以到这个上面安装排名靠前的那些插件，能够大大提高编辑效率，部分替代IDE(本人装了六七十个插件，满足各种变态的编辑需求)。其他优秀的编辑器sublime，atom，vscode，emacs等根据个人喜好来吧，不过vim等终端友好的编辑器方便在服务器上直接写代码，和本地体验一样，缺点就是补全和跳转支持不完善，对新人不友好，也可以 Pycharm  和 vim插件配合。(在google搜索python awesome等可以在github上搜索到一些awesome项目，总结了该语言很多技术工具)。网上还有很多牛人开源了自己的 dotfiles，我们可以参考下别人的 vimrc 配置。
+- neovim: 新时代的 vim，我在这个配置(https://github.com/PegasusWang/vim-config)上自定义了自己的配置，使用起来性能和反应速度上远超原生的老古董 vim，目前笔者已经全面迁移到 neovim，用着很爽。感兴趣可以关注笔者知乎专栏，我录了一些针对初学者的教学视频。
+- ranger: 用 vim 的方式管理文件，替代 mac 下难用的 finder。
+- oni: https://github.com/onivim/oni/ 构建在 neovim 上的 IDE。还有 VimR 等项目。
+- tmux/tmuxp。比screen好用，可以用来分屏，托管进程等，服务器端必备神器，ubuntu下基本就不用使用terminator之类的分屏工具了。最近看youtube视频还发现有人在服务器上使用tmux和vim结对编程，两个人同时attach到一个session里，基情四射。
+- wemux: tmux 共享，https://github.com/zolrath/wemux
+- sshfs: 本地挂在服务器文件夹
+- tmate: https://tmate.io 终端共享工具，结对编程。很多现代化编辑器 vscode, atom 提供结对编程的插件。
+- asciinema: 终端会话记录工具。https://asciinema.org/ 可以用来录制终端演示操作，而不用录屏。
+- oh-my-zsh。替代原生的bash shell，提供了好多方便的特性和漂亮主题，支持插件比如 zsh autocomplete。linux/mac下vim+tmux+zsh简直是绝配，甚至可以直接在服务器上方便地撸代码，跟本地开发体验没区别。
+- brew(mac)。类似ubuntu下的apt-get，可以方便安转各种软件和工具。
+- autojump。方便在命令行里来回跳转目录。
+- tldr: 列举出常见命令行工具用法。linux 命令行很多参数又不好记，man 手册比较难用，可以用这个 tldr 替代。https://github.com/tldr-pages/tldr
+- rmtrash/safe-rm: linux 自带的 rm 非常危险，可以使用安全删除工具先放到垃圾桶。`saferm  <https://zhuanlan.zhihu.com/p/91515325>`_
 
 Mac 终端快速配置
 --------------------------------------
