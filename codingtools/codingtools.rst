@@ -204,6 +204,8 @@ DSL
 - pandoc: 用于各种格式文档之间的转换，比如 html->markdown, html->rst, markdown->rst
 - Onenote: 微软出品笔记工具，手写和绘图功能很不错，笔者在一些教程里使用它来绘图演示
 
+参考: `Self-publishing a book with reStructuredText, Sphinx, Calibre, and vim <https://digitalsuperpowers.com/blog/2019-02-16-publishing-ebook.html>`_
+
 Swagger 工具
 --------------------------------------
 - swagger编辑器: https://swagger.io/tools/swagger-editor/
@@ -222,7 +224,7 @@ Swagger 工具
 
 - Sentry: 用来记录异常非常好用，能看到完善的栈信息，方便排错。
 - Fluentd
-- ELK
+- ELK: Elasticsearch, Logstash, Kibana
 
 管理及运维、监控工具(devops很火)
 --------------------------------------
