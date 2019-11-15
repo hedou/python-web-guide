@@ -3,11 +3,10 @@
 Go踩坑
 =====================================================================
 
-go初学者常见错误
+go初学者常见错误(强烈建议新手看一些避免一些坑)
 --------------------------------------------------
 
 - `50 Shades of Go: Traps, Gotchas, and Common Mistakes for New Golang Devs  <http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/>`_
-
 
 Go tricks
 --------------------------------------------------
