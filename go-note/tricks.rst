@@ -363,6 +363,43 @@ Go 如何格式化参数
 
 - https://yourbasic.org/golang/fmt-printf-reference-cheat-sheet/
 
+Go 如何复制map
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+注意 go 和其他很多编程语言一样，对于复合结构是浅拷贝。几个变量指向同一个复合结构的时候注意修改一个对其他变量也是可见的。
+
+.. code-block:: go
+
+    // https://stackoverflow.com/questions/23057785/how-to-copy-a-map
+    func copyMap(src map[string]string) map[string]string {
+      res := make(map[string]string)
+      for k, v := range src {
+        res[k] = v
+      }
+      return res
+    }
+
+    func testShareMap() {
+      am := []map[string]string{
+        map[string]string{"a1": "a1", "b1": "b1"},
+        map[string]string{"a2": "a2", "b2": "b2"},
+      }
+      bm := am
+      bm[0]["a1"] = "testbm" // NOTE 这里修改了b，a 里边的也会变。共享 map
+      fmt.Println(am)
+
+      var cm []map[string]string
+      for _, m := range am {
+        cm = append(cm, copyMap(m))
+      }
+      cm[0]["a1"] = "testcm" // will not modify am
+      fmt.Println(am)
+    }
+
+    func main() {
+      testShareMap()
+    }
+
+
 redio tricks
 --------------------------------------------------
 
