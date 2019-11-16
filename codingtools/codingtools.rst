@@ -77,7 +77,7 @@ https://github.com/bhilburn/powerlevel9k/wiki/Show-Off-Your-Config
 - https://www.keybr.com/
 - http://www.speedcoder.net/  可以展示出来正确的指法
 - https://www.typing-lessons.org/ 一套系列的打字和指法教程，没事的时候可以练习一下，摆脱二指禅打字
-- gtypist 一个linux/MacOS 命令行打字练习工具
+- gtypist (brew install gnu-typist; gtypist) 一个linux/MacOS 命令行打字练习工具
 
 Mac 屏保软件
 --------------------------------------
