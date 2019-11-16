@@ -70,10 +70,12 @@ https://github.com/bhilburn/powerlevel9k/wiki/Show-Off-Your-Config
 
 打字速度练习
 --------------------------------------
+虽然程序员不是打字员，但是对笔者来说，需要记录大量文档和笔记，高效的键盘和打字速度可以增加(我使用 HHKB+Vim)码字效率。
+
 - https://typing.io/
 - https://www.keybr.com/
 - http://www.speedcoder.net/  可以展示出来正确的指法
-- https://www.typing-lessons.org/
+- https://www.typing-lessons.org/ 一套系列的打字和指法教程，没事的时候可以练习一下
 
 Mac 屏保软件
 --------------------------------------
