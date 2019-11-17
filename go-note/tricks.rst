@@ -474,6 +474,27 @@ Go 如何复制map
             testField()
     }
 
+Failed Type Assertions
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+.. code-block:: go
+
+    package main
+
+    import "fmt"
+
+    func main() {
+            var data interface{} = "hehe"
+            // NOTE: 这里不要用 同名的 data 变量，比如换成 dataInt
+            if data, ok := data.(int); ok {
+                    fmt.Println("[is an int] value =>", data)
+            } else {
+                    fmt.Println("[not an int] value =>", data)
+                    // NOTE ：注意 data 已经被失败的 type assert 赋值成了0
+            }
+    }
+
+
 redio tricks
 --------------------------------------------------
 
