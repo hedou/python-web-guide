@@ -399,6 +399,80 @@ Go 如何复制map
       testShareMap()
     }
 
+闭包问题
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+.. code-block:: go
+
+    package main
+
+    import (
+            "fmt"
+            "time"
+    )
+
+    // 闭包问题
+
+    func testClosure() {
+            data := []string{"one", "two", "three"}
+            for _, v := range data {
+                    go func() {
+                            fmt.Println(v)
+                    }()
+            }
+            time.Sleep(1 * time.Second) // not good, just for demo
+            // three three three
+    }
+
+    // 两种方式解决：1.使用一个for 循环临时变量
+    func testClosure1() {
+            data := []string{"one", "two", "three"}
+            for _, v := range data {
+                    vcopy := v
+                    go func() {
+                            fmt.Println(vcopy)
+                    }()
+            }
+            time.Sleep(1 * time.Second) // not good, just for demo
+            // one two three (may wrong order)
+    }
+
+    // 方法2：使用传给匿名goroutine参数
+    func testClosure2() {
+            data := []string{"one", "two", "three"}
+            for _, v := range data {
+                    go func(in string) {
+                            fmt.Println(in)
+                    }(v)
+            }
+            time.Sleep(1 * time.Second) // not good, just for demo
+            // one two three (may wrong order)
+    }
+
+    type field struct {
+            name string
+    }
+
+    func (p *field) print() {
+            fmt.Println(p.name)
+    }
+
+    func testField() {
+            data := []field{{"one"}, {"two"}, {"three"}}
+            for _, v := range data {
+                    // v := v    // NOTE：直接这样就可以解决，
+                    // 或者使用 struct 指针。 []*field 初始化
+                    go v.print() // print three three three
+            }
+            time.Sleep(1 * time.Second)
+    }
+
+    func main() {
+            // testClosure()
+            // testClosure1()
+            // testClosure2()
+            testField()
+    }
 
 redio tricks
 --------------------------------------------------
