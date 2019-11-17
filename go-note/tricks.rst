@@ -495,6 +495,10 @@ Failed Type Assertions
     }
 
 
+逃逸分析
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+想要知道变量在 stask 还是 heap 分配使用 `go run -gcflags -m app.go`
+
 redio tricks
 --------------------------------------------------
 
