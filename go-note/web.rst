@@ -242,6 +242,7 @@ Go Profiler
 - pprof
 - github.com/uber/go-troch: Flame graph profiler for Go programs，火焰图工具，配合压测看性能瓶颈
 - https://cizixs.com/2017/09/11/profiling-golang-program/
+- https://software.intel.com/en-us/blogs/2014/05/10/debugging-performance-issues-in-go-programs
 
 Goroutines
 ---------------------------------------------------------------
