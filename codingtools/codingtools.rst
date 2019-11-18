@@ -73,11 +73,12 @@ https://github.com/bhilburn/powerlevel9k/wiki/Show-Off-Your-Config
 虽然程序员不是打字员，但是对笔者来说，需要记录大量文档和阅读笔记，高效的键盘和打字速度可以大幅增加(我使用 HHKB键盘+Vim编辑器无鼠标编程)码字效率。
 打字速度上去以后(一开始正确率比速度重要)，你可能会更加喜欢记录文档和笔记了，脑子里的想法可以快速用键盘来实现出来。
 
-- https://typing.io/
+- https://www.ratatype.com/typing-test/  先来做一个 wpm 测试吧
+- https://typing.io/  包含代码片段的练习网站
 - https://www.keybr.com/
 - http://www.speedcoder.net/  可以展示出来正确的指法
-- https://www.typing-lessons.org/ 一套系列的打字和指法教程，没事的时候可以练习一下，摆脱二指禅打字
-- https://www.keyhero.com/wpm-typing-tips/
+- https://www.typing-lessons.org/ 一套系列的打字和指法教程，没事的时候可以练习一下，摆脱二指禅打字。笔者目前就练习这个
+- https://www.keyhero.com/wpm-typing-tips/ 同样一个针对程序员的打字练习网站
 - gtypist (brew install gnu-typist; gtypist) 一个linux/MacOS 命令行打字练习工具
 
 Mac 屏保软件
