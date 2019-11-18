@@ -244,6 +244,11 @@ Go Profiler
 - https://cizixs.com/2017/09/11/profiling-golang-program/
 - https://software.intel.com/en-us/blogs/2014/05/10/debugging-performance-issues-in-go-programs
 
+Go 性能优化
+---------------------------------------------------------------
+- https://github.com/dgryski/go-perfbook
+- https://dave.cheney.net/high-performance-go-workshop/dotgo-paris.html
+
 Goroutines
 ---------------------------------------------------------------
 - https://medium.com/@vigneshsk/how-to-write-high-performance-code-in-golang-using-go-routines-227edf979c3c
