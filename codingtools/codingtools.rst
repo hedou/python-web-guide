@@ -11,6 +11,7 @@
 --------------------------------------------------
 
 - Pycharm/IDEA/Goland(JB全家桶)。专业的python IDE，功能很强大，特别喜欢它的代码merge工具，不想被编辑器折腾死的推荐直接使用，五星级推荐。(除了内存占用大点)。如果你不喜欢折腾编辑器，请直接用 IDE，经常看见一些用裸编辑器写代码的，代码规范检测都没有。
+- Neovim/vim/Emacs/Vscode/Sublime/Atom: 跨平台的编辑器
 - meld/vimdiff/kdiff3: 跨平台的文件对比和冲突合并工具。
 - devdocs.io: 文档查询工具，可以在线查询
 - EditorConfig: http://editorconfig.org/ 用来统一编辑器配置。如果成员用不同的操作系统和编辑器，建议使用。尤其是对于 python 这种使用缩进的语言
