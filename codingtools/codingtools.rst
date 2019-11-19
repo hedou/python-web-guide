@@ -10,18 +10,10 @@
 工欲善其事，必先利其器 开(装)发(逼)工具
 --------------------------------------------------
 
-- Pycharm(JB全家桶)。专业的python IDE，功能很强大，特别喜欢它的代码merge工具，不想被编辑器折腾死的推荐直接使用，五星级推荐。(除了内存占用大点)。如果你不喜欢折腾编辑器，请直接用 IDE，经常看见一些用裸编辑器写代码的，代码规范检测都没有。
+- Pycharm/IDEA/Goland(JB全家桶)。专业的python IDE，功能很强大，特别喜欢它的代码merge工具，不想被编辑器折腾死的推荐直接使用，五星级推荐。(除了内存占用大点)。如果你不喜欢折腾编辑器，请直接用 IDE，经常看见一些用裸编辑器写代码的，代码规范检测都没有。
 - meld/vimdiff/kdiff3: 跨平台的文件对比和冲突合并工具。
-- item2(mac)。替代原生的终端。https://medium.com/@RyanDavidson/make-your-terminal-more-colourful-and-productive-with-iterm2-and-zsh-11b91607b98c
-- Alfred(mac): mac 下一款功能强大的工具，不过我一般只用它快速打开软件(比如直接输入app名前缀快速切换不同app)。可以用 python 编写一些自己的 workflow 提高效率(https://github.com/deanishe/alfred-workflow)，比如把时间戳转成日期等。 https://github.com/derimagia/awesome-alfred-workflows
-- Dash(mac): 强悍的文档查询工具。支持非常多编程语言和框架。windows 和 linux 可以用 Zeal。或者 https://devdocs.io/
-- devdocs.io: 文档查询工具
-- Karabiner-Elements(mac): 改键工具 https://github.com/tekezo/Karabiner-Elements 也可以用来禁用内置键盘(mac自带修改capslock为 control)
-- Magnet/chunkwm/Amethyst/yabai 窗口管理辅助工具，拖拽窗口到屏幕边缘可以自动半屏， 全屏或者四分之一屏幕，还可以设定快捷键完成分屏，现在已经离不开magnet 分屏了。
-- Hammerspoon: 开源的mac窗口管理工具 https://github.com/Hammerspoon/hammerspoon
+- devdocs.io: 文档查询工具，可以在线查询
 - EditorConfig: http://editorconfig.org/ 用来统一编辑器配置。如果成员用不同的操作系统和编辑器，建议使用。尤其是对于 python 这种使用缩进的语言
-- CheatSheet: https://www.mediaatelier.com/CheatSheet/ 显示 mac 快捷键
-- mac-setup: https://github.com/sb2nov/mac-setup mac 下各种编程语言开发环境配置指引
 
 一定要有个趁手的开发工具(它甚至比你女朋友都重要)，不管是IDE还是编辑器，你程序员生涯的小半辈子都在和它打交道(提升编辑效率的秘诀在于多用键盘快捷键，少用鼠标，以及可以高度定制、和扩展功能的编辑器)。甚至编程字体你都要谨慎选取，比如字体可以很好区分'1', 'l', 'I', '0', 'O', 'S', '5'等易混淆字符，给浏览代码带来便利。如果使用的是mac可以google下 "Mac OS X development environment setup"，有惊喜呦。最后注意你用编辑器的话一定要用 pylint，pep8 检测插件，否则不遵守规范可能会导致用 IDE 打开项目后一堆警告(别人会想问候你祖宗的)。
 更多 mac 工具可以参考：https://github.com/jaywcjlove/awesome-mac 。搜 awesome-python 或者 awesome-flask 等有很多类似项目。
@@ -38,6 +30,20 @@
 * `《使用vim+tmux+zsh+autojump高效工作》 <http://ningning.today/2016/11/09/tools/vim-tmux-zsh-autojump/>`_
 * `《玩转 vim 与 Terminal (视频)》 <https://zhuanlan.zhihu.com/vim-video>`_
 * `《Mac 无鼠标编程指南（视频)》 <https://zhuanlan.zhihu.com/p/91031876>`_
+
+
+MacOS 效率工具
+--------------------------------------------------
+- Item2: 替代原生的终端。https://medium.com/@RyanDavidson/make-your-terminal-more-colourful-and-productive-with-iterm2-and-zsh-11b91607b98c
+- Alfred: mac 下一款功能强大的工具，不过我一般只用它快速打开软件(比如直接输入app名前缀快速切换不同app)。可以用 python 编写一些自己的 workflow 提高效率(https://github.com/deanishe/alfred-workflow)，比如把时间戳转成日期等。 https://github.com/derimagia/awesome-alfred-workflows
+- Dash: 强悍的文档查询工具。支持非常多编程语言和框架。windows 和 linux 可以用 Zeal。或者 https://devdocs.io/
+- CheatSheet: https://www.mediaatelier.com/CheatSheet/ 显示 mac 快捷键
+- mac-setup: https://github.com/sb2nov/mac-setup mac 下各种编程语言开发环境配置指引
+- Hammerspoon: 开源的mac窗口管理工具 https://github.com/Hammerspoon/hammerspoon
+- Magnet/chunkwm/Amethyst/yabai 窗口管理辅助工具，拖拽窗口到屏幕边缘可以自动半屏， 全屏或者四分之一屏幕，还可以设定快捷键完成分屏，现在已经离不开magnet 分屏了。
+- Karabiner-Elements(mac): 改键工具 https://github.com/tekezo/Karabiner-Elements 也可以用来禁用内置键盘(mac自带修改capslock为 control)
+- Be Focused: mac 下番茄工作法工具，可以用来给任务计时，或者提醒该休息下了
+- Qbserve: https://qotoqot.com/qbserve/ 一个 mac 下的时间追踪软件，可以查看自己在不同软件耗时，改善时间和工作管理
 
 命令行工具
 --------------------------------------
