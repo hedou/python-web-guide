@@ -81,3 +81,4 @@ Netflix 开源的 Hystrix 是比较流行的开源实现，对应的有各种其
 ----------------------
 
 - https://github.com/doocs/advanced-java
+- 《微服架构设计模式》
