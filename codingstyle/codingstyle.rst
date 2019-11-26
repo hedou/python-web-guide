@@ -755,6 +755,7 @@ Code Review(代码复查)
 
 * `《https://www.kevinlondon.com/2015/05/05/code-review-best-practices.html》 <https://www.kevinlondon.com/2015/05/05/code-review-best-practices.html>`_
 * `《如何用人类的方式进行 Code Review》 <https://zhuanlan.zhihu.com/p/31581735>`_
+* `《硅谷 Code Review 流程图》 <https://www.infoq.cn/article/tQrY-B15aRoBdzyr2aOh?utm_source=weibo&utm_medium=infoq&utm_campaign=newinfoq&utm_content=0515Airbnb>`_
 
 
 日志与异常记录
