@@ -60,6 +60,45 @@ Go 运行单个测试文件报错 undefined？
 - https://www.cnblogs.com/Detector/p/10010292.html
 - https://stackoverflow.com/questions/14723229/go-test-cant-find-function-in-a-same-package
 
+Go 循环遍历 []struct 是值传递
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+注意循环遍历一个结构体切片是值传递，如果想要修改 struct 的值，请使用下标赋值或者用结构体指针。
+
+.. code-block:: go
+
+    type Cat struct {
+      name string
+    }
+
+    func testSliceAssign() {
+      cats := []Cat{
+        {name: "cat1"},
+        {name: "cat2"},
+      }
+      for _, cat := range cats {
+        cat.name = "new cat"
+      }
+      fmt.Println(cats) // 无法修改 [{cat1} {cat2}]
+
+      // 方式1：使用下标
+      for i, _ := range cats {
+        cats[i].name = "new cat"
+      }
+      fmt.Println(cats) //
+      // 方式2：使用struct 指针
+      pcats := []*Cat{
+        {name: "cat1"},
+        {name: "cat2"},
+      }
+      for _, cat := range pcats {
+        cat.name = "new cat"
+      }
+      for _, cat := range pcats {
+        fmt.Println(cat)
+      }
+    }
+
+
 如何判断一个空结构体(empty struct)
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
