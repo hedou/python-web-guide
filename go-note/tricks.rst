@@ -5,7 +5,8 @@ Go踩坑
 
 go初学者常见错误
 ---------------------------------------------------------------
-强烈建议 go 新手过一遍下边这篇文章，go 写多了你一定会遇到很多里边总结的坑。
+强烈建议 go 新手先过一遍下边这篇文章，go 写多了你一定会遇到很多里边总结的坑。下文是笔者日常使用 go 的过程中碰到的一些
+问题或者语法上需要注意的坑，可以作为参考。
 
 - `50 Shades of Go: Traps, Gotchas, and Common Mistakes for New Golang Devs  <http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/>`_
 
@@ -75,7 +76,7 @@ Go 循环遍历 []struct 是值传递
         {name: "cat1"},
         {name: "cat2"},
       }
-      for _, cat := range cats {
+      for _, cat := range cats { // cat 这里是拷贝的值
         cat.name = "new cat"
       }
       fmt.Println(cats) // 无法修改 [{cat1} {cat2}]
@@ -84,7 +85,8 @@ Go 循环遍历 []struct 是值传递
       for i, _ := range cats {
         cats[i].name = "new cat"
       }
-      fmt.Println(cats) //
+      fmt.Println(cats)
+
       // 方式2：使用struct 指针
       pcats := []*Cat{
         {name: "cat1"},
