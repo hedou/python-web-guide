@@ -174,6 +174,7 @@ MacOS
 ---------------------------------------------------------------
 .. code-block:: python
 
+   # NOTE: 使用『时间机器』定期备份你的mac 是一个好习惯，笔者买了一个移动硬盘用来定期备份
    # 文件字符串批量替换，git项目里替换的时候注意指定文件类型，防止破坏git信息
    find . -name \*.py -exec sed -i '' 's/old/new/g' {} \;
    # copy that data into the system’s paste buffer
