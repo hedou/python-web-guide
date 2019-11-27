@@ -404,7 +404,7 @@ python 代码性能优化相关：
   - 并发：使用 gevent(greenlet)、多线程 等并发请求数据，配合 gunicorn(master-slave模型) 部署。不过需要注意使用 gevent mysql driver 需要纯 python 编写的 driver 才能被 monkey patch
   - 多线程/多进程：python 虽然有 GIL，但是 I/O 期间会释放 GIL，多线程仍可以大幅提升 I/O 密集应用的性能；多进程适用于 cpu 密集型应用。(threading/multiprocessing/concurrent.futures)
 
-目前来看基于 gevent 的并发方案是目前比较成熟的方案，也是很多公司首选的方案，在很多公司都有使用，asyncio 生态圈等待成熟。
+目前来看基于 gevent+gunicorn 的并发方案是目前比较成熟的方案(知乎就是这么用)，业务代码无需修改，也是很多公司首选的方案，在很多公司都有使用，asyncio 生态圈等待成熟。
 
 * `《常见性能优化策略的总结-美团点评技术博客》 <https://zhuanlan.zhihu.com/p/24401056>`_
 * `《High Performance Python》 <http://ningning.today/2017/02/05/python/high-performance-python/>`_
@@ -788,6 +788,7 @@ Code Review(代码复查)
 - 断点调试。看变量值。二分法(分而治之)排查代码位置，快速试错定位。比如一个地方很有隐秘的错误，但是又不好快速确定位置，我们就可以用二分加断点的方式快速定位到具体哪一块出了问题。
 - 使用调试器(命令行or IDE 调试工具）。 ipdb/pdb 断点配合 python 一些内置方法比如 `print/vars/locals/pprint` 等断点调试，使用 curl/chrome 开发者工具/mitmproxy 等调试请求。代码异常可以通过 `import traceback; traceback.print_exc()` 打印出来。
 - 日志比对/输入输出对拍。在重构系统的时候，首先保持原有系统和重构之后代码的正确性。可以通过比对日志，比对输入和输出的方式确保正确
+- 记录灵感/想法/可能的原因等，做排除法，缩小问题范围。
 - 依赖库bug。一般经过广泛使用的第三方库是可以信赖的，但是公司自己造的轮子（尤其是文档和单测都没有的），还是有可能出 bug 的。有可能是依赖而非自己代码逻辑 bug。
 - 服务器负载。常见服务器指标 cpu/io/memory 是否被打满，是否无法继续正常服务，如果是服务器负载问题也会导致逻辑失败，不一定是代码逻辑问题。
 
