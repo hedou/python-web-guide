@@ -256,3 +256,9 @@ Web 开发常用 Python 库(Golang 常用库请参考 golang 章节)
 - python2/3 兼容：six, 2to3
 - 代码检测：autopep8, pylint, flake8, mypy(python3)
 - 调试：Ipython, Ipdb, pdbpp
+
+裁员与法律援助
+------------------------------------------------------------------------------
+最近几年裁员事件逐渐增多，作为一个码农，要适当了解法律常识，学会维护自己的合法权益。
+
+- `如何看待网传网易裁员，让保安把身患绝症的 5 年老员工赶出公司一事？ <https://www.zhihu.com/question/357459810/answer/913255932?utm_source=wechat_session&utm_medium=social&utm_oi=31478419292160>`_
