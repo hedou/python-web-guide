@@ -420,6 +420,9 @@ Iterm2
    # https://stackoverflow.com/questions/11913990/iterm2-keyboard-shortcut-for-moving-tabs-around
    # Preferences/Keys 自定义配置使用 Cmd +jk 来在 Iterm2 tab 前后移动，模仿 vim 键位
 
+   # 如何防止 command+w 意外关闭导致工作丢失，这里可以如下设置，每次关闭提醒
+   # Settings -> Profiles -> Session -> Prompt before closing 勾选 Always
+
 
 Tmux
 -------------------------------------------------------------
@@ -1008,5 +1011,3 @@ HHKB 静电容键盘
 ~/.config/karabiner/assets/complex_modifications/wasd.json
 
 这里我把 right_command + WASD 修改成上下左右，方便 HHKB 方向键移动，默认的 HHKB 方向键不方便。
-
-
