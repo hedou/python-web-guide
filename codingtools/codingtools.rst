@@ -74,7 +74,10 @@ Mac 终端快速配置
 - 最好安装 tmux 用来替代iterm2 分屏
 - 按需安装 htop/autojump/z/fzf/ag 等命令行工具(使用 brew 可以安装)
 
-https://github.com/bhilburn/powerlevel9k/wiki/Show-Off-Your-Config
+可以参考我的快速配置教程：
+
+- https://github.com/PegasusWang/linux_config/tree/master/mac 笔者的 MacOS 终端快速配置
+- https://github.com/bhilburn/powerlevel9k/wiki/Show-Off-Your-Config
 
 打字速度练习
 --------------------------------------
