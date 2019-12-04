@@ -211,7 +211,7 @@ DSL
 文档/写书/笔记工具
 --------------------------------------
 - google doc/石墨: 支持多人协作编辑
-- gitbook + markdown: 可以写文档或电子书，托管到 github 上，可以生成 pdf。
+- gitbook/docsify + markdown: 可以写文档或电子书，托管到 github 上，可以生成 pdf。
 - doocer: http://doocer.com/ 写 kindle 电子书工具
 - sphinx + readthedoc(或者 mkdocs，支持 markdown) （代码即文档），python 项目很多在用这个生成文档。这本小书就是这么写出来的。`编写《Redis 设计与实现》时用到的工具 <http://blog.huangz.me/diary/2013/tools-for-writing-redisbook.html>`_
 - swagger/apidocjs: 适合写 restful 文档。如果使用 grpc 可以直接生成。
