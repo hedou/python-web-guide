@@ -201,6 +201,7 @@ Go 常用框架
 ---------------------------------------------------------------
 技术选型一般选择接口稳定，更新快，生态相对成熟，star 数量较高，用户广泛的库，坑少一点。
 后前分离时代用 gin 之类的框架写app后台还是挺快的，但是感觉做并发不高的内部后台业务还是用脚本python/php之类的更快。
+以下第三方库均可以通过 google + 关键词搜索到。
 
 - web/rpc框架: gin, grpc, beego
 - 参数验证：go-playground/validator
@@ -210,6 +211,11 @@ Go 常用框架
 - id生成器: rx/xid
 - redis: go-redis, redigo
 - cache(in memory): patrickmn/go-cache
+- 并发/协程池(star 数排序)：
+
+  - https://github.com/Jeffail/tunny
+  - https://github.com/benmanns/goworker
+  - https://github.com/rafaeldias/async
 - 异步任务框架: machinery, gocelery
 - 定时任务：robfig/cron
 - 熔断：hystrix-go, eapache/go-resiliency, cep21/circuit
@@ -218,6 +224,7 @@ Go 常用框架
 - 调试：go-spew/dlv
 - 图片处理：h2non/imaginary
 - 网络编程：fatih/pool
+- 表格：go-echarts
 
 工具:
 

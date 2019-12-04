@@ -5,8 +5,7 @@ Go踩坑
 
 go初学者常见错误
 ---------------------------------------------------------------
-强烈建议 go 新手先过一遍下边这篇文章，go 写多了你一定会遇到很多里边总结的坑。下文是笔者日常使用 go 的过程中碰到的一些
-问题或者语法上需要注意的坑，可以作为参考。
+强烈建议 go 新手先过一遍下边这篇文章，go 写多了你一定会遇到很多里边总结的坑。
 
 - `50 Shades of Go: Traps, Gotchas, and Common Mistakes for New Golang Devs  <http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/>`_
 
