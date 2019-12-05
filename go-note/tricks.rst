@@ -309,8 +309,8 @@ Go JSON 空值处理的一些坑，看示例
 - https://www.sohamkamani.com/blog/golang/2018-07-19-golang-omitempty/
 - https://ethancai.github.io/2016/06/23/bad-parts-about-json-serialization-in-Golang/
 
-Go int/int64 和 string 转换示例
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Go int/int64/float 和 string 转换示例
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 .. code-block:: go
 
@@ -351,6 +351,15 @@ Go int/int64 和 string 转换示例
             // int -> int64 ，不会丢失精度
             var n int = 97
             fmt.Println(int64(n) == int64(97))
+
+            // string -> float32/float64  https://yourbasic.org/golang/convert-string-to-float/
+            f := "3.14159265"
+            if s, err := strconv.ParseFloat(f, 32); err == nil {
+                fmt.Println(s) // 3.1415927410125732
+            }
+            if s, err := strconv.ParseFloat(f, 64); err == nil {
+                fmt.Println(s) // 3.14159265
+            }
     }
 
 Go struct 如何设置默认值
