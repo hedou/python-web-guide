@@ -169,6 +169,8 @@ Chrome(Mac)
    # 用 vimium 如何不用鼠标从 url 输入框回到网页:
    https://superuser.com/questions/324266/google-chrome-mac-set-keyboard-focus-from-address-bar-back-to-page/324267#324267
    https://xavierchow.github.io/2016/03/07/vimium-leave-address-bar/
+   # 清理 dns cache, https://superuser.com/questions/203674/how-to-clear-flush-the-dns-cache-in-google-chrome
+   Navigate to chrome://net-internals/#dns and press the "Clear host cache" button.
 
 MacOS
 ---------------------------------------------------------------
