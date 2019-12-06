@@ -130,9 +130,37 @@ go 如何实现函数默认值(go本身没提供)
       return fmt.Sprintf("%s%d", a, b)
     }
 
+go 初始化 slice/map 的区别
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+直接看代码，注意 map 赋值之前需要先 make 创建，但是 slice 却可以直接声明然后 append
+
+.. code-block:: go
+
+    func main() {
+            var intSlice []int // 注意可以直接声明一个 slice 然后 append
+            fmt.Println(intSlice)
+            intSlice = append(intSlice, 1)
+            fmt.Println(intSlice)
+
+            // 如果知道长度的情况下，最好使用 make 初始化，效率更高
+            intSlice2 := make([]int, 1)
+            fmt.Println(intSlice2)
+
+            m2 := make(map[int]int) // 如果是 map 要先 make 才可以，否则 panic
+            m2[1] = 1
+            fmt.Println(m2)
+
+            // 直接声明然后赋值就会 panic。有一些 struct 包含了 map 结构体成员，构造函数里需要注意初始化 map，否则直接赋值panic
+            // https://stackoverflow.com/questions/27553399/golang-how-to-initialize-a-map-field-within-a-struct
+            var m1 map[int]int 
+            m1[1] = 1          // NOTE: panic !
+            fmt.Println(m1)
+    }
+
+
 go 没有内置的 set 结构
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-go 目前没有提供泛型，也没提供一个统一的 set 数据结构。可以使用 map[string]bool 来模拟 set。
+go 目前没有提供泛型，也没提供一个统一的 set 数据结构。可以使用 map[string]bool 来模拟 set(注意并发安全)。
 或者使用第三方提供的 set 类型。
 
 - https://github.com/deckarep/golang-set
