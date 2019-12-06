@@ -367,6 +367,7 @@ Centos
 
 .. code-block:: shell
    # 如何搜索和安装指定版本
+   # https://unix.stackexchange.com/questions/151689/how-can-i-instruct-yum-to-install-a-specific-version-of-package-x
    yum --showduplicates list golang
    yum install package-version
 
