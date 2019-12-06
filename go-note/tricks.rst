@@ -577,6 +577,12 @@ Failed Type Assertions
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 想要知道变量在 stask 还是 heap 分配使用 `go run -gcflags -m app.go`
 
+报错：go test flag: flag provided but not defined
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+- https://stackoverflow.com/questions/29699982/go-test-flag-flag-provided-but-not-defined
+
+
 redio tricks
 --------------------------------------------------
 
