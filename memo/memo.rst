@@ -966,6 +966,22 @@ Ffmpeg && youbute-dl
        url = 'https://www.youtube.com/watch?v=48VSP-atSeI'
        ydl.download([url])
 
+Vlog 如何增加字幕
+-------------------------------------------------------------
+
+- https://github.com/BingLingGroup/autosub/blob/dev/docs/README.zh-Hans.md#%E8%AF%AD%E9%9F%B3%E8%BD%AC%E6%96%87%E5%AD%97%E7%BF%BB%E8%AF%91api%E8%AF%B7%E6%B1%82
+- https://www.zhihu.com/question/24717723/answer/290003526
+
+.. code-block:: shell
+
+   # 首先安装 autosub。先安装 brew install ffmpeg
+   pip3 install git+https://github.com/BingLingGroup/autosub.git@alpha ffmpeg-normalize
+   # 使用方式。最后生成 srt 文件，名字为 视频.zh-cn.rst
+   autosub -S zh-cn -D zh-cn -i 视频.mp4
+   # 之后可以使用软件比如 ArcTime 或者之类的软件可以导入并生成新的视频。
+   # 使用 ffmpeg 也可以增加字幕并输出到新的 mp4
+   ffmpeg -i 视频.mp4 -vf subtitles=视频.zh-cn.srt output.mp4
+
 Curl
 -------------------------------------------------------------
 
