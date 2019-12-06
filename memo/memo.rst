@@ -362,6 +362,13 @@ Linux(centos/ubuntu)
     ag readme -l --ignore-dir="*.rb"    # 忽略特性类型文件
     .agignore    # 用来忽略一些vcs，git等文件。
 
+Centos
+-------------------------------------------------------------
+
+.. code-block:: shell
+   # 如何搜索和安装指定版本
+   yum --showduplicates list golang
+   yum install package-version
 
 crontab
 -------------------------------------------------------------
