@@ -57,6 +57,8 @@ Go 运行单个测试文件报错 undefined？
 
 执行命令时加入这个测试文件需要引用的源码文件，在命令行后方的文件都会被加载到command-line-arguments中进行编译
 
+`go test -v getinfo_test.go  lib.go`
+
 - https://www.cnblogs.com/Detector/p/10010292.html
 - https://stackoverflow.com/questions/14723229/go-test-cant-find-function-in-a-same-package
 
