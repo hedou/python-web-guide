@@ -11,8 +11,8 @@
 --------------------------------------------------
 
 - Pycharm/IDEA/Goland(JB全家桶)。专业的python IDE，功能很强大，特别喜欢它的代码merge工具，不想被编辑器折腾死的推荐直接使用，五星级推荐。(除了内存占用大点)。如果你不喜欢折腾编辑器，请直接用 IDE，经常看见一些用裸编辑器写代码的，代码规范检测都没有。
-- Neovim/vim/Emacs/Vscode/Sublime/Atom: 跨平台的编辑器
-- meld/vimdiff/kdiff3: 跨平台的文件对比和冲突合并工具。
+- Neovim/vim/Emacs/Vscode/Sublime/Atom: 跨平台的编辑器。vim 目前是笔者的最爱，你可以在慕课网和 B站搜索到我的视频教程
+- meld/vimdiff/kdiff3: 跨平台的文件对比和冲突合并工具。当然还有付费的 BeyondCompare，对笔者来说大部分场景 vimdiff 就很好用
 - devdocs.io: 文档查询工具，可以在线查询
 - EditorConfig: http://editorconfig.org/ 用来统一编辑器配置。如果成员用不同的操作系统和编辑器，建议使用。尤其是对于 python 这种使用缩进的语言
 
@@ -33,7 +33,7 @@
 * `《Mac 无鼠标编程指南（视频)》 <https://zhuanlan.zhihu.com/p/91031876>`_
 
 
-MacOS 效率工具
+MacOS 开发效率工具
 --------------------------------------------------
 - Item2: 替代原生的终端。https://medium.com/@RyanDavidson/make-your-terminal-more-colourful-and-productive-with-iterm2-and-zsh-11b91607b98c
 - Alfred: mac 下一款功能强大的工具，不过我一般只用它快速打开软件(比如直接输入app名前缀快速切换不同app)。可以用 python 编写一些自己的 workflow 提高效率(https://github.com/deanishe/alfred-workflow)，比如把时间戳转成日期等。 https://github.com/derimagia/awesome-alfred-workflows
@@ -74,7 +74,7 @@ Mac 终端快速配置
 - 最好安装 tmux 用来替代iterm2 分屏
 - 按需安装 htop/autojump/z/fzf/ag 等命令行工具(使用 brew 可以安装)
 
-可以参考我的快速配置教程：
+可以参考我 github 上的快速配置教程：
 
 - https://github.com/PegasusWang/linux_config/tree/master/mac 笔者的 MacOS 终端快速配置
 - https://github.com/bhilburn/powerlevel9k/wiki/Show-Off-Your-Config
@@ -513,3 +513,4 @@ Linux network debug Tools
 - https://likegeeks.com/linux-network-commands/
 - https://unix.stackexchange.com/questions/50098/linux-network-troubleshooting-and-debugging
 - https://www.tecmint.com/linux-network-configuration-and-troubleshooting-commands/
+- https://github.com/mrzool/unix-as-ide
