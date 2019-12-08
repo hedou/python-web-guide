@@ -235,6 +235,7 @@ web 后端工程师的主要工作职责是实现网站、app 业务后端逻辑
 * `《https://github.com/PegasusWang/system-design-interview》 <https://github.com/PegasusWang/system-design-interview>`_
 * `《System Design》 <https://legacy.gitbook.com/book/soulmachine/system-design/details>`_ 常见系统设计题目
 * `《https://github.com/PegasusWang/system-design-primer》 <https://github.com/PegasusWang/system-design-primer>`_ 关于系统设计和架构设计相关的资料
+* `《system-design-and-architecture》 <https://github.com/puncsky/system-design-and-architecture>`_ 系统和架构设计
 
 
 Web 开发常用 Python 库(Golang 常用库请参考 golang 章节)
