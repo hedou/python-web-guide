@@ -64,7 +64,7 @@ Go 运行单个测试文件报错 undefined？
 
 Go 循环遍历 []struct 是值传递
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-注意循环遍历一个结构体切片是值传递，如果想要修改 struct 的值，请使用下标赋值或者用结构体指针。
+注意循环遍历一个结构体切片是值传递，如果想要修改 struct 的值，请使用 slice 下标赋值或者用结构体指针。
 
 .. code-block:: go
 
@@ -78,7 +78,7 @@ Go 循环遍历 []struct 是值传递
         {name: "cat2"},
       }
       for _, cat := range cats { // cat 这里是拷贝的值
-        cat.name = "new cat"
+        cat.name = "new cat"  // NOTE: 注意这里 cat 是拷贝的值，所以你无法修改 cat。使用下标或者指针
       }
       fmt.Println(cats) // 无法修改 [{cat1} {cat2}]
 
@@ -134,7 +134,8 @@ go 如何实现函数默认值(go本身没提供)
 
 go 初始化 slice/map 的区别
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-直接看代码，注意 map 赋值之前需要先 make 创建，但是 slice 却可以直接声明然后 append
+直接看代码，注意 map 赋值之前需要先 make 创建，但是 slice 却可以直接声明然后 append。
+如果是一个 struct 包含了 map，你应该在构造函数里进行 make 初始化，否则直接赋值也会 panic。
 
 .. code-block:: go
 
@@ -144,19 +145,27 @@ go 初始化 slice/map 的区别
             intSlice = append(intSlice, 1)
             fmt.Println(intSlice)
 
-            // 如果知道长度的情况下，最好使用 make 初始化，效率更高
+            // 已知长度的情况下，最好使用 make 初始化，效率更高
             intSlice2 := make([]int, 1)
             fmt.Println(intSlice2)
 
             m2 := make(map[int]int) // 如果是 map 要先 make 才可以，否则 panic
-            m2[1] = 1
+            m2[1] = 1 // ok
             fmt.Println(m2)
 
             // 直接声明然后赋值就会 panic。有一些 struct 包含了 map 结构体成员，构造函数里需要注意初始化 map，否则直接赋值panic
             // https://stackoverflow.com/questions/27553399/golang-how-to-initialize-a-map-field-within-a-struct
-            var m1 map[int]int 
+            var m1 map[int]int
             m1[1] = 1          // NOTE: panic !
             fmt.Println(m1)
+
+            type T struct {
+                m map[int][int]
+            }
+            func NewT() T {
+                return T{m: make(map[int]int)}
+                // return T{m: map[int]int{}}
+            }
     }
 
 
