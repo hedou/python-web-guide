@@ -109,7 +109,7 @@ Git 相关
 
 Chrome 开发者插件
 --------------------------------------
-- SurfingKeys/vimium/Cvim: chrome 插件，可以用 vim 的方式操作浏览器，很方便，不用鼠标也能完成大部分操作，笔者使用的SurfingKeys
+- SurfingKeys/vimium/Cvim: chrome 插件，可以用 vim 的方式操作浏览器，很方便，不用鼠标也能完成大部分操作，笔者使用的SurfingKeys比较强大，可以用 ctrl+i 来用 vim 编辑输入
 - wasavi: 想在网页编辑框使用 vim 可以试试这个插件。安装完之后使用 ctrl+enter 就可以了 https://github.com/akahuku/wasavi
 - FE助手：前端插件，Json 格式化/代码美化等很多有用的工具
 - Octotree: Chrome github 浏览插件，可以把 github 项目的目录树结构展示出来，非常方便
