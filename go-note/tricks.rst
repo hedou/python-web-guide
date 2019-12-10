@@ -387,6 +387,11 @@ Go int/int64/float 和 string 转换示例
             _int32, _ := strconv.ParseInt("97", 10, 32)
             fmt.Println(_int32, int32(_int32) == int32(97))
 
+            // int32 -> string, https://stackoverflow.com/questions/39442167/convert-int32-to-string-in-golang
+            strconv.FormatInt(int64(i), 10) // fast
+            strconv.Itoa(int(i)) // fast
+            fmt.Sprint(i) // slow
+
             // int -> int64 ，不会丢失精度
             var n int = 97
             fmt.Println(int64(n) == int64(97))
