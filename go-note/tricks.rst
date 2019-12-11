@@ -370,7 +370,7 @@ Go int/int64/float 和 string 转换示例
             sint64 := strconv.FormatInt(int64(97), 10)
             fmt.Println(sint64, sint64 == "97")
 
-            // int64 -> string (hex)
+            // int64 -> string (hex) ，十六进制
             sint64hex := strconv.FormatInt(int64(97), 16)
             fmt.Println(sint64hex, sint64hex == "61")
 

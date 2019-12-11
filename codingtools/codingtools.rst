@@ -63,6 +63,7 @@ MacOS 开发效率工具
 - autojump。方便在命令行里来回跳转目录。
 - tldr: 列举出常见命令行工具用法。linux 命令行很多参数又不好记，man 手册比较难用，可以用这个 tldr 替代。https://github.com/tldr-pages/tldr
 - rmtrash/safe-rm: linux 自带的 rm 非常危险，可以使用安全删除工具先放到垃圾桶。`saferm  <https://zhuanlan.zhihu.com/p/91515325>`_
+- when-changed: 一个可以监控文件变动并且自动执行命令的工具，写脚本代码观察编写边输出结果的时候比较方便。
 
 Mac 终端快速配置
 --------------------------------------
