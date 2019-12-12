@@ -170,7 +170,10 @@ Chrome(Mac)
    https://superuser.com/questions/324266/google-chrome-mac-set-keyboard-focus-from-address-bar-back-to-page/324267#324267
    https://xavierchow.github.io/2016/03/07/vimium-leave-address-bar/
    # 清理 dns cache, https://superuser.com/questions/203674/how-to-clear-flush-the-dns-cache-in-google-chrome
-   Navigate to chrome://net-internals/#dns and press the "Clear host cache" button.
+   Navigate to chrome://net-internals/#dns # and press the "Clear host cache" button.
+
+   # 收藏夹。注意分类收藏，否则后来会收藏多了比较乱。使用 surfingkeys ab (add bookmark) 和 gb(收藏夹管理) 可以快速操作
+
 
 MacOS
 ---------------------------------------------------------------
