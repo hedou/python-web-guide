@@ -630,6 +630,10 @@ Git
 
     # 手残pull错了分支就(pull是先fetch然后merge)。或者 revert 一个失误的 merge
     git reset --hard HEAD~
+    # 如果 pull 产生了 冲突，可以撤销。
+    git merge --abort
+    # git rebase 同样可以
+    git rebase --abort
 
     # How to revert Git repository to a previous commit?, https://stackoverflow.com/questions/4114095/how-to-revert-git-repository-to-a-previous-commit
     git reset --hard 0d1d7fc32
