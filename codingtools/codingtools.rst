@@ -241,9 +241,9 @@ Swagger 工具
 日志、异常收集工具
 --------------------------------------
 
-- Sentry: 用来记录异常非常好用，能看到完善的栈信息，方便排错。
+- Sentry: 用来记录异常非常好用，能看到完善的栈信息，方便排错。Python 社区用的比较多
 - Fluentd
-- ELK: Elasticsearch, Logstash, Kibana
+- ELK: Elasticsearch, Logstash, Kibana 日志聚合和搜索系统
 
 管理及运维、监控工具(devops很火)
 --------------------------------------
@@ -251,7 +251,7 @@ Swagger 工具
 - Fabric.应用部署
 - docker/k8s.最近比较火的容器技术。很多采用微服务架构的公司使用 docker 作为容器部署服务，或者构建一致的开发环境
 - SaltStack和Ansible. 配置管理
-- StatsD\Graphite等web监控
+- StatsD\Graphite\Prometheus等web监控
 
 API gateway
 --------------------------------------
