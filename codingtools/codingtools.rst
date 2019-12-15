@@ -88,10 +88,10 @@ Mac 终端快速配置
 
 - https://www.ratatype.com/typing-test/  先来做一个 wpm 测试吧
 - https://typing.io/  包含代码片段的练习网站
-- https://www.keybr.com/
+- https://www.keybr.com/ 可以根据英文『音节』来练习，提升因为打字速度和正确率
 - http://www.speedcoder.net/  可以展示出来正确的指法
 - https://www.typing-lessons.org/ 一套系列的打字和指法教程，没事的时候可以练习一下，摆脱二指禅打字。笔者目前就练习这个
-- https://www.keyhero.com/wpm-typing-tips/ 同样一个针对程序员的打字练习网站
+- https://www.keyhero.com/wpm-typing-tips/ 同样一个针对程序员的打字练习网站。笔者没事就会练习一下
 - gtypist (brew install gnu-typist; gtypist) 一个linux/MacOS 命令行打字练习工具
 
 Mac 屏保软件
@@ -453,6 +453,7 @@ HTML Presentation Tools
 --------------------------------------
 
 - coggle.it: 一款免费的在线思维导图工具 https://coggle.it/
+- GitMind: 在线思维导图工具，可以多人协作 https://gitmind.cn/
 
 电子阅读器
 --------------------------------------
