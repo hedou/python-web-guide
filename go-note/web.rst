@@ -197,27 +197,30 @@ Go List import
    go list -f '{{range $dep := .Deps}}{{printf "%s\n" $dep}}{{end}}' | xargs go list -f '{{if not .Standard}}{{.ImportPath}}{{end}}'
 
 
-Go 常用框架
+Go 常用框架(工具)
 ---------------------------------------------------------------
 技术选型一般选择接口稳定，更新快，生态相对成熟，star 数量较高，用户广泛的库，坑少一点。
-后前分离时代用 gin 之类的框架写app后台还是挺快的，但是感觉做并发不高的内部后台业务还是用脚本python/php之类的更快。
-以下第三方库均可以通过 google + 关键词搜索到。
+前后分离时代用 gin 之类的框架写app后台还是挺快的，但是感觉做并发不高的内部后台业务还是用脚本python/php之类的更快。
+以下第三方库均可以通过 google + 关键词搜索到，同一行尽量按照流行程度从前往后列举，默认都是 github 上的包。
 
 - web/rpc框架: gin, grpc, beego
-- 参数验证：go-playground/validator
+- 参数验证：go-playground/validator, bytedance/go-tagexpr
 - json处理转换：go-simplejson/mapstructure
-- 配置解析: viper
-- mysql orm: gorm, sqlx
-- id生成器: rx/xid
+- 配置解析: viper(兼容很多格式)
+- mysql orm: gorm, xorm, sqlx
 - redis: go-redis, redigo
+- Kafka: Shopify/sarama
+- Elasticsearch: olivere/elastic, elastic/elasticsearch
+- mongodb: mongodb/mongo-go-driver
+- id生成器: rx/xid
 - cache(in memory): patrickmn/go-cache
 - 并发/协程池(star 数排序)：
 
+  - https://github.com/rafaeldias/async
   - https://github.com/Jeffail/tunny
   - https://github.com/benmanns/goworker
-  - https://github.com/rafaeldias/async
 - 异步任务框架: machinery, gocelery
-- 定时任务：robfig/cron
+- 定时任务：robfig/cron, ouiqiang/gocron
 - 熔断：hystrix-go, eapache/go-resiliency, cep21/circuit
 - 限流: ulule/limiter, didip/tollbooth
 - 日志: logrus, zap, mumberjack
@@ -225,6 +228,16 @@ Go 常用框架
 - 图片处理：h2non/imaginary
 - 网络编程：fatih/pool
 - 表格：go-echarts
+- 转换工具：
+
+  - sql2go(sql -> go struct): http://stming.cn/tool/sql2go.html
+  - curl2go(curl -> go http code): https://mholt.github.io/curl-to-go/
+  - Json2go(json -> go struct): https://mholt.github.io/json-to-go/
+- 热编译工具：gowatch
+- 静态检查：golangci-lint
+- 网络代理：goproxy
+- 命令行: cobra
+- 字符串处理工具：huandu/xstrings
 
 工具:
 
