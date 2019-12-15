@@ -470,7 +470,7 @@ Linux network debug Tools
 --------------------------------------
 注意：dig/nslookup 等直接请求 dns server，会忽略 etc/hosts
 
-- ping：特定域名的 ip 是否可达。ping send ICMP echo request
+- ping/tcping：特定域名的 ip 是否可达。ping send ICMP echo request
 
   - ping google.com
   - ping -c 3 google.com
@@ -490,7 +490,7 @@ Linux network debug Tools
   - traceroute -n google.com , to avoid reverse dns lookup use -n
   - traceroute -I google.com, send ICMP packet (default UDP, -T TCP, some servers block UDP)
 
-- mtr, realtime tracing
+- mtr, realtime tracing, 结合了ping,traceroute,nslookup的相关特性
 - ss(socket statistics), checking connection performance。socket 统计，比netstat快，利用了 tcp_diag
 
    - https://www.cnblogs.com/peida/archive/2013/03/11/2953420.html
@@ -502,13 +502,18 @@ Linux network debug Tools
   - tcpdump -i <network_device> port 80
   - tcpdump -c 20 -i <network_device> port 80 , -c number of events
   - tcpdump -c 20 -i <network_device> src XXX.XXX.XXX.XXX
-  - ifconfig, you can obtain the device naems likes this
+  - ifconfig, you can obtain the device names likes this。查看和配置机器网卡
   - tcpdump -w /path/ -i <network_device>, tcpdump to a file
   - tcmpdump -r /path
   - sudo tcpdump -i lo0 port 6379 -nnX -vvv -A  # 本地 redis 抓包
 
 - netstat, network statisic,  display connection info, routing table information etc
-- lsof: lsof -i:8000
+- lsof(查看端口进程): lsof -i:8000
+- iftop: 查询流量异常的进程
+- curl: 发送 http 请求，类似的还有一些比如 httpie
+- nc: 作为tcp|udp服务器,或者作为工具,模拟发送tcp,udp包
+- trickle: 用户空间带宽控制管理的工具
+- Nmap: 端口扫描工具
 
 参考：
 
