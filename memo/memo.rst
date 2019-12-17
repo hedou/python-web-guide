@@ -621,6 +621,10 @@ Git
 
     # 手残 add 完以后输入错了 commit 信息
     git commit --amend
+    # 类似的还可以修改上一个提交者的名字 https://stackoverflow.com/questions/750172/how-to-change-the-author-and-committer-name-and-e-mail-of-multiple-commits-in-gi
+    git config --global user.name "you name"
+    git config --global user.email you@domain.com
+    git commit --amend --reset-author
 
     # 撤销 add （暂存），此时还没有 commit。比如 add 了不该 add 的文件
     git reset -- file
