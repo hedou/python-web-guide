@@ -366,6 +366,11 @@ Go int/int64/float 和 string 转换示例
             sint := strconv.Itoa(97)
             fmt.Println(sint, sint == "97")
 
+            // byte -> string
+            bytea := byte(1)
+            bint := strconv.Itoa(int(bytea))
+            fmt.Println(bint)
+
             // int64 -> string
             sint64 := strconv.FormatInt(int64(97), 10)
             fmt.Println(sint64, sint64 == "97")
