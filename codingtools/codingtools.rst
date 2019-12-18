@@ -516,7 +516,17 @@ Linux network debug Tools
 - trickle: 用户空间带宽控制管理的工具
 - Nmap: 端口扫描工具
 
+Linux debug Tools
+--------------------------------------
+
+- gdb
+- valgrind
+- ltrace: tracing system and library calls
+- lsof: tracking open files
+- pmap: viewing memory allocation
+
 参考：
+--------------------------------------
 
 - https://likegeeks.com/linux-network-commands/
 - https://unix.stackexchange.com/questions/50098/linux-network-troubleshooting-and-debugging
