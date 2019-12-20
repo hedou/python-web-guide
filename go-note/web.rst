@@ -268,6 +268,7 @@ Go 性能优化
 ---------------------------------------------------------------
 - https://github.com/dgryski/go-perfbook
 - https://dave.cheney.net/high-performance-go-workshop/dotgo-paris.html
+- https://stephen.sh/posts/quick-go-performance-improvements
 
 Goroutines
 ---------------------------------------------------------------
