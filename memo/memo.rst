@@ -258,6 +258,29 @@ MacOS
    notify("开会啦", "Go Go Go !!!")
 
 
+# SSH
+
+二次验证自动登录跳板机脚本，根据你的密码和服务器配置修改即可。
+
+.. code-block:: python
+
+  #!/bin/sh
+
+  # 有二次验证登录跳板机的时候比较麻烦，可以用这个脚本自动登录跳板机 参考：https://juejin.im/post/5ce760cef265da1b6e657d6f
+  # brew install expect
+  # brew install oath-toolkit
+  export LC_CTYPE="en_US.UTF-8"
+  expect -c "
+  spawn ssh user@ip -p22
+  set timeout 3
+  expect  \"user@ip's password:\"
+  set password yourpassword
+  set token \"`oathtool --totp -b -d 6 server_qr_token`\"
+  send \"\$password\$token\r\"
+  interact
+  "
+
+
 Mac 蓝牙耳机(自用索尼 wi1000x)
 ---------------------------------------------------------------
 
