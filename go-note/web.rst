@@ -25,12 +25,12 @@ Go 开发工具
 ---------------------------------------------------------------
 - Goland
 - vim/Neovim + vim-go
-- https://github.com/fedir/go-tooling-cheat-sheet/blob/master/go-tooling-cheat-sheet.pdf
 
 博客:
 
+- https://octetz.com/docs/2019/2019-04-24-vim-as-a-go-ide/
 - https://ictar.xyz/2019/05/14/an-overview-of-go-tooling/
-
+- https://github.com/fedir/go-tooling-cheat-sheet/blob/master/go-tooling-cheat-sheet.pdf
 
 Go idioms
 --------------------------------------------------
