@@ -201,7 +201,7 @@ Go 常用框架(工具)
 ---------------------------------------------------------------
 技术选型一般选择接口稳定，更新快，生态相对成熟，star 数量较高，用户广泛的库，坑少一点。
 前后分离时代用 gin 之类的框架写app后台还是挺快的，但是感觉做并发不高的内部后台业务还是用脚本python/php之类的更快。
-以下第三方库均可以通过 google + 关键词搜索到，同一行尽量按照流行程度从前往后列举，默认都是 github 上的包。
+以下第三方库均可以通过 google + 关键词搜索到，同一行尽量按照流行程度从前往后列举，默认都是 github 上的包(只写了仓库后缀)。
 
 - web/rpc框架: gin, grpc, beego
 - 参数验证：go-playground/validator, bytedance/go-tagexpr
@@ -212,7 +212,7 @@ Go 常用框架(工具)
 - Kafka: Shopify/sarama
 - Elasticsearch: olivere/elastic, elastic/elasticsearch
 - mongodb: mongodb/mongo-go-driver
-- id生成器: rx/xid
+- id生成器: rx/xid, satori/go.uuid
 - cache(in memory): patrickmn/go-cache
 - 并发/协程池(star 数排序)：
 
