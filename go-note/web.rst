@@ -174,7 +174,6 @@ Go vs. Python
 
 Go Best practice(工程实践)
 ---------------------------------------------------------------
-- https://yq.aliyun.com/articles/741747 Go 开发关键技术指南
 - https://draveness.me/golang-101 如何写出优雅的 golang 代码(好文推荐)
 - https://github.com/golang/go/wiki/CodeReviewComments 作为 effective go 补充
 - https://peter.bourgon.org/go-best-practices-2016/
@@ -187,6 +186,14 @@ Go Best practice(工程实践)
 
 - https://12factor.net/zh_cn/
 - https://go-proverbs.github.io go谚语，类似 python 之禅
+
+
+Go 开发关键技术指南
+---------------------------------------------------------------
+- https://developer.aliyun.com/article/739836 Go 开发关键技术指南
+- https://developer.aliyun.com/article/740696 Go 面向失败编程
+- https://yq.aliyun.com/articles/741747 带着服务器编程金刚经走进 2020 年
+
 
 Go List import
 ---------------------------------------------------------------
