@@ -172,8 +172,9 @@ Go vs. Python
 - http://govspy.peterbe.com/
 
 
-Go Best practice
+Go Best practice(工程实践)
 ---------------------------------------------------------------
+- https://yq.aliyun.com/articles/741747 Go 开发关键技术指南
 - https://draveness.me/golang-101 如何写出优雅的 golang 代码(好文推荐)
 - https://github.com/golang/go/wiki/CodeReviewComments 作为 effective go 补充
 - https://peter.bourgon.org/go-best-practices-2016/
