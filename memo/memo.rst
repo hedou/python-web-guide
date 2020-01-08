@@ -314,7 +314,7 @@ Oh My Zsh
 
    # 报错：_git:58: _git_commands: function definition file not found
    # 解决方式：rm ~/.zcompdump*; rm ~/.zplug/zcompdump  # https://github.com/robbyrussell/oh-my-zsh/issues/3996
-
+   # rm ~/.zcompdump; exec zsh -l  # https://github.com/ohmyzsh/ohmyzsh/issues/3996
 
 Linux(centos/ubuntu)
 ---------------------------------------------------------------
