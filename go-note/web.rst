@@ -289,6 +289,10 @@ Go 内存泄露
 - https://go101.org/article/memory-leaking.html
 - https://colobu.com/2019/08/28/go-memory-leak-i-dont-think-so/
 
+Go 反射
+---------------------------------------------------------------
+- https://segmentfault.com/a/1190000016230264 Go Reflect 高级实践
+
 Go 网络编程
 ---------------------------------------------------------------
 - https://tumregels.github.io/Network-Programming-with-Go/
