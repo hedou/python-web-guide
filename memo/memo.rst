@@ -880,7 +880,7 @@ vim-go plugin Tips
   :GoKeyify 把无名称初始化的 struct literals 转成包含字段名的初始化方式
   :GoIfErr 生成 if err 返回值(或者用 snippets)
   :GoChannelPeers 寻找可能的 channel 发送和接收点
-
+  :GoFillStruct 给一个 struct 填充默认值
 
 用markdown文件制作html ppt
 -------------------------------------------------------------
