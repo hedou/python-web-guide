@@ -193,7 +193,7 @@ Go 开发关键技术指南
 - https://developer.aliyun.com/article/739836 Go 开发关键技术指南
 - https://developer.aliyun.com/article/740696 Go 面向失败编程
 - https://yq.aliyun.com/articles/741747 带着服务器编程金刚经走进 2020 年
-
+- https://developer.aliyun.com/article/742169  Go 开发关键技术指南 | 敢问路在何方？
 
 Go List import
 ---------------------------------------------------------------
