@@ -25,12 +25,12 @@ Go 开发工具
 ---------------------------------------------------------------
 - Goland
 - vim/Neovim + vim-go
-- https://github.com/fedir/go-tooling-cheat-sheet/blob/master/go-tooling-cheat-sheet.pdf
 
 博客:
 
+- https://octetz.com/docs/2019/2019-04-24-vim-as-a-go-ide/
 - https://ictar.xyz/2019/05/14/an-overview-of-go-tooling/
-
+- https://github.com/fedir/go-tooling-cheat-sheet/blob/master/go-tooling-cheat-sheet.pdf
 
 Go idioms
 --------------------------------------------------
@@ -172,7 +172,7 @@ Go vs. Python
 - http://govspy.peterbe.com/
 
 
-Go Best practice
+Go Best practice(工程实践)
 ---------------------------------------------------------------
 - https://draveness.me/golang-101 如何写出优雅的 golang 代码(好文推荐)
 - https://github.com/golang/go/wiki/CodeReviewComments 作为 effective go 补充
@@ -186,6 +186,14 @@ Go Best practice
 
 - https://12factor.net/zh_cn/
 - https://go-proverbs.github.io go谚语，类似 python 之禅
+
+
+Go 开发关键技术指南
+---------------------------------------------------------------
+- https://developer.aliyun.com/article/739836 Go 开发关键技术指南
+- https://developer.aliyun.com/article/740696 Go 面向失败编程
+- https://yq.aliyun.com/articles/741747 带着服务器编程金刚经走进 2020 年
+- https://developer.aliyun.com/article/742169  Go 开发关键技术指南 | 敢问路在何方？
 
 Go List import
 ---------------------------------------------------------------
@@ -201,7 +209,7 @@ Go 常用框架(工具)
 ---------------------------------------------------------------
 技术选型一般选择接口稳定，更新快，生态相对成熟，star 数量较高，用户广泛的库，坑少一点。
 前后分离时代用 gin 之类的框架写app后台还是挺快的，但是感觉做并发不高的内部后台业务还是用脚本python/php之类的更快。
-以下第三方库均可以通过 google + 关键词搜索到，同一行尽量按照流行程度从前往后列举，默认都是 github 上的包。
+以下第三方库均可以通过 google + 关键词搜索到，同一行尽量按照流行程度从前往后列举，默认都是 github 上的包(只写了仓库后缀)。
 
 - web/rpc框架: gin, grpc, beego
 - 参数验证：go-playground/validator, bytedance/go-tagexpr
@@ -212,7 +220,7 @@ Go 常用框架(工具)
 - Kafka: Shopify/sarama
 - Elasticsearch: olivere/elastic, elastic/elasticsearch
 - mongodb: mongodb/mongo-go-driver
-- id生成器: rx/xid
+- id生成器: rx/xid, satori/go.uuid
 - cache(in memory): patrickmn/go-cache
 - 并发/协程池(star 数排序)：
 
@@ -244,6 +252,7 @@ Go 常用框架(工具)
 - https://github.com/smallnest/gen gorm struct 生成工具
 - https://mholt.github.io/json-to-go/ json 转 go struct
 - https://protogen.marcgravell.com/decode proto decode 工具
+- https://gopherize.me/  一个好玩的小工具，设计你喜欢的 gopher 形象
 
 博客：
 
@@ -279,6 +288,18 @@ Go 内存泄露
 ---------------------------------------------------------------
 - https://go101.org/article/memory-leaking.html
 - https://colobu.com/2019/08/28/go-memory-leak-i-dont-think-so/
+
+Go 反射
+---------------------------------------------------------------
+- https://segmentfault.com/a/1190000016230264 Go Reflect 高级实践
+
+Go 网络编程
+---------------------------------------------------------------
+- https://tumregels.github.io/Network-Programming-with-Go/
+
+Go 位操作
+---------------------------------------------------------------
+- https://learnku.com/go/t/23460/bit-operation-of-go
 
 Go源码阅读
 ---------------------------------------------------------------

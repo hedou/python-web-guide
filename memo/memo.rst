@@ -314,7 +314,7 @@ Oh My Zsh
 
    # 报错：_git:58: _git_commands: function definition file not found
    # 解决方式：rm ~/.zcompdump*; rm ~/.zplug/zcompdump  # https://github.com/robbyrussell/oh-my-zsh/issues/3996
-
+   # rm ~/.zcompdump; exec zsh -l  # https://github.com/ohmyzsh/ohmyzsh/issues/3996
 
 Linux(centos/ubuntu)
 ---------------------------------------------------------------
@@ -876,11 +876,11 @@ vim-go plugin Tips
   :GoMetaLinter 执行 lint，可以配置 .gometalinter.json 忽略一些 lint 错误。https://github.com/PegasusWang/linux_config/blob/master/golang/gometalinter.json
   :GoRename 快速重构
   :GoImpl 为 struct 生成接口函数定义(光标放到struct定义上使用)。如果一个 interface 有很多需要实现的函数，比较方便
-  :GoAddTags GoRemoveTags json 快速给 struct field 增加 json tag，支持 visual 模式多选
+  :GoAddTags GoRemoveTags json 快速给 struct field 增加 json tag，支持 visual 模式多选。默认 tag 名是下划线命名
   :GoKeyify 把无名称初始化的 struct literals 转成包含字段名的初始化方式
   :GoIfErr 生成 if err 返回值(或者用 snippets)
   :GoChannelPeers 寻找可能的 channel 发送和接收点
-
+  :GoFillStruct 给一个 struct 填充默认值
 
 用markdown文件制作html ppt
 -------------------------------------------------------------
