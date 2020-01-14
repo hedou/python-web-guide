@@ -39,6 +39,7 @@ Go idioms
 
 Go 错误处理
 --------------------------------------------------
+- https://github.com/pkg/errors 推荐使用
 - https://github.com/juju/errors
 - https://blog.golang.org/error-handling-and-go
 - https://dave.cheney.net/2016/04/27/dont-just-check-errors-handle-them-gracefully
