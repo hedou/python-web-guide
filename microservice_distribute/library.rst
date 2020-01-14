@@ -6,16 +6,18 @@
 
 介绍一些微服务中常到碰的问题，包括常见概念，系统组件，系统平台等。
 
-限流
+限流器
 ----------------------
 
-某些业务需要针对 IP 或者用户来进行一个限流操作，减少恶意请求或者减轻服务器压力。
-限流可以在很多层面去做，比如 nginx+lua, API Gateway，或者在接口层直接来做，一般可以结合 redis 来做。
+某些业务需要针对 IP 或者用户来进行一个限流操作，减少恶意请求，减轻服务器压力或者根据业务需求来进行频率控制。
+限流可以在很多层面去做，比如 nginx+lua, API Gateway，或者在接口层直接来做，一般可以结合 redis 来做为计数器。
 限流有一下一些实现方式，可以根据业务场景选择：
 
 - token bucket。令牌桶算法
 - redis incr/expire。最简单的一种方式，通过 redis 针对用户或者 ip key 来计数
 - redis zset。可以实现基于时间窗口来限流。不过不适合短期内大量 qps 限流，适合用户行为限流
+
+你可以在网上很方便的搜索 『rate limiter』 来找到对应的实现。
 
 断路器/熔断器(Circuit Breaker)
 -------------------------------------------
@@ -31,8 +33,21 @@ Netflix 开源的 Hystrix 是比较流行的开源实现，对应的有各种其
 - `Circuit Breaker and Retry  <https://medium.com/@trongdan_tran/circuit-breaker-and-retry-64830e71d0f6>`_
 
 
-分布式 id 生成器
-----------------------
+分布式 id 生成器(发号器)
+-------------------------------
+单机 mysql 一般我们直接使用 mysql 提供的自增 id 作为主键，但是分布式系统下需要别的算法来保证多机 mysql 全局唯一 id。
+一般有如下几种方式：
+
+- 发号器(snowflake 算法)
+- uuid
+
+一般来说单调递增整形 id 对于索引更加友好，所以一般我们可以使用 snowflake 之类的算法来分配 id，其大致原理如下：
+
+.. image:: ../_image/microservice_distribute/slowflake.png
+
+网上依旧很多开源实现，你可以搜索到一些 snowflake 的 golang 实现：
+
+- `bwmarrin/snowflake <https://github.com/bwmarrin/snowflake>`_
 
 服务发现
 ----------------------
