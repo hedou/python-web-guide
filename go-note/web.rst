@@ -221,7 +221,7 @@ Go 常用框架(工具)
 - Kafka: Shopify/sarama
 - Elasticsearch: olivere/elastic, elastic/elasticsearch
 - mongodb: mongodb/mongo-go-driver
-- id生成器: rx/xid, satori/go.uuid
+- id生成器: rx/xid, satori/go.uuid, bwmarrin/snowflake
 - cache(in memory): patrickmn/go-cache
 - 并发/协程池(star 数排序)：
 
