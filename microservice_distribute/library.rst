@@ -49,6 +49,11 @@ Netflix 开源的 Hystrix 是比较流行的开源实现，对应的有各种其
 
 - `bwmarrin/snowflake <https://github.com/bwmarrin/snowflake>`_
 
+RPC
+----------------------
+在分布式系统中，不同业务模块之间可以通过消息队列或者 rpc 来进行通信。
+
+
 服务发现
 ----------------------
 
@@ -107,3 +112,5 @@ Netflix 开源的 Hystrix 是比较流行的开源实现，对应的有各种其
 
 - https://github.com/doocs/advanced-java
 - 《微服架构设计模式》 一本比较好的讲微服务架构实现的书籍
+- https://github.com/theanalyst/awesome-distributed-systems
+- https://github.com/ty4z2008/Qix/blob/master/ds.md#
