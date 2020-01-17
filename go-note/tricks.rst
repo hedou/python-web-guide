@@ -140,6 +140,9 @@ go 初始化 slice/map 的区别
 
 .. code-block:: go
 
+    // 初始化一个全局 map 可以用 make，防止第一次赋值 nil map 会 panic
+    var globalMap = make(map[string]string) // 之后可以在 init() 函数初始化
+
     func main() {
             var intSlice []int // 注意可以直接声明一个 slice 然后 append
             fmt.Println(intSlice)
