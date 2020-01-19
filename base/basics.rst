@@ -246,6 +246,7 @@ Web 开发常用 Python 库(Golang 常用库请参考 golang 章节)
 在开发工具章节我还会列举到更多能够提升开发效率的工具。
 
 - web/restful 框架：Django/Flask/Tornado
+- 异步http web框架：fastapi/aiohttp/Sanic
 - ORM: sqlalchemy, Peewee
 - 表单验证：WTForms, marshmallow
 - 数据处理和分析：Numpy, Pandas, Matplotlib
