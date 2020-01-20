@@ -769,6 +769,11 @@ Code Review(代码复查)
 * `《每个 Python 程序员都要知道的日志实践》 <http://mp.weixin.qq.com/s?__biz=MzA4MjEyNTA5Mw==&mid=2652564362&idx=1&sn=f33910af004f276bbef7ae52e0757bcb&chksm=8464c3c0b3134ad617bcffd865894344367fdd2995a0d5ff9c4da30e0c158b3d02b3d616f615&mpshare=1&scene=23&srcid=1124K7Ht1FP2A1Fnvi3HTBE5#rd>`_
 * `《日志的艺术（The art of logging）》 <http://www.cnblogs.com/xybaby/p/7954610.html>`_
 
+代码自查
+--------------------------------------
+- 该加的日志是否加上了？日志等级是否正确？代码里的各项配置是否正确
+- 代码规范是否符合标准？是否有用工具格式化
+- 加锁的地方有没有对应的释放锁？打开的资源是否关闭了？会不会导致资源泄露？
 
 服务上线
 --------------------------------------
