@@ -363,6 +363,8 @@ Linux(centos/ubuntu)
 
     # 进程相关
     dmesg | egrep -i -B100 'killed process'   # 查看被杀死进程信息
+    # linux 批量杀掉筛选进程(比如定时脚本多个同时执行，最好限制) https://blog.csdn.net/weiyichenlun/article/details/59108463
+    ps -ef | grep main.py | grep -v grep | awk '{print $2}' | xargs kill -9
 
     # scp
     scp someuser@192.168.199.1:/home/someuser/file ./    # 远程机器拷贝到本机
