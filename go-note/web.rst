@@ -6,6 +6,7 @@ Go入门
 Go语言入门和深入
 --------------------------------------------------
 
+- `Lets Go <https://github.com/PegasusWang/LetsGo>`_  笔者连载的 go 文字和视频教程
 - `A Tour of Go <https://tour.golang.org/welcome/1>`_
 - `Go by Example <https://gobyexample.com>`_
 - `Learn Go with Tests <https://quii.gitbook.io/learn-go-with-tests/>`_
@@ -23,14 +24,21 @@ Go Books
 
 Go 开发工具
 ---------------------------------------------------------------
-- Goland
-- vim/Neovim + vim-go
+- Goland IDE
+- Vscode/Sublime/Atom 等常用编辑器结合插件
+- vim/Neovim + vim-go + coc.nvim
 
 博客:
 
 - https://octetz.com/docs/2019/2019-04-24-vim-as-a-go-ide/
 - https://ictar.xyz/2019/05/14/an-overview-of-go-tooling/
 - https://github.com/fedir/go-tooling-cheat-sheet/blob/master/go-tooling-cheat-sheet.pdf
+
+Go 博客教程
+--------------------------------------------------
+- https://yourbasic.org/golang/
+- https://golangbot.com/learn-golang-series/
+- https://golangbot.com/learn-golang-series/
 
 Go idioms
 --------------------------------------------------
