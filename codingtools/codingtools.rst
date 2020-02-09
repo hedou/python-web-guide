@@ -123,6 +123,16 @@ Chrome 开发者插件
 
 * `《在浏览器中嵌入 NeoVim，可使用本地配置》 <https://zhuanlan.zhihu.com/p/86027644>`_
 
+编程字体(适合代码显示)
+--------------------------------------
+- Monaco (Mac)
+- Consolas (Windows)
+- Hack
+- Source Code Pro (Adobe)
+- [FiraCode(连字符特性)](https://github.com/tonsky/FiraCode)
+- Jetbrinas Mono 字体
+- Nerdfont [https://www.nerdfonts.com/]
+
 
 代码工具
 --------------------------------------
