@@ -428,7 +428,8 @@ crontab
     date
 
 
-对于python脚本，给main函数加上装饰器@single_process可以保证只有一个该脚本会执行, pip install single_process，比如下面这个run.py
+对于python脚本，可以用如下方式保证同一时间只有一个脚本在运行（一些定时任务同一台机器上多个同时跑可能有问题），可以用
+如下方式限制。（多个机器上应该用分布式锁）
 
 .. code-block:: shell
 
@@ -436,10 +437,12 @@ crontab
     # -*- coding:utf-8 -*-
 
     import time
-    from single_process import single_process    # pip install single_process
+    # https://stackoverflow.com/questions/380870/make-sure-only-a-single-instance-of-a-program-is-running
+    # 更好的方式使用 tendo
+    # pip install tendo
+    from tendo import singleton
+    me = singleton.SingleInstance() # will sys.exit(-1) if other instance is running
 
-
-    @single_process    # 保证不会同时执行，原理请看single_process源码。新版本貌似改了用法，非装饰器
     def main():
         time.sleep(10)
         print(time.time())
