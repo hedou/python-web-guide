@@ -160,7 +160,7 @@ go 初始化 slice/map 的区别
             // 直接声明然后赋值就会 panic。有一些 struct 包含了 map 结构体成员，构造函数里需要注意初始化 map，否则直接赋值panic
             // https://stackoverflow.com/questions/27553399/golang-how-to-initialize-a-map-field-within-a-struct
             var m1 map[int]int
-            m1[1] = 1          // NOTE: panic !
+            m1[1] = 1          // NOTE: panic ! 注意这样会panic 啊！！!
             fmt.Println(m1)
 
             type T struct {
