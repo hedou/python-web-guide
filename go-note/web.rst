@@ -231,12 +231,13 @@ Go 常用框架(工具)
 - Elasticsearch: olivere/elastic, elastic/elasticsearch
 - mongodb: mongodb/mongo-go-driver
 - id生成器: rx/xid, satori/go.uuid, bwmarrin/snowflake
-- cache(in memory): patrickmn/go-cache
+- cache(in memory): patrickmn/go-cache, golang/groupcache(分布式)
 - 并发/协程池(star 数排序)：
 
   - https://github.com/rafaeldias/async
   - https://github.com/Jeffail/tunny
   - https://github.com/benmanns/goworker
+
 - 异步任务框架: machinery, gocelery
 - 定时任务：robfig/cron, ouiqiang/gocron
 - 熔断：hystrix-go, eapache/go-resiliency, cep21/circuit
@@ -251,6 +252,7 @@ Go 常用框架(工具)
   - sql2go(sql -> go struct): http://stming.cn/tool/sql2go.html
   - curl2go(curl -> go http code): https://mholt.github.io/curl-to-go/
   - Json2go(json -> go struct): https://mholt.github.io/json-to-go/
+
 - 热编译工具：gowatch
 - 静态检查：golangci-lint
 - 网络代理：goproxy

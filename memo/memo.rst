@@ -465,6 +465,8 @@ Iterm2
    # 如何防止 command+w 意外关闭导致工作丢失，这里可以如下设置，每次关闭提醒
    # Settings -> Profiles -> Session -> Prompt before closing 勾选 Always
 
+   # 如何使用 rz/sz 传文件
+   https://segmentfault.com/a/1190000012166969
 
 Tmux
 -------------------------------------------------------------
