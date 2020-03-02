@@ -335,10 +335,11 @@ RPC
 
 Rest
 --------------------------------------
-- Django Rest Framework: https://www.django-rest-framework.org/
+- Django Rest Framework(DRF): https://www.django-rest-framework.org/
 - Flask-Restful: https://flask-restful.readthedocs.io/ ，可以用 cookiecutter-flask-restful 快速启动一个 restful 后端项目
+- fastapi: https://github.com/tiangolo/fastapi python3 异步框架
 - GRPC: https://github.com/grpc-ecosystem
-
+- Gin: go web 框架
 
 数据处理和可视化
 --------------------------------------
