@@ -249,6 +249,7 @@ Swagger 工具
 
 - hexo: 基于 nodejs 编写的静态博客工具 https://hexo.io/zh-cn/
 - hugo: https://gohugo.io/ 博客建站工具
+- gitalk: https://github.com/gitalk/gitalk#install  基于 github 的评论系统
 
 日志、异常收集工具
 --------------------------------------
