@@ -101,6 +101,30 @@ Go 循环遍历 []struct 是值传递
       }
     }
 
+Go 无法修改值为结构体的map
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+.. code-block:: go
+
+    func testChangeMapStruct() {
+      type T struct{ Cnt int }
+      m := map[string]T{"a": T{Cnt: 1}, "b": T{Cnt: 2}}
+      for _, v := range m {
+        v.Cnt = 100
+      }
+      fmt.Println(m)
+
+      // 想要修改 map[string]T 的值，必须使用指针
+      m2 := map[string]*T{"a": &T{Cnt: 1}, "b": &T{Cnt: 2}}
+      for _, v := range m2 {
+        v.Cnt = 100
+      }
+      fmt.Println(m2["a"])
+    }
+
+    func main() {
+      testChangeMapStruct()
+    }
 
 如何判断一个空结构体(empty struct)
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
