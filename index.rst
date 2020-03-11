@@ -8,6 +8,7 @@
 
     base/*
     codingstyle/*
+    debug/index
     codingtools/*
     idiom/*
     design/*
