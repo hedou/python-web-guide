@@ -238,6 +238,9 @@ MacOS
    # brew install coreutils
    grealpath file
 
+   # mac trackpad 蓝牙频繁掉线问题。尝试使用 5G wifi 而不是 2.4G
+   # https://apple.stackexchange.com/questions/321948/why-does-my-magic-trackpad-2-randomly-disconnect-and-stop-clicking
+
 
 如何发送 mac 通知，可以用来做提示
 
