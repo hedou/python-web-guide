@@ -63,7 +63,7 @@ MacOS 开发效率工具
 - autojump。方便在命令行里来回跳转目录。
 - tldr: 列举出常见命令行工具用法。linux 命令行很多参数又不好记，man 手册比较难用，可以用这个 tldr 替代。https://github.com/tldr-pages/tldr
 - rmtrash/safe-rm: linux 自带的 rm 非常危险，可以使用安全删除工具先放到垃圾桶。`saferm  <https://zhuanlan.zhihu.com/p/91515325>`_
-- when-changed: 一个可以监控文件变动并且自动执行命令的工具，写脚本代码观察编写边输出结果的时候比较方便。
+- when-changed: 一个可以监控文件变动并且自动执行命令的工具，写脚本代码观察编写边输出结果的时候比较方便。笔者很多视频演示过
 - https://github.com/onceupon/Bash-Oneliner
 
 Mac 终端快速配置
@@ -388,7 +388,7 @@ APM (Application Performance Management)
 - sqlacodegen: 从 mysql 生成python sqlalchemy model定义。https://github.com/agronholm/sqlacodegen
 
 
-绘图工具
+绘图/流程图工具
 --------------------------------------
 - processon: http://processon.com/ 使用了下感觉还不错，基本能满足需求
 - draw.io: https://www.draw.io/
@@ -418,13 +418,13 @@ APM (Application Performance Management)
 - 办公室午休床，隔音耳塞
 - 海露人工泪液/湿房镜/防蓝光镜片/usb热敷眼罩: 缓解干眼症
 - 录音笔。最近裁员有点多，你懂的。笔者用的一款搜狗的录音笔，非常小巧，可以用来记录会议，语音转文字做字幕，实时翻译等。
-- 机械/静电容键盘（键盘可以说是程序员最在意的工具了，推荐几个我个人认为比较适合写代码的，个人比较推荐红轴，无段落感，打字行云流水)
+- 机械/静电容键盘（键盘可以说是程序员最在意的工具了，推荐几个我个人认为比较适合写代码的，个人推荐红轴，无段落感，打字行云流水)
 
   - HHKB: 码农神器静电容键盘，不过不用 vim，非 linux/unix 用户慎用。没有方向键和F区
-  - 宁芝（niz）PLUM普拉姆静电容键盘: 同静电容键盘，键位更多，适合大众用户(不过做工不精细被吐槽过)
+  - 宁芝（niz）PLUM普拉姆静电容键盘: 同静电容键盘，键位更多，适合大众用户
   - 阿米洛（Varmilo） 苹果MAC双系统机械键盘: 机械键盘，适合 mac
   - Poker2: 键位类似 HHKB，同样是可编程迷你键盘，可以替代 HHKB，笔者之前长期使用
-  - Filco Minila Air
+  - Filco Minila Air: 同样是迷你机械键盘，适合大众程序员
 
 参考: `程序员双十一剁手指南  <https://zhuanlan.zhihu.com/p/89192238>`_
 
@@ -471,13 +471,13 @@ HTML Presentation Tools
 - coggle.it: 一款免费的在线思维导图工具 https://coggle.it/
 - GitMind: 在线思维导图工具，可以多人协作 https://gitmind.cn/
 
-电子阅读器
+电子阅读器/电子书软件
 --------------------------------------
-笔者使用的 Kindle 和 国产的大屏幕 Boox，目前小米生态的墨案也推出了大屏幕(10.3)存电子纸。
-当然你可以使用平板电脑，不过长时间对眼睛不太好。
+笔者使用的 Kindle 和 国产的大屏幕 Boox，目前小米生态的墨案也推出了大屏幕(10.3)寸水墨屏阅读器。
+当然你可以使用平板电脑，不过长时间盯着屏幕对眼睛不太好，笔者倾向于使用水墨屏阅读器。
 
 - Koreader: http://koreader.rocks/ 一款支持多种主流电子书格式的开源电子书阅读器，支持Kindle/Android等
-- calibre: https://calibre-ebook.com 跨平台的电子书管理和阅读软件
+- calibre: https://calibre-ebook.com 跨平台的电子书管理和阅读桌面软件
 
 参考：
 
