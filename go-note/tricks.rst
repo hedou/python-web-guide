@@ -126,6 +126,27 @@ Go 无法修改值为结构体的map
       testChangeMapStruct()
     }
 
+不要并发读写map，可能导致程序崩溃
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+如果多个 goroutine 并发对 map 进行读写，必须要同步。
+
+.. code-block:: go
+
+    // https://blog.golang.org/go-maps-in-action
+    var counter = struct{
+        sync.RWMutex
+        m map[string]int
+    }{m: make(map[string]int)}
+    counter.RLock()
+
+    n := counter.m["some_key"]
+    counter.RUnlock()
+    fmt.Println("some_key:", n)
+
+    counter.Lock()
+    counter.m["some_key"]++
+    counter.Unlock()
+
 如何判断一个空结构体(empty struct)
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
