@@ -128,7 +128,7 @@ Go 无法修改值为结构体的map
 
 不要并发读写map，可能导致程序崩溃
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-如果多个 goroutine 并发对 map 进行读写，必须要同步。
+如果多个 goroutine 并发对 map 进行读写，必须要同步，否则可能导致进程退出
 
 .. code-block:: go
 
@@ -137,13 +137,13 @@ Go 无法修改值为结构体的map
         sync.RWMutex
         m map[string]int
     }{m: make(map[string]int)}
-    counter.RLock()
 
+    counter.RLock() // locks for reading
     n := counter.m["some_key"]
     counter.RUnlock()
     fmt.Println("some_key:", n)
 
-    counter.Lock()
+    counter.Lock() // locks for writing
     counter.m["some_key"]++
     counter.Unlock()
 
