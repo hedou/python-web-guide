@@ -316,6 +316,11 @@ Go 位操作
 ---------------------------------------------------------------
 - https://learnku.com/go/t/23460/bit-operation-of-go
 
+Go 缺陷
+---------------------------------------------------------------
+- https://github.com/ksimka/go-is-not-good
+- `50 Shades of Go: Traps, Gotchas, and Common Mistakes for New Golang Devs  <http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/>`_
+
 Go源码阅读
 ---------------------------------------------------------------
 
