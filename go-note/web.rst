@@ -233,7 +233,7 @@ Go 常用框架(工具)
 - mongodb: mongodb/mongo-go-driver
 - id生成器: rx/xid, satori/go.uuid, bwmarrin/snowflake
 - cache(in memory): patrickmn/go-cache, golang/groupcache(分布式)
-- 并发/协程池(star 数排序)：
+- 并发/协程池(star 数从低到高排序)：
 
   - https://github.com/rafaeldias/async
   - https://github.com/Jeffail/tunny
