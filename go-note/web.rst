@@ -17,6 +17,7 @@ Go语言入门和深入
 - `Build Web Application With Golang <https://github.com/astaxie/build-web-application-with-golang>`_
 - `Go 高级编程 <https://chai2010.cn/advanced-go-programming-book/>`_
 - `Go 101 <https://go101.org/article/101.html>`_ 包含了很多基础和高级主题
+- `Mastering Go <https://books.studygolang.com/Mastering_Go_ZH_CN/>`_
 
 Go Books
 ---------------------------------------------------------------
