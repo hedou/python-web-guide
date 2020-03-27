@@ -12,6 +12,22 @@ go初学者常见错误
 Go tricks
 --------------------------------------------------
 
+影子变量(Shadowed variables)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+.. code-block:: go
+
+    // https://yourbasic.org/golang/gotcha-shadowing-variables/
+    func main() {
+        n := 0
+        if true {
+            n := 1
+            n++
+        }
+        fmt.Println(n) // 0，注意 if 作用与里边使用 := 赋值隐藏了外部的 n，所以原来的 n 打印还是 0
+        // 如果想要修改 n，直接用 n = 1
+    }
+
 golang cannot refer to unexported field or method
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
