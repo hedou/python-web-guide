@@ -326,6 +326,10 @@ Go Leetcode
 ---------------------------------------------------------------
 https://github.com/austingebauer/go-leetcode
 
+Go 面试
+---------------------------------------------------------------
+- `Awesome Go Interview Questions and Answers <https://goquiz.github.io/>`_
+
 Go源码阅读
 ---------------------------------------------------------------
 
