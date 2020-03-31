@@ -313,6 +313,10 @@ Go 网络编程
 ---------------------------------------------------------------
 - https://tumregels.github.io/Network-Programming-with-Go/
 
+Go 并发模式
+---------------------------------------------------------------
+- https://blog.golang.org/pipelines
+
 Go 位操作
 ---------------------------------------------------------------
 - https://learnku.com/go/t/23460/bit-operation-of-go
