@@ -326,6 +326,7 @@ Go 缺陷
 ---------------------------------------------------------------
 - https://github.com/ksimka/go-is-not-good
 - `50 Shades of Go: Traps, Gotchas, and Common Mistakes for New Golang Devs  <http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/>`_
+- https://bluxte.net/musings/2018/04/10/go-good-bad-ugly/
 
 Go Leetcode
 ---------------------------------------------------------------
