@@ -249,6 +249,7 @@ Go 常用框架(工具)
 - 图片处理：h2non/imaginary
 - 网络编程：fatih/pool
 - 表格：go-echarts
+- excel(XLSX): 360EntSecGroup-Skylar/excelize, tealeg/xlsx
 - 转换工具：
 
   - sql2go(sql -> go struct): http://stming.cn/tool/sql2go.html
