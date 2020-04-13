@@ -3,6 +3,37 @@
 Go 算法和数据结构
 =====================================================================
 
+Stack
+--------------------------------------------------
+
+.. code-block:: go
+
+    type Stack struct {
+        st []int
+    }
+
+    func NewStack() *Stack {
+        return &Stack{st:make([]int,0)}
+    }
+    func (s *Stack) Push(x int) {
+        s.st = append(s.st, x)
+    }
+
+    func (s *Stack) Peek() int{
+        return s.st[len(s.st)-1]
+    }
+
+    func (s *Stack) Pop() int{
+        n := len(s.st)
+        top := s.st[n-1]
+        s.st = s.st[:n-1]
+        return top
+    }
+
+    func (s *Stack) Empty() bool{
+        return len(s.st) == 0
+    }
+
 Queue
 --------------------------------------------------
 
