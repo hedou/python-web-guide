@@ -232,7 +232,7 @@ Go 常用框架(工具)
 - Kafka: Shopify/sarama
 - Elasticsearch: olivere/elastic, elastic/elasticsearch
 - mongodb: mongodb/mongo-go-driver
-- id生成器: rx/xid, satori/go.uuid, bwmarrin/snowflake
+- id生成器: rx/xid, satori/go.uuid, beinan/fastid, bwmarrin/snowflake
 - cache(in memory): patrickmn/go-cache, golang/groupcache(分布式)
 - 并发/协程池(star 数从低到高排序)：
 
@@ -247,7 +247,7 @@ Go 常用框架(工具)
 - 日志: logrus, zap, mumberjack
 - 调试：go-spew/dlv
 - 图片处理：h2non/imaginary
-- 网络编程：fatih/pool
+- 网络库：fatih/pool; panjf2000/gnet
 - 表格：go-echarts
 - excel(XLSX): 360EntSecGroup-Skylar/excelize, tealeg/xlsx
 - 转换工具：
