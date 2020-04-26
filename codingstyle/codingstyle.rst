@@ -323,6 +323,7 @@ ORM和Mysql数据库相关：
 - 注意不要在循环里使用查询语句，合并查询语句。比如不要在for循环中使用一个对象的relation查询(懒加载的时候，每次调用都会查询数据库)
 - 注意隐式类型转换导致的全表扫描。大家可以搜一下《数据库30条军规》，有一些坑应该避免。
 - Mysql需要存储表情：`CREATE DATABASE mydb CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;`
+- 不同微服务之间尽量不要共享数据库，而是通过接口进行通信。避免一个服务迁移数据之后受到影响。
 
 * `《MySQL互联网业务数据库设计规范》 <https://www.verynull.com/2017/02/18/MySQL%E4%BA%92%E8%81%94%E7%BD%91%E4%B8%9A%E5%8A%A1%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/>`_
 * `《Mysql高性能优化规范建议》 <https://www.cnblogs.com/huchong/p/10219318.html>`_
