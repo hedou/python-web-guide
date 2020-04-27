@@ -149,6 +149,12 @@ RPC/Web 框架
 - redis版本和集群模式。使用云 redis 的时候之前因为使用了 lua 脚本，但是测试环境和线上使用了不同的 redis 集群版本，发现测试
   环境测试一直没问题，但是一到线上就不起作用。建议保持线上和测试环境的基础组件版本一致。
 
+脚本编写问题
+~~~~~~~~~~~~~~~~~~~~~~
+- 先用日志替换写操作。需要跑一些脚本的时候，可能会修改数据库，如果脚本直接修改了数据并且脚本有 bug 可能就会导致数据异常。
+  建议所有的写操作写替换成日志打印出来，确认无误之后再去执行，更加保险。
+
+
 参考
 --------------------------------------
 * `50 Shades of Go: Traps, Gotchas, and Common Mistakes for New Golang Devs  <http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/>`_
