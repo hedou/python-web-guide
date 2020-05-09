@@ -471,6 +471,14 @@ Iterm2
    # 如何使用 rz/sz 传文件
    https://segmentfault.com/a/1190000012166969
 
+   # 如何使用 iterm2 it2copy 从 服务器上用 vim 拷贝文件
+   # https://stackoverflow.com/questions/10694516/vim-copy-mac-over-ssh/10703012
+   1. 安装 iTerm2 Utilities 到服务器。iTerm2 -> Install shell Integratio。后边是 bash or zsh，根据你用的 shell 选择
+    curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | zsh
+   2. 重新登录之后 it2copy 生效
+   3. 在 vim visual 模式选择之后 执行 `:w !it2copy` 即可。或这直接 cat file.txt | it2copy
+
+
 Tmux
 -------------------------------------------------------------
 
