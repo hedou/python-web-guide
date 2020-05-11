@@ -480,6 +480,9 @@ Go int/int64/float 和 string 转换示例
             if s, err := strconv.ParseFloat(f, 64); err == nil {
                 fmt.Println(s) // 3.14159265
             }
+
+            // float -> string https://yourbasic.org/golang/convert-string-to-float/
+            s := fmt.Sprintf("%f", 123.456)
     }
 
 Go struct 如何设置默认值
