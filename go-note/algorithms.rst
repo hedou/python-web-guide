@@ -3,6 +3,8 @@
 Go 算法和数据结构
 =====================================================================
 
+刷题过程中会遇到一些通用数据结构的封装，在这里记录一下。注意没有考虑 goroutine 安全，生产环境用需要加锁改造。
+
 Stack
 --------------------------------------------------
 
@@ -120,4 +122,154 @@ Deque
 
     func (dq *Deque) Len() int {
         return dq.ll.Len()
+    }
+
+
+Linked List
+--------------------------------------------------
+
+.. code-block:: go
+
+    package main
+
+    import "fmt"
+
+    // 测试链表。在 redigo 里边使用到了链表作为 pool 的实现
+    type IntList struct {
+        count int
+        // front,back 分别指向第一个和最后一个 node，或者是 nil。front.prev back.next 都是空
+        front, back *Node
+    }
+
+    // 链表节点
+    type Node struct {
+        next, prev *Node
+    }
+
+    func (l *IntList) Count() int {
+        return l.count
+    }
+
+    func (l *IntList) pushFront(node *Node) {
+        node.next = l.front
+        node.prev = nil
+        if l.count == 0 { // note when list is empty
+            l.back = node
+        } else {
+            l.front.prev = node
+        }
+        l.front = node
+        l.count++
+    }
+
+    func (l *IntList) popFront() {
+        first := l.front
+        l.count--
+        if l.count == 0 {
+            l.front, l.back = nil, nil
+        } else {
+            first.next.prev = nil
+            l.front = first.next
+        }
+        first.next, first.prev = nil, nil // clear first
+    }
+
+    func (l *IntList) popBack() {
+        last := l.back
+        l.count--
+        if l.count == 0 {
+            l.front, l.back = nil, nil
+        } else {
+            last.prev.next = nil
+            l.back = last.prev
+        }
+        last.prev, last.next = nil, nil
+    }
+
+    func (l *IntList) Print() {
+        cur := l.front
+        for cur != l.back {
+            fmt.Println(cur)
+            cur = cur.next
+        }
+        if l.back != nil {
+            fmt.Println(l.back)
+        }
+    }
+
+
+Trie
+--------------------------------------------------
+
+.. code-block:: go
+
+    // Package main provides ...
+    package main
+
+    import "fmt"
+
+    // https://golangbyexample.com/trie-implementation-in-go/
+
+    const (
+        ALBHABET_SIZE = 26
+    )
+
+    type node struct {
+        childrens [ALBHABET_SIZE]*node
+        isWordEnd bool
+    }
+
+    type trie struct {
+        root *node
+    }
+
+    func newTrie() *trie {
+        return &trie{
+            root: &node{},
+        }
+    }
+
+    func (t *trie) insert(word string) {
+        wordLength := len(word)
+        current := t.root
+        for i := 0; i < wordLength; i++ {
+            idx := word[i] - 'a'
+            if current.childrens[idx] == nil {
+                current.childrens[idx] = &node{}
+            }
+            current = current.childrens[idx]
+        }
+        current.isWordEnd = true
+    }
+    func (t *trie) find(word string) bool {
+        wordLength := len(word)
+        current := t.root
+        for i := 0; i < wordLength; i++ {
+            idx := word[i] - 'a'
+            if current.childrens[idx] == nil {
+                return false
+            }
+            current = current.childrens[idx]
+        }
+        if current.isWordEnd {
+            return true
+        }
+        return false
+    }
+
+    func main() {
+        trie := newTrie()
+        words := []string{"zhang", "wang", "li", "zhao"}
+        for i := 0; i < len(words); i++ {
+            trie.insert(words[i])
+        }
+        toFind := []string{"zhang", "wang", "li", "zhao", "gong"}
+        for i := 0; i < len(toFind); i++ {
+            c := toFind[i]
+            if trie.find(c) {
+                fmt.Printf("word[%s] found in trie.\n", c)
+            } else {
+                fmt.Printf("word[%s] not found in trie\n", c)
+            }
+        }
     }
