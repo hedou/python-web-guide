@@ -3,7 +3,8 @@
 Go 算法和数据结构
 =====================================================================
 
-刷题过程中会遇到一些通用数据结构的封装，在这里记录一下。注意没有考虑 goroutine 安全，生产环境用需要加锁改造。
+刷题过程中会遇到一些通用数据结构的封装，在这里记录一下。注意因为是刷算法题用的额，没有考虑 goroutine 安全，
+如果是在生产环境中使用用需要加锁改造。
 
 Stack
 --------------------------------------------------
@@ -272,4 +273,71 @@ Trie
                 fmt.Printf("word[%s] not found in trie\n", c)
             }
         }
+    }
+
+OrderedMap (类似 python collections.OrderedDict)
+--------------------------------------------------
+
+.. code-block:: go
+
+    package main
+
+    import (
+        "container/list"
+        "fmt"
+    )
+
+    // 按照 key 插入顺序遍历 map，类似 python collections.OrderedDict。注意不是 key 的字典序，而是插入顺序
+    type OrderedMap struct {
+        m  map[string]int
+        me map[string]*list.Element
+        ll *list.List // 记录 key order
+    }
+
+    func NewOrderedMap() *OrderedMap {
+        return &OrderedMap{
+            m:  make(map[string]int),
+            me: make(map[string]*list.Element),
+            ll: list.New(),
+        }
+    }
+
+    func (o *OrderedMap) Set(k string, v int) {
+        if _, found := o.m[k]; !found {
+            e := o.ll.PushBack(k)
+            o.me[k] = e
+        }
+        o.m[k] = v
+    }
+
+    func (o *OrderedMap) Exist(k string) bool {
+        _, found := o.m[k]
+        return found
+    }
+
+    func (o *OrderedMap) Get(k string) int {
+        return o.m[k]
+    }
+
+    func (o *OrderedMap) Delete(k string) {
+        delete(o.m, k)
+
+        node := o.me[k]
+        o.ll.Remove(node)
+        delete(o.me, k)
+    }
+
+    func (o *OrderedMap) Len() int {
+        return len(o.m)
+    }
+
+    // 按照 key 进入顺序返回
+    func (o *OrderedMap) Keys() []string {
+        keys := make([]string, o.ll.Len())
+        i := 0
+        for e := o.ll.Front(); e != nil; e = e.Next() {
+            keys[i] = e.Value.(string)
+            i++
+        }
+        return keys
     }
