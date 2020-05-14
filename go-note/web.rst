@@ -248,7 +248,7 @@ Go 常用框架(工具)
 - 日志: logrus, zap, mumberjack
 - 调试：go-spew/dlv
 - 图片处理：h2non/imaginary
-- 网络库：fatih/pool; panjf2000/gnet
+- 网络库：fatih/pool; panjf2000/gnet, valyala/fasthttp
 - http client: levigross/grequests
 - 表格：go-echarts
 - excel(XLSX): 360EntSecGroup-Skylar/excelize, tealeg/xlsx
