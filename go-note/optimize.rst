@@ -9,6 +9,18 @@ string 与 []byte 互转
 
 .. code-block:: go
 
+    /*
+    type StringHeader struct {
+        Data uintptr
+        Len  int
+    }
+    type SliceHeader struct {
+        Data uintptr
+        Len  int
+        Cap  int
+    }
+    */
+
     func str2bytes(s string) []byte {
        x := (*[2]uintptr)(unsafe.Pointer(&s))
        b := [3]uintptr{x[0], x[1], x[1]}
