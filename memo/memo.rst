@@ -1064,6 +1064,14 @@ Curl
 * `《markdown sheet》 <http://commonmark.org/help/>`_
 * `《CONQUERING THE COMMAND LINE》 <http://conqueringthecommandline.com/book/>`_
 
+Pandoc 转换文档格式
+-------------------------------------------------------------
+
+.. code-block:: shell
+
+  pandoc -s -o about.md about.rst
+
+
 Wireshark(mac tcp 抓包)
 -------------------------------------------------------------
 
