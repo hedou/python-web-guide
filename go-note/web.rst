@@ -237,6 +237,7 @@ Go 常用框架(工具)
 - cache(in memory): patrickmn/go-cache, allegro/bigcache, golang/groupcache(分布式)
 - 并发/协程池(star 数从低到高排序)：
 
+  - https://github.com/panjf2000/ants
   - https://github.com/rafaeldias/async
   - https://github.com/Jeffail/tunny
   - https://github.com/benmanns/goworker
