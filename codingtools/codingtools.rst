@@ -448,13 +448,13 @@ APM (Application Performance Management)
 - MediaInfo: 查看视频信息
 - HandBrake: 视频压缩工具，免费工具。直接从录屏工具导出的视频体积可能会非常大，推荐压缩后上传到网站
 - SketchBookPro/Deskscribble(收费): 白板/黑板工具，配合 wacom 手写板可以把屏幕当成黑板或者白板使用。模仿可汗学院的授课方式，笔者在讲述 Python 算法的课程里使用到。
-- Wacom 手绘板：用来实现屏幕手写，配合绘图或者白板软件当做黑板使用，方便手写做一些演示或者推导。
+- Wacom/绘王 手绘板：用来实现屏幕手写，配合绘图或者白板软件当做黑板使用，方便手写做一些演示或者推导。
 - Blue yeti电容麦/Rode NT usb电容麦/铁三角Atr2100动圈麦：使用 mac 内置麦克风音频效果比较差，可以考虑专业的播客级麦克风，录制出来的视频声音要清楚很多。usb 麦克风即插即用，非常方便，但是灵敏底噪大。动圈麦在嘈杂环境表现更好，不会收录杂音。
 - VideoScribe: 制作手绘风格视频，提升视频趣味性。收费
-- 课件制作: PowerPoint, Keynote, AxeSlide, Focusky 等
+- 课件制作: PowerPoint, Keynote, AxeSlide, Focusky 等。笔者现在喜欢使用 OneNote 配合手写板在视频里进行图解演示。
 - Mousepose: 鼠标高亮增强工具。演示的时候可以高亮部分区域，其他部分置灰
 - 免费字体：思源字体(思源宋体、思源黑体)；站酷字体。视频中的一些字体可能要考虑版权问题，推荐使用无版权字体
-- canva: 一个好用的封面设计网站，可以用来涉及视频封面图 https://www.canva.com
+- canva: 一个好用的封面设计网站，可以用来设计 vlog/课程 视频封面图 https://www.canva.com
 
 HTML Presentation Tools
 --------------------------------------
