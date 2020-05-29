@@ -241,6 +241,7 @@ Go 常用框架(工具)
   - https://github.com/rafaeldias/async
   - https://github.com/Jeffail/tunny
   - https://github.com/benmanns/goworker
+  - https://github.com/buptmiao/parallel
 
 - 异步任务框架: machinery, gocelery
 - 定时任务：robfig/cron, ouiqiang/gocron
