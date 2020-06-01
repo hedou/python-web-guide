@@ -13,7 +13,8 @@
 限流可以在很多层面去做，比如 nginx+lua, API Gateway，或者在接口层直接来做，一般可以结合 redis 来做为计数器。
 限流有一下一些实现方式，可以根据业务场景选择：
 
-- token bucket。令牌桶算法
+- token bucket。令牌桶算法。允许突发流量。https://github.com/juju/ratelimit
+- leakey bucket。漏桶算法。以恒定速率处理(恒定速率漏水) https://github.com/uber-go/ratelimit
 - redis incr/expire。最简单的一种方式，通过 redis 针对用户或者 ip key 来计数
 - redis zset。可以实现基于时间窗口来限流。不过不适合短期内大量 qps 限流，适合用户行为限流
 
