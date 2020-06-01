@@ -246,7 +246,7 @@ Go 常用框架(工具)
 - 异步任务框架: machinery, gocelery
 - 定时任务：robfig/cron, ouiqiang/gocron
 - 熔断：hystrix-go, eapache/go-resiliency, cep21/circuit
-- 限流: ulule/limiter, didip/tollbooth, uber-go/ratelimit, juju/ratelimit
+- 限流: ulule/limiter, didip/tollbooth, uber-go/ratelimit (漏桶leaky-bucket), juju/ratelimit (令牌桶token bucket)
 - 日志: logrus, zap, mumberjack
 - 调试：go-spew/dlv
 - 图片处理：h2non/imaginary
