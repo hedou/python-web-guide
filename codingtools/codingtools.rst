@@ -392,9 +392,10 @@ APM (Application Performance Management)
 - sqlacodegen: 从 mysql 生成python sqlalchemy model定义。https://github.com/agronholm/sqlacodegen
 
 
-绘图/流程图工具
+绘图/流程图/思维导图工具
 --------------------------------------
-- processon: http://processon.com/ 使用了下感觉还不错，基本能满足需求
+- processon: http://processon.com/ 使用了下感觉还不错，基本能满足需求。有模板、流程图、时序图、思维导图等
+- Gliffy Diagrams: https://chrome.google.com/webstore/detail/gliffy-diagrams/bhmicilclplefnflapjmnngmkkkkpfad/related
 - draw.io: https://www.draw.io/
 - carbon: https://carbon.now.sh/ 可以根据代码生成图片
 
