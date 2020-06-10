@@ -932,16 +932,16 @@ vim-go plugin Tips
    reveal-md slides.md -w
 
 
-PPT
+PPT 技巧
 -------------------------------------------------------------
 
 .. code-block:: shell
 
-   # 如何粘贴代码到 PPT 里边，转成 rtf。直接粘贴没有代码高亮，转成 rtf 格式
+   # 如何粘贴代码到 PPT 里边: 转成 rtf。直接粘贴没有代码高亮，转成 rtf 格式就可以了
    # https://superuser.com/questions/85948/how-can-i-embed-programming-source-code-in-powerpoint-slide-and-keep-code-highli
    # pip install Pygments
    pygmentize -f rtf code.py | pbcopy
-   # 粘贴到 ppt 之后需要选择 “保留源格式”
+   # 粘贴到 ppt 之后需要选择 “保留源格式”，这样代码才有高亮
 
 
 Benchmark
