@@ -261,7 +261,8 @@ MacOS
    notify("开会啦", "Go Go Go !!!")
 
 
-# SSH
+SSH
+-------------
 
 二次验证自动登录跳板机脚本，根据你的密码和服务器配置修改即可。
 
@@ -377,7 +378,7 @@ Linux(centos/ubuntu)
     tar zxvf FileName.tar.gz    # 解压
     tar zcvf FileName.tar.gz DirName    # 压缩
 
-代码搜索用ag, 比ack快
+代码搜索用ag/rg, 比ack快
 
 .. code-block:: python
 
@@ -487,7 +488,7 @@ Tmux
    # https://wiki.archlinux.org/index.php/tmux
    tmux rename -t oriname newname
    tmux att -t name -d               # -d 不同窗口全屏
-   # 如果手贱在本机tmux里又ssh到服务器又进入服务器的tmux怎么办
+   # 如果手贱在本机tmux里又ssh到服务器又进入服务器的tmux怎么办(退出 tmux 套娃)
    c-b c-b d
 
    # Vim style pane selection
@@ -1086,7 +1087,7 @@ Capture -> Options -> lo0 抓本地 127.0.0.1 包。筛选 tcp.port == 6379 抓 
 - https://www.jianshu.com/p/62f00db7be68
 - http://mrpeak.cn/blog/wireshark/  Wireshark抓包iOS入门教程
 
-HHKB 静电容键盘
+HHKB 静电容键盘。Karabiner 修改 mac 键位配置
 -------------------------------------------------------------
 
 - HHKB 开关我只打开了 2 （mac 模式），貌似网上有说打开开关 6 会出现无法唤醒的问题。
