@@ -736,3 +736,49 @@ reids mock 可以用 miniredis，以下是一个示例代码
       code := m.Run()
       os.Exit(code)
     }
+
+
+网络相关
+--------------------------------------------------
+
+获取本机 ip
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+.. code-block:: go
+
+    package main
+
+    import (
+        "fmt"
+        "log"
+        "net"
+        "time"
+    )
+
+    var localIp string // 用一个全局变量或者缓存，防止高并发的时候重复频繁调用
+
+    // GetIPAddr 获取 server IP
+    func GetIPAddr() string {
+        if localIp != "" {
+            // fmt.Printf("use local ip %s\n", localIp)
+            return localIp
+        }
+        addrs, err := net.InterfaceAddrs()
+        if err != nil {
+            return ""
+        }
+
+        for _, addr := range addrs {
+            if ipnet, ok := addr.(*net.IPNet); ok && !ipnet.IP.IsLoopback() {
+                if ipnet.IP.To4() != nil {
+                    localIp = ipnet.IP.String()
+                    return localIp
+                }
+            }
+        }
+        return ""
+    }
+
+    func main() {
+        fmt.Println(GetIPAddr())
+    }
