@@ -667,6 +667,24 @@ Failed Type Assertions
             }
     }
 
+An interface holding a nil value is not nil
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+An interface holding nil value is not nil. An interface equals nil only if both type and value are nil.
+
+.. code-block:: go
+
+    package main
+    import "fmt"
+    func main() {
+        var a interface{}
+        fmt.Printf("a == nil is %t\n", a == nil) // a == nil is true
+        var b interface{}
+        var p *int = nil
+        b = p
+        fmt.Printf("b == nil is %t\n", b == nil) // b == nil is false
+    }
+
 
 逃逸分析
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
