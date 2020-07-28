@@ -4,7 +4,7 @@
 微服务/分布式系统组件
 =========================================
 
-介绍一些微服务中常到碰的问题，包括常见概念，系统组件，系统平台等。
+介绍一些微服务中的常见问题，包括常见概念，中间件，系统平台等。
 
 限流器
 ----------------------
@@ -13,11 +13,11 @@
 限流可以在很多层面去做，比如 nginx+lua, API Gateway，或者在接口层直接来做，一般可以结合 redis 来做为计数器。
 限流有一下一些实现方式，可以根据业务场景选择：
 
-常见的三种方式是信号量、漏桶算法、令牌桶算法。
+常见的几种方式是信号量、漏桶算法、令牌桶算法。
 
-- token bucket。令牌桶算法。允许突发流量。https://github.com/juju/ratelimit
+- token bucket。令牌桶算法。允许突发流量。https://github.com/juju/ratelimit 或者 go 自带的 https://github.com/golang/time
 - leaky bucket。漏桶算法。以恒定速率处理(恒定速率漏水) https://github.com/uber-go/ratelimit
-- redis incr/expire。最简单的一种方式，通过 redis 针对用户或者 ip key 来计数
+- redis incr/expire。最简单的一种方式，通过 redis 针对用户或者 ip key 来计数，可以加上用户信息作为 key
 - redis zset。可以实现基于时间窗口来限流。不过不适合短期内大量 qps 限流，适合用户行为限流
 
 你可以在网上很方便的搜索 『rate limiter』 来找到对应的实现。
