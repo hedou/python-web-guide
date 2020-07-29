@@ -224,7 +224,7 @@ Go 常用框架(工具)
 以下第三方库均可以通过 google + 关键词搜索到，同一行尽量按照流行程度从前往后列举，默认都是 github 上的包(只写了仓库后缀)。
 也可以去 awesome-go 之类的去查找，然后根据 star 数目等作为参考选用。
 
-- web/rpc框架: gin, grpc, beego
+- web/rpc框架: gin, grpc, beego, labstack/echo
 - 参数验证：go-playground/validator, bytedance/go-tagexpr
 - json处理转换：go-simplejson/mapstructure，json-iterator/go, tidwall/gjson(获取 json 值)
 - 配置解析: viper(兼容很多格式)
