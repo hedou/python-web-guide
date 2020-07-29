@@ -226,7 +226,7 @@ Go 常用框架(工具)
 
 - web/rpc框架: gin, grpc, beego
 - 参数验证：go-playground/validator, bytedance/go-tagexpr
-- json处理转换：go-simplejson/mapstructure，json-iterator/go
+- json处理转换：go-simplejson/mapstructure，json-iterator/go, tidwall/gjson(获取 json 值)
 - 配置解析: viper(兼容很多格式)
 - mysql orm: gorm, xorm, sqlx
 - redis: go-redis, redigo
