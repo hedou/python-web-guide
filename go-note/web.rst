@@ -230,7 +230,7 @@ Go 常用框架(工具)
 - 配置解析: viper(兼容很多格式)
 - mysql orm: gorm, xorm, sqlx
 - redis: go-redis, redigo
-- Kafka: Shopify/sarama
+- Kafka: Shopify/sarama, confluent-kafka-go
 - Elasticsearch: olivere/elastic, elastic/elasticsearch
 - mongodb: mongodb/mongo-go-driver
 - id生成器: rx/xid, satori/go.uuid, beinan/fastid, bwmarrin/snowflake
