@@ -272,6 +272,7 @@ Go 常用框架(工具)
 - 字符串处理工具：huandu/xstrings
 - HTML 处理/过滤: PuerkitoBio/goquery, microcosm-cc/bluemonday
 - 系统信息收集：shirou/gopsutil
+- go runtime: bmhatfield/go-runtime-metrics(runtime 指标收集)
 
 工具:
 
