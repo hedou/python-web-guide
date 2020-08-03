@@ -268,7 +268,7 @@ Go 常用框架(工具)
 - 热编译工具：gowatch
 - 静态检查：golangci-lint
 - 网络代理：goproxy
-- 命令行: cobra
+- 命令行: spf13/cobra
 - 字符串处理工具：huandu/xstrings
 - HTML 处理/过滤: PuerkitoBio/goquery, microcosm-cc/bluemonday
 - 系统信息收集：shirou/gopsutil
