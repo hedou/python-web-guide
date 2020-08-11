@@ -68,6 +68,30 @@ package is folder.  package name is folder name.  package path is folder path.
 - https://splice.com/blog/golang-verify-type-implements-interface-compile-time/
 - https://medium.com/@matryer/golang-tip-compile-time-checks-to-ensure-your-type-satisfies-an-interface-c167afed3aae
 
+
+如何通过反射判断是否实现接口?
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+.. code-block:: go
+
+    type CustomError struct{}
+
+    func (*CustomError) Error() string {
+        return ""
+    }
+
+    func testImplements() {
+        // 判断某个类型是否实现了接口。
+        // 获取接口类型 reflect.TypeOf((*<interface>)(nil)).Elem()
+        typeOfError := reflect.TypeOf((*error)(nil)).Elem()
+        customErrorPtr := reflect.TypeOf(&CustomError{})
+        customError := reflect.TypeOf(CustomError{})
+
+        fmt.Println(customErrorPtr.Implements(typeOfError)) // true
+        fmt.Println(customError.Implements(typeOfError))    // false
+    }
+
+
 Go 运行单个测试文件报错 undefined？
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -773,7 +797,7 @@ reids mock 可以用 miniredis，以下是一个示例代码
         "time"
     )
 
-    var localIp string // 用一个全局变量或者缓存，防止高并发的时候重复频繁调用
+    var localIp string // 用一个全局变量或者缓存，防止高并发的时候重复频繁系统调用
 
     // GetIPAddr 获取 server IP
     func GetIPAddr() string {
