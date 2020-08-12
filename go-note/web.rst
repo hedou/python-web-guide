@@ -324,7 +324,7 @@ Go 反射
 
 Go 网络编程
 ---------------------------------------------------------------
-- https://tumregels.github.io/Network-Programming-with-Go/
+- https://tumregels.github.io/Network-Programming-with-Go/  一本 go 网络编程入门在线电子书
 
 Go 并发模式
 ---------------------------------------------------------------
