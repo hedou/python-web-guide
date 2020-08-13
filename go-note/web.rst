@@ -342,7 +342,8 @@ Go 缺陷
 
 Go Leetcode
 ---------------------------------------------------------------
-https://github.com/austingebauer/go-leetcode
+- https://github.com/austingebauer/go-leetcode
+- https://books.halfrost.com/leetcode/ 一本 go leetcode 题解电子书
 
 Go 面试
 ---------------------------------------------------------------
