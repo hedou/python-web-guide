@@ -249,8 +249,8 @@ Go 常用框架(工具)
 - 限流库:
 
    - web框架限流：ulule/limiter, didip/tollbooth
-   - 令牌桶(token bucket)限流：uber-go/ratelimit
-   - 漏桶(leaky bucket)限流: juju/ratelimit, golang.org/x/time/rate
+   - 令牌桶(token bucket)限流：juju/ratelimit, golang.org/x/time/rate
+   - 漏桶(leaky bucket)限流: uber-go/ratelimit
 
 - 日志: logrus, zap, mumberjack
 - 调试：go-spew/dlv
@@ -273,6 +273,8 @@ Go 常用框架(工具)
 - HTML 处理/过滤: PuerkitoBio/goquery, microcosm-cc/bluemonday
 - 系统信息收集：shirou/gopsutil
 - go runtime: bmhatfield/go-runtime-metrics(runtime 指标收集)
+- 邮件：gopkg.in/gomail
+- 接口文档生成：swaggo/swag
 
 工具:
 
