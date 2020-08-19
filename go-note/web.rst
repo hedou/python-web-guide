@@ -253,6 +253,7 @@ Go 常用框架(工具)
    - 漏桶(leaky bucket)限流: uber-go/ratelimit
 
 - 日志: logrus, zap, mumberjack
+- 链路追踪：opentracing/opentracing-go, uber/jaeger-client-go
 - 调试：go-spew/dlv
 - 图片处理：h2non/imaginary
 - 网络库/连接池：fatih/pool; panjf2000/gnet, valyala/fasthttp
