@@ -51,7 +51,7 @@ Netflix 开源的 Hystrix 是比较流行的开源实现，对应的有各种其
 
 .. image:: ../_image/microservice_distribute/slowflake.png
 
-网上依旧很多开源实现，你可以搜索到一些 snowflake 的 golang 实现：
+网上依旧很多开源实现，你可以搜索到一些 snowflake 的 golang 实现，注意依赖时间戳有些可能有时钟回拨问题。
 
 - `bwmarrin/snowflake <https://github.com/bwmarrin/snowflake>`_
 - `9种分布式ID生成方式 <https://zhuanlan.zhihu.com/p/107939861>`_
