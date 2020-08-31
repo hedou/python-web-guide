@@ -824,3 +824,19 @@ reids mock 可以用 miniredis，以下是一个示例代码
     func main() {
         fmt.Println(GetIPAddr())
     }
+
+
+Go panic 场景
+--------------------------------------------------
+在《Go 编程之旅》中总结了一些 panic 场景，写 go 的时候留意下：
+
+- 数组/切片越界
+- 空指针调用
+- 过早关闭 HTTP 响应体
+- 除以 0
+- 向已经关闭的 channel 发送消息
+- 重复关闭 channel
+- 关闭未初始化的 channel
+- 未初始化 map
+- 跨协程的 panic 处理
+- sync 计数为负数。
