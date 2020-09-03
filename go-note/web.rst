@@ -163,6 +163,9 @@ Go 断点调试器dlv
    # 打断点断点
    b main.main
 
+   # 打印变量
+   print val
+
    # go get -u github.com/derekparker/delve/cmd/dlv
    dlv debug main.go
 
