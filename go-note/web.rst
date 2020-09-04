@@ -88,6 +88,7 @@ Gin example
 - https://github.com/EDDYCJY/go-gin-example
 - https://github.com/vsouza/go-gin-boilerplate
 - https://github.com/gothinkster/golang-gin-realworld-example-app
+- https://github.com/go-programming-tour-book/blog-service 《go 编程之旅》博客代码示例
 
 gin 实战博客:
 
