@@ -634,7 +634,7 @@ Go 如何复制map
             // one two three (may wrong order)
     }
 
-    // 方法2：使用传给匿名goroutine参数
+    // 方法2：使用传给匿名goroutine参数，推荐使用这种方式
     func testClosure2() {
             data := []string{"one", "two", "three"}
             for _, v := range data {
