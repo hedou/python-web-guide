@@ -5,8 +5,11 @@ Mysql
 =============
 
 
-如何批量 kill 掉查询
+Mysql 操作
 =====================================================================
+
+批量 kill 掉查询
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 有时候需要批量 kill 掉查询进程，有几种方式，比如生成 sql 文件执行：
 
@@ -48,3 +51,12 @@ Mysql
                 print('kill %s' % item)
                 cursor.execute('kill %s', _id)
         connection.close()
+
+删除大表
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: sql
+    # https://stackoverflow.com/questions/879327/quickest-way-to-delete-enormous-mysql-table
+    CREATE TABLE new_foo LIKE foo;
+    RENAME TABLE foo TO old_foo, new_foo TO foo;
+    DROP TABLE old_foo;
