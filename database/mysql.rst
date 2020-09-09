@@ -18,7 +18,7 @@ Mysql
     mysql> source /tmp/a.txt;
 
 
-直接生成 sql 语句 copy 下来复制到命令行也可以，或者练成一行复制：
+直接生成 sql 语句 copy 下来复制到命令行也可以，或者连接成一行方便复制：
 
 .. code-block:: sql
 
