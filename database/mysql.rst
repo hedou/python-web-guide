@@ -5,7 +5,7 @@ Mysql
 =============
 
 
-Mysql 操作
+数据库操作
 =====================================================================
 
 批量 kill 掉查询
@@ -56,6 +56,7 @@ Mysql 操作
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: sql
+
     # https://stackoverflow.com/questions/879327/quickest-way-to-delete-enormous-mysql-table
     CREATE TABLE new_foo LIKE foo;
     RENAME TABLE foo TO old_foo, new_foo TO foo;
