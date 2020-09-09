@@ -61,3 +61,16 @@ Mysql
     CREATE TABLE new_foo LIKE foo;
     RENAME TABLE foo TO old_foo, new_foo TO foo;
     DROP TABLE old_foo;
+
+统计表的大小并排序
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: sql
+
+    # https://stackoverflow.com/questions/9620198/how-to-get-the-sizes-of-the-tables-of-a-mysql-database
+    SELECT
+         table_schema as `Database`,
+         table_name AS `Table`,
+         round(((data_length + index_length) / 1024 / 1024), 2) `Size in MB`
+    FROM information_schema.TABLES
+    ORDER BY (data_length + index_length) DESC;
