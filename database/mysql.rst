@@ -74,3 +74,11 @@ Mysql
          round(((data_length + index_length) / 1024 / 1024), 2) `Size in MB`
     FROM information_schema.TABLES
     ORDER BY (data_length + index_length) DESC;
+
+查看表信息
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: sql
+
+    mysql > show table status;
+    mysql > show table status where Rows>100000;
