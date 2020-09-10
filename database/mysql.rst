@@ -52,7 +52,7 @@ Mysql
                 cursor.execute('kill %s', _id)
         connection.close()
 
-删除大表
+删除大表(借助一个临时表)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: sql
@@ -82,7 +82,6 @@ Mysql
 
     mysql > show table status;
     mysql > show table status where Rows>100000;
-
 
 
 Python Mysql 操作
