@@ -29,6 +29,16 @@ Mysql
 
     mysql > select GROUP_CONCAT(stat SEPARATOR ' ') from (select concat('KILL ',id,';') as stat from information_schema.processlist where db='dbname') as stats;
 
+    # 按客户端 IP 分组，看哪个客户端的链接数最多
+    select client_ip,count(client_ip) as client_num from (select substring_index(host,':' ,1) as client_ip from processlist ) as connect_info group by client_ip order by client_num desc;
+
+    # 查看正在执行的线程，并按 Time 倒排序，看看有没有执行时间特别长的线程
+    select * from information_schema.processlist where Command != 'Sleep' order by Time desc;
+
+    # 找出所有执行时间超过 5 分钟的线程，拼凑出 kill 语句，方便后面查杀
+    select concat('kill ', id, ';') from information_schema.processlist where Command != 'Sleep' and Time > 300 order by Time desc;
+
+
 也可以通过 python 脚本来完成，原理也是查询进程 id 然后删除：
 
 .. code-block:: py
