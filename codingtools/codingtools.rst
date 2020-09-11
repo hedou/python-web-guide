@@ -175,7 +175,7 @@ Chrome 开发者插件
 - pigar: 找出项目使用到的依赖库
 - buildout: 项目构建工具
 - pyenv/virtualenv/pipenv：多版本管理
-- cloc: 命令行代码行数统计工具
+- cloc, boyter/scc: 命令行代码行数统计工具，scc 速度快很多
 
 
 代码仓库托管
