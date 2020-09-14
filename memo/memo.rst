@@ -781,6 +781,10 @@ Git
     [user]
         email = john.doe@company.tld
 
+    # 从提交历史搜索字符串，比如提交历史中引入了一个新的函数，可以通过这个方式搜索
+    # https://stackoverflow.com/questions/5816134/how-to-find-the-git-commit-that-introduced-a-string-in-any-branch
+    git log -S 'hello world' --source --all
+
 
 Git工作流
 ------------
