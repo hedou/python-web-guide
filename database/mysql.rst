@@ -93,6 +93,14 @@ Mysql
     mysql > show table status;
     mysql > show table status where Rows>100000;
 
+纵向显示
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+有时候表字段比较多的时候，查询结果显示会很乱，可以使用竖屏显示的方式，结尾加上 `\\G`
+
+.. code-block:: sql
+
+    mysql > select * from user limit 10 \G
+
 
 Python Mysql 操作
 =====================================================================
