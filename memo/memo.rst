@@ -459,7 +459,7 @@ crontab
 * `《crontab快速参考》 <http://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/crontab.html>`_
 
 
-Iterm2
+Iterm2/Terminal
 -------------------------------------------------------------
 
 .. code-block:: sh
@@ -479,6 +479,9 @@ Iterm2
     curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | zsh
    2. 重新登录之后 it2copy 生效
    3. 在 vim visual 模式选择之后 执行 `:w !it2copy` 即可。或这直接 cat file.txt | it2copy
+
+   # 终端输出乱序。有时候有一些脚本或者软件可能会修改终端配置但是失败后又没有恢复，导致输出乱序，解决如下
+   `stty sane` 或者 `reset` 或者 `tset`
 
 
 Tmux
