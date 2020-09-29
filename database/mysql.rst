@@ -101,6 +101,14 @@ Mysql
 
     mysql > select * from user limit 10 \G
 
+导出和导入表的数据
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: sql
+
+    shell > mysqldump -u user -h host -p pass db_name table_name > out.sql
+    mysql > source /path/to/out.sql
+
 
 Python Mysql 操作
 =====================================================================
