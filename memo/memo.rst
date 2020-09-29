@@ -481,7 +481,7 @@ Iterm2/Terminal
    3. 在 vim visual 模式选择之后 执行 `:w !it2copy` 即可。或这直接 cat file.txt | it2copy
 
    # 终端输出乱序。有时候有一些脚本或者软件可能会修改终端配置但是失败后又没有恢复，导致输出乱序，解决如下
-   `stty sane` 或者 `reset` 或者 `tset`
+   `stty sane` 或者 `reset`
 
 
 Tmux
