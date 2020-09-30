@@ -48,12 +48,12 @@ MacOS 开发效率工具
 
 命令行工具
 --------------------------------------
+- tmux/tmuxp。比screen好用，可以用来分屏，托管进程等，服务器端必备神器，ubuntu下基本就不用使用terminator之类的分屏工具了。最近看youtube视频还发现有人在服务器上使用tmux和vim结对编程，两个人同时attach到一个session里，基情四射。
 - vim。本人比较喜欢的编辑器，平常写代码、博客、文档等使用频繁，配上各种插件编辑效率很高。http://vimawesome.com/ 可以到这个上面安装排名靠前的那些插件，能够大大提高编辑效率，部分替代IDE(本人装了六七十个插件，满足各种变态的编辑需求)。其他优秀的编辑器sublime，atom，vscode，emacs等根据个人喜好来吧，不过vim等终端友好的编辑器方便在服务器上直接写代码，和本地体验一样，缺点就是补全和跳转支持不完善，对新人不友好，也可以 Pycharm  和 vim插件配合。(在google搜索python awesome等可以在github上搜索到一些awesome项目，总结了该语言很多技术工具)。网上还有很多牛人开源了自己的 dotfiles，我们可以参考下别人的 vimrc 配置。
 - neovim: 新时代的 vim，我在这个配置(https://github.com/PegasusWang/vim-config)上自定义了自己的配置，使用起来性能和反应速度上远超原生的老古董 vim，目前笔者已经全面迁移到 neovim，用着很爽。感兴趣可以关注笔者知乎专栏，我录了一些针对初学者的教学视频。
 - vim-bootstrap: 一个快速建立不同编程语言 vimrc 的创建工具 https://github.com/editor-bootstrap/vim-bootstrap
 - ranger: 用 vim 的方式管理文件，替代 mac 下难用的 finder。
 - oni: https://github.com/onivim/oni/ 构建在 neovim 上的 IDE。还有 VimR 等项目。
-- tmux/tmuxp。比screen好用，可以用来分屏，托管进程等，服务器端必备神器，ubuntu下基本就不用使用terminator之类的分屏工具了。最近看youtube视频还发现有人在服务器上使用tmux和vim结对编程，两个人同时attach到一个session里，基情四射。
 - wemux: tmux 共享，https://github.com/zolrath/wemux
 - sshfs: 本地挂在服务器文件夹
 - tmate: https://tmate.io 终端共享工具，结对编程。很多现代化编辑器 vscode, atom 提供结对编程的插件。
@@ -108,6 +108,7 @@ Git 相关
 - git-cz: https://github.com/commitizen/cz-cli 用来统一 git commmit 提交信息，代替 gitmessage。参考文章：https://juejin.im/post/5afc5242f265da0b7f44bee4
 - pre-commit: git pre commit 工具，比如可以在 commit 之前增加代码静态检查或者运行单元测试。 https://pre-commit.com/
 - gitignore.io: 搜索ignore文件模板，有常见编程语言的示例模板。https://www.gitignore.io
+- lazygit/gitui: 终端 git UI 工具
 
 
 Chrome 开发者插件
