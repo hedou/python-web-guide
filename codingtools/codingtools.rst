@@ -358,9 +358,8 @@ Rest
 压测(benchmark)工具
 --------------------------------------
 - locust: 基于 python gevent 实现的压测工具。http://locust.io/， 有 web 界面，支持编写 python 脚本模拟测试，高度定制化，推荐。
-- ab
-- wrk
-- siege
+- ab/wrk/siege: 常见的命令行测试工具，用于一些简单的压测
+- JMeter: 基于 Java 的压测工具
 - pts: 阿里云提供的一个压测工具。https://cn.aliyun.com/product/pts
 
 一些 web 框架的压测结果：
