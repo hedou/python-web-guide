@@ -9,5 +9,6 @@ Golang 快速入门 Go For Pythonisa
 
     web
     tricks
-    algorithms
     optimize
+    algorithms
+    design_patterns
