@@ -900,8 +900,8 @@ vim-go plugin Tips
 
   # 跳转到接口的实现 https://github.com/fatih/vim-go/issues/820
   :GoDef (或ctrl+]) 跳转到定义，但是如果是接口实现只能跳转到 interface 定义而非 struct 实现。
-  :GoCallees 从函数调用处跳转到接口的真正实现，而不是接口定义 (在方法调用点使用 -> struct 方法实现列表)
-  :GoCallers 找到当前函数被调用的地点
+  :GoCallees 从函数调用处跳转到接口的真正实现，而不是接口定义 (在方法调用点使用 -> struct 方法实现列表) 
+  :GoCallers 找到当前函数被调用的地点 (caller 主调， callee 被调)
   :GoImplements 获取一个接口方法的所有实现列表。(interface method -> implement method list)
 
   # 常用的方便命令(命令模式Tab补全), 参考 https://github.com/fatih/vim-go/blob/master/doc/vim-go.txt
