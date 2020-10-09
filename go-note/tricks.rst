@@ -240,8 +240,9 @@ go 初始化 slice/map 的区别
             intSlice = append(intSlice, 1)
             fmt.Println(intSlice)
 
-            // 已知长度的情况下，最好使用 make 初始化，效率更高
-            intSlice2 := make([]int, 1)
+            // 已知最大容量的情况下，建议 make 初始化，可以避免重新分配内存提升效率
+            maxCap := 3
+            intSlice2 := make([]int, 0, maxCap)
             fmt.Println(intSlice2)
 
             m2 := make(map[int]int) // 如果是 map 要先 make 才可以，否则 panic
