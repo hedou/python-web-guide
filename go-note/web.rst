@@ -42,6 +42,7 @@ Go 博客教程
 - https://yourbasic.org/golang/
 - https://golangbot.com/learn-golang-series/
 - https://golangbot.com/learn-golang-series/
+- https://golangbyexample.com/all-design-patterns-golang/ go 设计模式(考虑并发安全)
 
 Go idioms
 --------------------------------------------------
