@@ -292,6 +292,7 @@ Go 常用框架(工具)
 - https://mholt.github.io/json-to-go/ json 转 go struct
 - https://protogen.marcgravell.com/decode proto decode 工具
 - https://gopherize.me/  一个好玩的小工具，设计你喜欢的 gopher 形象
+- https://github.com/jfeliu007/goplantuml 一个自动根据 go 项目生成 uml 图的工具
 
 博客：
 
