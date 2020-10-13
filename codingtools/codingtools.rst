@@ -281,10 +281,10 @@ API gateway
 - IPython/Bpython: 代替原生的解释器，支持补全，语法高亮等
 - ipdb/pdb: ipdb 支持自动补全，比原生的 pdb 要好用一些。
 - pdbpp: https://pypi.org/project/pdbpp/
+- postman: 接口调试 gui 工具，也可以导出成各种编程语言的 HTTP 请求代码，或者粘贴请求地址并且修改参数
 - curl: 如果不想使用 postman 等 GUI 工具（比如在服务器上本地测试无法使用这种工具），可以用 curl 命令或者 python requests 库模拟请求
 - https://curl.trillworks.com/ 把 curl 命令参数转成 requests 代码。 https://github.com/NickCarneiro/curlconverter/。
 - httpie : 类似 curl 但是参数更加友好的命令行请求工具
-- postman: 接口调试 gui 工具，也可以导出成各种编程语言的 HTTP 请求代码
 - httpbin.org
 - curl/requests 互相转化: https://github.com/oeegor/curlify https://github.com/spulec/uncurl
 
