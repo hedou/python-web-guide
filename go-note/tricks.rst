@@ -449,6 +449,7 @@ Go int/int64/float 和 string 转换示例
 
 .. code-block:: go
 
+    // 推荐一个更加强大的转换库：https://github.com/spf13/cast
     package main
 
     import (
