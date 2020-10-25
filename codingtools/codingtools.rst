@@ -296,7 +296,8 @@ API gateway
 --------------------------------------
 - mitmproxy: 用 python 实现的终端命令行http抓包工具，可以将请求直接导出成 curl 请求，python 代码甚至 locust 测试脚本，非常方便，笔者经常用来抓包和调试。
 - charles: mac下的 http抓包软件(收费)
-- wireshark: 支持 tcp 抓包，对于一些使用自有协议的抓包，没法通过 http 请求抓包，可以使用 wireshark。wireshark是学习网络协议的好帮手
+- wireshark: 支持tcp抓包，对于一些使用自有协议的抓包，没法通过 http 请求抓包，可以使用 wireshark。wireshark是学习网络协议的好帮手
+- termshark: 类似 wireshark 的一个命令行版本的抓包工具 https://github.com/gcla/termshark
 - tcpdump: 服务器命令行抓包工具
 - netwox: 网络工具集，可以用来创造任意的 TCP、UDP 和 IP 数据报文
 
