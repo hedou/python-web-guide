@@ -562,6 +562,40 @@ Go 如何格式化参数
 
 - https://yourbasic.org/golang/fmt-printf-reference-cheat-sheet/
 
+
+命名返回值
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+go 的返回值可以命名，使用命名返回值有几个用处：
+
+- 可以当成文档，直观的展示返回值的含义
+- 自动初始化为类型的零值
+- 返回的时候不用写很多参数名，直接用 return 就行
+- 如果想要在 defer 中修改返回值，只能使用命名参数。例子如下
+- 缺点：函数里很容易误用声明一个同名的参数就会被被覆盖了(shadow)
+- 函数返回相同类型的两个或三个参数，或者如果从上下文中不清楚结果的含义，使用命名返回，其它情况不建议使用命名返回。
+
+.. code-block:: go
+
+    func namedReturn(i int) (ret int) {
+        ret = i
+        defer func() { ret++ }()
+
+        return
+    }
+
+    func anonReturn(i int) int {
+        ret := i
+        defer func() { ret++ }() // 修改 ret 无效
+        return ret
+    }
+
+    func main() {
+        fmt.Println(namedReturn(0)) // 1
+        fmt.Println(anonReturn(0))  // 0
+    }
+
+
 Go 如何复制map
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 注意 go 和其他很多编程语言一样，对于复合结构是浅拷贝，共享底层数据结构。几个变量指向同一个复合结构的时候注意修改一个对其他变量也是可见的。
