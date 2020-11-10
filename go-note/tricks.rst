@@ -873,6 +873,6 @@ Go panic 场景
 - 向已经关闭的 channel 发送消息
 - 重复关闭 channel
 - 关闭未初始化的 channel
-- 未初始化 map
+- 未初始化 map。注意访问 map 不存在的 key 不会 panic，而是返回 map 类型对应的空值
 - 跨协程的 panic 处理
 - sync 计数为负数。
