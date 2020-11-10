@@ -154,13 +154,14 @@ Go 无法修改值为结构体的map
         }
         fmt.Println(m)
 
-        // 修改值为结构体的 map，必须要使用指针
+        // 修改值为结构体的 map，可以使用指针
         m2 := map[string]*T{"a": &T{Cnt: 1}, "b": &T{Cnt: 2}}
         for _, v := range m2 {
             v.Cnt = 100
         }
         fmt.Println(m2["a"], m2["b"])
 
+        // 或者使用 map[k].v 修改
         m3 := map[string]*T{"a": &T{Cnt: 1}, "b": &T{Cnt: 2}}
         for k := range m3 {
             m3[k].Cnt = 100
