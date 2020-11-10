@@ -147,19 +147,25 @@ Go 无法修改值为结构体的map
 .. code-block:: go
 
     func testChangeMapStruct() {
-      type T struct{ Cnt int }
-      m := map[string]T{"a": T{Cnt: 1}, "b": T{Cnt: 2}}
-      for _, v := range m {
-        v.Cnt = 100
-      }
-      fmt.Println(m)
+        type T struct{ Cnt int }
+        m := map[string]T{"a": T{Cnt: 1}, "b": T{Cnt: 2}}
+        for _, v := range m {
+            v.Cnt = 100
+        }
+        fmt.Println(m)
 
-      // 想要修改 map[string]T 的值，必须使用指针
-      m2 := map[string]*T{"a": &T{Cnt: 1}, "b": &T{Cnt: 2}}
-      for _, v := range m2 {
-        v.Cnt = 100
-      }
-      fmt.Println(m2["a"])
+        // 修改值为结构体的 map，必须要使用指针
+        m2 := map[string]*T{"a": &T{Cnt: 1}, "b": &T{Cnt: 2}}
+        for _, v := range m2 {
+            v.Cnt = 100
+        }
+        fmt.Println(m2["a"], m2["b"])
+
+        m3 := map[string]*T{"a": &T{Cnt: 1}, "b": &T{Cnt: 2}}
+        for k := range m3 {
+            m3[k].Cnt = 100
+        }
+        fmt.Println(m3["a"], m3["b"])
     }
 
     func main() {
