@@ -564,6 +564,24 @@ Go 如何断判非空字符串/slice
 标准库实际上 `len(s) != 0` 和 `s != ""` 都有使用，我个人倾向于 `s != ""` 看起来更清楚，区分其他容器类型判断的方式。
 比如如果使用 slice 可以使用 len(slice) == 0 判断是否为空。
 
+Go 清空 slice 两种方式区别
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+.. code-block:: go
+
+    // https://yourbasic.org/golang/clear-slice/
+    func testClearSlice() {
+        // 1. 赋值 nil 清空
+        a := []string{"A", "B", "C"}
+        a = nil                        // 这种方式会导致 gc 释放底层数组（假设没有其他引用)
+        fmt.Println(a, len(a), cap(a)) // [] 0 0
+
+        // 2. 使用 s = s[:0] , 注意底层 cap 还是 5
+        b := []string{"A", "B", "C", "D", "E"}
+        b = b[:0]                      // 不会清空底层数组
+        fmt.Println(b, len(b), cap(b)) // [] 0 5
+    }
+
 Go 如何格式化参数
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
