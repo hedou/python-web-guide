@@ -289,6 +289,7 @@ Go 常用框架(工具)
 - go runtime: bmhatfield/go-runtime-metrics(runtime 指标收集)
 - 邮件：gopkg.in/gomail
 - 接口文档生成：swaggo/swag
+- 消息队列：nsqio/nsq
 
 工具:
 
