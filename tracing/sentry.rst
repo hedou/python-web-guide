@@ -7,12 +7,11 @@ Sentry 搭建
 Sentry 简介
 -----------
 Sentry 是一个 Python 社区中使用广泛的错误收集系统，可以用来收集并归类 Python 异常/Go error 等信息，在知乎/腾讯内部等都有使用。
-你可以把它类比成错误收集的 ELK，虽然它也可以展示收集的日志，不过出于性能等因素考虑，一般只用来收集错误和异常，通过官方提
-供的开源版本，可以很容易使用 docker 运行它。
+你可以把它类比成错误收集的 ELK，虽然它也可以展示收集的日志，不过出于性能等因素考虑，一般只用来收集错误和异常，通过官方提供的开源版本，
+可以很容易使用 docker 运行它。
 
 - 官网：https://sentry.io/welcome/
-- 优势：相比在浩如烟海的日志中搜索异常信息，使用 Sentry 你可以更加容易发现程序中的严重错误并及时修复，同时附带上有用的上
-  下文信息帮助你排查异常。
+- 优势：相比在浩如烟海的日志中搜索异常信息，使用 Sentry 你可以更加容易发现程序中的严重错误并及时修复，同时附带上有用的上下文信息帮助你排查异常。
 
 安装 Docker 和 Docker Compose
 -----------------------------
@@ -30,7 +29,7 @@ pip 如果安装某个包有问题：
 ``sudo pip install requests --ignore-installed requests``
 
 DockerHub 加速器
-================
+----------------
 
 参考：https://cloud.tencent.com/document/product/457/9113
 
@@ -79,3 +78,13 @@ https://develop.sentry.dev/self-hosted/
 
    # 或者直接重启所有服务
    docker-compose restart
+
+创建管理员
+----------
+
+执行 ``./install.sh``
+安装脚本的时候会提示是否创建用户，如果跳过了还可以单独创建：
+
+.. code:: sh
+
+   sudo docker-compose run --rm web createuser
