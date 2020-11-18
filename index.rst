@@ -19,5 +19,6 @@
     python-note/index
     go-note/index
     microservice_distribute/index
+    tracing/index
     memo/*
     *
