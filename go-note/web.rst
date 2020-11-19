@@ -120,7 +120,7 @@ Go package
 
 Go项目Layout
 --------------------------------------------------
-- https://github.com/golang-standards/project-layout
+- https://github.com/golang-standards/project-layout 标准 go 项目目录组织
 - https://zhengyinyong.com/go-project-layout-design.html
 
 
