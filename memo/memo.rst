@@ -492,8 +492,12 @@ Tmux
    # https://wiki.archlinux.org/index.php/tmux
    tmux rename -t oriname newname
    tmux att -t name -d               # -d 不同窗口全屏
+
    # 如果手贱在本机tmux里又ssh到服务器又进入服务器的tmux怎么办(退出 tmux 套娃)
    c-b c-b d
+
+   # 如果升级了 tmux 之后，使用 tmux 出现 tmux server exited unexpectedly 尝试删除 /tmp 里的 tmux 临时文件
+   # https://github.com/tmux/tmux/issues/2376
 
    # Vim style pane selection
    bind -n C-h select-pane -L
