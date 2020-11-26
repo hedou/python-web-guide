@@ -202,7 +202,7 @@ MacOS
    # 从终端查 wifi 密码, https://apple.stackexchange.com/questions/176119/how-to-access-the-wi-fi-password-through-terminal
    security find-generic-password -ga "ROUTERNAME" | grep "password:"
 
-   # XXX.APP已损坏,打不开.你应该将它移到废纸篓 MACOS 10.12 SIERRA
+   # XXX.APP已损坏,打不开.你应该将它移到废纸篓 MACOS 10.12 SIERRA，允许“任何来源” https://zhuanlan.zhihu.com/p/135948430
    sudo spctl --master-disable
 
    # 使用 mounty 挂载 ntfs 盘，Item "file.mov" is used by Mac OS X and cannot be opened.
