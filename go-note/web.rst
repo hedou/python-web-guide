@@ -263,7 +263,7 @@ Go 常用框架(工具)
    - 令牌桶(token bucket)限流：juju/ratelimit, golang.org/x/time/rate
    - 漏桶(leaky bucket)限流: uber-go/ratelimit
 
-- 日志: logrus, zap, mumberjack
+- 日志: logrus, zap, lumberjack(滚动日志)
 - 链路追踪：opentracing/opentracing-go, uber/jaeger-client-go
 - 调试：go-spew/dlv
 - 图片处理：h2non/imaginary
