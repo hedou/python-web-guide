@@ -10,11 +10,11 @@ string 与 []byte 互转
 .. code-block:: go
 
     /*
-    type StringHeader struct {
+    type StringHeader struct { // reflect.StringHeader
         Data uintptr
         Len  int
     }
-    type SliceHeader struct {
+    type SliceHeader struct { // reflect.SliceHeader
         Data uintptr
         Len  int
         Cap  int
@@ -35,7 +35,7 @@ string 与 []byte 互转
 - `Go性能优化技巧 <https://segmentfault.com/a/1190000005006351>`_
 - `Golang 中 string 与 []byte 互转优化 <https://medium.com/@kevinbai/golang-%E4%B8%AD-string-%E4%B8%8E-byte-%E4%BA%92%E8%BD%AC%E4%BC%98%E5%8C%96-6651feb4e1f2>`_
 
-字符串拼接
+大量字符串拼接
 ---------------------------------------------------------------
 大量字符串拼接不要用 + ，使用 bytes.Buffer 或者 strings.Builder
 
