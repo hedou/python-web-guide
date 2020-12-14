@@ -286,7 +286,7 @@ API gateway
 - curl: 如果不想使用 postman 等 GUI 工具（比如在服务器上本地测试无法使用这种工具），可以用 curl 命令或者 python requests 库模拟请求
 - https://curl.trillworks.com/ 把 curl 命令参数转成 requests 代码。 https://github.com/NickCarneiro/curlconverter/。
 - httpie : 类似 curl 但是参数更加友好的命令行请求工具
-- httpbin.org
+- httpbin.org 一个使用 flask 编写的 http 调试网站，你可以通过 http 客户端发送请求到该网址验证 http 参数等
 - curl/requests 互相转化: https://github.com/oeegor/curlify https://github.com/spulec/uncurl
 
 调试小技巧：使用 chrome 开发者工具右键请求点击copy as curl，然后可以用 uncurl 转成 requests请求调试代码。
