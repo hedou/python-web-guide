@@ -114,6 +114,7 @@ Mysql
 
 .. code-block:: sql
 
+   # https://stackoverflow.com/questions/67093/how-do-i-quickly-rename-a-mysql-database-change-schema-name
    mysqldump -u username -p -v olddatabase > olddbdump.sql
    mysqladmin -u username -p create newdatabase
    mysql -u username -p newdatabase < olddbdump.sql
