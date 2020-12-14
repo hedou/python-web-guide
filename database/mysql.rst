@@ -109,6 +109,15 @@ Mysql
     shell > mysqldump -u user -h host -p pass db_name table_name > out.sql
     mysql > source /path/to/out.sql
 
+重命名数据库
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: sql
+
+   mysqldump -u username -p -v olddatabase > olddbdump.sql
+   mysqladmin -u username -p create newdatabase
+   mysql -u username -p newdatabase < olddbdump.sql
+
 
 Python Mysql 操作
 =====================================================================
