@@ -104,8 +104,10 @@ gin 实战博客:
 微服务框架：
 
 - go kit: https://github.com/go-kit/kit
-- kratos: https://github.com/bilibili/kratos B站go微服务框架
 - go-micro: https://github.com/micro/go-micro
+- kratos: https://github.com/bilibili/kratos B站go微服务框架
+- go-zero: https://github.com/tal-tech/go-zero 好未来 go 微服务框架
+- jupiter: https://github.com/douyu/jupiter 斗鱼 go 微服务框架
 
 微服务代码示例：
 
