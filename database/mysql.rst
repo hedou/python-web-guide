@@ -71,6 +71,7 @@ Mysql
     CREATE TABLE new_foo LIKE foo;
     RENAME TABLE foo TO old_foo, new_foo TO foo;
     DROP TABLE old_foo;
+    # 发现好像直接用 truncate table tablename; 清理千万级别表也挺快的
 
 统计表的大小并排序
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
