@@ -319,7 +319,7 @@ Proxy
 - lxml/BeautifulSoup/pyquery: 解析 html，xml 等。
 - tornado: 异步的 http client 可以写爬虫
 - redis/celery: 实现队列、异步爬虫。异步方案也比较多
-- phantomjs/puppeteer: 用来处理动态网站。puppeteer 基于 nodejs
+- phantomjs/puppeteer/playwright-python: 用来处理动态网站。puppeteer 基于 nodejs。可以用来写爬虫，控制浏览器，自动化测试等
 - pyppeteer/selenium: 基于 python 动态网站爬虫处理，或者用于自动化测试
 - portia: 类似造数、八爪鱼之类的可视化爬虫 https://github.com/scrapinghub/portia
 
