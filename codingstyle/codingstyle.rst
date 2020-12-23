@@ -806,6 +806,7 @@ Code Quality: Simple, Well-tested, Bug free, Clear, Refactored, Documented, Exte
 - 动态语言的重构工具支持不够完善，重构的时候要注意别改坏了逻辑，要十分谨慎。单元测试可以保证原有逻辑没有被破坏。
 
 * `《重构 - 读书笔记(PYTHON示例)》 <http://www.wklken.me/posts/2017/06/17/refactoring-07.html>`_  来自 wklken's blog
+* `《详解圈复杂度》 <http://kaelzhang81.github.io/2017/06/18/%E8%AF%A6%E8%A7%A3%E5%9C%88%E5%A4%8D%E6%9D%82%E5%BA%A6/>`_
 
 Python 做业务后端的优缺点分析
 --------------------------------------
