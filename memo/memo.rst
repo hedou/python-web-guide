@@ -241,6 +241,9 @@ MacOS
    # mac trackpad 蓝牙频繁掉线问题。尝试使用 5G wifi 而不是 2.4G
    # https://apple.stackexchange.com/questions/321948/why-does-my-magic-trackpad-2-randomly-disconnect-and-stop-clicking
 
+   # 软件：pathfinder 如何增加 隔空投送 airdrop 分享文件
+   https://support.cocoatech.com/discussions/problems/126873-full-airdrop-sharing-is-here-for-pf8-and-pf7
+
 
 如何发送 mac 通知，可以用来做提示
 
