@@ -548,6 +548,7 @@ Linux debug Tools
 - gdb
 - valgrind
 - ltrace: tracing system and library calls
+- strace —— Trace system calls and signals。 跟踪进程的系统调用或信号产生的情况。
 - lsof: tracking open files
 - pmap: viewing memory allocation
 
