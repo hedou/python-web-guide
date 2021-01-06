@@ -780,6 +780,28 @@ An interface holding nil value is not nil. An interface equals nil only if both 
 
 - https://stackoverflow.com/questions/29699982/go-test-flag-flag-provided-but-not-defined
 
+Go Context 的坑
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+调用接收context的函数时要小心，要清楚context在什么时候cancel，什么行为会触发cancel。
+笔者最近遇到一个问题是，在框架的 handler 函数返回之前，单独开一个 goroutine 创建一条 mysql 流水，但是handler 函数调用完
+成之后框架会cancel，导致这个 mysql 传进去了框架函数带过来的 ctx cancel 之后执行失败
+
+
+.. code-block:: go
+
+    func (h *Handler) handleFunc(ctx context.Context, req *Request, resp *Response) error {
+        // ... 其他业务逻辑
+        go func() { // 异步记录流水
+            // 注意，这里不能直接用框架的 ctx，而是需要一个不被 cancel 的 context，否则执行会失败
+            // 改成 context.Background()
+            if err := postDao.CreatePostCreateRecord(ctx, row); err != nil {
+                log.Errorf("CreatePost postDao.CreatePostCreateRecord err:%+v", err)
+            }
+        }()
+        return nil
+    }
+
+- https://zhuanlan.zhihu.com/p/34417106 《Go Context的踩坑经历》
 
 redio tricks
 --------------------------------------------------
