@@ -349,6 +349,8 @@ Redis相关:
 * `《REDIS内存容量的预估和优化》 <https://searchdatabase.techtarget.com.cn/7-20218/>`_
 * `《阿里云 Redis 开发规范》 <https://yq.aliyun.com/articles/531067>`_
 * `《Redis Best Practice》 <https://redislabs.com/redis-best-practices/>`_
+* `《Redis 容量预估工具》 <http://www.redis.cn/redis_memory/>`_
+
 
 Web 框架相关：
 
