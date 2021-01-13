@@ -923,6 +923,13 @@ vim-go plugin Tips
   :GoChannelPeers 寻找可能的 channel 发送和接收点
   :GoFillStruct 给一个 struct 填充默认值
 
+  # 甚至还可以让超过 120 行的代码自动折行，需要安装 https://github.com/segmentio/golines
+  # golines -w -m 120 red_dot.go  # 直接命令行格式化
+  let g:go_fmt_command = "golines"
+  let g:go_fmt_options = {
+    \ 'golines': '-m 128',
+    \ }
+
 用markdown文件制作html ppt
 -------------------------------------------------------------
 
