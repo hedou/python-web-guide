@@ -398,10 +398,10 @@ APM (Application Performance Management)
 
 绘图/流程图/思维导图工具
 --------------------------------------
-- processon: http://processon.com/ 使用了下感觉还不错，基本能满足需求。有模板、流程图、时序图、思维导图等
+- processon: http://processon.com/ 使用了下感觉还不错，支持流程图、时序图、思维导图等，可以 clone 别人做好的作为模板
 - Gliffy Diagrams: https://chrome.google.com/webstore/detail/gliffy-diagrams/bhmicilclplefnflapjmnngmkkkkpfad/related
 - draw.io: https://www.draw.io/
-- carbon: https://carbon.now.sh/ 可以根据代码生成图片
+- carbon: https://carbon.now.sh/ 可以根据代码生成图片，在分享代码却没有高亮的时候比较方便
 
 量化投资
 --------------------------------------
