@@ -889,6 +889,9 @@ vim
    # 跳转到上一个 insert 的位置，经常用在修改之后跳转到之前的编辑位置 https://vi.stackexchange.com/questions/2001/how-do-i-jump-to-the-location-of-my-last-edit
    `^ 或者 '^
 
+   # vim 替换不间断空格，illegal character U+00A0异常解决。https://www.jianshu.com/p/5f9992e5cd47
+   :%s/\%u00a0/ /g
+
 * `《vim cheet sheet》 <https://vim.rtorr.com/lang/zh_cn/>`_
 
 
