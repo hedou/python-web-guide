@@ -19,7 +19,7 @@
 - 缓存
 - 队列(削峰，解耦)
 
-常见的几种限流算法有计数器、漏桶算法、令牌桶算法。
+常见的几种限流算法有计数器算法、漏桶算法、令牌桶算法。
 
 - token bucket。令牌桶算法。允许突发流量。https://github.com/juju/ratelimit 或者 go 自带的 https://github.com/golang/time
 - leaky bucket。漏桶算法。以恒定速率处理(恒定速率漏水) https://github.com/uber-go/ratelimit
@@ -29,6 +29,7 @@
 你可以在网上很方便的搜索 『rate limiter』 来找到对应的实现。
 
 - `分布式系统高可用实战之限流器（Go 版本实现） <https://juejin.im/post/5eb2cfcce51d4528dd23bd7e>`_
+- `5种常见限流算法 <https://juejin.cn/post/6915591543797596174#heading-6>`_
 
 
 断路器/熔断器(Circuit Breaker)
