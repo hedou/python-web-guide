@@ -258,7 +258,7 @@ Go 常用框架(工具)
 
 - 异步任务框架: machinery, gocelery
 - 定时任务：robfig/cron, ouiqiang/gocron
-- 熔断：hystrix-go, eapache/go-resiliency, cep21/circuit
+- 熔断：hystrix-go, eapache/go-resiliency, cep21/circuit, alibaba/sentinel-golang
 - 限流库:
 
    - web框架限流：ulule/limiter, didip/tollbooth
