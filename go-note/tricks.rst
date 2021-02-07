@@ -909,6 +909,20 @@ reids mock 可以用 miniredis，以下是一个示例代码
     }
 
 
+网络请求设置 Host
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+.. code-block:: go
+
+    req, err := http.NewRequest("GET", "http://bbb.com/", nil)
+    if err != nil {
+        log.Fatal(err)
+    }
+    req.Host = "aaa.com"
+    # 注意以下不起作用，用 python 习惯使用 header 设置头了，但是 go 里边只能通过 req.Host 设置
+    # req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
+
+
 Go panic 场景
 --------------------------------------------------
 在《Go 编程之旅》中总结了一些 panic 场景，写 go 的时候注意下，防止进程退出：
