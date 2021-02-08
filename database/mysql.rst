@@ -86,6 +86,18 @@ Mysql
     FROM information_schema.TABLES
     ORDER BY (data_length + index_length) DESC;
 
+统计数据库大小
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: sql
+
+   # https://stackoverflow.com/questions/1733507/how-to-get-size-of-mysql-database
+   SELECT table_schema "DB Name",
+           ROUND(SUM(data_length + index_length) / 1024 / 1024, 1) "DB Size in MB"
+   FROM information_schema.tables
+   GROUP BY table_schema;
+
+
 查看表信息
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
