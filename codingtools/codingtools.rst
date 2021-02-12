@@ -121,6 +121,7 @@ Chrome 开发者插件
 - Momentum: 美化 Chrome 界面的插件，有很多漂亮的图片作为背景
 - Onetab: 用来整合 chrome tab到一个页面，如果打开了太多窗口特别占用资源的时候可以使用
 - LGTM: 有些开发过程中，需要一个同事review 代码后评价 LGTM(Looks Good To Me)才能 merge 代码，这里是图片版的 LGTM
+- SimpRead: 简悦，阅读模式 chrome 插件，支持导出和分享。试了一下导出知乎回答还不错
 
 * `《在浏览器中嵌入 NeoVim，可使用本地配置》 <https://zhuanlan.zhihu.com/p/86027644>`_
 
