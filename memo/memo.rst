@@ -527,6 +527,13 @@ Tmux
        tmux attach-session -t $SESSION_NAME || tmux new-session -s $SESSION_NAME
    fi
 
+   # 问题：Tmux resurrect file not found!
+   function tmux-resurrect-reset-last() {
+       cd ~/.tmux/resurrect && \
+           ln -f -s $(/bin/ls -t tmux_resurrect_*.txt | head -n 1) last && \
+           /bin/ls -l last
+   }
+
 SSH
 -------------------------------------------------------------
 
