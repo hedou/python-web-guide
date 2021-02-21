@@ -921,7 +921,7 @@ Go 网络请求设置 Host 不起作用
     }
     req.Host = "aaa.com"
     // 注意以下不起作用，用 python 习惯使用 header 设置头了，但是 go 里边只能通过 req.Host 设置 host
-    // req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
+    // req.Header.Set("Content-Type", "application/x-www-form-urlencoded") // 不起作用！！！
 
 
 Go panic 场景
