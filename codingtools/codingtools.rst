@@ -65,6 +65,7 @@ MacOS 开发效率工具
 - rmtrash/safe-rm: linux 自带的 rm 非常危险，可以使用安全删除工具先放到垃圾桶。`saferm  <https://zhuanlan.zhihu.com/p/91515325>`_
 - when-changed: 一个可以监控文件变动并且自动执行命令的工具，写脚本代码观察编写边输出结果的时候比较方便。笔者很多视频演示过
 - https://github.com/onceupon/Bash-Oneliner
+- epy-reader: https://github.com/wustho/epy 一个在终端下阅读 epub 电子书的工具，用快捷键 "o" 还可以打开图片
 
 Mac 终端快速配置
 --------------------------------------
