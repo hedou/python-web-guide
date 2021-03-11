@@ -293,6 +293,7 @@ Go 常用框架(工具)
 - 接口文档生成：swaggo/swag
 - 消息队列：nsqio/nsq
 - 分布式kv存储：etcd
+- 用户认证：dgrijalva/jwt-go
 
 工具:
 
