@@ -239,6 +239,7 @@ Go 常用框架(工具)
 - 参数验证：go-playground/validator, bytedance/go-tagexpr
 - 单元测试断言：matryer/is, testify/assert, smartystreets/goconvey(bdd 驱动测试)
 - json处理转换：go-simplejson/mapstructure，json-iterator/go (比内置的 json 解析快很多), tidwall/gjson(获取 json 值)
+- 字典/结构体合并：imdario/mergo
 - 配置解析: viper(兼容很多格式)
 - mysql orm: gorm, xorm, sqlx
 - redis: go-redis, redigo
