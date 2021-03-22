@@ -776,6 +776,10 @@ Git
     # git 注意不要把二进制大文件，视频文件等放入到版本库，可能会导致 .git 非常大，删了也无济于事
     find . -executable -type f >>.gitignore # https://stackoverflow.com/questions/5711120/gitignore-without-binary-files
 
+    # git 历史删除大文件。如果你提交了大文件，即使你git rm删除了也会留在 git 的历史记录中，导致.git 文件夹很大
+    # https://stackoverflow.com/questions/8083282/how-do-i-remove-a-big-file-wrongly-committed-in-git
+    git filter-branch --index-filter "git rm -rf --cached --ignore-unmatch path_to_file" HEAD
+
     # 如何恢复一个已经删除的分之, https://stackoverflow.com/questions/3640764/can-i-recover-a-branch-after-its-deletion-in-git
     git reflog  # 查找对应 commit hash
     git checkout -b branch-name hash
