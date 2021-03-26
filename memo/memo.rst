@@ -806,6 +806,9 @@ Git
     # https://stackoverflow.com/questions/5816134/how-to-find-the-git-commit-that-introduced-a-string-in-any-branch
     git log -S 'hello world' --source --all
 
+    # 统计xx某某提交了多少代码
+    git log --author="xxx" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }'
+
 
 Git工作流
 ------------
