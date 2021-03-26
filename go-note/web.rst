@@ -181,6 +181,12 @@ Go 断点调试器dlv
    # https://github.com/go-delve/delve/issues/562
    dlv debug ./cmd/unit-assignment-cli/main.go -- server
 
+   # 如何调试 go 的 coredump 文件。对于一些很偶发的进程退出会比较难排查，可以利用 coredump 文件辅助排查问题：
+   1. 调整ulimit关于core file size的设置，执行 ulimit -c unlimited 将core file size设成无限大小。
+   2. 输出环境变量 export GOTRACEBACK=crash 使得golang进程知道需要产生cash时候的coredump文件。
+   3. 分析 /usr/local/bin/dlv core ./app ./core_app
+   4. 使用命令 goroutine goroutineid 和 bt 打印栈信息
+
 
 - https://yq.aliyun.com/articles/57578
 
