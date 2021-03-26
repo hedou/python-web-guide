@@ -290,6 +290,7 @@ API gateway
 - httpie : 类似 curl 但是参数更加友好的命令行请求工具
 - httpbin.org 一个使用 flask 编写的 http 调试网站，你可以通过 http 客户端发送请求到该网址验证 http 参数等
 - curl/requests 互相转化: https://github.com/oeegor/curlify https://github.com/spulec/uncurl
+- Violentmonkey: 油猴脚本。有比较多插件 https://greasyfork.org/zh-CN 可以搜索使用
 
 调试小技巧：使用 chrome 开发者工具右键请求点击copy as curl，然后可以用 uncurl 转成 requests请求调试代码。
 
