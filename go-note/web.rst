@@ -276,7 +276,7 @@ Go 常用框架(工具)
 - 链路追踪：opentracing/opentracing-go, uber/jaeger-client-go
 - 调试：go-spew/dlv
 - 图片处理：h2non/imaginary
-- 网络库/连接池：fatih/pool; panjf2000/gnet, valyala/fasthttp
+- 网络库/连接池：fatih/pool; panjf2000/gnet, valyala/fasthttp，kavu/go_reuseport
 - websocket: nhooyr.io/websocket, gorilla/websocket
 - http client: levigross/grequests
 - 表格：go-echarts
