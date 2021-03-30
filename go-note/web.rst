@@ -247,7 +247,7 @@ Go 常用框架(工具)
 - json处理转换：go-simplejson/mapstructure，json-iterator/go (比内置的 json 解析快很多), tidwall/gjson(获取 json 值)
 - 字典/结构体合并：imdario/mergo
 - 配置解析: viper(兼容很多格式)
-- mysql orm: gorm, xorm, sqlx
+- mysql orm: gorm, xorm, sqlx, ent/ent(实体框架)
 - redis: go-redis, redigo
 - Kafka: Shopify/sarama, confluent-kafka-go
 - Elasticsearch: olivere/elastic, elastic/elasticsearch
