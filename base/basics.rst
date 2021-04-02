@@ -32,6 +32,7 @@ python，ruby之类的动态语言优势在于其生产力，你能在极短时�
 
 * `《Dabeaz》 <http://www.dabeaz.com/>`_ Python 培训领域 number one，Pycon 常客，有很多高质量的教程
 
+* `《Python Cheatsheet》 <https://github.com/gto76/python-cheatsheet>`_  Python 语法快速参考
 
 当然还有Python的官方文档作为参考，不过有些文档比较晦涩，还是推荐书籍入门。网上目前也可以搜到很多免费的电子书。
 如果有时间可以看看国内廖雪峰写的Python教程，简单易懂，就是跳跃有点大（有些章节对新人来说不是很友好）。
