@@ -809,6 +809,9 @@ Git
     # 统计xx某某提交了多少代码
     git log --author="xxx" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }'
 
+    # 修改上一次提交人。比如一开始 git commiter 配置错了。https://stackoverflow.com/questions/3042437/how-to-change-the-commit-author-for-one-specific-commit
+    git commit --amend --author="Author Name <email@address.com>" --no-edit
+
 
 Git工作流
 ------------
