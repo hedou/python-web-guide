@@ -247,7 +247,7 @@ Web 开发常用 Python 库(Golang 常用库请参考 golang 章节)
 在开发工具章节我还会列举到更多能够提升开发效率的工具。
 
 - web/restful 框架：Django/Flask/Tornado
-- 异步http web框架：fastapi/aiohttp/Sanic
+- 异步http web框架：FastApi/aiohttp/Sanic
 - ORM: sqlalchemy, Peewee
 - 表单验证：WTForms, marshmallow
 - 数据处理和分析：Numpy, Pandas, Matplotlib
@@ -261,6 +261,8 @@ Web 开发常用 Python 库(Golang 常用库请参考 golang 章节)
 - python2/3 兼容：six, 2to3
 - 代码检测：autopep8, pylint, flake8, mypy(python3)
 - 调试：Ipython, Ipdb, pdbpp
+- 终端：rich(美化颜色输出)
+- 命令行：click
 
 裁员、劳动法与法律援助
 ------------------------------------------------------------------------------
