@@ -685,6 +685,7 @@ Git
     git config --global user.name "you name"
     git config --global user.email you@domain.com
     git commit --amend --reset-author
+    # 如果想要修改多个历史提交的 commit 信息，可以使用 git rebase -i 交互式修改。对应的提交行使用 reword 就可以
 
     # 撤销 add （暂存），此时还没有 commit。比如 add 了不该 add 的文件
     git reset -- file
