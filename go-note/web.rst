@@ -115,10 +115,11 @@ gin 实战博客:
 - https://github.com/callistaenterprise/goblog go 微服务代码示例和博客，介绍了微服务各种基础组件
 - https://github.com/yun-mu/MicroServicePractice 微服务实践
 
-Go package
+Go package (搜索常用的 go 第三方库)
 --------------------------------------------------
 - https://awesome-go.com/
 - https://go-search.org/search?q=redis
+- https://golangrepo.com/
 
 Go项目Layout
 --------------------------------------------------
