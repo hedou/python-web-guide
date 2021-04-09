@@ -332,6 +332,7 @@ Proxy
 - celery: python 社区一个流行的异步任务框架
 - machinery: golang 的异步任务框架 https://github.com/RichardKnop/machinery
 - Airflow: 任务调度 https://airflow.apache.org/docs/apache-airflow/1.10.1/index.html#
+- xxl-job: 分布式任务调度平台 https://github.com/xuxueli/xxl-job/
 
 端口扫描
 --------------------------------------
