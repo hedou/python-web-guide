@@ -326,6 +326,10 @@ Proxy
 - pyppeteer/selenium: 基于 python 动态网站爬虫处理，或者用于自动化测试
 - portia: 类似造数、八爪鱼之类的可视化爬虫 https://github.com/scrapinghub/portia
 
+自动化测试
+--------------------------------------
+- uiautomator2: https://github.com/openatx/uiautomator2
+- taobao-iphone-device: https://github.com/alibaba/taobao-iphone-device
 
 异步任务框架
 --------------------------------------
