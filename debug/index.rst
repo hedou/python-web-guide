@@ -227,5 +227,7 @@ RPC/Web 框架
 
 参考
 --------------------------------------
-- `《开发更高质量的服务》 <http://vearne.cc/archives/39164>`_
 - `50 Shades of Go: Traps, Gotchas, and Common Mistakes for New Golang Devs  <http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/>`_
+- `《开发更高质量的服务》 <http://vearne.cc/archives/39164>`_
+- `《Go101 内存内泄漏场景》 <https://gfw.go101.org/article/memory-leaking.html>`_
+
