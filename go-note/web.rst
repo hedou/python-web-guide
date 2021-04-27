@@ -217,6 +217,7 @@ Go Best practice(工程实践)
 - https://go-proverbs.github.io go谚语，类似 python 之禅
 - https://the-zen-of-go.netlify.com/ zen of go
 - https://bluxte.net/musings/2018/04/10/go-good-bad-ugly/
+- https://github.com/cristaloleg/go-advice
 
 Go 开发关键技术指南
 ---------------------------------------------------------------
