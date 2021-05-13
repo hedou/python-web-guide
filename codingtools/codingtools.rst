@@ -47,6 +47,10 @@ MacOS 开发效率工具
 - Qbserve: https://qotoqot.com/qbserve/ 一个 mac 下的时间追踪软件，可以查看自己在不同软件耗时，改善时间和工作管理
 - xbar: 一款可以在 macos 菜单栏显示任意信息的 App，可以通过脚本扩展功能。有插件商店
 
+Mac微信工具
+--------------------------------------
+- 微信小助手：https://github.com/MustangYM/WeChatExtension-ForMac  支持微信多开、消息防撤回、微信皮肤等多种功能
+
 命令行工具
 --------------------------------------
 - tmux/tmuxp。比screen好用，可以用来分屏，托管进程等，服务器端必备神器，ubuntu下基本就不用使用terminator之类的分屏工具了。最近看youtube视频还发现有人在服务器上使用tmux和vim结对编程，两个人同时attach到一个session里，基情四射。
