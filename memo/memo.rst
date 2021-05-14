@@ -505,6 +505,11 @@ Tmux
    # 如果升级了 tmux 之后，使用 tmux 出现 tmux server exited unexpectedly 尝试删除 /tmp 里的 tmux 临时文件
    # https://github.com/tmux/tmux/issues/2376
 
+   # 技巧：tmux 如何在多个 pane 执行一样的命令。先执行 ctrl + b :
+   ctrl + b :
+   setw synchronize-panes on
+   setw synchronize-panes off
+
    # Vim style pane selection
    bind -n C-h select-pane -L
    bind -n C-j select-pane -D
@@ -514,7 +519,7 @@ Tmux
    # https://stackoverflow.com/questions/22138211/how-do-i-disconnect-all-other-users-in-tmux
    tmux a -dt <session-name>
 
-   # 如何 ssh 后自动 attach 到某个 session
+   # 如何 ssh 后自动 attach 到某个 session。编辑你的 .bashrc or .zshrc
    if [[ "$TMUX" == "" ]] && [[ "$SSH_CONNECTION" != "" ]]; then
        # Attempt to discover a detached session and attach it, else create a new session
        WHOAMI="lens"   # attach 的 session 名称
