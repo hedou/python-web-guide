@@ -1123,6 +1123,16 @@ Pandoc 转换文档格式
 
   pandoc -s -o about.md about.rst
 
+Calibre
+-------------------------------------------------------------
+
+.. code-block:: shell
+
+  # https://www.jianshu.com/p/0bcb92509309
+  # https://snowdreams1006.github.io/myGitbook/advance/export.html
+  # 通过 calibre 提供的二进制工具抓取并且生成电子书
+  ebook-convert draveness.recipe draveness.mobi --output-profile kindle
+
 
 Wireshark(mac tcp 抓包)
 -------------------------------------------------------------
