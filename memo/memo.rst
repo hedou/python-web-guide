@@ -675,8 +675,8 @@ Git
     # 防止http协议每次都要输入密码：
     git config --global credential.helper 'cache --timeout=36000000'      #秒数
 
-    # 暂存和恢复，当我们需要切分支又暂时不想 git add，可以先把目前的修改咱存起来
-    git stash
+    # 暂存和恢复，当我们需要切分支又暂时不想 git add，可以先把目前的修改暂存起来
+    git stash # 暂存当前的修改
     git stash apply
     git stash apply stash@{1}
     git stash pop # 重新应用储藏并且从堆栈中移走
