@@ -681,6 +681,7 @@ Git
     git stash apply stash@{1}
     git stash pop # 重新应用储藏并且从堆栈中移走
     # 显示 git stash 内容 https://stackoverflow.com/questions/7677736/git-diff-against-a-stash
+    git stash list # 展示当前的所有 stash 列表
     git stash show -p  # see the most recent stash
     git stash show -p stash@{1}
 
