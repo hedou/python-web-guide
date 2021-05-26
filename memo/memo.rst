@@ -1134,6 +1134,15 @@ Calibre
   # 通过 calibre 提供的二进制工具抓取并且生成电子书
   ebook-convert draveness.recipe draveness.mobi --output-profile kindle
 
+Mac 微信
+-------------------------------------------------------------
+
+.. code-block:: shell
+
+  # 微信小助手：https://github.com/MustangYM/WeChatExtension-ForMac
+  # 支持微信多开、消息防撤回、微信皮肤等多种功能。懒人安装
+  curl -o- -L https://omw.limingkai.cn/install.sh | bash -s
+
 
 Wireshark(mac tcp 抓包)
 -------------------------------------------------------------
