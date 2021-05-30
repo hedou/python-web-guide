@@ -1123,6 +1123,8 @@ Pandoc 转换文档格式
 .. code-block:: shell
 
   pandoc -s -o about.md about.rst
+  # markdown 转成 word
+  pandoc -o output.docx -f markdown -t docx filename.md
 
 Calibre
 -------------------------------------------------------------
