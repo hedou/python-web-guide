@@ -954,10 +954,11 @@ vim-go plugin Tips
   :GoFillStruct 给一个 struct 填充默认值
 
   # 甚至还可以让超过 120 行的代码自动折行，需要安装 https://github.com/segmentio/golines
-  # golines -w -m 120 red_dot.go  # 直接命令行格式化
+  # golines -w -m 120 red_dot.go  # 直接命令行格式化，gofmt 没有长行的折行功能
+  # 在 vim 中使用 golines
   let g:go_fmt_command = "golines"
   let g:go_fmt_options = {
-    \ 'golines': '-m 128',
+    \ 'golines': '-m 120',
     \ }
 
 用markdown文件制作html ppt
