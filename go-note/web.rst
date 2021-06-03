@@ -304,6 +304,7 @@ Go 常用框架(工具)
 - 分布式kv存储：etcd
 - 用户认证：dgrijalva/jwt-go
 - 访问(权限)控制：casbin/casbin
+- 进程控制：uber-go/automaxprocs
 - 地理位置：ip2location/ip2location-go
 
 工具:
