@@ -244,6 +244,7 @@ Go 常用框架(工具)
 也可以去 awesome-go 之类的去查找，然后根据 star 数目等作为参考选用。
 
 - web/rpc框架: gin, grpc, beego, labstack/echo
+- 微服务框架：go-kit, go-micro, karatos(b 站)，go-zero(好未来)，jupiter(斗鱼)
 - 参数验证：go-playground/validator, bytedance/go-tagexpr
 - 单元测试断言：matryer/is, testify/assert, smartystreets/goconvey(bdd 驱动测试)
 - json处理转换：go-simplejson/mapstructure，json-iterator/go (比内置的 json 解析快很多), tidwall/gjson(获取 json 值)
