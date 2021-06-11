@@ -1015,9 +1015,13 @@ Ffmpeg && youbute-dl
    # brew install youtube-dl
    # https://askubuntu.com/questions/486297/how-to-select-video-quality-from-youtube-dl
    # http://www.cnblogs.com/faunjoe88/p/7810427.html
+   # 下载视频，支持油管、b 站等
    youtube-dl -F "http://www.youtube.com/watch?v=P9pzm5b6FFY"
    youtube-dl -f 22 "http://www.youtube.com/watch?v=P9pzm5b6FFY"
    youtube-dl -f bestvideo+bestaudio "http://www.youtube.com/watch?v=P9pzm5b6FFY"
+
+   # 转换格式，比如 flv -> mp4 https://superuser.com/questions/624565/ffmpeg-convert-flv-to-mp4-without-losing-quality
+   ffmpeg -i input.flv -codec copy output.mp4
 
    # 截取视频
    ffmpeg -i input.mp4 -ss 00:01:00 -to 00:02:00 -c copy output.mp4
