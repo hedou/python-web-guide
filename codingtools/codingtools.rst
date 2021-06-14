@@ -488,6 +488,13 @@ HTML Presentation Tools
 * `《HTML-presentation-tools.md》 <https://gist.github.com/PegasusWang/5d00c2e32943f1e3258e964eb64ce4aa>`_
 * `《markdown-for-slide-decks.md》 <https://gist.github.com/johnloy/27dd124ad40e210e91c70dd1c24ac8c8>`_
 
+Terminal slides
+--------------------------------------
+在终端下使用 markdown 演示
+
+- slidev: nodejs 编写 https://github.com/slidevjs/slidev
+- slides: go 编写的终端 ppt 工具 https://github.com/maaslalani/slides
+- present: python 语言的终端演示工具 https://github.com/vinayak-mehta/present
 
 思维导图工具
 --------------------------------------

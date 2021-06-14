@@ -1131,7 +1131,7 @@ Pandoc 转换文档格式
   # markdown 转成 word
   pandoc -o output.docx -f markdown -t docx filename.md
 
-Calibre
+Calibre 电子书管理工具
 -------------------------------------------------------------
 
 .. code-block:: shell
@@ -1140,6 +1140,20 @@ Calibre
   # https://snowdreams1006.github.io/myGitbook/advance/export.html
   # 通过 calibre 提供的二进制工具抓取并且生成电子书
   ebook-convert draveness.recipe draveness.mobi --output-profile kindle
+
+Gitbook
+-------------------------------------------------------------
+
+.. code-block:: shell
+
+  # gitbook 本地生成电子书 pdf（依赖 calibare 的 ebook-convert)
+  npm install -g gitbook
+  npm install -g gitbook-cli
+  # 本地预览
+  gitbook build; gitbook serve
+  # 生成 pdf
+  gitbook pdf
+  # 如果 polyfills.js 报错了 https://www.cnblogs.com/cyxroot/p/13754475.html
 
 Mac 微信
 -------------------------------------------------------------
