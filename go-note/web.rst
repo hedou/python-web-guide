@@ -281,7 +281,7 @@ Go 常用框架(工具)
 - 图片处理：h2non/imaginary
 - 网络库/连接池：fatih/pool; panjf2000/gnet, valyala/fasthttp，kavu/go_reuseport
 - websocket: nhooyr.io/websocket, gorilla/websocket
-- http client: levigross/grequests, asmcos/requests
+- http client: levigross/grequests, asmcos/requests, go-resty/resty
 - 表格：go-echarts
 - excel(XLSX): 360EntSecGroup-Skylar/excelize, tealeg/xlsx
 - 转换工具：
