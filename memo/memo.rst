@@ -741,6 +741,8 @@ Git
     # undo add
     git reset <file>
     git reset    # undo all
+    # undo git reset https://stackoverflow.com/questions/2510276/how-to-undo-git-reset
+    git reset 'HEAD@{1}'
 
     # 查看add后的diff
     git diff --staged
