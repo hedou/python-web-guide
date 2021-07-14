@@ -237,7 +237,7 @@ MacOS
    # 如何解决 mac 突然没有声音的问题(系统 bug，音频守护进程 coreaudiod出了问题)
    sudo killall coreaudiod
 
-   # mac 如何使用 realpath, https://stackoverflow.com/questions/3572030/bash-script-absolute-path-with-os-x
+   # mac 如何使用 realpath 显示绝对路径, https://stackoverflow.com/questions/3572030/bash-script-absolute-path-with-os-x
    # brew install coreutils
    grealpath file
 
@@ -246,6 +246,9 @@ MacOS
 
    # 软件：pathfinder 如何增加 隔空投送 airdrop 分享文件
    https://support.cocoatech.com/discussions/problems/126873-full-airdrop-sharing-is-here-for-pf8-and-pf7
+
+   # mac 压缩之后去掉 "_MACOSX" 隐藏文件。https://stackoverflow.com/questions/10924236/mac-zip-compress-without-macosx-folder
+   zip -d filename.zip __MACOSX/\*
 
 
 如何发送 mac 通知，可以用来做提示
