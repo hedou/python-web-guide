@@ -293,7 +293,7 @@ Go 常用框架(工具)
 - 热编译工具：gowatch
 - 静态检查：golangci-lint
 - 网络代理：goproxy
-- 命令行: spf13/cobra
+- 命令行处理: spf13/cobra
 - 字符串处理工具：huandu/xstrings
 - 类型转换：spf13/cast
 - HTML 处理/过滤: PuerkitoBio/goquery, microcosm-cc/bluemonday
@@ -308,6 +308,7 @@ Go 常用框架(工具)
 - 进程控制：uber-go/automaxprocs
 - 地理位置：ip2location/ip2location-go
 - 时间处理：jinzhu/now
+- 金融数字格式化: leekchan/accounting
 
 工具:
 
