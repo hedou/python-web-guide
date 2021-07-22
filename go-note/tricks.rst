@@ -239,6 +239,7 @@ go 初始化 slice/map 的区别
 .. code-block:: go
 
     // 初始化一个全局 map 可以用 make，防止第一次赋值 nil map 会 panic
+    // https://nanxiao.gitbooks.io/golang-101-hacks/content/posts/nil-slice-vs-nil-map.html
     var globalMap = make(map[string]string) // 之后可以在 init() 函数初始化
 
     func main() {
@@ -935,7 +936,7 @@ Go panic 场景
 - 向已经关闭的 channel 发送消息
 - 重复关闭 channel
 - 关闭未初始化的 channel
-- 未初始化 map。注意访问 map 不存在的 key 不会 panic，而是返回 map 类型对应的零值
+- 未初始化 map。注意访问 map 不存在的 key 不会 panic，而是返回 map 类型对应的零值，但是不能直接赋值
 - 跨协程的 panic 处理
 - sync 计数为负数。
 - 类型断言不匹配。`var a interface{} = 1; fmt.Println(a.(string))` 会 panic，建议用 `s,ok := a.(string)`
