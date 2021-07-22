@@ -302,6 +302,7 @@ Go 常用框架(工具)
 - 邮件：gopkg.in/gomail
 - 接口文档生成：swaggo/swag
 - 消息队列：nsqio/nsq
+- 延时队列/时间轮：ouqiang/delay-queue, RussellLuo/timingwheel
 - 分布式kv存储：etcd
 - 用户认证：dgrijalva/jwt-go
 - 访问(权限)控制：casbin/casbin
