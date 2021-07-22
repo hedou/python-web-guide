@@ -272,6 +272,18 @@ go 初始化 slice/map 的区别
             }
     }
 
+    func testNilMap() {
+        var nilm map[string]int
+        nilm = nil
+        // 直接对 nil map 取值和 获取长度不会 panic
+        fmt.Println(nilm["a"], len(nilm))
+        // 直接对 nil map 遍历也不会 panic
+        for k, v := range nilm {
+            fmt.Println(k, v)
+        }
+        // nilm["hehe"] = 1 // 但是不能赋值，会 panic。必须用 make 或者 empty map 初始化先
+    }
+
 
 go 没有内置的 set 结构
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
