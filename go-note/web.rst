@@ -310,6 +310,7 @@ Go 常用框架(工具)
 - 地理位置：ip2location/ip2location-go
 - 时间处理：jinzhu/now
 - 金融数字格式化: leekchan/accounting
+- 分布式事务：yedf/dtm
 
 工具:
 
