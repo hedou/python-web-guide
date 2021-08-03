@@ -304,7 +304,7 @@ Go 常用框架(工具)
 - 消息队列：nsqio/nsq
 - 延时队列/时间轮：ouqiang/delay-queue, RussellLuo/timingwheel
 - 分布式kv存储：etcd
-- 用户认证：dgrijalva/jwt-go
+- 用户认证：golang-jwt/jwt,dgrijalva/jwt-go(弃用)
 - 访问(权限)控制：casbin/casbin
 - 进程控制：uber-go/automaxprocs
 - 地理位置：ip2location/ip2location-go
