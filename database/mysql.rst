@@ -165,6 +165,7 @@ Sqlalchemy 示例
     """
 
     import sqlalchemy as db
+    from sqlalchemy imprt text
 
     """
     # 本机 mysql 创建一个测试表
@@ -181,7 +182,7 @@ Sqlalchemy 示例
 
     def sqlalchemy_demo():
         # https://towardsdatascience.com/sqlalchemy-python-tutorial-79a577141a91
-        url = "mysql+pymysql://root:wnnwnn@127.0.0.1:3306/testdb"  # 测试地址
+        url = "mysql+pymysql://root:wnnwnn@127.0.0.1:3306/testdb"  # 本地用的测试地址
         engine = db.create_engine(url)
         connection = engine.connect()
         metadata = db.MetaData()
@@ -213,6 +214,16 @@ Sqlalchemy 示例
         query = db.delete(table).where(table.columns.code == 10010)
         connection.execute(query)
 
+      def sqlalchemy_text_demo():
+          """直接执行 sql 语句 """
+          url = "mysql+pymysql://root:wnnwnn@127.0.0.1:3306/testdb"  # 本地用的测试地址
+          engine = db.create_engine(url)
+          connection = engine.connect()
+
+          sql = text("show tables;")
+          res = connection.execute(sql)
+          for i in res:
+              print(i)
 
     if __name__ == "__main__":
         sqlalchemy_demo()
