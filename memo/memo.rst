@@ -251,8 +251,9 @@ MacOS
    zip -d filename.zip __MACOSX/\*
 
    # 删除旧文件 https://tecadmin.net/delete-files-older-x-days/
-   find /var/log -name "*.log" -type f -mtime +30 # 找到 30 天之前修改的文件
+   find /var/log -name "*.log" -type f -mtime +30 # 找到 30 天之前修改的文件，指定文件类型 为 log
    find /var/log -name "*.log" -type f -mtime +30 -delete  # 执行删除
+   find /opt/backup -type f -mtime +30
 
 
 如何发送 mac 通知，可以用来做提示
