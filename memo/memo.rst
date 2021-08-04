@@ -250,6 +250,10 @@ MacOS
    # mac 压缩之后去掉 "_MACOSX" 隐藏文件。https://stackoverflow.com/questions/10924236/mac-zip-compress-without-macosx-folder
    zip -d filename.zip __MACOSX/\*
 
+   # 删除旧文件 https://tecadmin.net/delete-files-older-x-days/
+   find /var/log -name "*.log" -type f -mtime +30 # 找到 30 天之前修改的文件
+   find /var/log -name "*.log" -type f -mtime +30 -delete  # 执行删除
+
 
 如何发送 mac 通知，可以用来做提示
 
