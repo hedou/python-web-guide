@@ -287,7 +287,7 @@ SSH
   # 有二次验证登录跳板机的时候比较麻烦，可以用这个脚本自动登录跳板机 参考：https://juejin.im/post/5ce760cef265da1b6e657d6f
   # brew install expect
   # brew install oath-toolkit
-  # {user} {ip} {yourpassword} {server_qr_token} 替换成对应的 用户名、ip、密码、服务器秘钥
+  # {user} {ip} {yourpassword} {server_qr_token} 替换成对应的 用户名、ip、密码、服务器秘钥 (密码建议定期更换防止安全风险)
   export LC_CTYPE="en_US.UTF-8"
   expect -c "
   spawn ssh user@ip -p22
