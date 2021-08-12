@@ -399,7 +399,7 @@ APM (Application Performance Management)
 数据库工具
 --------------------------------------
 - mycli: mysql 命令行补全等。https://github.com/dbcli/mycli
-- MysqlWorkbench/Sequel Pro: mysql 客户端工具。
+- MysqlWorkbench/Sequel Pro: mysql 客户端工具。也可以用来生成生成 ER 图
 - Navicat Premium: 强大的数据库管理工具，收费
 - pt-online-schema-change: mysql数据库变更工具
 - Medis: redis client 工具
@@ -407,6 +407,8 @@ APM (Application Performance Management)
 
 - gen: 根据 mysql 生成 golang gorm model。https://github.com/smallnest/gen
 - sqlacodegen: 从 mysql 生成python sqlalchemy model定义。https://github.com/agronholm/sqlacodegen
+
+参考：https://www.webucator.com/article/how-to-create-an-er-diagram-for-a-mysql-database-w/
 
 
 绘图/流程图/思维导图工具
