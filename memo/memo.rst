@@ -255,6 +255,10 @@ MacOS
    find /var/log -name "*.log" -type f -mtime +30 -delete  # 执行删除
    find /opt/backup -type f -mtime +30
 
+   # hide or show desktop icon for presentation
+   alias hide_desktop_icon='defaults write com.apple.finder CreateDesktop -bool false; killall Finder'
+   alias show_desktop_icon='defaults write com.apple.finder CreateDesktop -bool true; killall Finder'
+
 
 如何发送 mac 通知，可以用来做提示
 
@@ -928,6 +932,9 @@ vim
 
    # vim 替换不间断空格，illegal character U+00A0异常解决。https://www.jianshu.com/p/5f9992e5cd47
    :%s/\%u00a0/ /g
+
+   # set transparent
+   :hi normal guibg=000000
 
 * `《vim cheet sheet》 <https://vim.rtorr.com/lang/zh_cn/>`_
 
