@@ -277,7 +277,7 @@ Trie
 
 OrderedMap (类似 python collections.OrderedDict)
 --------------------------------------------------
-模拟 python collections.OrderedDict 写的，可以方便的实现 lru 等
+模拟 python collections.OrderedDict 写的，可以方便的实现 lru 等。注意这里的 order 指的是 key 插入的顺序，不是指 key 字典序。
 
 .. code-block:: go
 
