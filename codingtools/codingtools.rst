@@ -331,6 +331,7 @@ Proxy
 - phantomjs/puppeteer/playwright-python: 用来处理动态网站。puppeteer 基于 nodejs。可以用来写爬虫，控制浏览器，自动化测试等
 - pyppeteer/selenium: 基于 python 动态网站爬虫处理，或者用于自动化测试
 - portia: 类似造数、八爪鱼之类的可视化爬虫 https://github.com/scrapinghub/portia
+- Pholcus/Colly/crawlab: Go语言编写的爬虫框架
 
 自动化测试
 --------------------------------------
