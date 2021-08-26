@@ -1,6 +1,6 @@
 .. _memo:
 
-个人备忘录
+个人技术备忘录
 =====================================================================
 
 ..
@@ -507,6 +507,8 @@ Tmux
 
 .. code-block:: sh
 
+   # 建议直接用 https://github.com/gpakosz/.tmux 这个强大的 tmux 配置
+
    # https://wiki.archlinux.org/index.php/tmux
    tmux rename -t oriname newname
    tmux att -t name -d               # -d 不同窗口全屏
@@ -553,6 +555,10 @@ Tmux
            ln -f -s $(/bin/ls -t tmux_resurrect_*.txt | head -n 1) last && \
            /bin/ls -l last
    }
+
+   # use prefix + m zoom and unzoom panes. https://tao-of-tmux.readthedocs.io/en/latest/manuscript/07-pane.html
+   bind-key -T prefix m resize-pane -Z
+
 
 SSH
 -------------------------------------------------------------
