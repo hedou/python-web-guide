@@ -580,6 +580,14 @@ Linux debug Tools
 - lsof: tracking open files
 - pmap: viewing memory allocation
 
+命令行工具
+--------------------------------------
+
+- https://github.com/agarrharr/awesome-cli-apps
+- https://github.com/chubin/awesome-console-services
+- https://github.com/herrbischoff/awesome-command-line-apps
+
+
 参考：
 --------------------------------------
 
