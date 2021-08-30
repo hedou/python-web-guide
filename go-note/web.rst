@@ -237,7 +237,7 @@ Go List import
    go list -f '{{range $dep := .Deps}}{{printf "%s\n" $dep}}{{end}}' | xargs go list -f '{{if not .Standard}}{{.ImportPath}}{{end}}'
 
 
-Go 常用框架(工具)
+Go 常用框架(工具)⭐️
 ---------------------------------------------------------------
 技术选型一般选择接口稳定，更新快，生态相对成熟，star 数量较高，用户广泛的库，坑少一点。
 前后分离时代用 gin 之类的框架写app后台还是挺快的，但是感觉做并发不高的内部后台业务还是用脚本python/php之类的更快。
@@ -312,6 +312,8 @@ Go 常用框架(工具)
 - 时间处理：jinzhu/now
 - 金融数字格式化: leekchan/accounting
 - 分布式事务：yedf/dtm
+- 分布式锁: go-redsync/redsync(redlock算法)
+
 
 工具:
 

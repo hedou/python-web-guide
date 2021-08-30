@@ -96,6 +96,7 @@ RPC
 单机上可以使用 go 提供的 sync 包加锁，分布式情况下一般有几种方式：
 
 - redis: 借助 setnx。性能较高
+- Redlock算法: https://github.com/go-redsync/redsync
 - zookpeer: 适合分布式调度，不适合高频率持有时间短的抢锁场景
 - etcd
 
