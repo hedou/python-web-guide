@@ -507,7 +507,8 @@ Tmux
 
 .. code-block:: sh
 
-   # 建议直接用 https://github.com/gpakosz/.tmux 这个强大的 tmux 配置
+   # 建议直接用 https://github.com/gpakosz/.tmux 这个强大的 tmux 配置(oh-my-tmux)
+   # 不过注意，如果一开始 tmux.conf.local 里的命令执行失败（比如curl 网络失败）可能导致插件加载失败，注意排查
 
    # https://wiki.archlinux.org/index.php/tmux
    tmux rename -t oriname newname
