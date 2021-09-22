@@ -234,6 +234,15 @@ go 如何实现函数默认值(go本身没提供)
       return fmt.Sprintf("%s%d", a, b)
     }
 
+    // 或者使用传递结构体的方式，使用结构体的默认零值或者构造函数的初始值
+    type Params struct {
+      a, b, c int
+    }
+
+    func doIt(p Params) int {
+      return p.a + p.b + p.c
+    }
+
 
 go 初始化 slice/map 的区别
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
