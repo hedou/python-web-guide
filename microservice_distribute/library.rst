@@ -68,11 +68,23 @@ RPC
 在分布式系统中，不同业务模块之间可以通过消息队列或者 rpc 来进行通信。
 
 
-服务发现
+服务注册与发现
 ----------------------
+- Consul
+- Etcd
+- Zookeeper
+
+微服务网关
+----------------------
+- Nginx
+- Netflix Zuul
+- Kong
 
 配置中心
 ----------------------
+- Apollo: https://github.com/ctripcorp/apollo
+- Spring Cloud Config
+- Disconf
 
 健康检查
 ----------------------
