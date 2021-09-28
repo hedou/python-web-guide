@@ -19,7 +19,7 @@ Go语言入门和深入
 - `Go 101 <https://go101.org/article/101.html>`_ 包含了很多基础和高级主题
 - `Mastering Go <https://books.studygolang.com/Mastering_Go_ZH_CN/>`_
 - `Go语言圣经 <https://books.studygolang.com/gopl-zh/>`_
-- `Go安全编程规范 <https://zhuanlan.zhihu.com/p/400078436>`_
+- `Go安全编程规范 <https://github.com/Tencent/secguide/blob/main/Go%E5%AE%89%E5%85%A8%E6%8C%87%E5%8D%97.md>`_
 
 
 Go Books
