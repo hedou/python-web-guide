@@ -709,6 +709,8 @@ Git
 
     # 手残 add 完以后输入错了 commit 信息
     git commit --amend
+    # 修改文件内容并合并到上一次的commit变更当中。比如发现没有修改完全，又改了代码，可以修改之后 add 然后执行
+    git commit --amend --no-edit
     # 类似的还可以修改上一个提交者的名字 https://stackoverflow.com/questions/750172/how-to-change-the-author-and-committer-name-and-e-mail-of-multiple-commits-in-gi
     git config --global user.name "you name"
     git config --global user.email you@domain.com
