@@ -307,8 +307,10 @@ SSH
 Mac 蓝牙耳机(自用索尼 wi1000x)
 ---------------------------------------------------------------
 
-如何给Macbook Pro 开启 Apt-X 蓝牙音质 https://www.jianshu.com/p/a1efa561ed9e
-使用播放器 Audirvana Plus
+如何给Macbook Pro 开启 Apt-X 蓝牙音质 https://www.jianshu.com/p/a1efa561ed9e。使用播放器 Audirvana Plus
+
+注意：mac有一个 bug 至今没有修复，cpu 占用高的时候使用蓝牙耳机可能会被莫名其妙修改平衡。声音一边大一边小，去设置-声音里调整一下就好。
+`macbook-pro-bluetooth-audio-balance-keeps-changing-by-itself <https://apple.stackexchange.com/questions/280145/macbook-pro-bluetooth-audio-balance-keeps-changing-by-itself>`_
 
 
 Proxy
