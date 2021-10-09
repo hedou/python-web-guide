@@ -293,8 +293,12 @@ Go 常用框架(工具)⭐️
   - curl2go(curl -> go http code): https://mholt.github.io/curl-to-go/
   - Json2go(json -> go struct): https://mholt.github.io/json-to-go/
 
+- 代码检查工具：
+
+  - 静态检查：golangci-lint
+  - goroutine 泄露检查: github.com/uber-go/goleak
+
 - 热编译工具：gowatch
-- 静态检查：golangci-lint
 - 网络代理：goproxy
 - 命令行处理: spf13/cobra
 - 字符串处理工具：huandu/xstrings
@@ -360,10 +364,16 @@ Goroutines
 - https://medium.com/@vigneshsk/how-to-write-high-performance-code-in-golang-using-go-routines-227edf979c3c
 - https://udhos.github.io/golang-concurrency-tricks/
 
-Go 内存泄露
+Go 内存泄露(memory leak)
 ---------------------------------------------------------------
 - https://go101.org/article/memory-leaking.html
 - https://colobu.com/2019/08/28/go-memory-leak-i-dont-think-so/
+
+
+Go goroutine 泄露
+---------------------------------------------------------------
+- https://www.trailofbits.com/post/discovering-goroutine-leaks-with-semgrep
+- https://hoverzheng.github.io/post/technology-blog/go/goroutine-leak%E5%92%8C%E8%A7%A3%E5%86%B3%E4%B9%8B%E9%81%93/
 
 Go 反射
 ---------------------------------------------------------------
