@@ -685,6 +685,7 @@ Git
 
     # 用来review：
     git log --since=1.days --committer=PegasusWang --author=PegasusWang
+    git log --since="6am" # 查看当天提交
     git diff commit1 commit2
 
     # 冲突以后使用远端的版本： NOTE：注意在 git merge 和 git rebase 中 ours/theirs 含义相反
