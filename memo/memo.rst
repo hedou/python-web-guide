@@ -259,6 +259,10 @@ MacOS
    alias hide_desktop_icon='defaults write com.apple.finder CreateDesktop -bool false; killall Finder'
    alias show_desktop_icon='defaults write com.apple.finder CreateDesktop -bool true; killall Finder'
 
+   # mac https://apple.stackexchange.com/questions/54329/can-i-get-the-cpu-temperature-and-fan-speed-from-the-command-line-in-os-x
+   gem install iStats # need
+   istats all
+
 
 如何发送 mac 通知，可以用来做提示
 
