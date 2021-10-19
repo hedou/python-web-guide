@@ -263,6 +263,16 @@ MacOS
    gem install iStats # need
    istats all
 
+   # mac https://superuser.com/questions/273756/how-to-change-default-app-for-all-files-of-particular-file-type-through-terminal
+   # https://chainsawonatireswing.com/2012/09/19/changing-default-applications-on-a-mac-using-the-command-line-then-a-shell-script/
+   brew install duti # 安装 duti
+   osascript -e 'id of app "calibre.app"' # https://www.hexnode.com/mobile-device-management/help/how-to-find-the-bundle-id-of-an-application-on-mac/
+   duti -x sh # 获取 .sh 文件的默认打开软件，最后一行是id
+   duti -s io.brackets.appshell .md all # 用该 id 的软件打开所有的 md 文件
+
+   osascript -e 'id of app "ebook-viewer.app"' # 安装 calibre 之后，找到附带的电子书浏览软件 id
+   duti -s com.calibre-ebook.ebook-viewer .mobi all # 用 ebook-viewer 打开所有的 mobi
+
 
 如何发送 mac 通知，可以用来做提示
 
