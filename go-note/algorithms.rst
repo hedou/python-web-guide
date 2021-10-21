@@ -77,7 +77,7 @@ Queue
         return len(q.items) == 0
     }
 
-Deque
+Deque 双端队列
 --------------------------------------------------
 
 .. code-block:: go
@@ -199,7 +199,7 @@ Linked List
     }
 
 
-Trie
+Trie 字典树
 --------------------------------------------------
 
 .. code-block:: go
@@ -341,4 +341,57 @@ OrderedMap (类似 python collections.OrderedDict)
             i++
         }
         return keys
+    }
+
+Heap 堆
+--------------------------------------------------
+go 自带了一个 `container/heap` 模块可以用来实现堆。
+
+.. code-block:: go
+
+    // This example demonstrates an integer heap built using the heap interface.
+    // A heap is a tree with the property that each node is the minimum-valued node in its subtree.
+    // 可以用来实现优先级队列 priority queue
+    package main
+
+    import (
+        "container/heap"
+        "fmt"
+    )
+
+    // An IntHeap is a min-heap of ints.
+    type IntHeap []int
+
+    func (h IntHeap) Len() int           { return len(h) }
+    func (h IntHeap) Less(i, j int) bool { return h[i] < h[j] }
+    func (h IntHeap) Swap(i, j int)      { h[i], h[j] = h[j], h[i] }
+
+    // 最后追加一个元素
+    func (h *IntHeap) Push(x interface{}) {
+        // Push and Pop use pointer receivers because they modify the slice's length,
+        // not just its contents.
+        *h = append(*h, x.(int))
+    }
+
+    // 移除并且返回最后一个元素
+    func (h *IntHeap) Pop() interface{} {
+        old := *h
+        n := len(old)
+        x := old[n-1]
+        *h = old[0 : n-1]
+        return x
+    }
+
+    // This example inserts several ints into an IntHeap, checks the minimum,
+    // and removes them in order of priority.
+    func main() {
+        h := &IntHeap{2, 1, 5}
+        heap.Init(h)
+        fmt.Println(h)
+        heap.Push(h, 3)
+        fmt.Println(h)
+        fmt.Printf("minimum: %d\n", (*h)[0]) // h[0] 最小的元素
+        for h.Len() > 0 {
+            fmt.Printf("%d ", heap.Pop(h))
+        }
     }
