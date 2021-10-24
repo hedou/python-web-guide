@@ -429,4 +429,9 @@ Go源码阅读
 ---------------------------------------------------------------
 除了内置库之外，go 还有很多优秀的源码值得学习。建议用到的一些优秀的第三方库的源码都可以看一下，了解底层实现也方便排查问题。
 
+- https://golang.design/under-the-hood//
+- https://bytemode.github.io/reading/
+- https://docs.kilvn.com/go-internals/ref2.html
+- https://draveness.me/golang/docs/part1-prerequisite/ch01-prepare/golang-debug/
+
 .. image:: ../_image/goweb/gocode阅读.png
