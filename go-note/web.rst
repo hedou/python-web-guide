@@ -421,9 +421,10 @@ Go Leetcode
 - https://github.com/austingebauer/go-leetcode
 - https://books.halfrost.com/leetcode/ 一本 go leetcode 题解电子书
 
-Go 面试
+Go 面试题
 ---------------------------------------------------------------
 - `Awesome Go Interview Questions and Answers <https://goquiz.github.io/>`_
+- https://bytemode.github.io/interview/
 
 Go源码阅读
 ---------------------------------------------------------------
