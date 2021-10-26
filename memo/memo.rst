@@ -225,7 +225,7 @@ MacOS
    brew install rmtrash  # npm install -g safe-rm; alias rm='safe-rm'
 
    # 增加 terminal 光标移动速度, https://stackoverflow.com/questions/4489885/how-can-i-increase-the-cursor-speed-in-terminal
-   # defaults write NSGlobalDomain KeyRepeat -int 1
+   defaults write NSGlobalDomain KeyRepeat -int 1   # 默认值 2，设置成 1 合适，设置成 0 就太快了，翻页刷新有问题
    mac: 系统设置-> 键盘 -> 修改按键重复到最快，重复前延迟最短。可以让光标在终端里移动更快
 
    # 如何在文件更新之后自动刷新浏览器，需要首先 pip 安装 when-changed

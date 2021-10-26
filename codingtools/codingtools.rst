@@ -168,6 +168,7 @@ Chrome 开发者插件
 - Epydoc: Automatic API Documentation Generation for Python
 - 2to3/python-modernize: python2 转 python3 工具。目前 Instagram 已经全面迁移到 python3
 - 编写2/3兼容代码：http://python-future.org/compatible_idioms.html
+- kite: 基于机器学习的自动补全，支持多种编辑器和 IDE https://www.kite.com/
 
 * `《[转] Instagram 在 PyCon 2017 的演讲摘要》 <https://zhuanlan.zhihu.com/p/27232791>`_
 
