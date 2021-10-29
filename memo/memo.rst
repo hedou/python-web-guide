@@ -959,7 +959,7 @@ vim
    # vim 替换不间断空格，illegal character U+00A0异常解决。https://www.jianshu.com/p/5f9992e5cd47
    :%s/\%u00a0/ /g
 
-   # set transparent
+   # set transparent，设置透明，如果iterm2 设置了背景图可以看到
    :hi normal guibg=000000
 
 * `《vim cheet sheet》 <https://vim.rtorr.com/lang/zh_cn/>`_
