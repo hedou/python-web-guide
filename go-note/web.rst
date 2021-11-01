@@ -260,7 +260,7 @@ Go 常用框架(工具)⭐️
 - mongodb: mongodb/mongo-go-driver
 - id生成器: rx/xid, satori/go.uuid, beinan/fastid, bwmarrin/snowflake, sony/sonyflake
 - hash: cespare/xxhash(快速 hash)
-- cache(in memory): patrickmn/go-cache, allegro/bigcache, golang/groupcache(分布式), singleflight(防止缓存击穿)
+- cache(in memory): patrickmn/go-cache, allegro/bigcache, golang/groupcache(分布式), singleflight(防止缓存击穿), hashicorp/golang-lru
 - 并发/协程池(star 数从低到高排序)：
 
   - https://github.com/panjf2000/ants
