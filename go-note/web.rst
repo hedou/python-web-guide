@@ -298,6 +298,7 @@ Go 常用框架(工具)⭐️
 
   - 静态检查：golangci-lint
   - goroutine 泄露检查: github.com/uber-go/goleak
+  - 注释工具: github.com/cuonglm/gocmt 自动给导出变量、函数等增加注释
 
 - 热编译工具：gowatch
 - 网络代理：goproxy
