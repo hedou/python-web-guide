@@ -261,7 +261,7 @@ Go 常用框架(工具)⭐️
 - id生成器: rx/xid, satori/go.uuid, beinan/fastid, bwmarrin/snowflake, sony/sonyflake
 - hash: cespare/xxhash(快速 hash)
 - cache(in memory): patrickmn/go-cache, allegro/bigcache, golang/groupcache(分布式), singleflight(防止缓存击穿)
-- cache(lru/lfu): hashicorp/golang-lru, bluele/gcache
+- cache(lru/lfu/2Q/ARC): hashicorp/golang-lru, bluele/gcache, songangweb/mcache(增强lru)
 - 并发/协程池(star 数从低到高排序)：
 
   - https://github.com/panjf2000/ants
