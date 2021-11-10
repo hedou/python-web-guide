@@ -1,6 +1,6 @@
 .. _memo:
 
-个人技术备忘录
+个人技术备忘录 💻
 =====================================================================
 
 ..
@@ -56,14 +56,17 @@ pip/easy_install
        install('argh')
 
 
-更换源, vi ~/.pip/pip.conf
+有时候 pip 安装会比较慢可以更换为豆瓣的源，两种方式
+
+1. `pip install redis -i https://pypi.doubanio.com/simple`
+2. 或者修改全局 `vi ~/.pip/pip.conf`
 
 .. code-block:: shell
 
-   [global]
-   timeout = 60
-   index-url = http://pypi.douban.com/simple
-   trusted-host = pypi.douban.com
+  [global]
+  timeout = 60
+  index-url = http://pypi.douban.com/simple
+  trusted-host = pypi.douban.com
 
 
 IPython
