@@ -322,6 +322,7 @@ Go 常用框架(工具)⭐️
 - 分布式事务：yedf/dtm
 - 分布式锁: go-redsync/redsync(redlock算法)
 - Zookeeper: go-zookeeper/zk
+- 设计模式：tmrts/go-patterns
 
 工具:
 
