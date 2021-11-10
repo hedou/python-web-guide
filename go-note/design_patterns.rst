@@ -16,10 +16,10 @@ Go 设计模式
     )
 
     /*
-    go 单例模式：
+    go 单例模式实现方式：
 
     1. 使用 lock，为了并发安全，使用 lock + double check
-    2. 使用 sync.Once
+    2. 使用 sync.Once (推荐👍)
     3. 使用 init() The init function is only called once per file in a package,  so we can be sure that only a single instance will be created
 
     参考：
@@ -62,8 +62,10 @@ Go 设计模式
          fmt.Scanln()
     }
 
-    /*
-    // 使用 once
+
+.. code-block:: go
+
+    // 推荐使用 once，实现更加简洁优雅
     var once sync.Once
 
     type single struct {
@@ -72,15 +74,20 @@ Go 设计模式
     var singleInstance *single
 
     func getInstance() *single {
-         if singleInstance == nil {
-             once.Do(
-                 func() {
-                     fmt.Println("Creting Single Instance Now")
-                     singleInstance = &single{}
-                 })
-         } else {
-             fmt.Println("Single Instance already created-2")
-         }
-         return singleInstance
+            if singleInstance == nil {
+                    once.Do(func() {
+                            fmt.Println("Creting Single Instance Now")
+                            singleInstance = &single{}
+                    })
+            } else {
+                    fmt.Println("Single Instance already created-2")
+            }
+            return singleInstance
     }
-    */
+
+
+参考:
+--------------------------------------------------
+
+- `Go Patterns (github) <https://github.com/tmrts/go-patterns>`_
+- `All Design Patterns in Go (Golang) <https://golangbyexample.com/singleton-design-pattern-go/>`_
