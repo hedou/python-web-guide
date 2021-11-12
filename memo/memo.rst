@@ -227,10 +227,6 @@ MacOS
    # 删除的文件会放到 $HOME/.Trash 方便恢复
    brew install rmtrash  # npm install -g safe-rm; alias rm='safe-rm'
 
-   # 增加 terminal 光标移动速度, https://stackoverflow.com/questions/4489885/how-can-i-increase-the-cursor-speed-in-terminal
-   defaults write NSGlobalDomain KeyRepeat -int 1   # 默认值 2，设置成 1 合适，设置成 0 就太快了，翻页刷新有问题
-   mac: 系统设置-> 键盘 -> 修改按键重复到最快，重复前延迟最短。可以让光标在终端里移动更快
-
    # 如何在文件更新之后自动刷新浏览器，需要首先 pip 安装 when-changed
    alias flush_watch_refresh_chrome=" when-changed -v -r -1 -s ./ osascript -e 'tell application \"Google Chrome\" to tell the active tab of its first window to reload' "
 
@@ -276,7 +272,6 @@ MacOS
    osascript -e 'id of app "ebook-viewer.app"' # 安装 calibre 之后，找到附带的电子书浏览软件 id
    duti -s com.calibre-ebook.ebook-viewer .mobi all # 用 ebook-viewer 打开所有的 mobi
 
-
 如何发送 mac 通知，可以用来做提示
 
 .. code-block:: python
@@ -295,6 +290,20 @@ MacOS
 
    notify("开会啦", "Go Go Go !!!")
 
+增加终端下光标的移动速度：
+
+.. code-block:: shell
+
+   # mac: 系统设置-> 键盘 -> 修改按键重复到最快，重复前延迟最短。可以让光标在终端里移动更快
+
+   # 增加 terminal 光标移动速度, https://stackoverflow.com/questions/4489885/how-can-i-increase-the-cursor-speed-in-terminal
+   # 终端执行以下几个 defaults 命令 https://medium.com/@juanpaulo/set-blazingly-fast-key-repeats-a87c808ad01d
+
+   # Disable press-and-hold for keys in favor of key repeat
+   defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+   # Set a blazingly fast keyboard repeat rate
+   defaults write NSGlobalDomain KeyRepeat -int 1  # 默认值 2，设置成 1 合适，设置成 0 就太快了，翻页刷新有问题
+   defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 SSH
 -------------
