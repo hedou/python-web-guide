@@ -389,10 +389,10 @@ Rest
 - https://github.com/the-benchmarker/web-frameworks
 - https://www.techempower.com/benchmarks/
 
-Profiler
+Profiler 性能分析工具
 -------------------------------------------------------------------------
-- pyflame: https://github.com/uber/pyflame
-
+- pyflame: https://github.com/uber/pyflame 火焰图工具，分析 cpu 耗时
+- pyinstrument:https://github.com/joerick/pyinstrument  python 执行耗时分析工具
 
 APM (Application Performance Management)
 -------------------------------------------------------------------------
