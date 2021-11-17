@@ -251,7 +251,7 @@ Go 常用框架(工具)⭐️
 - 单元测试断言：matryer/is, testify/assert, smartystreets/goconvey(bdd 驱动测试)
 - 错误处理: pkg/errors, hashicorp/go-multierror
 - json处理转换：go-simplejson/mapstructure，json-iterator/go (比内置的 json 解析快很多), tidwall/gjson(获取 json 值)
-- 字典/结构体合并：imdario/mergo
+- 字典/结构体合并/结构体拷贝：imdario/mergo, jinzhu/copier
 - 配置解析: viper(兼容很多格式)
 - mysql orm: gorm, xorm, sqlx, ent/ent(实体框架)
 - redis: go-redis, redigo
