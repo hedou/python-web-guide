@@ -425,7 +425,7 @@ Linux(centos/ubuntu)
     tar zxvf FileName.tar.gz    # 解压
     tar zcvf FileName.tar.gz DirName    # 压缩
 
-代码搜索用ag/rg, 比ack快
+代码搜索用ag(the silversearcher)/rg, 比ack快
 
 .. code-block:: python
 
@@ -436,7 +436,7 @@ Linux(centos/ubuntu)
     ag -Q .rb    # Literal Expression Searches, search for the exact pattern
     ag string -l    # Listing Files (-l)
     ag string -i    # Case Insensitive Searches (-i)
-    ag string -G py$    # 搜索应py结尾的文件
+    ag string -G py$    # 搜索应py结尾的文件 (指定文件类型)
     ag readme -l --ignore-dir=railties/lib    # 忽略文件夹
     ag readme -l --ignore-dir="*.rb"    # 忽略特性类型文件
     .agignore    # 用来忽略一些vcs，git等文件。
