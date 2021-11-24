@@ -470,6 +470,7 @@ APM (Application Performance Management)
 - aria2: https://aria2.github.io/ 轻量级的命令行下载工具
 - FFmpeg: 强大的视频处理工具，可以用来截图，截取视频片段等
 - ScreenFlow/Camtasia/Obs: 屏幕录制，剪辑工具，收费。笔者用来录制屏幕用
+- ImageOptim: https://imageoptim.com 一个开源免费的mac图片压缩工具
 - licecap: 一款小巧的免费 gif 录制工具
 - TunesKit Video Cutter(mac): 视频分割、合并工具
 - iZotope RX6: 音频降噪工具，去除杂音、呼吸声等等，收费
