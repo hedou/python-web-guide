@@ -1,7 +1,7 @@
 .. _library:
 
 =========================================
-微服务/分布式系统组件
+云原生时代-微服务/分布式系统组件
 =========================================
 
 介绍一些微服务中的常见问题，包括常见概念，中间件，开源系统等，佛系更新中。
@@ -202,5 +202,6 @@ RPC
 
 - https://github.com/doocs/advanced-java
 - 《微服架构设计模式》 一本比较好的讲微服务架构实现的书籍
+- 《凤凰架构》
 - https://github.com/theanalyst/awesome-distributed-systems
 - https://github.com/ty4z2008/Qix/blob/master/ds.md#
