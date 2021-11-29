@@ -6,6 +6,7 @@ Go入门
 Go语言入门和深入
 --------------------------------------------------
 
+- `Go Roadmap <https://github.com/Alikhll/golang-developer-roadmap>`_  学习路线图
 - `Lets Go <https://github.com/PegasusWang/LetsGo>`_  笔者连载的 go 文字和视频教程
 - `A Tour of Go <https://tour.golang.org/welcome/1>`_
 - `Go by Example <https://gobyexample.com>`_
