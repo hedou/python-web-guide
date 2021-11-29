@@ -160,7 +160,7 @@ Go项目Layout
 
 参考：
 
-- https://medium.com/@rosaniline/unit-testing-gorm-with-go-sqlmock-in-go-93cbce1f6b5b
+- https://medium.com/@rosaniline/unit-testing-gorm-with-go-sqlmock-in-go-93cbce1f6b5b  (medium.com有阅读次数限制，隐身模式打开似乎就可以了)
 
 
 Go 断点调试器dlv
@@ -249,7 +249,7 @@ Go 常用框架(工具)⭐️
 - 微服务框架：go-kit, go-micro, karatos(b 站)，go-zero(好未来)，jupiter(斗鱼)
 - 参数验证：go-playground/validator, bytedance/go-tagexpr
 - 单元测试断言：matryer/is, testify/assert, smartystreets/goconvey(bdd 驱动测试)
-- 错误处理: pkg/errors, hashicorp/go-multierror
+- 错误处理: pkg/errors, hashicorp/go-multierror(多错误处理), sync/errgroup(多goroutine错误处理)
 - json处理转换：go-simplejson/mapstructure，json-iterator/go (比内置的 json 解析快很多), tidwall/gjson(获取 json 值)
 - 字典/结构体合并/结构体拷贝：imdario/mergo, jinzhu/copier
 - 配置解析: viper(兼容很多格式)
