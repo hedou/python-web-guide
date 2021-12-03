@@ -271,6 +271,7 @@ Go 常用框架(工具)⭐️
   - https://github.com/benmanns/goworker
   - https://github.com/buptmiao/parallel
 
+- 原子访问：uber-go/atomic
 - 异步任务框架: machinery, gocelery
 - 定时任务：robfig/cron, ouiqiang/gocron
 - 熔断：hystrix-go, eapache/go-resiliency, cep21/circuit, alibaba/sentinel-golang
