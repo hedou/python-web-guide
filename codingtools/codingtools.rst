@@ -133,7 +133,7 @@ Chrome 开发者插件
 - LGTM: 有些开发过程中，需要一个同事review 代码后评价 LGTM(Looks Good To Me)才能 merge 代码，这里是图片版的 LGTM
 - SimpRead: 简悦，阅读模式 chrome 插件，支持导出和分享。试了一下导出知乎回答还不错
 - Awesome Screenshot: 截长图、浏览器录屏工具
-- 暴力猴：支持超多的插件，比如护眼插件、youtute 下载插件等 https://violentmonkey.github.io/
+- 暴力猴：支持超多的插件，比如护眼插件、youtute 下载插件等 https://violentmonkey.github.io/ 还可以搜索插件市场 https://greasyfork.org/zh-CN
 
 * `《在浏览器中嵌入 NeoVim，可使用本地配置》 <https://zhuanlan.zhihu.com/p/86027644>`_
 
