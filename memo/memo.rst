@@ -288,9 +288,8 @@ MacOS
    import os
 
    def notify(title, text):
-       os.system("""
-                 osascript -e 'display notification "{}" with title "{}"'
-                 """.format(text, title))
+       os.system(""" osascript -e 'say "家里放点音乐吧"' """)
+       os.system(""" osascript -e 'display notification "{}" with title "{}"' """.format(text, title))
 
    notify("开会啦", "Go Go Go !!!")
 
