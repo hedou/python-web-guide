@@ -980,6 +980,10 @@ vim
    # set transparent，设置透明，如果iterm2 设置了背景图可以看到
    :hi normal guibg=000000
 
+   # vim 去掉 ^M 字符（这个字符用 type CTRL-V, then CTRL-M. 打出来）。
+   # 或者 brew isntall dos2unix，然后 dos2unix filename
+   :s/^M$//
+
 * `《vim cheet sheet》 <https://vim.rtorr.com/lang/zh_cn/>`_
 
 
