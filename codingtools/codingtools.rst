@@ -593,6 +593,7 @@ Linux debug Tools
 - strace —— Trace system calls and signals。 跟踪进程的系统调用或信号产生的情况。
 - lsof: tracking open files
 - pmap: viewing memory allocation
+- fuser file_name 或者 `ls -l /proc/*/fd/* | grep filename` 找到文件被哪些进程使用
 
 命令行工具
 --------------------------------------
