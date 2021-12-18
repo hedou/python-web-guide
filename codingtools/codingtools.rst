@@ -490,6 +490,7 @@ APM (Application Performance Management)
 - Mousepose: 鼠标高亮增强工具。演示的时候可以高亮部分区域，其他部分置灰
 - 免费字体：思源字体(思源宋体、思源黑体)；站酷字体。视频中的一些字体可能要考虑版权问题，推荐使用无版权字体
 - canva: 一个好用的封面设计网站，可以用来设计 vlog/课程 视频封面图 https://www.canva.com
+- qmcdump: 命令行版本的 qq 音乐解码器
 
 MacOS 图片软件
 --------------------------------------
