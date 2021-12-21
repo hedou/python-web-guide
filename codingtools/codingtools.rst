@@ -76,6 +76,7 @@ Mac微信工具
 - epy-reader: https://github.com/wustho/epy 一个在终端下阅读 epub 电子书的工具，用快捷键 "o" 还可以打开图片
 - 现代 unix 工具：https://github.com/ibraheemdev/modern-unix
 - fanyi: 命令行版本的翻译工具 https://github.com/afc163/fanyi
+- cheat.sh: 程序员小抄工具，可以快速查询各种命令、语法等用法 https://github.com/chubin/cheat.sh
 
 Mac 终端快速配置
 --------------------------------------
