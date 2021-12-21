@@ -489,6 +489,14 @@ Go int/int64/float 和 string 转换示例
             "fmt"
             "strconv"
     )
+    /*
+    或者安装 https://github.com/chubin/cheat.sh
+    curl https://cht.sh/:cht.sh | sudo tee /usr/local/bin/cht.sh
+    chmod +x /usr/local/bin/cht.sh
+
+    之后输入以下语句查询答案：
+    cht.sh go cht.sh go string to float64
+    */
 
     func main() { // 测试 int 和 string(decimal) 互相转换的函数
             // https://yourbasic.org/golang/convert-int-to-string/
