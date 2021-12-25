@@ -1093,8 +1093,6 @@ Ffmpeg && youbute-dl
 
    # 截取视频
    ffmpeg -i input.mp4 -ss 00:01:00 -to 00:02:00 -c copy output.mp4
-   # 截取mp3
-   ffmpeg -i input.mp3 -ss 00:00:00 -t 00:03:00 -acodec copy output.mp3
    # https://gist.github.com/PegasusWang/11b9203ffa699cd8f07e29559cc4d055
    # 截图
    ffmpeg -ss 00:10:00 -i "Apache Sqoop Tutorial.mp4" -y -f image2 -vframes 1 test.png
@@ -1118,6 +1116,10 @@ Ffmpeg && youbute-dl
    # use aria2 # https://blog.51cto.com/14046599/2348642
    # brew install aria2
    youtube-dl https://www.youtube.com/watch?v=zAJUeZ0SNp8 --external-downloader aria2c --external-downloader-args "-x 16 -k 1M"
+
+   # 音频 mp3 处理
+   ffmpeg -i input.mp3 -ss 00:00:00 -t 00:03:00 -acodec copy output.mp3  # 截取mp3
+   ffmpeg -i audio.wav -acodec libmp3lame audio.mp3 # wav to mp3
 
 
 .. code-block:: python
