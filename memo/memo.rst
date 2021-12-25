@@ -258,7 +258,7 @@ MacOS
    find /var/log -name "*.log" -type f -mtime +30 -delete  # 执行删除
    find /opt/backup -type f -mtime +30
 
-   # hide or show desktop icon for presentation
+   # hide or show desktop icon for presentation 隐藏桌面图标
    alias hide_desktop_icon='defaults write com.apple.finder CreateDesktop -bool false; killall Finder'
    alias show_desktop_icon='defaults write com.apple.finder CreateDesktop -bool true; killall Finder'
 
@@ -307,6 +307,18 @@ MacOS
    # Set a blazingly fast keyboard repeat rate
    defaults write NSGlobalDomain KeyRepeat -int 1  # 默认值 2，设置成 1 合适，设置成 0 就太快了，翻页刷新有问题
    defaults write NSGlobalDomain InitialKeyRepeat -int 10
+
+如何命令行格式化u盘:
+
+.. code-block:: shell
+
+   # https://superuser.com/questions/527657/how-do-you-format-a-2-gb-sd-card-to-fat32-preferably-with-disk-utility
+
+   # 找到你的u 盘
+   diskutil list
+   # 格式化 u 盘，注意 UDISKNAME 必须大写。最后的 /dev/disk2 是上一步找到的 u 盘，千万别写错了
+   sudo diskutil eraseDisk FAT32 UDISKNAME MBRFormat /dev/disk2
+
 
 SSH
 -------------
