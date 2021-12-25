@@ -1093,6 +1093,8 @@ Ffmpeg && youbute-dl
 
    # 截取视频
    ffmpeg -i input.mp4 -ss 00:01:00 -to 00:02:00 -c copy output.mp4
+   # 截取mp3
+   ffmpeg -i input.mp3 -ss 00:00:00 -t 00:03:00 -acodec copy output.mp3
    # https://gist.github.com/PegasusWang/11b9203ffa699cd8f07e29559cc4d055
    # 截图
    ffmpeg -ss 00:10:00 -i "Apache Sqoop Tutorial.mp4" -y -f image2 -vframes 1 test.png
