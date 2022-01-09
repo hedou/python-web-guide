@@ -275,6 +275,60 @@ Trie 字典树
         }
     }
 
+Lru Cache (不是并发安全的，仅示例)
+--------------------------------------------------
+
+.. code-block:: go
+
+    package main
+
+    import "container/list"
+
+    type LRUCache struct {
+        lis      *list.List
+        m        map[int]*list.Element
+        capacity int
+    }
+
+    // 包装成一个 struct
+    type KV struct {
+        Key int
+        Val int
+    }
+
+    func Constructor(capacity int) LRUCache {
+        return LRUCache{
+            lis:      list.New(),
+            m:        make(map[int]*list.Element),
+            capacity: capacity,
+        }
+    }
+
+    func (this *LRUCache) Get(key int) int {
+        if ele, ok := this.m[key]; ok {
+            this.lis.MoveToFront(ele)
+            return ele.Value.(*KV).Val
+        }
+        return -1
+    }
+
+    func (this *LRUCache) Put(key int, value int) {
+        if ele, ok := this.m[key]; ok {
+            ele.Value.(*KV).Val = value
+            this.lis.MoveToFront(ele)
+            return
+        }
+
+        ele := this.lis.PushFront(&KV{key, value})
+        this.m[key] = ele // map 保存的是 节点信息
+
+        if this.lis.Len() > this.capacity {
+            back := this.lis.Back()
+            delete(this.m, back.Value.(*KV).Key)
+            this.lis.Remove(back)
+        }
+    }
+
 OrderedMap (类似 python collections.OrderedDict)
 --------------------------------------------------
 模拟 python collections.OrderedDict 写的，可以方便的实现 lru 等。注意这里的 order 指的是 key 插入的顺序，不是指 key 字典序。
