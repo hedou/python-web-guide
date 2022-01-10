@@ -283,7 +283,7 @@ Go 常用框架(工具)⭐️
 
 - 日志: logrus, zap, lumberjack(滚动日志)
 - 链路追踪：opentracing/opentracing-go, uber/jaeger-client-go
-- 调试：go-spew/dlv
+- 调试：go-spew/dlv, kr/pretty
 - 图片处理：h2non/imaginary
 - 网络库/连接池：fatih/pool; panjf2000/gnet, valyala/fasthttp，kavu/go_reuseport
 - websocket: nhooyr.io/websocket, gorilla/websocket
