@@ -77,6 +77,7 @@ Mac微信工具
 - 现代 unix 工具：https://github.com/ibraheemdev/modern-unix
 - fanyi: 命令行版本的翻译工具 https://github.com/afc163/fanyi
 - cheat.sh: 程序员小抄工具，可以快速查询各种命令、语法等用法 https://github.com/chubin/cheat.sh
+- mackup: mac 备份软件配置  https://github.com/lra/mackup
 
 Mac 终端快速配置
 --------------------------------------
