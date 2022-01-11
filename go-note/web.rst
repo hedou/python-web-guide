@@ -259,7 +259,8 @@ Go 常用框架(工具)⭐️
 - Kafka: Shopify/sarama, confluent-kafka-go
 - Elasticsearch: olivere/elastic, elastic/elasticsearch
 - mongodb: mongodb/mongo-go-driver
-- id生成器: rx/xid, satori/go.uuid, beinan/fastid, bwmarrin/snowflake, sony/sonyflake
+- id生成器: rx/xid, beinan/fastid, bwmarrin/snowflake, sony/sonyflake
+- uuid: gofrs/uuid, satori/go.uuid, google/uuid (注意有些会 panic)
 - hash: cespare/xxhash(快速 hash)
 - cache(in memory): patrickmn/go-cache, allegro/bigcache, golang/groupcache(分布式), singleflight(防止缓存击穿)
 - cache(lru/lfu/2Q/ARC): hashicorp/golang-lru, bluele/gcache, songangweb/mcache(增强lru)
