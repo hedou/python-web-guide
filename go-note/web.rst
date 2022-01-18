@@ -338,6 +338,12 @@ Go 常用框架(工具)⭐️
 - https://github.com/TrueFurby/go-callvis 查看 go 的调用关系
 - https://github.com/novalagung/gorep 批量替换引入的包(比如修改了名字或者包名等)
 
+Go 数据结构与算法
+---------------------------------------------------------------
+
+- https://golangbyexample.com/all-data-structures-golang/
+- https://github.com/emirpasic/gods
+- https://github.com/Workiva/go-datastructures
 
 博客：
 
