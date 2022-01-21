@@ -1211,9 +1211,12 @@ Pandoc 转换文档格式
 
 .. code-block:: shell
 
+  # https://pandoc.org/demos.html
   pandoc -s -o about.md about.rst
   # markdown 转成 word
   pandoc -o output.docx -f markdown -t docx filename.md
+  # rst -> github markdown
+  pandoc file.rst -f rst -t gfm -o filename.md
 
 Calibre 电子书管理工具
 -------------------------------------------------------------
