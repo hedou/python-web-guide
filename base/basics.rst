@@ -64,12 +64,14 @@ python，ruby之类的动态语言优势在于其生产力，你能在极短时�
 * `《使用 Flask-RESTful 设计 RESTful API》 <http://www.pythondoc.com/flask-restful/second.html>`_
 * `《restful-api-guidelines》 <https://opensource.zalando.com/restful-api-guidelines/index.html#table-of-contents>`_
 
-网络编程(进阶)
--------------------
+网络/并发编程(进阶)
+-----------------------------------
 如果想要深入了解一些网络框架的底层原理就需要学习底层socket网络编程了，比如《unix 网络编程》，《Linux 高性能服务器编程》等。
 推荐一些入门资料：
 
 * `《Beej's Guide to Network Programming》 <http://beej-zhcn.netdpi.net/>`_
+* `《Python并行编程》 <https://python-parallel-programmning-cookbook.readthedocs.io/zh_CN/latest/>`_
+
 
 Linux系统
 ----------
