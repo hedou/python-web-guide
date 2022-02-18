@@ -17,6 +17,7 @@ Python
    python -m SimpleHTTPServer    # python2
 
    python -u script.py   # 刷新缓冲，执行脚本重定向结果到文件时候比较有用
+   python -u script.py  | tee script.log # 打印脚本结果，同时输出到日志 (无缓冲可以立马看到输出)
 
    # logging
    FATAL(50) > ERROR(40) > WARNING(30) > INFO(20) > DEBUG(10)
