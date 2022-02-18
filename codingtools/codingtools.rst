@@ -571,7 +571,7 @@ Linux network debug Tools
    - https://www.cnblogs.com/peida/archive/2013/03/11/2953420.html
 
 - arp, view the arp table
-- tcpdump, packet analysis
+- tcpdump, packet analysis。https://juejin.cn/post/6844904084168769549
 
   - tcpdump -i <network_device> tcp
   - tcpdump -i <network_device> port 80
