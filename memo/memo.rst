@@ -267,6 +267,9 @@ MacOS
    gem install iStats # need
    istats all
 
+   # mac 休眠 https://www.jianshu.com/p/ec888c3e33dd
+   sudo shutdown -s +10 # 10分钟后休眠
+
    # mac https://superuser.com/questions/273756/how-to-change-default-app-for-all-files-of-particular-file-type-through-terminal
    # https://chainsawonatireswing.com/2012/09/19/changing-default-applications-on-a-mac-using-the-command-line-then-a-shell-script/
    brew install duti # 安装 duti
