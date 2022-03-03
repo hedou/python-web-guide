@@ -323,6 +323,14 @@ MacOS
    # 格式化 u 盘，注意 UDISKNAME 必须大写。最后的 /dev/disk2 是上一步找到的 u 盘，千万别写错了
    sudo diskutil eraseDisk FAT32 UDISKNAME MBRFormat /dev/disk2
 
+增加 time machine 备份速度:
+
+.. code-block:: shell
+
+   # https://huataihuang.gitbooks.io/cloud-atlas/content/develop/mac/time_machine_backup_speed.html
+   sudo sysctl debug.lowpri_throttle_enabled=0 # 关闭限流
+   sudo sysctl debug.lowpri_throttle_enabled=1 # 恢复限流
+
 
 SSH
 -------------
