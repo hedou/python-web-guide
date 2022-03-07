@@ -292,6 +292,7 @@ Swagger 工具
 - SaltStack和Ansible. 配置管理
 - StatsD\Graphite\Prometheus等web监控
 - Netdata: 强大的系统监控工具 https://github.com/netdata/netdata
+- glances: 支持终端监控 https://github.com/nicolargo/glances
 
 API gateway
 --------------------------------------
