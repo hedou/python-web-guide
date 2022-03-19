@@ -371,6 +371,7 @@ Go 性能优化
 - https://dave.cheney.net/high-performance-go-workshop/dotgo-paris.html
 - https://stephen.sh/posts/quick-go-performance-improvements
 - https://mp.weixin.qq.com/s/ogtRE_LbllN2Tla97LnFrQ
+- https://zhuanlan.zhihu.com/p/482547957 Go 高性能编程技法
 
 Goroutines
 ---------------------------------------------------------------
