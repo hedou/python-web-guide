@@ -297,14 +297,14 @@ MacOS
 
    notify("开会啦", "Go Go Go !!!")
 
-增加终端下光标的移动速度：
+增加终端下光标的移动速度(⭐️ 非常好用)：
 
 .. code-block:: shell
 
-   # mac: 系统设置-> 键盘 -> 修改按键重复到最快，重复前延迟最短。可以让光标在终端里移动更快
+   # mac: 系统设置-> 键盘 -> 修改按键重复到最快，重复前延迟最短。可以让光标在终端里移动更快 (推荐下边的命令修改更快)
 
    # 增加 terminal 光标移动速度, https://stackoverflow.com/questions/4489885/how-can-i-increase-the-cursor-speed-in-terminal
-   # 终端执行以下几个 defaults 命令 https://medium.com/@juanpaulo/set-blazingly-fast-key-repeats-a87c808ad01d
+   # 终端执行以下三个 defaults 命令后必须重启(亲测有效，速度飞起! 😄) https://medium.com/@juanpaulo/set-blazingly-fast-key-repeats-a87c808ad01d
 
    # Disable press-and-hold for keys in favor of key repeat
    defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
