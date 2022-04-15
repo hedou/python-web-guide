@@ -507,6 +507,7 @@ HTML Presentation Tools
 --------------------------------------
 如果觉得用 ppt 做分享比较老套，可以尝试一些使用 HTML 来做 slide show 的工具。或者使用 markdown 生成 html 幻灯片。
 
+- slidev: nodejs 编写 https://github.com/slidevjs/slidev (推荐，有标注功能)
 - reveal-md: 使用 markdown 转成网页 slides。https://github.com/webpro/reveal-md 亲测使用起来很方便，依赖 nodejs
 - reveal.js: The HTML Presentation Framework
 - RISE: 在 jupyter 里做 slide show，甚至可以直接在网页里运行 Python 代码。 https://github.com/damianavila/RISE
@@ -520,7 +521,6 @@ Terminal slides
 --------------------------------------
 在终端下使用 markdown 演示
 
-- slidev: nodejs 编写 https://github.com/slidevjs/slidev
 - slides: go 编写的终端 ppt 工具 https://github.com/maaslalani/slides
 - present: python 语言的终端演示工具 https://github.com/vinayak-mehta/present
 
