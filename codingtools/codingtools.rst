@@ -137,7 +137,7 @@ Chrome 开发者插件
 - Onetab: 用来整合 chrome tab到一个页面，如果打开了太多窗口特别占用资源的时候可以使用
 - LGTM: 有些开发过程中，需要一个同事review 代码后评价 LGTM(Looks Good To Me)才能 merge 代码，这里是图片版的 LGTM
 - SimpRead: 简悦，阅读模式 chrome 插件，支持导出和分享。试了一下导出知乎回答还不错
-- Awesome Screenshot: 截长图、浏览器录屏工具
+- Awesome Screenshot: 截长图、浏览器录屏工具。有时候有一些 pdf 只能预览不能下载，其实可以用它的截长图功能导出来 pdf
 - 暴力猴：支持超多的插件，比如护眼插件、youtute 下载插件等 https://violentmonkey.github.io/ 还可以搜索插件市场 https://greasyfork.org/zh-CN
 
 * `《在浏览器中嵌入 NeoVim，可使用本地配置》 <https://zhuanlan.zhihu.com/p/86027644>`_
