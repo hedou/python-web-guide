@@ -273,7 +273,7 @@ Go 常用框架(工具)⭐️
   - https://github.com/buptmiao/parallel
 
 - 原子访问：uber-go/atomic
-- 异步任务框架: machinery, gocelery
+- 异步任务队列框架: machinery, gocelery, hibiken/asynq, LMSTFY(美图开源)
 - 定时任务：robfig/cron, ouiqiang/gocron
 - 熔断：hystrix-go, eapache/go-resiliency, cep21/circuit, alibaba/sentinel-golang
 - 限流库:
