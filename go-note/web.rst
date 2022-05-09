@@ -373,6 +373,7 @@ Go 性能优化
 - https://stephen.sh/posts/quick-go-performance-improvements
 - https://mp.weixin.qq.com/s/ogtRE_LbllN2Tla97LnFrQ
 - https://zhuanlan.zhihu.com/p/482547957 Go 高性能编程技法
+- https://geektutu.com/post/high-performance-go.html 《Go 语言高性能编程》
 
 Goroutines
 ---------------------------------------------------------------
