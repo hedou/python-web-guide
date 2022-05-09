@@ -974,6 +974,8 @@ Go panic 场景
 - sync 计数为负数。
 - 类型断言不匹配。`var a interface{} = 1; fmt.Println(a.(string))` 会 panic，建议用 `s,ok := a.(string)`
 
+参考：https://xiaomi-info.github.io/2020/01/20/go-trample-panic-recover/
+
 Go Web
 --------------------------------------------------
 
