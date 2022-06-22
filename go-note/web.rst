@@ -22,6 +22,105 @@ Go语言入门和深入
 - `Go语言圣经 <https://books.studygolang.com/gopl-zh/>`_
 - `Go安全编程规范 <https://github.com/Tencent/secguide/blob/main/Go%E5%AE%89%E5%85%A8%E6%8C%87%E5%8D%97.md>`_
 
+Go 常用框架(工具)技术雷达 ❤️
+---------------------------------------------------------------
+技术选型一般选择接口稳定，持续维护，生态相对成熟，star 数量较高，用户广泛的库，坑少一点。
+前后分离时代用 gin 之类的框架写app后台还是挺快的，但是感觉做并发不高的内部后台业务还是用脚本python/php之类的更快。
+以下第三方库均可以通过 google + 关键词搜索到，同一行尽量按照流行程度从前往后列举，默认都是 github 上的包(只写了仓库后缀)。
+也可以去 awesome-go 之类的去查找，然后根据 star 数目等作为参考选用。
+
+- web/rpc框架: gin, grpc, beego, labstack/echo
+- 微服务框架：go-kit, go-micro, karatos(b 站)，go-zero(好未来)，jupiter(斗鱼)
+- 参数验证：go-playground/validator, bytedance/go-tagexpr
+- 单元测试断言：matryer/is, testify/assert, smartystreets/goconvey(bdd 驱动测试), rakyll/gotest(gotest 颜色)
+- 错误处理: pkg/errors, hashicorp/go-multierror(多错误处理), sync/errgroup(多goroutine错误处理)
+- json处理转换：go-simplejson/mapstructure，json-iterator/go (比内置的 json 解析快很多), tidwall/gjson(获取 json 值)
+- 字典/结构体合并/结构体拷贝：imdario/mergo, jinzhu/copier
+- 配置解析: viper(兼容很多格式)
+- mysql orm: gorm, xorm, sqlx, ent/ent(实体框架), doug-martin/goqu(生成sql)
+- redis: go-redis, redigo
+- Kafka: Shopify/sarama, confluent-kafka-go
+- Elasticsearch: olivere/elastic, elastic/elasticsearch
+- mongodb: mongodb/mongo-go-driver
+- id生成器: rx/xid, beinan/fastid, bwmarrin/snowflake, sony/sonyflake
+- uuid: gofrs/uuid, satori/go.uuid, google/uuid (注意有些会 panic)
+- hash: cespare/xxhash(快速 hash)
+- cache(in memory): patrickmn/go-cache, allegro/bigcache, golang/groupcache(分布式), singleflight(防止缓存击穿)
+- cache(lru/lfu/2Q/ARC): hashicorp/golang-lru, bluele/gcache, songangweb/mcache(增强lru)
+- 并发/协程池(star 数从低到高排序)：
+
+  - https://github.com/panjf2000/ants
+  - https://github.com/rafaeldias/async
+  - https://github.com/Jeffail/tunny
+  - https://github.com/benmanns/goworker
+  - https://github.com/buptmiao/parallel
+
+- 原子访问：uber-go/atomic
+- 异步任务队列框架: machinery, gocelery, hibiken/asynq, LMSTFY(美图开源)
+- 定时任务：robfig/cron, ouiqiang/gocron
+- 熔断：hystrix-go, eapache/go-resiliency, cep21/circuit, alibaba/sentinel-golang
+- 限流库:
+
+  - web框架限流：ulule/limiter, didip/tollbooth
+  - 令牌桶(token bucket)限流：juju/ratelimit, golang.org/x/time/rate
+  - 漏桶(leaky bucket)限流: uber-go/ratelimit
+
+- 日志: logrus, zap, lumberjack(滚动日志)
+- 链路追踪：opentracing/opentracing-go, uber/jaeger-client-go
+- 调试：go-spew/dlv, kr/pretty
+- 图片处理：h2non/imaginary
+- 网络库/连接池：fatih/pool; panjf2000/gnet, valyala/fasthttp，kavu/go_reuseport
+- websocket: nhooyr.io/websocket, gorilla/websocket
+- http client: levigross/grequests, asmcos/requests, go-resty/resty, gojek/heimdall(重试、熔断)
+- 表格：go-echarts
+- excel(XLSX): 360EntSecGroup-Skylar/excelize, tealeg/xlsx
+- 转换工具：
+
+  - sql2go(sql -> go struct): http://stming.cn/tool/sql2go.html
+  - curl2go(curl -> go http code): https://mholt.github.io/curl-to-go/
+  - Json2go(json -> go struct): https://mholt.github.io/json-to-go/
+
+- 代码检查工具：
+
+  - 静态检查：golangci-lint
+  - goroutine 泄露检查: github.com/uber-go/goleak
+  - 注释工具: github.com/cuonglm/gocmt 自动给导出变量、函数等增加注释
+
+- 热编译工具：gowatch
+- 网络代理：goproxy
+- 命令行处理: spf13/cobra
+- 字符串处理工具：huandu/xstrings
+- 类型转换：spf13/cast
+- HTML 处理/过滤: PuerkitoBio/goquery, microcosm-cc/bluemonday
+- 系统信息收集：shirou/gopsutil
+- go runtime: bmhatfield/go-runtime-metrics(runtime 指标收集)
+- 邮件：gopkg.in/gomail
+- 接口文档生成：swaggo/swag
+- 消息队列：nsqio/nsq
+- 延时队列/时间轮：ouqiang/delay-queue, RussellLuo/timingwheel
+- 分布式kv存储：etcd
+- 用户认证：golang-jwt/jwt,dgrijalva/jwt-go(弃用), authelia/authelia
+- 访问(权限)控制：casbin/casbin
+- 进程控制：uber-go/automaxprocs
+- 地理位置：ip2location/ip2location-go
+- 时间处理：jinzhu/now
+- 金融数字格式化: leekchan/accounting
+- 分布式事务：yedf/dtm
+- 分布式锁: go-redsync/redsync(redlock算法)
+- Zookeeper: go-zookeeper/zk
+- 设计模式：tmrts/go-patterns
+- 数据结构：deckarep/golang-set
+
+工具:
+
+- https://github.com/smallnest/gen gorm struct 生成工具，根据 sql 生成 struct，甚至还可以直接生成增删改查的代码
+- https://mholt.github.io/json-to-go/ json 转 go struct
+- https://protogen.marcgravell.com/decode proto decode 工具
+- https://gopherize.me/  一个好玩的小工具，设计你喜欢的 gopher 形象
+- https://github.com/egonelbre/gophers 各种好玩的 gopher 吉祥物图片
+- https://github.com/jfeliu007/goplantuml 一个自动根据 go 项目生成 uml 图的工具 https://www.dumels.com/
+- https://github.com/TrueFurby/go-callvis 查看 go 的调用关系
+- https://github.com/novalagung/gorep 批量替换引入的包(比如修改了名字或者包名等)
 
 Go Books
 ---------------------------------------------------------------
@@ -238,106 +337,6 @@ Go List import
    go list -f '{{range $imp := .Imports}}{{printf "%s\n" $imp}}{{end}}' | sort
    go list -f '{{range $dep := .Deps}}{{printf "%s\n" $dep}}{{end}}' | xargs go list -f '{{if not .Standard}}{{.ImportPath}}{{end}}'
 
-
-Go 常用框架(工具)⭐️
----------------------------------------------------------------
-技术选型一般选择接口稳定，持续维护，生态相对成熟，star 数量较高，用户广泛的库，坑少一点。
-前后分离时代用 gin 之类的框架写app后台还是挺快的，但是感觉做并发不高的内部后台业务还是用脚本python/php之类的更快。
-以下第三方库均可以通过 google + 关键词搜索到，同一行尽量按照流行程度从前往后列举，默认都是 github 上的包(只写了仓库后缀)。
-也可以去 awesome-go 之类的去查找，然后根据 star 数目等作为参考选用。
-
-- web/rpc框架: gin, grpc, beego, labstack/echo
-- 微服务框架：go-kit, go-micro, karatos(b 站)，go-zero(好未来)，jupiter(斗鱼)
-- 参数验证：go-playground/validator, bytedance/go-tagexpr
-- 单元测试断言：matryer/is, testify/assert, smartystreets/goconvey(bdd 驱动测试), rakyll/gotest(gotest 颜色)
-- 错误处理: pkg/errors, hashicorp/go-multierror(多错误处理), sync/errgroup(多goroutine错误处理)
-- json处理转换：go-simplejson/mapstructure，json-iterator/go (比内置的 json 解析快很多), tidwall/gjson(获取 json 值)
-- 字典/结构体合并/结构体拷贝：imdario/mergo, jinzhu/copier
-- 配置解析: viper(兼容很多格式)
-- mysql orm: gorm, xorm, sqlx, ent/ent(实体框架)
-- redis: go-redis, redigo
-- Kafka: Shopify/sarama, confluent-kafka-go
-- Elasticsearch: olivere/elastic, elastic/elasticsearch
-- mongodb: mongodb/mongo-go-driver
-- id生成器: rx/xid, beinan/fastid, bwmarrin/snowflake, sony/sonyflake
-- uuid: gofrs/uuid, satori/go.uuid, google/uuid (注意有些会 panic)
-- hash: cespare/xxhash(快速 hash)
-- cache(in memory): patrickmn/go-cache, allegro/bigcache, golang/groupcache(分布式), singleflight(防止缓存击穿)
-- cache(lru/lfu/2Q/ARC): hashicorp/golang-lru, bluele/gcache, songangweb/mcache(增强lru)
-- 并发/协程池(star 数从低到高排序)：
-
-  - https://github.com/panjf2000/ants
-  - https://github.com/rafaeldias/async
-  - https://github.com/Jeffail/tunny
-  - https://github.com/benmanns/goworker
-  - https://github.com/buptmiao/parallel
-
-- 原子访问：uber-go/atomic
-- 异步任务队列框架: machinery, gocelery, hibiken/asynq, LMSTFY(美图开源)
-- 定时任务：robfig/cron, ouiqiang/gocron
-- 熔断：hystrix-go, eapache/go-resiliency, cep21/circuit, alibaba/sentinel-golang
-- 限流库:
-
-   - web框架限流：ulule/limiter, didip/tollbooth
-   - 令牌桶(token bucket)限流：juju/ratelimit, golang.org/x/time/rate
-   - 漏桶(leaky bucket)限流: uber-go/ratelimit
-
-- 日志: logrus, zap, lumberjack(滚动日志)
-- 链路追踪：opentracing/opentracing-go, uber/jaeger-client-go
-- 调试：go-spew/dlv, kr/pretty
-- 图片处理：h2non/imaginary
-- 网络库/连接池：fatih/pool; panjf2000/gnet, valyala/fasthttp，kavu/go_reuseport
-- websocket: nhooyr.io/websocket, gorilla/websocket
-- http client: levigross/grequests, asmcos/requests, go-resty/resty, gojek/heimdall(重试、熔断)
-- 表格：go-echarts
-- excel(XLSX): 360EntSecGroup-Skylar/excelize, tealeg/xlsx
-- 转换工具：
-
-  - sql2go(sql -> go struct): http://stming.cn/tool/sql2go.html
-  - curl2go(curl -> go http code): https://mholt.github.io/curl-to-go/
-  - Json2go(json -> go struct): https://mholt.github.io/json-to-go/
-
-- 代码检查工具：
-
-  - 静态检查：golangci-lint
-  - goroutine 泄露检查: github.com/uber-go/goleak
-  - 注释工具: github.com/cuonglm/gocmt 自动给导出变量、函数等增加注释
-
-- 热编译工具：gowatch
-- 网络代理：goproxy
-- 命令行处理: spf13/cobra
-- 字符串处理工具：huandu/xstrings
-- 类型转换：spf13/cast
-- HTML 处理/过滤: PuerkitoBio/goquery, microcosm-cc/bluemonday
-- 系统信息收集：shirou/gopsutil
-- go runtime: bmhatfield/go-runtime-metrics(runtime 指标收集)
-- 邮件：gopkg.in/gomail
-- 接口文档生成：swaggo/swag
-- 消息队列：nsqio/nsq
-- 延时队列/时间轮：ouqiang/delay-queue, RussellLuo/timingwheel
-- 分布式kv存储：etcd
-- 用户认证：golang-jwt/jwt,dgrijalva/jwt-go(弃用), authelia/authelia
-- 访问(权限)控制：casbin/casbin
-- 进程控制：uber-go/automaxprocs
-- 地理位置：ip2location/ip2location-go
-- 时间处理：jinzhu/now
-- 金融数字格式化: leekchan/accounting
-- 分布式事务：yedf/dtm
-- 分布式锁: go-redsync/redsync(redlock算法)
-- Zookeeper: go-zookeeper/zk
-- 设计模式：tmrts/go-patterns
-- 数据结构：deckarep/golang-set
-
-工具:
-
-- https://github.com/smallnest/gen gorm struct 生成工具，根据 sql 生成 struct，甚至还可以直接生成增删改查的代码
-- https://mholt.github.io/json-to-go/ json 转 go struct
-- https://protogen.marcgravell.com/decode proto decode 工具
-- https://gopherize.me/  一个好玩的小工具，设计你喜欢的 gopher 形象
-- https://github.com/egonelbre/gophers 各种好玩的 gopher 吉祥物图片
-- https://github.com/jfeliu007/goplantuml 一个自动根据 go 项目生成 uml 图的工具 https://www.dumels.com/
-- https://github.com/TrueFurby/go-callvis 查看 go 的调用关系
-- https://github.com/novalagung/gorep 批量替换引入的包(比如修改了名字或者包名等)
 
 Go 数据结构与算法
 ---------------------------------------------------------------
