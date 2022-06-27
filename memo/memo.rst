@@ -496,7 +496,8 @@ crontab
     */5 * *  * * /root/pyhome/crawler/lagou/changeip.sh >> /root/pyhome/crawler/lagou/ip.log 2>&1
 
     # 一个 crontab 表达式工具
-    https://tooltt.com/crontab/
+    - https://tooltt.com/crontab/
+    - https://tool.lu/crontab/
 
 
 可以用如下方式执行依赖其他模块的python脚本，用run.sh执行run.py，记得chmod +x可执行权限，运行前执行下sh脚本测试能否成功
