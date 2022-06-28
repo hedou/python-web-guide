@@ -966,7 +966,7 @@ Go panic 场景
 - 空指针调用。比如访问一个 nil 结构体指针的成员
 - 过早关闭 HTTP 响应体
 - 除以 0
-- 向已经关闭的 channel 发送消息
+- 向已经关闭的 channel 发送消息(或者多次close同一个 channel)
 - 重复关闭 channel
 - 关闭未初始化的 channel
 - 未初始化 map。注意访问 map 不存在的 key 不会 panic，而是返回 map 类型对应的零值，但是不能直接赋值
@@ -974,7 +974,10 @@ Go panic 场景
 - sync 计数为负数。
 - 类型断言不匹配。`var a interface{} = 1; fmt.Println(a.(string))` 会 panic，建议用 `s,ok := a.(string)`
 
-参考：https://xiaomi-info.github.io/2020/01/20/go-trample-panic-recover/
+参考：
+
+- https://xiaomi-info.github.io/2020/01/20/go-trample-panic-recover/
+- https://zhuanlan.zhihu.com/p/534419732 Golang channel 三大坑，你踩过了嘛？
 
 Go Web
 --------------------------------------------------
