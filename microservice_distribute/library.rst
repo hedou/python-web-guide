@@ -129,8 +129,9 @@ RPC
 从调研结果来看，很多方案和框架都是使用的基于 redis 实现。
 
 - 定时轮询数据库。只适合非常小规模的业务比如一些公司内部系统，拿出所有任务扫一遍执行到期任务。
-- redis zset。把topic作为key，时间作为score加入到 zset，定时器通过 ZREANGEBYSCORE 查询 zset 中 score 最小的元素拿出来执行。
+- redis zset/redis过期回调。把topic作为key，时间作为score加入到 zset，定时器通过 ZREANGEBYSCORE 查询 zset 中 score 最小的元素拿出来执行。(防止大 key 一般可能分散多个zset)
 - RabbitMQ: 依赖 TTL 和死信队列实现延迟队列效果。(需要有熟悉的运维支持)
+- RocketMQ 支持延时消息。消息延迟级别分别为1s 5s 10s 30s 1m 2m 3m 4m 5m 6m 7m 8m 9m 10m 20m 30m 1h 2h，共18个级别。
 - kafka: 用 kafka topic 模拟死信队列（不过不太优雅）
 - 时间轮/多级时间轮: 在 kafka/netty 内部实现中有用到
 
@@ -144,6 +145,7 @@ RPC
 参考：
 
 - `你真的知道怎么实现一个延迟队列吗 <https://zhuanlan.zhihu.com/p/266156267>`_
+- https://juejin.cn/post/7052894117105238053 延时消息常见实现方案
 
 分布式缓存
 ----------------------
