@@ -40,7 +40,7 @@ Go 常用框架(工具)技术雷达 ❤️
 - mysql orm: gorm, xorm, sqlx, ent/ent(实体框架), doug-martin/goqu(生成sql)
 - redis: go-redis, redigo
 - Kafka: Shopify/sarama, confluent-kafka-go
-- Elasticsearch: olivere/elastic, elastic/elasticsearch
+- Elasticsearch: olivere/elastic, elastic/go-elasticsearch
 - mongodb: mongodb/mongo-go-driver
 - id生成器: rx/xid, beinan/fastid, bwmarrin/snowflake, sony/sonyflake
 - uuid: gofrs/uuid, satori/go.uuid, google/uuid (注意有些会 panic)
