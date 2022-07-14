@@ -158,6 +158,7 @@ Go 错误处理
 - https://blog.golang.org/error-handling-and-go
 - https://dave.cheney.net/2016/04/27/dont-just-check-errors-handle-them-gracefully
 - https://zhuanlan.zhihu.com/p/82985617 Golang error 的突围
+- https://cloud.tencent.com/developer/article/1999877 3种方式！Go Error处理最佳实践
 
 
 Go日志实践
