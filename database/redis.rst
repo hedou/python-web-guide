@@ -18,7 +18,7 @@ Scan 命令代码示例
 
 .. code-block:: python
 
-    import redis # pip install redis
+    import redis  # pip install redis
 
 
     def init_redis():
@@ -26,8 +26,9 @@ Scan 命令代码示例
         return redis.Redis(host=HOST, port=PORT, password=PWD)
 
 
-    def get_master_node_ids(r):
+    def get_all_node_ids(r):
         """ 获取所有的腾讯云 redis 集群 master node_id。扫描的需要覆盖所有 master 节点。如果scan 一个复合结构不需要扫所有节点
+        redis cluster 架构
         u'ip:port@12028': {u'connected': True,                                                                                                                                                                                     [149/176]
                                  u'epoch': u'17',
                                  u'flags': u'master',
@@ -37,12 +38,18 @@ Scan 命令代码示例
                                  u'node_id': u'XXXXXXXXXXXXX',
                                  u'slots': [[u'8192', u'10239']]},
         """
+        from collections import defaultdict
         node_dict = r.execute_command("cluster nodes")
-        node_ids = []
+        master_slaves = defaultdict(list)  # {master_id : [slave_ids]}
         for _addr_id, info in node_dict.items():
-            if info.get("flags", "") == 'master':
-                node_ids.append(info["node_id"])
-        return node_ids
+            if info.get("flags", "") == "slave":
+                master_id = info["master_id"]
+                master_slaves[master_id].append(info["node_id"])
+        master_ids = list(master_slaves.keys())
+        slave_ids = []  # 获取其中一个 slave id
+        for _, slave_ids in master_slaves.items():
+            slave_ids.append(slave_ids[0])
+        return master_ids, slave_ids
 
 
     def scan(r, node_id='', cursor=0, match=None, count=None):
@@ -57,9 +64,9 @@ Scan 命令代码示例
 
 
     def scan_playcount(r):  # r redis client
-        node_ids = get_master_node_ids(r)
+        _master_ids, slave_ids = get_all_node_ids(r)
         num = 0
-        for node_id in node_ids:  # scan 每一个 redis master 节点
+        for node_id in slave_ids:  # scan 每一个 redis slave 节点
             cursor = 0  # reset cursor if error
 
             while True:
