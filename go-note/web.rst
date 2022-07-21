@@ -35,6 +35,7 @@ Go 常用框架(工具)技术雷达 ❤️
 - 参数验证：go-playground/validator, bytedance/go-tagexpr
 - 单元测试断言：matryer/is, testify/assert, smartystreets/goconvey(bdd 驱动测试), rakyll/gotest(gotest 颜色)
 - 错误处理: pkg/errors, hashicorp/go-multierror(多错误处理), sync/errgroup(多goroutine错误处理)
+- 重试：avast/retry-go
 - json处理转换：go-simplejson/mapstructure，json-iterator/go (比内置的 json 解析快很多), tidwall/gjson(获取 json 值)
 - 字典/结构体合并/结构体拷贝：imdario/mergo, jinzhu/copier
 - 配置解析: viper(兼容很多格式)
