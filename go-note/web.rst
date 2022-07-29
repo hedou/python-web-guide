@@ -323,6 +323,7 @@ Go Best practice(工程实践)
 - https://the-zen-of-go.netlify.com/ zen of go
 - https://bluxte.net/musings/2018/04/10/go-good-bad-ugly/
 - https://github.com/cristaloleg/go-advice
+- https://dablelv.github.io/go-coding-advice/ Go 编码建议
 
 Go 开发关键技术指南
 ---------------------------------------------------------------
