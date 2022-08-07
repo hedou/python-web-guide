@@ -165,7 +165,7 @@ Sqlalchemy 示例
     """
 
     import sqlalchemy as db
-    from sqlalchemy imprt text
+    from sqlalchemy import text
 
     """
     # 本机 mysql 创建一个测试表
