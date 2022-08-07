@@ -21,6 +21,7 @@ Go语言入门和深入
 - `Mastering Go <https://books.studygolang.com/Mastering_Go_ZH_CN/>`_
 - `Go语言圣经 <https://books.studygolang.com/gopl-zh/>`_
 - `Go安全编程规范 <https://github.com/Tencent/secguide/blob/main/Go%E5%AE%89%E5%85%A8%E6%8C%87%E5%8D%97.md>`_
+- `Go并发编程 <https://lailin.xyz/post/go-training-week3-goroutine.html>`_
 
 Go 常用框架(工具)技术雷达 ❤️
 ---------------------------------------------------------------
@@ -34,6 +35,7 @@ Go 常用框架(工具)技术雷达 ❤️
 - 参数验证：go-playground/validator, bytedance/go-tagexpr
 - 单元测试断言：matryer/is, testify/assert, smartystreets/goconvey(bdd 驱动测试), rakyll/gotest(gotest 颜色)
 - 错误处理: pkg/errors, hashicorp/go-multierror(多错误处理), sync/errgroup(多goroutine错误处理)
+- 重试：avast/retry-go
 - json处理转换：go-simplejson/mapstructure，json-iterator/go (比内置的 json 解析快很多), tidwall/gjson(获取 json 值)
 - 字典/结构体合并/结构体拷贝：imdario/mergo, jinzhu/copier
 - 配置解析: viper(兼容很多格式)
@@ -157,6 +159,7 @@ Go 错误处理
 - https://blog.golang.org/error-handling-and-go
 - https://dave.cheney.net/2016/04/27/dont-just-check-errors-handle-them-gracefully
 - https://zhuanlan.zhihu.com/p/82985617 Golang error 的突围
+- https://cloud.tencent.com/developer/article/1999877 3种方式！Go Error处理最佳实践
 
 
 Go日志实践
@@ -320,6 +323,7 @@ Go Best practice(工程实践)
 - https://the-zen-of-go.netlify.com/ zen of go
 - https://bluxte.net/musings/2018/04/10/go-good-bad-ugly/
 - https://github.com/cristaloleg/go-advice
+- https://dablelv.github.io/go-coding-advice/ Go 编码建议
 
 Go 开发关键技术指南
 ---------------------------------------------------------------

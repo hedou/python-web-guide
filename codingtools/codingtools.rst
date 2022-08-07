@@ -360,6 +360,15 @@ Proxy
 - Airflow: 任务调度 https://airflow.apache.org/docs/apache-airflow/1.10.1/index.html#
 - xxl-job: 分布式任务调度平台 https://github.com/xuxueli/xxl-job/
 
+参考：https://zhuanlan.zhihu.com/p/92152648 Python 定时任务最佳实践
+
+python定时任务框架
+--------------------------------------
+- schedule：Python job scheduling for humans. 轻量级，无需配置的作业调度库
+- python-crontab： 针对系统 Cron 操作 crontab 文件的作业调度库
+- Apscheduler：一个高级的 Python 任务调度库
+- Celery： 是一个简单，灵活，可靠的分布式系统，用于处理大量消息，同时为操作提供维护此类系统所需的工具, 也可用于任务调度
+
 端口扫描
 --------------------------------------
 ZMap: 是密歇根大学研究人员发布的软件，可以在千兆网络条件下 45 分钟完成全网单端口扫描。支持 TCP SYN 、ICMP、UDP 等多种模式。可以用来搜寻代理
