@@ -204,6 +204,29 @@ Go 无法修改值为结构体的map
     counter.m["some_key"]++
     counter.Unlock()
 
+不要拷贝 mutex 对象
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+如果一个结构体包含 mutex 对象，不要 copy 它。比如如果放到了一个结构体里，必须使用指针接收者防止拷贝。
+
+.. code-block:: go
+
+    type Container struct {
+        sync.Mutex // <-- Added a mutex
+        counters   map[string]int
+    }
+
+    func (c Container) inc(name string) { // NOTE: 错误！ 这里必须使用指针接收者，否则会 copy mutex 成员
+        c.Lock() // <-- Added locking of the mutex
+        defer c.Unlock()
+        c.counters[name]++
+    }
+
+    func (c *Container) inc(name string) { // 正确写法！ 用指针接收者
+        c.Lock() // <-- Added locking of the mutex
+        defer c.Unlock()
+        c.counters[name]++
+    }
+
 如何判断一个空结构体(empty struct)
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
