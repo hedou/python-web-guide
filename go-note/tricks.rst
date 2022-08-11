@@ -1002,6 +1002,20 @@ Go panic 场景
 - https://xiaomi-info.github.io/2020/01/20/go-trample-panic-recover/
 - https://zhuanlan.zhihu.com/p/534419732 Golang channel 三大坑，你踩过了嘛？
 
+
+Go 内存泄露场景
+--------------------------------------------------
+
+- 切片引用的底层数组，一直没有释放(由于 string 切片时也会共用底层数组，所以使用不当也会造成内存泄漏)。尽量保证切片只作为局部变量
+- time.Ticker 忘记 stop。注意Ticker 和 Timer 是不同的。Timer 只会定时一次，而 Ticker 如果不 Stop，就会一直发送定时。
+- channel 误用造成的泄露
+
+  - 如果接收者需要在 channel 关闭之前提前退出，为防止内存泄漏，在发送者与接收者发送次数是一对一时，应设置 channel 缓冲队列为 1；
+  - 在发送者与接收者的发送次数是多对多时，应使用专门的 stop channel 通知发送者关闭相应 channel。
+
+参考：https://zhuanlan.zhihu.com/p/550956060
+
+
 Go Web
 --------------------------------------------------
 
