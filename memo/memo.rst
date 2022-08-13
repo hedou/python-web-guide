@@ -1211,6 +1211,7 @@ Curl
 .. code-block:: shell
 
    # 记录 curl 过程, https://askubuntu.com/questions/944788/how-does-curl-print-to-terminal-while-piping
+   # 注意，如果 url 地址里边有 & 符号记得 url 两边加上双引号
    curl -v http://httpbin.org/headers > t.txt 2>&1
 
 
