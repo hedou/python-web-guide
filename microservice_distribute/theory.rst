@@ -61,3 +61,5 @@ Fast Paxos
 
 Raft
 -----------------------------------------
+
+- http://www.kailing.pub/raft/index.html raft动画演示
