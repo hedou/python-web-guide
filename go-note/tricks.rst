@@ -841,18 +841,16 @@ Go Context 的坑
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 调用接收context的函数时要小心，要清楚context在什么时候cancel，什么行为会触发cancel。
 笔者最近遇到一个问题是，在框架的 handler 函数返回之前，单独开一个 goroutine 创建一条 mysql 流水，但是handler 函数调用完
-成之后框架会cancel，导致这个 mysql 传进去了框架函数带过来的 ctx cancel 之后执行失败
-
+成之后框架会cancel，导致这个 mysql 传进去了框架函数带过来的 ctx cancel 之后执行失败，解决方式就是传一个单独的 context
 
 .. code-block:: go
 
     func (h *Handler) handleFunc(ctx context.Context, req *Request, resp *Response) error {
         // ... 其他业务逻辑
         go func() { // 异步记录流水
-            // 注意，这里不能直接用框架的 ctx，而是需要一个不被 cancel 的 context，否则执行会失败
-            // 改成 context.Background()
-            // if err := postDao.CreatePostCreateRecord(context.Background(), row); err != nil {
-            if err := postDao.CreatePostCreateRecord(ctx, row); err != nil {
+            // 注意，这里不能直接用框架的 ctx，而是需要一个不被 cancel 的 context，否则执行会失败，改成 context.TODO()
+            if err := postDao.CreatePostCreateRecord(context.TODO(), row); err != nil { // 正确!
+            // if err := postDao.CreatePostCreateRecord(ctx, row); err != nil { // 错误！ ctx 很快被 cancel 导致流程失败
                 log.Errorf("CreatePost postDao.CreatePostCreateRecord err:%+v", err)
             }
         }()
@@ -866,7 +864,7 @@ redio tricks
 
 redis 连接超时
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-默认是没有超时时间的，注意设置超时时间（connect/read/write)。
+默认是没有超时时间的，注意设置超时时间（connect/read/write)。所有的网络 client 都应该设置超时时间(参考P99等值)
 
 - https://ms2008.github.io/2019/07/04/golang-redis-deadlock/
 
@@ -1007,7 +1005,7 @@ Go 内存泄露场景
 --------------------------------------------------
 
 - 切片引用的底层数组，一直没有释放(由于 string 切片时也会共用底层数组，所以使用不当也会造成内存泄漏)。尽量保证切片只作为局部变量
-- time.Ticker 忘记 stop。注意Ticker 和 Timer 是不同的。Timer 只会定时一次，而 Ticker 如果不 Stop，就会一直发送定时。
+- time.Ticker 忘记 stop。注意Ticker 和 Timer 是不同的。Timer 只会定时一次，而 Ticker 如果不 Stop，就会一直发送定时。建议用defer 进行stop
 - channel 误用造成的泄露
 
   - 如果接收者需要在 channel 关闭之前提前退出，为防止内存泄漏，在发送者与接收者发送次数是一对一时，应设置 channel 缓冲队列为 1；
