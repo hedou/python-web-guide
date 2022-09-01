@@ -7,6 +7,7 @@
     :maxdepth: 2
 
     base/*
+    go-note/index
     codingstyle/*
     debug/index
     codingtools/*
@@ -17,7 +18,6 @@
     skillstack/index
     devtools/index
     python-note/index
-    go-note/index
     microservice_distribute/index
     tracing/index
     memo/*
