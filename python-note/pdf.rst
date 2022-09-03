@@ -58,14 +58,14 @@ Python 批量合并 pdf
         main()
 
 
-推荐使用 pikepdf 库来批量操作 pdf，pyPdf 库挺久没有更新了
+推荐下边这个 pikepdf 库来批量操作 pdf，pyPdf 库挺久没有更新了
 
 .. code-block:: python
 
     # -*- coding: utf-8 -*-
 
     import os.path
-    from pikepdf import Pdf  # pip install pikepdf
+    from pikepdf import Pdf, OutlineItem  # pip install pikepdf
 
 
     def get_pdf_files(dst_dir):
@@ -82,10 +82,15 @@ Python 批量合并 pdf
         # https://pikepdf.readthedocs.io/en/latest/topics/pages.html#merge-concatenate-pdf-from-several-pdfs
         pdf_paths = sorted(get_pdf_files(dst_dir)) if sort else get_pdf_files(dst_dir)
         pdf = Pdf.new()
-        for path in pdf_pathsm
-            src = Pdf.open(path)
-            print("merging:" + src.filename)
-            pdf.pages.extend(src.pages)
+        page_count = 0
+        with pdf.open_outline() as outline:
+            for path in pdf_paths:
+                src = Pdf.open(path)
+                print("merging:" + src.filename)  # 打印一下进度
+                oi = OutlineItem(os.path.basename(src.filename), page_count)  # 增加目录
+                outline.root.append(oi)
+                page_count += len(src.pages)
+                pdf.pages.extend(src.pages)
         pdf.save(outfile)
 
 
