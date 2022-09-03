@@ -1,12 +1,12 @@
 .. _pdf:
 
-合并 pdf
+Python 批量合并 pdf
 ========================================
 
 .. code-block:: python
 
     """
-    合并多个 pdf 到一个，使用方式：放到当前文件夹下运行
+    合并多个 pdf 到一个，使用方式：放到当前文件夹下运行。 pyPdf 库有点老了
     """
 
     import os.path
@@ -47,6 +47,46 @@
         outputStream = file(dst_dir + outfile, "wb")
         output.write(outputStream)
         outputStream.close()
+
+
+    def main():
+        merged = "all.pdf"
+        merge_pdf("./", merged)
+
+
+    if __name__ == '__main__':
+        main()
+
+
+推荐使用 pikepdf 库来批量操作 pdf，pyPdf 库挺久没有更新了
+
+.. code-block:: python
+
+    # -*- coding: utf-8 -*-
+
+    import os.path
+    from pikepdf import Pdf  # pip install pikepdf
+
+
+    def get_pdf_files(dst_dir):
+        paths = []
+        for root, dirs, files in os.walk(dst_dir):
+            for filespath in files:
+                if filespath.endswith('.pdf'):  # pdf file
+                    abspath = os.path.join(root, filespath)
+                    paths.append(abspath)
+        return paths
+
+
+    def merge_pdf(dst_dir, outfile, sort=True):
+        # https://pikepdf.readthedocs.io/en/latest/topics/pages.html#merge-concatenate-pdf-from-several-pdfs
+        pdf_paths = sorted(get_pdf_files(dst_dir)) if sort else get_pdf_files(dst_dir)
+        pdf = Pdf.new()
+        for path in pdf_pathsm
+            src = Pdf.open(path)
+            print("merging:" + src.filename)
+            pdf.pages.extend(src.pages)
+        pdf.save(outfile)
 
 
     def main():
