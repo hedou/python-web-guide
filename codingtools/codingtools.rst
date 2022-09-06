@@ -208,9 +208,10 @@ Chrome 开发者插件
 项目模板脚手架
 --------------------------------------
 微服务化的时代经常需要创建很多类似的项目代码模板，这个时候项目脚手架就分方便了。
-统一的项目模板对于运维和开发都比较重要，有利于降低维护成本。
+统一的项目模板对于运维和开发都比较重要，有利于降低维护成本，大家写的代码结构都比较一致非常有利于维护和迁移模块。
 
 - cookiecutter: 一系列项目模板生成工具，懒人必备。https://github.com/audreyr/cookiecutter。笔者之前内部项目就直接用 flask-cookiecutter 直接生成的。
+  可以到 http://cookiecutter-templates.sebastianruml.name/ 搜索感兴趣的编程语言或者框架的代码模板直接拿来修改使用
 - yeoman: http://yeoman.io/generators/ 前端项目模板生成工具
 - ant-design: 后端管理后台项目解决方案 https://ant.design/docs/react/practical-projects-cn
 
