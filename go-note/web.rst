@@ -123,6 +123,7 @@ Go 常用框架(工具)技术雷达 ❤️
 - https://github.com/jfeliu007/goplantuml 一个自动根据 go 项目生成 uml 图的工具 https://www.dumels.com/
 - https://github.com/TrueFurby/go-callvis 查看 go 的调用关系
 - https://github.com/novalagung/gorep 批量替换引入的包(比如修改了名字或者包名等)
+- https://github.com/better-go/go-template go 生成项目模板
 
 Go Books
 ---------------------------------------------------------------
