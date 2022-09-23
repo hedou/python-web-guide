@@ -1,6 +1,6 @@
 .. _gotricks:
 
-Go踩坑
+Go 踩坑
 =====================================================================
 
 go初学者常见错误
@@ -139,6 +139,32 @@ Go 循环遍历 []struct 是值传递
       for _, cat := range pcats {
         fmt.Println(cat)
       }
+    }
+
+Go 无法修改结构体的值
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+注意如果需要修改结构体的值，必须使用指针接收者，否则无法修改结构体的值(值拷贝)。
+
+.. code-block:: go
+
+    type Student struct {
+        Name string
+    }
+
+    func (s Student) SetName(name string) { // NOTE: 无法修改，接收者是值拷贝
+        s.Name = name
+    }
+
+    func (s *Student) SetNameByPointer(name string) { // 指针接收者才能修改
+        s.Name = name
+    }
+
+    func testChangeName() {
+        s := &Student{Name: "lao wang"}
+        s.SetName("lao li")
+        fmt.Printf("%+v\n", s) // NOTE: 输出还是 lao wang，这里是值拷贝修改不了
+        s.SetNameByPointer("lao li")
+        fmt.Printf("%+v\n", s) // 输出 lao li，修改成功！
     }
 
 Go 无法修改值为结构体的map
