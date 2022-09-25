@@ -77,3 +77,4 @@ Raft
 -----------------------------------------
 
 - http://www.kailing.pub/raft/index.html raft动画演示
+- https://github.com/hashicorp/raft 代码实现
