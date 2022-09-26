@@ -294,6 +294,15 @@ Go 断点调试器dlv
    3. 分析 /usr/local/bin/dlv core ./app ./core_app
    4. 使用命令 goroutine goroutineid 和 bt 打印栈信息
 
+   # dlv 常用命令：
+   break main.go:7  # 在main.go 第 7 行加入断点
+   break runtime.growslice # 函数处打断点
+   continue # 继续执行运行到断点处
+   disassemble # 插件对应的反汇编代码
+   goroutines # 查看当前 goroutines
+   stack(bt) # 查看调用栈信息
+   regs  # 过regs命令可以查看全部的寄存器状态, 可以通过单步执行来观察寄存器的变化
+   locals # 查看当前函数所有变量值
 
 - https://yq.aliyun.com/articles/57578
 
