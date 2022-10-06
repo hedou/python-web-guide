@@ -740,8 +740,11 @@ Go 如何复制map
       testShareMap()
     }
 
-闭包问题
+循环变量与闭包问题 ⭐️
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+go 的循环变量是 per-loop 的而不是 per-iteration 绑定的，这个特性导致了很多隐蔽反直觉并且难以排查的bug。
+go 官方目前仍在讨论是否要改善这个问题：https://github.com/golang/go/discussions/56010 。
+举一些常见例子防止踩坑：
 
 .. code-block:: go
 
@@ -753,7 +756,6 @@ Go 如何复制map
     )
 
     // 闭包问题
-
     func testClosure() {
             data := []string{"one", "two", "three"}
             for _, v := range data {
@@ -762,14 +764,14 @@ Go 如何复制map
                     }()
             }
             time.Sleep(1 * time.Second) // not good, just for demo
-            // three three three
+            // three three three  // 打印的都是最后一个值
     }
 
-    // 两种方式解决：1.使用一个for 循环临时变量
+    // 两种方式解决：1.使用一个块临时变量
     func testClosure1() {
             data := []string{"one", "two", "three"}
             for _, v := range data {
-                    vcopy := v
+                    vcopy := v // 使用一个临时变量，经常可以看到 v := v 这种写法
                     go func() {
                             fmt.Println(vcopy)
                     }()
@@ -778,7 +780,7 @@ Go 如何复制map
             // one two three (may wrong order)
     }
 
-    // 方法2：使用传给匿名goroutine参数，推荐使用这种方式
+    // 方法2：使用传给匿名goroutine参数，个人推荐使用这种方式
     func testClosure2() {
             data := []string{"one", "two", "three"}
             for _, v := range data {
@@ -790,6 +792,7 @@ Go 如何复制map
             // one two three (may wrong order)
     }
 
+    // 指针接收者调用场景
     type field struct {
             name string
     }
@@ -808,12 +811,29 @@ Go 如何复制map
             time.Sleep(1 * time.Second)
     }
 
-    func main() {
-            // testClosure()
-            // testClosure1()
-            // testClosure2()
-            testField()
+    // 结构体示例
+    values := []MyStruct{MyStruct{1}, MyStruct{2}, MyStruct{3}}
+    output := []*MyStruct{}
+    for _, v := range values {
+      // v := v
+      output = append(output, &v) // 不要直接引用一个循环变量的地址
     }
+    fmt.Println("output: ", output) // 打印相同的地址
+
+总结一下：
+
+- 不要直接对循环变量取地址
+- 不要在 goroutine 中直接使用循环变量
+- 如果循环变量(非指针)调用函数是一个指针接收者，调用值需要拷贝一个临时变量再调用
+
+解决方式：
+
+1. 创建一个临时局部变量(`v:=v`)
+2. 作为参数传入(解决goroutine场景)
+
+参考:
+
+- https://nullprogram.com/blog/2014/06/06/ Per Loop vs. Per Iteration Bindings
 
 Failed Type Assertions
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
