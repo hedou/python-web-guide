@@ -111,7 +111,7 @@ Go 常用框架(工具)技术雷达 ❤️
 - 分布式锁: go-redsync/redsync(redlock算法)
 - Zookeeper: go-zookeeper/zk
 - 设计模式：tmrts/go-patterns
-- 数据结构：deckarep/golang-set
+- 数据结构：deckarep/golang-set, emirpasic/gods
 
 工具:
 
