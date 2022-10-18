@@ -78,3 +78,8 @@ Raft
 
 - http://www.kailing.pub/raft/index.html raft动画演示
 - https://github.com/hashicorp/raft 代码实现
+
+参考：
+-----------------------------------------
+- 《设计数据密集型应用》
+- https://martinfowler.com/articles/patterns-of-distributed-systems/
