@@ -112,6 +112,7 @@ Go 常用框架(工具)技术雷达 ❤️
 - Zookeeper: go-zookeeper/zk
 - 设计模式：tmrts/go-patterns
 - 数据结构：deckarep/golang-set, emirpasic/gods
+- 通用泛型工具库：thoas/go-funk
 
 工具:
 
