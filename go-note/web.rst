@@ -92,7 +92,7 @@ Go 常用框架(工具)技术雷达 ❤️
 - 网络代理：goproxy
 - 命令行处理: spf13/cobra
 - 字符串处理工具：huandu/xstrings
-- 类型转换：spf13/cast
+- 数据类型转换：spf13/cast
 - HTML 处理/过滤: PuerkitoBio/goquery, microcosm-cc/bluemonday
 - 系统信息收集：shirou/gopsutil
 - go runtime: bmhatfield/go-runtime-metrics(runtime 指标收集)
@@ -113,6 +113,7 @@ Go 常用框架(工具)技术雷达 ❤️
 - 设计模式：tmrts/go-patterns
 - 数据结构：deckarep/golang-set, emirpasic/gods
 - 通用泛型工具库：thoas/go-funk
+- 深拷贝：mohae/deepcopy
 
 工具:
 
