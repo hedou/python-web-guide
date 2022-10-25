@@ -106,7 +106,7 @@ Go 常用框架(工具)技术雷达 ❤️
 - 进程控制：uber-go/automaxprocs
 - 地理位置：ip2location/ip2location-go
 - 时间处理：jinzhu/now
-- 金融数字格式化: leekchan/accounting
+- 金融数字格式化/定点数: leekchan/accounting, shopspring/decimal
 - 分布式事务：yedf/dtm
 - 分布式锁: go-redsync/redsync(redlock算法)
 - Zookeeper: go-zookeeper/zk
