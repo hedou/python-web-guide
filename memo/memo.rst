@@ -1055,13 +1055,13 @@ vim-go/coc.nvim plugin Tips
     \ }
 
   # 以下是 coc.nvim 官方示例定义的快捷键
-  " 跳转到定义
+  " 跳转到变量定义
   nmap <silent> gd <Plug>(coc-definition)
-  " 跳转到值的类型定义，或者函数的返回值类型
+  " 跳转到值的类型定义，或者跳转到函数的返回值类型
   nmap <silent> gy <Plug>(coc-type-definition)
   " 跳转到 interface 接口的对应实现
   nmap <silent> gi <Plug>(coc-implementation)
-  " 打开当前变量、函数等的引用列表
+  " 打开当前变量、函数等的调用列表
   nmap <silent> gr <Plug>(coc-references)
 
 
