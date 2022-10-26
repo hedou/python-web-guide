@@ -1057,7 +1057,7 @@ vim-go/coc.nvim plugin Tips
   # 以下是 coc.nvim 官方示例定义的快捷键
   " 跳转到定义
   nmap <silent> gd <Plug>(coc-definition)
-  " 跳转到返回值的类型定义，看函数的返回值类型的时候非常方便
+  " 跳转到值的类型定义，或者函数的返回值类型
   nmap <silent> gy <Plug>(coc-type-definition)
   " 跳转到 interface 接口的对应实现
   nmap <silent> gi <Plug>(coc-implementation)
