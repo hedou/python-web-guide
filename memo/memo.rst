@@ -1015,12 +1015,12 @@ vim
 * `《vim cheet sheet》 <https://vim.rtorr.com/lang/zh_cn/>`_
 
 
-vim-go plugin Tips
------------------------
+vim-go/coc.nvim plugin Tips
+-----------------------------------------
 
 .. code-block:: vim
 
-  # 最近一直在开发机服务器上直接用 neovim+vim-go 写 golang，具有完备开发功能(vim-go借助各种go工具实现)
+  # 最近一直在开发机服务器上直接用 neovim+vim-go+coc.nvim 写 golang，具有完备开发功能(vim-go借助各种go工具实现)
   # https://github.com/fatih/vim-go
   # https://github.com/fatih/vim-go-tutorial  # vim-go 官方教程，最好过一遍
   let g:go_def_mode='godef'  # 有时候 gopls 有问题可以用 godef 跳转，默认用 gopls
@@ -1053,6 +1053,17 @@ vim-go plugin Tips
   let g:go_fmt_options = {
     \ 'golines': '-m 120',
     \ }
+
+  # 以下是 coc.nvim 官方示例定义的快捷键
+  " 跳转到定义
+  nmap <silent> gd <Plug>(coc-definition)
+  " 跳转到返回值的类型定义，看函数的返回值类型的时候非常方便
+  nmap <silent> gy <Plug>(coc-type-definition)
+  " 跳转到 interface 接口的对应实现
+  nmap <silent> gi <Plug>(coc-implementation)
+  " 打开当前变量、函数等的引用列表
+  nmap <silent> gr <Plug>(coc-references)
+
 
 用markdown文件制作html ppt
 -------------------------------------------------------------
