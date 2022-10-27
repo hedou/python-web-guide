@@ -908,6 +908,10 @@ Git
     # 修改上一次提交人。比如一开始 git commiter 配置错了。https://stackoverflow.com/questions/3042437/how-to-change-the-commit-author-for-one-specific-commit
     git commit --amend --author="Author Name <email@address.com>" --no-edit
 
+    # tags 功能(比如从一个源码的 tag 构建) https://stackoverflow.com/questions/35979642/what-is-git-tag-how-to-create-tags-how-to-checkout-git-remote-tags
+    git tag -l  # 显示所有 tag
+    git checkout tags/<tag> -b <branch>
+
 
 Git工作流
 ------------
@@ -1061,7 +1065,7 @@ vim-go/coc.nvim plugin Tips
   nmap <silent> gy <Plug>(coc-type-definition)
   " 跳转到 interface 接口的对应实现
   nmap <silent> gi <Plug>(coc-implementation)
-  " 打开当前变量、函数等的调用列表
+  " 打开当前变量、函数等的列表
   nmap <silent> gr <Plug>(coc-references)
 
 
