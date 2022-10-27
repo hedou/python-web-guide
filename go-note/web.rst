@@ -206,6 +206,7 @@ gin 实战博客:
 - https://segmentfault.com/a/1190000013808421  gin 连载博客
 - https://www.cnblogs.com/xinliangcoder/p/11212573.html logrus日志
 - https://marcoma.xyz/2019/03/17/gin-tutorial-7/
+- https://www.jishuchi.com/books/gin-practice Golang Gin 实践
 
 微服务
 --------------------------------------------------
