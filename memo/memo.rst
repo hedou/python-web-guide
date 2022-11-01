@@ -1315,4 +1315,5 @@ HHKB 静电容键盘。Karabiner 修改 mac 键位配置
 ~/.config/karabiner/assets/complex_modifications/wasd.json
 
 这里我把 right_command + WASD 修改成上下左右，方便 HHKB 方向键移动，默认的 HHKB 方向键不方便。
-目前键盘已经从 HHKB 切换到 niz 静电容 35 克，长期打字对小指头挺友好的，再也没疼过。
+目前键盘已经从 HHKB 切换到 niz 静电容 35 克，长期打字对小指头挺友好的，再也没疼过。niz支持切换键程，个人一般习惯切到最短的
+键程打字比较顺畅，轻点一下按键就可以触发。
