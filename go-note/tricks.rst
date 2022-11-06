@@ -1027,21 +1027,24 @@ Go 网络请求设置 Host 不起作用
     // req.Header.Set("Host", "www.example.org")  // 不起作用！！！ https://github.com/golang/go/issues/29865
 
 
-Go panic 场景
+Go panic 场景 ⚠️
 --------------------------------------------------
 在《Go 编程之旅》中总结了一些 panic 场景，写 go 的时候注意下，防止进程退出：
 
 - 数组/切片越界。确保下标在数组长度范围内
-- 空指针调用。比如访问一个 nil 结构体指针的成员, a.b.c 但是 b 是一个空指针就会 panic
+- 空指针调用。比如访问一个 nil 结构体指针的成员, `a.b.c` 但是 b 是一个空指针就会 panic
 - 过早关闭 HTTP 响应体
 - 除以 0
 - 向已经关闭的 channel 发送消息(或者多次close同一个 channel)
 - 重复关闭 channel
 - 关闭未初始化的 channel
-- 未初始化 map。注意访问 map 不存在的 key 不会 panic，而是返回 map 类型对应的零值，但是不能直接赋值
-- 跨协程的 panic 处理
+- 跨协程的 panic 处理。main 协程中无法处理对子协程的 panic
 - sync 计数为负数。
 - 类型断言不匹配。`var a interface{} = 1; fmt.Println(a.(string))` 会 panic，建议用 `s,ok := a.(string)`
+- 危险的 map
+
+  - 赋值之前必须用 make 创建。注意访问 map 不存在的 key 不会 panic，而是返回 map 类型对应的零值，但是不能直接声明就赋值，而是要用make创建
+  - 不要并发写原生 map。 需要加锁、使用 sync.Map 或者第三方并发安全的 map 比如 patrickmn/go-cache。当你声明一个全局map时，确认它是只读的
 
 参考：
 
