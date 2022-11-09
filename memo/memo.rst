@@ -1059,12 +1059,12 @@ vim-go/coc.nvim plugin Tips
     \ }
 
 
-  " 以下是 coc.nvim 官方示例定义的快捷键
+  " 以下是 coc.nvim 官方示例定义的快捷键。用好这几个快捷键可以给开发带来极大便利
   " 跳转到变量定义。normal 模式下在一个变量名上按一下 gd 即可跳转到定义位置，然后ctrl-o 可以快速返回原位置
   nmap <silent> gd <Plug>(coc-definition)
   " 跳转到值的类型定义，或者跳转到函数的返回值类型。在你想要快速查找一个类型的结构的时候非常有用
   nmap <silent> gy <Plug>(coc-type-definition)
-  " 跳转到 interface 接口的对应实现。比如查看go里一个 interface 被哪些 struct 实现了
+  " 跳转到 interface 接口的对应实现。比如查看go里一个 interface 被哪些 struct 实现了。如果在 struct 名字上使用可以找到当前 struct 实现了哪些 interface
   nmap <silent> gi <Plug>(coc-implementation)
   " 打开当前变量、函数等被引用的列表。比如看一个 函数 在哪些地方使用了
   nmap <silent> gr <Plug>(coc-references)
