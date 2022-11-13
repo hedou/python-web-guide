@@ -10,6 +10,13 @@ Go 性能优化
 - 优化反射。https://github.com/goccy/go-reflect
 - 减小锁消耗。减小锁粒度；使用原子操作(atomic)代替互斥锁
 
+优化建议：
+
+- 预分配内存。slice/map 如果预知容量信息，初始化应该提供，减少内存重分配和复制元素的消耗。 `make([]int, 0, cap); make(map[int]int, cap)`
+- 使用 strings.Builder 拼接大量字符串
+- 使用空的结构体作为占位符，空结构体 struct{} 不占内存。 比如实现 set 使用 map[string]struct{}{}
+- 使用 atomic 代替 sync 包
+
 string 与 []byte 互转
 ---------------------------------------------------------------
 利用了底层 string 和 byte slice 实现的技巧，如果需要大量互转可以使用这种方式。
