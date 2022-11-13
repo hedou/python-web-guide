@@ -42,6 +42,7 @@ MacOS 开发效率工具
 - mac-setup: https://github.com/sb2nov/mac-setup mac 下各种编程语言开发环境配置指引
 - Hammerspoon: 开源的mac窗口管理工具 https://github.com/Hammerspoon/hammerspoon
 - Magnet/chunkwm/Amethyst/yabai 窗口管理辅助工具，拖拽窗口到屏幕边缘可以自动半屏， 全屏或者四分之一屏幕，还可以设定快捷键完成分屏，现在已经离不开magnet 分屏了。
+- Tiles: 类似 magnet 窗口管理软件，免费！ https://freemacsoft.net/tiles/
 - Karabiner-Elements(mac): 改键工具 https://github.com/tekezo/Karabiner-Elements 也可以用来禁用内置键盘(mac自带修改capslock为 control)
 - Be Focused: mac 下番茄工作法工具，可以用来给任务计时，或者提醒该休息下了
 - Qbserve: https://qotoqot.com/qbserve/ 一个 mac 下的时间追踪软件，可以查看自己在不同软件耗时，改善时间和工作管理
