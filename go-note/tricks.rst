@@ -8,6 +8,7 @@ go初学者常见错误
 强烈建议 go 新手先过一遍下边这篇文章，go 写多了你一定会遇到很多里边总结的坑。
 
 - `50 Shades of Go: Traps, Gotchas, and Common Mistakes for New Golang Devs  <http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/>`_
+- https://github.com/teivah/100-go-mistakes
 
 Go tricks
 --------------------------------------------------
