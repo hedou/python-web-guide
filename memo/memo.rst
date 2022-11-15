@@ -455,6 +455,10 @@ Linux(centos/ubuntu)
     tar zxvf FileName.tar.gz    # 解压
     tar zcvf FileName.tar.gz DirName    # 压缩
 
+    # 监控文件变动并且自动增量同步本地文件到服务器对应文件夹（需要先安装 when-changed)
+    when-changed -r -v -1 . rsync -avh --exclude='.git/' --exclude='mydoc/' --exclude='output/' /Users/pegasus/work/code/ XXX@ip:/home/pegasus/work/code/
+
+
 代码搜索用ag(the silversearcher)/rg, 比ack快
 
 .. code-block:: python
