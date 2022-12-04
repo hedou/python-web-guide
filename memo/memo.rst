@@ -916,6 +916,10 @@ Git
     git tag -l  # 显示所有 tag
     git checkout tags/<tag> -b <branch>
 
+    # 生成和应用 patch, https://stackoverflow.com/questions/28192623/create-patch-or-diff-file-from-git-repository-and-apply-it-to-another-different
+    git diff tag1..tag2 > mypatch.patch
+    git apply mypatch.patch
+
 
 Git工作流
 ------------
