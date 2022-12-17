@@ -310,6 +310,18 @@ Go 断点调试器dlv
 
 - https://yq.aliyun.com/articles/57578
 
+Go 跨平台编译
+---------------------------------------------------------------
+用 Go 你可以选择自己喜欢的操作系统开发，并跨平台编译程序要发布平台的可执行程序即可。
+Go 通过两个环境变量控制跨平台编译：
+
+- GOOS: 代表要编译的目标操作系统，常见的有 Linux, Windows, Darwin 等
+- GOARCH: 代表要编译的目标处理器架构，常见的有 386, AMD64, ARM64 等
+
+比如现在在用 macOS AMD64 开发，但是想要编译出 Linux AMD64 的可执行程序，只需要执行：
+
+`GOOS=linux GOARCH=amd64 go build main.go`
+
 Go Debug 调试工具
 ---------------------------------------------------------------
 - go-spew: 用来打印一些复杂结构方便调试 https://github.com/davecgh/go-spew
