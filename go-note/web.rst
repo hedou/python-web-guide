@@ -36,7 +36,7 @@ Go 常用框架(工具)技术雷达 ❤️
 - 单元测试断言：matryer/is, testify/assert, smartystreets/goconvey(bdd 驱动测试), rakyll/gotest(gotest 颜色)
 - 错误处理: pkg/errors, hashicorp/go-multierror(多错误处理), sync/errgroup(多goroutine错误处理)
 - 重试：avast/retry-go
-- json处理转换：go-simplejson/mapstructure，json-iterator/go (比内置的 json 解析快很多), tidwall/gjson(获取 json 值)
+- json处理转换：go-simplejson/mapstructure，json-iterator/go (比内置的 json 解析快很多), tidwall/gjson(获取 json 值), bytedance/sonic
 - 字典/结构体合并/结构体拷贝：imdario/mergo, jinzhu/copier
 - 配置解析: viper(兼容很多格式)
 - mysql orm: gorm, xorm, sqlx, ent/ent(实体框架), doug-martin/goqu(生成sql)
@@ -92,7 +92,7 @@ Go 常用框架(工具)技术雷达 ❤️
 - 网络代理：goproxy
 - 命令行处理: spf13/cobra
 - 字符串处理工具：huandu/xstrings
-- 数据类型转换：spf13/cast
+- 通用数据类型转换：spf13/cast
 - HTML 处理/过滤: PuerkitoBio/goquery, microcosm-cc/bluemonday
 - 系统信息收集：shirou/gopsutil
 - go runtime: bmhatfield/go-runtime-metrics(runtime 指标收集)
