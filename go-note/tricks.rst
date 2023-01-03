@@ -1050,7 +1050,7 @@ Go panic 场景 ⚠️
 - 危险的 map
 
   - 赋值之前必须用 make 创建。注意访问 map 不存在的 key 不会 panic，而是返回 map 类型对应的零值，但是不能直接声明就赋值，而是要用make创建
-  - 不要并发写原生 map。 需要加锁、使用 sync.Map 或者第三方并发安全的 map 比如 patrickmn/go-cache。当你声明一个全局map时，确认它是只读的
+  - 不要并发写原生 map。需要加锁、使用 sync.Map 或者第三方并发安全的 map 比如 patrickmn/go-cache。当你声明一个全局map时，确认它是只读的，如果意外不同携程的函数同时修改它就可能偶现 panic
 
 参考：
 
