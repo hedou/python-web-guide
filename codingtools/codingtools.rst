@@ -443,8 +443,8 @@ APM (Application Performance Management)
 绘图/流程图/思维导图工具
 --------------------------------------
 - processon: http://processon.com/ 使用了下感觉还不错，支持流程图、时序图、思维导图等，可以 clone 别人看好的图作为模板
+- draw.io: https://www.draw.io/  UML 图的功能比较好用，笔者一般流程图用 processon，UML和时序图一般用 draw.io(可以导入飞书)
 - echart.js: 数据可视化 https://echarts.apache.org/examples/zh/index.html
-- draw.io: https://www.draw.io/
 - 亿图：www.edrawmax.cn 类似 processon，有很多好看的模板
 - Gliffy Diagrams: https://chrome.google.com/webstore/detail/gliffy-diagrams/bhmicilclplefnflapjmnngmkkkkpfad/related
 - carbon/codeimg.io: https://carbon.now.sh/ 可以根据代码生成图片，在分享代码却没有高亮的时候比较方便。codeimg 类似
