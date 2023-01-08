@@ -5,7 +5,7 @@ Go 性能优化
 
 常见的优化手段
 ---------------------------------------------------------------
-- 池化技术。比如 sync.Pool；协程池(Jeffail/tunny, panjf2000/ants)
+- 池化技术。比如 sync.Pool 对象池；协程池(Jeffail/tunny, panjf2000/ants)；连接池(buraksezer/connpool)；内存池等
 - 复用对象。比如 string2bytes
 - 优化反射。https://github.com/goccy/go-reflect
 - 减小锁消耗。减小锁粒度；使用原子操作(atomic)代替互斥锁。读多写少的场景使用读写锁(RWMutex)
