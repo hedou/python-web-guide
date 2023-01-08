@@ -1069,10 +1069,37 @@ Go 内存泄露场景
 - time.Ticker 忘记 stop。注意Ticker 和 Timer 是不同的。Timer 只会定时一次，而 Ticker 如果不 Stop，就会一直发送定时。建议用defer 进行stop
 - channel 误用造成的泄露
 
-  - 如果接收者需要在 channel 关闭之前提前退出，为防止内存泄漏，在发送者与接收者发送次数是一对一时，应设置 channel 缓冲队列为 1；
+  - 如果接收者需要在 channel 关闭之前提前退出，为防止内存泄漏，在发送者与接收者发送次数是一对一时，应设置 channel 缓冲队列为 1；`ch := make(chan struct{}, 1)`
   - 在发送者与接收者的发送次数是多对多时，应使用专门的 stop channel 通知发送者关闭相应 channel。
 
+- 使用了 cgo。为了不让goroutine阻塞，cgo都是单独开一个线程处理，这种场景 runtime 无法管理。如果cgo处理逻辑有阻塞，可能导致线程数保障
+
 参考：https://zhuanlan.zhihu.com/p/550956060
+
+Go goroutine 泄露(堆积)
+---------------------------------------------------------------
+泄露场景：
+
+- goroutine由于channel的读/写端退出而一直阻塞，导致goroutine一直占用资源，而无法退出
+- goroutine进入死循环中，导致资源一直无法释放。(比如无法停止的定时器或者 for 循环等)
+- goroutine中的网络操作由于没设置超时短期大量未结束导致goroutine快速累积。（所有的网络 client 一定要设置超时时间）
+
+解决方式:  goroutine 能够终止，goroutine 终止的场景如下：
+
+- 当一个goroutine完成它的工作
+- 由于发生了没有处理的错误
+- 有其他的协程告诉它终止(比如常见的生产者消费者场景，主线程结束之后通知生产者退出)
+
+如何发现：
+
+- 使用开源工具: github.com/uber-go/goleak
+- runtime 协程数量监控：`runtime.NumGoroutine()`
+- pprof: `pprof.Lookup("goroutine")`
+
+参考：
+
+- https://www.trailofbits.com/post/discovering-goroutine-leaks-with-semgrep
+- https://hoverzheng.github.io/post/technology-blog/go/goroutine-leak%E5%92%8C%E8%A7%A3%E5%86%B3%E4%B9%8B%E9%81%93/
 
 
 Go Web
