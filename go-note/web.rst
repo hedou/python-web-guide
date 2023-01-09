@@ -22,6 +22,8 @@ Go语言入门和深入
 - `Go语言圣经 <https://books.studygolang.com/gopl-zh/>`_
 - `Go安全编程规范 <https://github.com/Tencent/secguide/blob/main/Go%E5%AE%89%E5%85%A8%E6%8C%87%E5%8D%97.md>`_
 - `Go并发编程 <https://lailin.xyz/post/go-training-week3-goroutine.html>`_
+- `Learning notes for golang <https://github.com/jincheng9/go-tutorial>`_
+
 
 Go 常用框架(工具)技术雷达 ❤️
 ---------------------------------------------------------------
