@@ -140,6 +140,7 @@ Chrome 开发者插件
 - SimpRead: 简悦，阅读模式 chrome 插件，支持导出和分享。试了一下导出知乎回答还不错
 - Awesome Screenshot: 截长图、浏览器录屏工具。有时候有一些 pdf 只能预览不能下载，其实可以用它的截长图功能导出来 pdf
 - 暴力猴：支持超多的插件，比如护眼插件、youtute 下载插件等 https://violentmonkey.github.io/ 还可以搜索插件市场 https://greasyfork.org/zh-CN
+- Copytables: 可以复制网页中的表格为 html、csv 等
 
 * `《在浏览器中嵌入 NeoVim，可使用本地配置》 <https://zhuanlan.zhihu.com/p/86027644>`_
 
