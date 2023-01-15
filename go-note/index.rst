@@ -9,6 +9,7 @@ Golang 快速入门 Go For Pythonisa ❤️
 
     web
     tricks
+    mistakes
     optimize
     algorithms
     design_patterns
