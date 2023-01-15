@@ -874,13 +874,6 @@ Git
     # then check out a copy from the index
     git checkout -- <file>
 
-    # git 注意不要把二进制大文件，视频文件等放入到版本库，可能会导致 .git 非常大，删了也无济于事
-    find . -executable -type f >>.gitignore # https://stackoverflow.com/questions/5711120/gitignore-without-binary-files
-
-    # git 历史删除大文件。如果你提交了大文件，即使你git rm删除了也会留在 git 的历史记录中，导致.git 文件夹很大
-    # https://stackoverflow.com/questions/8083282/how-do-i-remove-a-big-file-wrongly-committed-in-git
-    git filter-branch --index-filter "git rm -rf --cached --ignore-unmatch path_to_file" HEAD
-
     # 如何恢复一个已经删除的分之, https://stackoverflow.com/questions/3640764/can-i-recover-a-branch-after-its-deletion-in-git
     git reflog  # 查找对应 commit hash
     git checkout -b branch-name hash
@@ -920,6 +913,30 @@ Git
     # 生成和应用 patch, https://stackoverflow.com/questions/28192623/create-patch-or-diff-file-from-git-repository-and-apply-it-to-another-different
     git diff tag1..tag2 > mypatch.patch
     git apply mypatch.patch
+
+
+Git 删除大文件
+----------------------------
+Git 只适合代码文本管理，如果误提交了一个二进制文件或者视频等文件将会导致 git 仓库变得非常大。
+你应该在首次提交代码的时候就是用 gitignore 忽略掉大文件，如果已经误提交了，直接删除文件并不会删除 git 历史中的记录。
+需要使用专门的工具来进行删除，目前官方推荐使用 git-filter-repo 了，不再推荐使用 git filter-branch。
+
+.. code-block:: shell
+
+    # ⭐️ git 如何删除提交历史中的大文件(比如很多新手误提交了一个二进制或者视频等大文件)
+    # git 注意不要把二进制大文件，视频文件等放入到版本库，可能会导致 .git 非常大，删了也无济于事
+    find . -executable -type f >>.gitignore # https://stackoverflow.com/questions/5711120/gitignore-without-binary-files
+
+    # git 历史删除大文件。如果你提交了大文件，即使你git rm删除了也会留在 git 的历史记录中，导致.git 文件夹很大
+    # https://stackoverflow.com/questions/8083282/how-do-i-remove-a-big-file-wrongly-committed-in-git
+    # git filter-branch --index-filter "git rm -rf --cached --ignore-unmatch path_to_file" HEAD
+
+    # ⭐️ 推荐使用 git-filter-repo
+    # https://stackoverflow.com/questions/2100907/how-to-remove-delete-a-large-file-from-commit-history-in-the-git-repository
+    # https://www.jianshu.com/p/03bf1bc1b543
+    pip install git-filter-repo # 安装
+    git filter-repo --invert-paths --path-match YOUR_BIG_FILE  # 从提交历史删除大文件
+    git push -f origin master # 因为修改了提交历史，可能需要临时放开一下 master 权限，强行 push 一次
 
 
 Git工作流
