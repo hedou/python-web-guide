@@ -49,7 +49,8 @@ Go 常用框架(工具)技术雷达 ❤️
 - id生成器: rx/xid, beinan/fastid, bwmarrin/snowflake, sony/sonyflake, godruoyi/go-snowflake
 - uuid: gofrs/uuid, satori/go.uuid, google/uuid (注意有些会 panic)
 - hash: cespare/xxhash(快速 hash)
-- cache(in memory): patrickmn/go-cache, allegro/bigcache, golang/groupcache(分布式), coocood/freecache, singleflight(防止缓存击穿)
+- cache(in memory): patrickmn/go-cache, allegro/bigcache, golang/groupcache(分布式), coocood/freecache, singleflight(防止缓存击穿), 
+- cache(基于context): ag9920/go-ctxcache (基于context缓存解决重复调用放大问题)
 - cache(lru/lfu/2Q/ARC): hashicorp/golang-lru, bluele/gcache, songangweb/mcache(增强lru)
 - 并发/协程池(star 数从低到高排序)：
 
