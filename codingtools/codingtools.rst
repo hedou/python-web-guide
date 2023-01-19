@@ -492,7 +492,7 @@ APM (Application Performance Management)
 在 mac 下录制了一些 vim 和 python 的视频教程(b 站或者知乎可以看到)，记录下使用到的一些硬件和软件工具，硬件工具均可网购，部分软件收费：
 
 - keycastr: mac 按键回显到屏幕，最近录制 vim 视频教程的时候有用到。https://github.com/keycastr/keycastr
-- youbute-dl: https://github.com/rg3/youtube-dl 命令行油管视频下载工具
+- youbute-dl/lux(golang): https://github.com/rg3/youtube-dl 命令行油管视频下载工具
 - aria2: https://aria2.github.io/ 轻量级的命令行下载工具
 - FFmpeg: 强大的视频处理工具，可以用来截图，截取视频片段等
 - ScreenFlow/Camtasia/Obs: 屏幕录制，剪辑工具，收费。笔者用来录制屏幕用
