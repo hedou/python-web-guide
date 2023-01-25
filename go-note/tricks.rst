@@ -1105,6 +1105,12 @@ Go 网络请求设置 Host 不起作用
     // 注意以下不起作用，用 python 习惯使用 header 设置头了，但是 go 里边只能通过 req.Host 设置 host
     // req.Header.Set("Host", "www.example.org")  // 不起作用！！！ https://github.com/golang/go/issues/29865
 
+Go 错误处理的一些建议
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+1. 如果封装了原始的 error，应该使用 errors.Is(error value) 和 errors.As(error type)判断
+2. 不要多次处理错误，打日志或者返回 error 不要同时做。内层错误 wrap 之后，外层统一处理打印
+3. 不要忽略错误。如果明确可以忽略也要显示忽略并且加上注释。 `_ = func()`
 
 Go panic 场景 ⚠️
 --------------------------------------------------
