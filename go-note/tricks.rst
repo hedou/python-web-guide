@@ -103,9 +103,38 @@ Go 运行单个测试文件报错 undefined？
 - https://www.cnblogs.com/Detector/p/10010292.html
 - https://stackoverflow.com/questions/14723229/go-test-cant-find-function-in-a-same-package
 
+break 可以在 for,switch,select 生效
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+如果在 for 循环中的 switch/select 中使用了 break，实际上 break 的并不是 for，而是对应的switch/select。
+如果需要 break 掉 for 语句，就要使用标签(label)来解决。
+
+.. code-block:: go
+
+        for {
+            select {
+            case <-ch:
+            // do something
+            case <-ctx.Done():
+                break // NOTE: 注意这里 break 的是 select，并不是 for
+            }
+        }
+
+    // 解决方式使用 loop 标签
+    loop:
+        for {
+            select {
+            case <-ch:
+            // do something
+            case <-ctx.Done():
+                break loop // 结束 loop 而不是 select
+            }
+        }
+
+
 Go 循环遍历 []struct 会拷贝值
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 注意循环遍历一个结构体切片会拷贝每一个值，修改会不生效。如果想要修改 struct 的值，请使用 slice 下标修改或者用结构体指针。
+(推荐使用下标，因为遍历指针结构对cpu cache 不友好)
 
 .. code-block:: go
 
@@ -801,6 +830,7 @@ go 官方目前仍在讨论是否要改善这个问题：https://github.com/gola
       for _, v := range values {
           // v := v // 加上这一行才能打印1，2，3
           output = append(output, &v) // 如果不用临时变量，始终取到的是同一个地址
+          // 或者用 output = append(output, &values[i]) // 推荐使用下标
       }
 
       for _, o := range output {
@@ -826,13 +856,14 @@ go 官方目前仍在讨论是否要改善这个问题：https://github.com/gola
 总结一下会出bug的常见情况：
 
 - 在 goroutine 中直接使用循环变量(示例1)
-- 循环中直接对循环变量取地址(示例2)
+- 循环中直接对循环变量取地址(示例2)。这种场景建议直接迭代下标，然后从原来的数组获取值
 - 循环变量(非指针)调用函数是一个指针接收者，调用却直接传入循环变量值(示例3)
 
 解决方式：
 
 1. 创建一个临时局部变量(`v:=v`)
 2. 作为参数传入(解决goroutine场景)
+3. for 循环中推荐直接只迭代下标的方式从原来的数组获取值
 
 参考:
 

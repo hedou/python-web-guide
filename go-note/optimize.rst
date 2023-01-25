@@ -61,7 +61,7 @@ string 与 []byte 互转
 
 大量字符串拼接
 ---------------------------------------------------------------
-大量字符串拼接不要用 + ，使用 bytes.Buffer 或者 strings.Builder
+字符串在 go 中是不可变对象。大量字符串(一般超过 5 个字符串)拼接不要用 + ，使用 bytes.Buffer 或者 strings.Builder
 
 .. code-block:: go
 
