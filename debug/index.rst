@@ -101,7 +101,7 @@ Debug 调试神技
 
 参考：
 
-- `基于 context.Context 的 Golang loader 缓存<https://juejin.cn/post/7154318373663277093>`_
+- `基于 context.Context 的 Golang loader 缓存 <https://juejin.cn/post/7154318373663277093>`_
 
 数值错误
 ~~~~~~~~~~~~~~~~~~~~~~

@@ -171,9 +171,10 @@ Go 循环遍历 []struct 会拷贝值
       }
     }
 
-Go 无法修改结构体的值
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-注意如果需要修改结构体的值，必须使用指针接收者，否则无法修改结构体的值(值拷贝)。
+Go 无法修改结构体的值(值接收者vs指针接收者)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+注意如果需要修改结构体的值，必须使用指针接收者，否则无法修改结构体的值(值拷贝)。指针接收者其实也是拷贝，不过因为拷贝的是
+指针的值，所以能够修改。
 
 .. code-block:: go
 
@@ -196,6 +197,28 @@ Go 无法修改结构体的值
         s.SetNameByPointer("lao li")
         fmt.Printf("%+v\n", s) // 输出 lao li，修改成功！
     }
+
+
+总结一下何时使用值接收者或者指针接收者(《100 Go Mistakes and How to Avoid Them-2022》)：
+
+- 必须使用指针接收者
+
+  - 方法需要修改接收者
+  - 方法的接收者包含一个不能拷贝的对象，比如 sync 包的对象
+
+- 应该使用指针接收者：大对象场景，可以避免拷贝开销
+
+- 必须使用值接收者
+
+  - 保证接收者的值不会被修改
+  - 接收者是 map、function、channel，如果是指针接收者会编译错误
+
+- 应该使用值接收者
+
+  - 如果接收者是值，并且不应该被修改
+  - 如果接收者是小的 array 或者struct（仅包含值类型并且没有可修改的值比如time.Time）
+  - 如果接收者是基础类型比如 int、float64、string
+
 
 Go 无法修改值为结构体的map
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -734,6 +757,25 @@ go 的返回值可以命名，使用命名返回值有几个用处：
     }
 
 
+defer 语句参数是立即计算
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+来看一个例子，通过 defer 计算一下执行的时间，错误写法因为 defer 的参数是立即计算的，所以不生效。
+
+.. code-block:: go
+
+    func testDeferLogTime() { // 记录执行的毫秒数
+        start := time.Now()
+        defer func() { fmt.Println(time.Since(start).Milliseconds()) }() // 正确写法输入 1s
+        // defer fmt.Println(time.Since(start).Milliseconds()) // NOTE: 写法错误，defer 参数及时计算，这样写结果是 0
+        time.Sleep(1 * time.Second)
+    }
+
+解决方法有两种：
+
+1. 传入指针作为参数。这种情况同样适用于指针接收者和值接收者的情况
+2. 使用函数闭包。把要执行的语句放到一个匿名函数里
+
+
 Go 如何复制map
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 注意 go 和其他很多编程语言一样，对于复合结构是浅拷贝，共享底层数据结构。几个变量指向同一个复合结构的时候注意修改一个对其他变量也是可见的。
@@ -891,7 +933,6 @@ Failed Type Assertions
 
 An interface holding a nil value is not nil
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
 An interface holding nil value is not nil. An interface equals nil only if both type and value are nil.
 
 .. code-block:: go
@@ -905,6 +946,7 @@ An interface holding nil value is not nil. An interface equals nil only if both 
         var p *int = nil
         b = p
         fmt.Printf("b == nil is %t\n", b == nil) // b == nil is false
+        // 在一些场景中如果需要返回 nil，直接显示返回 nil 不容易出错
     }
 
 
