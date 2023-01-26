@@ -961,27 +961,6 @@ An interface holding nil value is not nil. An interface equals nil only if both 
 
 - https://stackoverflow.com/questions/29699982/go-test-flag-flag-provided-but-not-defined
 
-Go Context 的坑
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-调用接收context的函数时要小心，要清楚context在什么时候cancel，什么行为会触发cancel。
-笔者最近遇到一个问题是，在框架的 handler 函数返回之前，单独开一个 goroutine 创建一条 mysql 流水，但是handler 函数调用完
-成之后框架会cancel，导致这个 mysql 传进去了框架函数带过来的 ctx cancel 之后执行失败，解决方式就是传一个单独的 context
-
-.. code-block:: go
-
-    func (h *Handler) handleFunc(ctx context.Context, req *Request, resp *Response) error {
-        // ... 其他业务逻辑
-        go func() { // 异步记录流水
-            // 注意，这里不能直接用框架的 ctx，而是需要一个不被 cancel 的 context，否则执行会失败，改成 context.TODO()
-            if err := postDao.CreatePostCreateRecord(context.TODO(), row); err != nil { // 正确!
-            // if err := postDao.CreatePostCreateRecord(ctx, row); err != nil { // 错误！ ctx 很快被 cancel 导致流程失败
-                log.Errorf("CreatePost postDao.CreatePostCreateRecord err:%+v", err)
-            }
-        }()
-        return nil
-    }
-
-- https://zhuanlan.zhihu.com/p/34417106 《Go Context的踩坑经历》
 
 Go rand 的坑
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -1113,6 +1092,41 @@ Go 错误处理的一些建议
 1. 如果封装了原始的 error，应该使用 errors.Is(error value) 和 errors.As(error type)判断
 2. 不要多次处理错误，打日志或者返回 error 不要同时做。内层错误 wrap 之后，外层统一处理打印
 3. 不要忽略错误。如果明确可以忽略也要显示忽略并且加上注释。 `_ = func()`
+
+
+并发编程
+--------------------------------------------------
+
+数据竞争
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+当多个协程同时访问同一块内存区域并且至少有一个是写入操作时就会发生数据竞争。
+
+- 使用 atomic 操作(atomic包)
+- 使用 mutex 保护临界区
+- 通过 channel 通信保证一个变量只能被一个协程更新
+
+Go Context 的坑
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+调用接收context的函数时要小心，要清楚context在什么时候cancel，什么行为会触发cancel。
+笔者最近遇到一个问题是，在框架的 handler 函数返回之前，单独开一个 goroutine 创建一条 mysql 流水，但是handler 函数调用完
+成之后框架会cancel，导致这个 mysql 传进去了框架函数带过来的 ctx cancel 之后执行失败，解决方式就是传一个单独的 context
+
+.. code-block:: go
+
+    func (h *Handler) handleFunc(ctx context.Context, req *Request, resp *Response) error {
+        // ... 其他业务逻辑
+        go func() { // 异步记录流水
+            // 注意，这里不能直接用框架的 ctx，而是需要一个不被 cancel 的 context，否则执行会失败，改成 context.TODO()或者有超时的新context
+            if err := postDao.CreatePostCreateRecord(context.TODO(), row); err != nil { // 正确!
+            // if err := postDao.CreatePostCreateRecord(ctx, row); err != nil { // 错误！ ctx 很快被 cancel 导致流程失败
+                log.Errorf("CreatePost postDao.CreatePostCreateRecord err:%+v", err)
+            }
+        }()
+        return nil
+    }
+
+- https://zhuanlan.zhihu.com/p/34417106 《Go Context的踩坑经历》
+
 
 Go panic 场景 ⚠️
 --------------------------------------------------
