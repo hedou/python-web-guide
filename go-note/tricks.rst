@@ -283,28 +283,6 @@ Go 无法修改值为结构体的map
     counter.m["some_key"]++
     counter.Unlock()
 
-不要拷贝 mutex 对象
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-如果一个结构体包含 mutex 对象，不要 copy 它。比如如果放到了一个结构体里，必须使用指针接收者防止拷贝。
-
-.. code-block:: go
-
-    type Container struct {
-        sync.Mutex // <-- Added a mutex
-        counters   map[string]int
-    }
-
-    func (c Container) inc(name string) { // NOTE: 错误！ 这里必须使用指针接收者，否则会 copy mutex 成员
-        c.Lock() // <-- Added locking of the mutex
-        defer c.Unlock()
-        c.counters[name]++
-    }
-
-    func (c *Container) inc(name string) { // 正确写法！ 用指针接收者
-        c.Lock() // <-- Added locking of the mutex
-        defer c.Unlock()
-        c.counters[name]++
-    }
 
 如何判断一个空结构体(empty struct)
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -775,7 +753,7 @@ defer 语句参数是立即计算
 解决方法有两种：
 
 1. 传入指针作为参数。这种情况同样适用于指针接收者和值接收者的情况
-2. 使用函数闭包。把要执行的语句放到一个匿名函数里
+2. 使用函数闭包(closure)。把要执行的语句放到一个匿名函数里
 
 
 Go 如何复制map
@@ -1105,18 +1083,19 @@ Go 错误处理的一些建议
 - 使用 mutex 保护临界区
 - 通过 channel 通信保证一个变量只能被一个协程更新
 
-Go Context 的坑
+Go Context 的坑：错误传播 context
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 调用接收context的函数时要小心，要清楚context在什么时候cancel，什么行为会触发cancel。
 笔者最近遇到一个问题是，在框架的 handler 函数返回之前，单独开一个 goroutine 创建一条 mysql 流水，但是handler 函数调用完
-成之后框架会cancel，导致这个 mysql 传进去了框架函数带过来的 ctx cancel 之后执行失败，解决方式就是传一个单独的 context
+成之后(response被写回client)框架会cancel，导致这个 mysql 传进去了框架函数带过来的 ctx cancel 之后执行失败。
+解决方式就是传一个单独的 context，不要直接透传上游框架的 context。
 
 .. code-block:: go
 
     func (h *Handler) handleFunc(ctx context.Context, req *Request, resp *Response) error {
         // ... 其他业务逻辑
         go func() { // 异步记录流水
-            // 注意，这里不能直接用框架的 ctx，而是需要一个不被 cancel 的 context，否则执行会失败，改成 context.TODO()或者有超时的新context
+            // 注意，这里不能直接用框架的 ctx，而是需要一个不被 cancel 的 context，否则执行可能会失败，改成 context.TODO()或者有超时的新context
             if err := postDao.CreatePostCreateRecord(context.TODO(), row); err != nil { // 正确!
             // if err := postDao.CreatePostCreateRecord(ctx, row); err != nil { // 错误！ ctx 很快被 cancel 导致流程失败
                 log.Errorf("CreatePost postDao.CreatePostCreateRecord err:%+v", err)
@@ -1127,9 +1106,55 @@ Go Context 的坑
 
 - https://zhuanlan.zhihu.com/p/34417106 《Go Context的踩坑经历》
 
+不要拷贝 sync 包里的对象(比如mutex)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+如果一个结构体包含 sync 包的对象比如 mutex 对象，不要 copy 它。比如如果放到了一个结构体里，必须使用指针接收者防止拷贝。
+以下场景如果包含 sync 包的 Cond/Map/Mutex/RWMutex/Once/Pool/WaitGroup 都要注意：
+
+1. 方法是一个值接收者
+2. sync 包的结构作为函数参数
+3. 函数的参数包含一个sync 结构
+
+.. code-block:: go
+
+    type Counter struct {
+        sync.Mutex // <-- Added a mutex
+        counters   map[string]int
+    }
+
+    func (c Counter) inc(name string) { // NOTE: 错误！ 这里必须使用指针接收者，否则会 copy mutex 成员
+        c.Lock() // <-- Added locking of the mutex
+        defer c.Unlock()
+        c.counters[name]++
+    }
+
+    // 解决方法 1：方法的参数必须是指针接受者
+    func (c *Counter) inc(name string) { // 正确写法！ 用指针接收者
+        c.Lock() // <-- Added locking of the mutex
+        defer c.Unlock()
+        c.counters[name]++
+    }
+
+
+    // 解决方法 2：sync 对象使用指针类型
+    type Counter struct {
+        mu       *sync.Mutex // 使用指针类型
+        counters map[string]int
+    }
+
+    func NewCounter() Counter {
+        return Counter{
+            mu:       &sync.Mutex{},
+            counters: map[string]int{},
+        }
+    }
+
+
+Go 安全编程(panic/内存泄露)
+--------------------------------------------------
 
 Go panic 场景 ⚠️
---------------------------------------------------
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 在《Go 编程之旅》中总结了一些 panic 场景，写 go 的时候注意下，防止进程退出：
 
 - 数组/切片越界。确保下标在数组长度范围内
@@ -1154,7 +1179,7 @@ Go panic 场景 ⚠️
 
 
 Go 内存泄露场景
---------------------------------------------------
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 - 切片引用的底层数组，一直没有释放(由于 string 切片时也会共用底层数组，所以使用不当也会造成内存泄漏)。
 
@@ -1172,7 +1197,7 @@ Go 内存泄露场景
 参考：https://zhuanlan.zhihu.com/p/550956060
 
 Go goroutine 泄露(堆积)
----------------------------------------------------------------
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 泄露场景：
 
 - goroutine由于channel的读/写端退出而一直阻塞，导致goroutine一直占用资源，而无法退出
