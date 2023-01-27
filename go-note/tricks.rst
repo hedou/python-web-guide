@@ -945,64 +945,34 @@ Go rand 的坑
 如果忘记调用 `rand.Seed(time.Now().UnixNano())` 每次重新运行返回结果是相同的，应该在程序初始化的时候比如 init 函数调用一次 seed。
 
 
-redio tricks
+Go 标准库相关
 --------------------------------------------------
 
-redis 连接超时
+Json 序列化的坑
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-默认是没有超时时间的，注意设置超时时间（connect/read/write)。所有的网络 client 都应该设置超时时间(参考P99等值)
-
-- https://ms2008.github.io/2019/07/04/golang-redis-deadlock/
-
-redis 单测如何 mock
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-reids mock 可以用 miniredis，以下是一个示例代码
+1. 类型嵌入导致序列化字段丢失问题
 
 .. code-block:: go
 
-    package main
-
-    import (
-      "fmt"
-      "os"
-      "testing"
-
-      "github.com/alicebob/miniredis"
-      "github.com/go-redis/redis"
-      "github.com/stretchr/testify/assert"
-    )
-
-    var followImpl *Follow
-
-    func setupFollow() {
-      fmt.Println("setup")
-      mr, err := miniredis.Run()
-      if err != nil {
-        panic("init miniredis failed")
-      }
-      client := redis.NewClient(&redis.Options{
-        Addr: mr.Addr(),
-      })
-      _ = client.Set("key", "wang", 0).Err()
-      followImpl = &Follow{client: client}
+    // 序列化后会发现 ID 字段神奇地丢失了，因为嵌入Timer导致 Event 实现了 json.Marshaler
+    type Event struct {
+        ID int
+        time.Time
+    }
+    // 解决方式：1. 不要直接嵌入对象，增加一个名字。2. 重新实现 MarshalJSON() 方法
+    type Event struct {
+        ID int
+        Time time.Time
     }
 
-    func TestGet(t *testing.T) {
-      val, err := followImpl.Get("key")
-      followImpl.client.Set("key", "2", 0)
-      fmt.Println(val, err)
-      assert.Equal(t, val, "wang")
-    }
+2. time.Time 字段序列化和反序列化后比较结果不同。
+go 的 time.Time 对象包含日历时钟(Wall time)和单调时钟(Monitonic time)，序列化后在反序列化会丢失单调时钟的值，所以用等号
+比较会不同。解决方式有两种：
 
-    func TestPING(t *testing.T) {
-      PING()
-    }
+- 使用 time.Equal 比较不会比较单调时钟
+- 使用 time.Truncate(0) 去掉单调时钟后再序列化
 
-    func TestMain(m *testing.M) {
-      setupFollow()
-      code := m.Run()
-      os.Exit(code)
-    }
+3. 如果序列化 map 的值是 any，序列化后的数字类型都是 float64
 
 
 网络相关
@@ -1181,6 +1151,7 @@ Go panic 场景 ⚠️
 Go 内存泄露场景
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+- 资源使用后没有 Close。比如 http.body、db.Query.Rows、file文件描述符未关闭等
 - 切片引用的底层数组，一直没有释放(由于 string 切片时也会共用底层数组，所以使用不当也会造成内存泄漏)。
 
   - 尽量保证切片只作为局部变量使用，不会被传递到方法外，这样局部变量使用完后就会被回收
@@ -1220,6 +1191,66 @@ Go goroutine 泄露(堆积)
 
 - https://www.trailofbits.com/post/discovering-goroutine-leaks-with-semgrep
 - https://hoverzheng.github.io/post/technology-blog/go/goroutine-leak%E5%92%8C%E8%A7%A3%E5%86%B3%E4%B9%8B%E9%81%93/
+
+
+redis go tricks
+--------------------------------------------------
+
+redis 连接超时
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+默认是没有超时时间的，注意设置超时时间（connect/read/write)。所有的网络 client 都应该设置超时时间(参考P99等值)
+
+- https://ms2008.github.io/2019/07/04/golang-redis-deadlock/
+
+redis 单测如何 mock
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+reids mock 可以用 miniredis，以下是一个示例代码
+
+.. code-block:: go
+
+    package main
+
+    import (
+      "fmt"
+      "os"
+      "testing"
+
+      "github.com/alicebob/miniredis"
+      "github.com/go-redis/redis"
+      "github.com/stretchr/testify/assert"
+    )
+
+    var followImpl *Follow
+
+    func setupFollow() {
+      fmt.Println("setup")
+      mr, err := miniredis.Run()
+      if err != nil {
+        panic("init miniredis failed")
+      }
+      client := redis.NewClient(&redis.Options{
+        Addr: mr.Addr(),
+      })
+      _ = client.Set("key", "wang", 0).Err()
+      followImpl = &Follow{client: client}
+    }
+
+    func TestGet(t *testing.T) {
+      val, err := followImpl.Get("key")
+      followImpl.client.Set("key", "2", 0)
+      fmt.Println(val, err)
+      assert.Equal(t, val, "wang")
+    }
+
+    func TestPING(t *testing.T) {
+      PING()
+    }
+
+    func TestMain(m *testing.M) {
+      setupFollow()
+      code := m.Run()
+      os.Exit(code)
+    }
 
 
 Go Web
