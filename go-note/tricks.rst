@@ -1165,7 +1165,10 @@ Go 内存泄露场景
 
 - 使用了 cgo。为了不让goroutine阻塞，cgo都是单独开一个线程处理，这种场景 runtime 无法管理。如果cgo处理逻辑有阻塞，可能导致线程数保障
 
-参考：https://zhuanlan.zhihu.com/p/550956060
+参考
+
+- https://zhuanlan.zhihu.com/p/550956060
+- https://www.hitzhangjie.pro/blog/2021-04-14-go%E7%A8%8B%E5%BA%8F%E5%86%85%E5%AD%98%E6%B3%84%E9%9C%B2%E9%97%AE%E9%A2%98%E5%BF%AB%E9%80%9F%E5%AE%9A%E4%BD%8D/
 
 Go goroutine 泄露(堆积)
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -1173,7 +1176,7 @@ Go goroutine 泄露(堆积)
 
 - goroutine由于channel的读/写端退出而一直阻塞，导致goroutine一直占用资源，而无法退出
 - goroutine进入死循环中，导致资源一直无法释放。(比如无法停止的定时器或者 for 循环等)
-- goroutine中的网络操作由于没设置超时短期大量未结束导致goroutine快速累积。（所有的网络 client 一定要设置超时时间）
+- goroutine中的网络操作由于没设置超时短期大量未结束导致goroutine快速累积(慢等待)。（所有的网络 client 一定要设置超时时间）
 
 解决方式:  goroutine 能够终止，goroutine 终止的场景如下：
 
