@@ -1196,13 +1196,6 @@ Go goroutine 泄露(堆积)
 - https://hoverzheng.github.io/post/technology-blog/go/goroutine-leak%E5%92%8C%E8%A7%A3%E5%86%B3%E4%B9%8B%E9%81%93/
 
 
-Go 性能优化
---------------------------------------------------
-未正确设置容器 CPU 配额
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-容器中运行 Go 程序需要正确设置 GOMAXPROCS，推荐使用 https://github.com/uber-go/automaxprocs 这个库，直接一行代码就可以。
-`import _ "go.uber.org/automaxprocs"`
-
 redis go tricks
 --------------------------------------------------
 
