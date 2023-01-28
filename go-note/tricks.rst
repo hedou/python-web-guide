@@ -1151,7 +1151,7 @@ Go panic 场景 ⚠️
 Go 内存泄露场景
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-- 资源使用后没有 Close。比如 http.body、db.Query.Rows、file文件描述符未关闭等
+- 资源使用后没有 Close。比如 http.body、db.Query.Rows、file文件描述符未关闭等。（实现了 io.Closer 的结构体都应该用完关闭）
 - 切片引用的底层数组，一直没有释放(由于 string 切片时也会共用底层数组，所以使用不当也会造成内存泄漏)。
 
   - 尽量保证切片只作为局部变量使用，不会被传递到方法外，这样局部变量使用完后就会被回收
@@ -1192,6 +1192,13 @@ Go goroutine 泄露(堆积)
 - https://www.trailofbits.com/post/discovering-goroutine-leaks-with-semgrep
 - https://hoverzheng.github.io/post/technology-blog/go/goroutine-leak%E5%92%8C%E8%A7%A3%E5%86%B3%E4%B9%8B%E9%81%93/
 
+
+Go 性能优化
+--------------------------------------------------
+未正确设置容器 CPU 配额
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+容器中运行 Go 程序需要正确设置 GOMAXPROCS，推荐使用 https://github.com/uber-go/automaxprocs 这个库，直接一行代码就可以。
+`import _ "go.uber.org/automaxprocs"`
 
 redis go tricks
 --------------------------------------------------
