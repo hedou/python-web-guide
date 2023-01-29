@@ -918,6 +918,9 @@ Git
     git diff tag1..tag2 > mypatch.patch
     git apply mypatch.patch
 
+    # 删除当前文件夹 git 未跟踪的文件 https://stackoverflow.com/questions/61212/how-do-i-remove-local-untracked-files-from-the-current-git-working-tree
+    git clean -f # 注意危险操作提前确认文件确实可以删除
+
 
 Git 删除大文件
 ----------------------------
