@@ -412,8 +412,12 @@ Linux(centos/ubuntu)
     # 映射capslock 为　ctrl
     setxkbmap -layout us -option ctrl:nocaps
 
-    # 文件字符串批量替换
+    # 文件字符串批量替换(危险操作最好有 git 版本控制方便回滚)
     grep oldString -rl /path | xargs sed -i "s/oldString/newString/g"
+
+    # 删除多个文件中包含 patter 的指定行。比如递归删除包含 sleep 的行 (注意这种危险操作最好有 git 版本控制，方便回滚)
+    # https://stackoverflow.com/questions/1182756/remove-line-of-text-from-multiple-files-in-linux
+    find . -name "*.go" -type f | xargs sed -i -e '/sleep/d'
 
     # 递归删除某一类型文件
     find . -name "*.bak" -type f -delete
