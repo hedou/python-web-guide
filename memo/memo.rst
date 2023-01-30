@@ -465,15 +465,17 @@ Linux(centos/ubuntu)
     when-changed -r -v -1 . rsync -avh --exclude='.git/' --exclude='mydoc/' --exclude='output/' /Users/pegasus/work/code/ XXX@ip:/home/pegasus/work/code/
 
 
-代码搜索用ag(the silversearcher)/rg, 比ack快
+代码搜索用Ag(the silversearcher)/rg, 比ack快
 
-.. code-block:: python
+.. code-block:: shell
 
+    # 安装
     sudo apt-get install silversearcher-ag    # ubuntu
-    brew install ag
+    brew install ag # mac
+
     ag string dir/    # search dir
     ag readme$    # regular expression
-    ag -Q .rb    # Literal Expression Searches, search for the exact pattern
+    ag -Q .rb    # Literal Expression Searches, search for the exact pattern。这个选项很有用，特殊字符不用转义了
     ag string -l    # Listing Files (-l)
     ag string -i    # Case Insensitive Searches (-i)
     ag string -G py$    # 搜索应py结尾的文件 (指定文件类型)
