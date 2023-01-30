@@ -188,6 +188,8 @@ MacOS
 
    # NOTE: 使用『时间机器』定期备份你的mac 是一个好习惯，笔者买了一个移动硬盘用来定期备份
    # 文件字符串批量替换，git项目里替换的时候注意指定文件类型，防止破坏git信息
+   # 注意 mac 的 sed 命令和 linux 有区别(比如mac sed -i 后必须有参数) https://unix.stackexchange.com/questions/13711/differences-between-sed-on-mac-osx-and-other-standard-sed
+   # 可以使用 brew install gnu-sed 替换，然后使用 gsed 命令替代
    find . -name \*.py -exec sed -i '' 's/old/new/g' {} \;
    # copy that data into the system’s paste buffer
    cat file.txt | pbcopy
