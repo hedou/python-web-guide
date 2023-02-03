@@ -375,6 +375,12 @@ Go 常用命令
   # 清理模块缓存, GO111MODULE=on 以后，下载的模块内容会缓存在$GOPATH/pkg/mod 目录中： 使用以下命令可清空缓存：
   go clean --modcache
 
+  # 跨平台编译
+  `GOOS=linux GOARCH=amd64 go build main.go`
+
+  # 强制重新构建(依赖包) 使用 -a。参考：http://c.biancheng.net/view/120.html
+  go build -a main.go
+
 
 Go 数据结构与算法
 ---------------------------------------------------------------
