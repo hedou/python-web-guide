@@ -109,6 +109,7 @@ Mac 终端快速配置
 - https://www.typing-lessons.org/ 一套系列的打字和指法教程，没事的时候可以练习一下，摆脱二指禅打字。笔者目前就练习这个
 - https://www.keyhero.com/wpm-typing-tips/ 同样一个针对程序员的打字练习网站。笔者没事就会练习一下
 - gtypist (brew install gnu-typist; gtypist) 一个linux/MacOS 命令行打字练习工具
+- https://kaiyiwing.gitee.io/qwerty-learner/ 既可以练习打字，又能学习单词，提供了四六级和雅思托福等词库。还有编程语言 API 词库
 
 Mac 屏保软件
 --------------------------------------
