@@ -362,14 +362,18 @@ Go 开发关键技术指南
 - https://yq.aliyun.com/articles/741747 带着服务器编程金刚经走进 2020 年
 - https://developer.aliyun.com/article/742169  Go 开发关键技术指南 | 敢问路在何方？
 
-Go List import
+Go 常用命令
 ---------------------------------------------------------------
 
 .. code-block:: shell
 
-   # https://pmcgrath.net/how-to-get-golang-package-import-list
-   go list -f '{{range $imp := .Imports}}{{printf "%s\n" $imp}}{{end}}' | sort
-   go list -f '{{range $dep := .Deps}}{{printf "%s\n" $dep}}{{end}}' | xargs go list -f '{{if not .Standard}}{{.ImportPath}}{{end}}'
+  # 获取 go 的 import 列表 (list import)
+  # https://pmcgrath.net/how-to-get-golang-package-import-list
+  go list -f '{{range $imp := .Imports}}{{printf "%s\n" $imp}}{{end}}' | sort
+  go list -f '{{range $dep := .Deps}}{{printf "%s\n" $dep}}{{end}}' | xargs go list -f '{{if not .Standard}}{{.ImportPath}}{{end}}'
+
+  # 清理模块缓存, GO111MODULE=on 以后，下载的模块内容会缓存在$GOPATH/pkg/mod 目录中： 使用以下命令可清空缓存：
+  go clean --modcache
 
 
 Go 数据结构与算法
