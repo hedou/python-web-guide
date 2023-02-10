@@ -247,6 +247,7 @@ RPC/Web 框架
 - 缓存一致性。无论是先更新缓存再更新数据库，或者先更新数据库再失效缓存，并发场景都不能保证完全一致。推荐先更新数据库，再
   删除缓存出现缓存不一致概率最小，也是目前最常用的一种方案(Cache Aside 旁路模式)
 - 热 key 和大 key。热key 一般通过本地缓存或者哈希分片的方式解决，大 key 一般也应该尽量从业务上避免，可以拆分或者写数据库做冷热分离
+- 老 key 和长 key。如果是作为缓存的key一定要设置过期时间防止永久驻留(根据业务预估失效期)。缓存key的名字也应该尽量短，本身也占用空间
 - redigo: 注意go的一个常用 redis 库如果查询不到 key 会返回 redis.ErrNil，需要和其他的 err 做区分。一般来说go里查不到和返回错误是需要业务上做不同的处理
 - redis cluster 集群错误：有时候要实现 redis lua 原子操作，对于 redis cluster，操作的所有key必须在一个slot上(或者可以指定hash tag 落到同一个 slot)，否则返回错误信息。
   同理 redis cluster 下 mset/mget/pipeline 等都需要操作同一个 slot，腾讯云 redis 在 proxy 层给你实现了，可以直接批量操作。
@@ -264,6 +265,7 @@ RPC/Web 框架
 
 - `热点key问题的发现与解决 <https://www.alibabacloud.com/help/zh/doc-detail/67252.htm>`_
 - `Lua脚本使用规范 <https://help.aliyun.com/document_detail/92942.html>`_
+- `redis容量预估工具 <http://www.redis.cn/redis_memory/>`_
 
 消息队列问题
 ~~~~~~~~~~~~~~~~~~~~~~
