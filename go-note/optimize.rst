@@ -61,7 +61,8 @@ string 与 []byte 互转
 
 大量字符串拼接
 ---------------------------------------------------------------
-字符串在 go 中是不可变对象。大量字符串(一般超过 5 个字符串)拼接不要用 + ，使用 bytes.Buffer 或者 strings.Builder
+字符串在 go 中是不可变对象。大量字符串(一般超过 5 个字符串)拼接不要用 + ，使用 bytes.Buffer 或者 strings.Builder。
+不过对于个数比较少的字符串拼接，直接用 `+` 效率也很高，比 fmt.Sprintf 更快，所以少量字符串拼接可以放心使用 `+` 。
 
 .. code-block:: go
 
@@ -101,6 +102,12 @@ string 与 []byte 互转
 
 - `concatenate strings in golang <https://golangdocs.com/concatenate-strings-in-golang>`_
 - `How to efficiently concatenate strings in go <https://stackoverflow.com/questions/1760757/how-to-efficiently-concatenate-strings-in-go>`_
+
+
+更快的随机数
+---------------------------------------------------------------
+Go 内置的 rand.Int()在生成随机数时，为了并发安全底层使用了锁，在高并发常见下会有性能问题。
+可以使用 github.com/valyala/fastrand 等三方库替换。
 
 
 伪共享问题(false sharing)
