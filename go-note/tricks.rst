@@ -1136,7 +1136,7 @@ Go panic 场景 ⚠️
 - 重复关闭 channel
 - 关闭未初始化的 channel
 - 跨协程的 panic 处理。main 协程中无法处理对子协程的 panic
-- sync 计数为负数。
+- sync 计数为负数。(比如 sync.WaitGroup 确保 Add和Done 的次数是对应一致的)
 - 类型断言不匹配。`var a interface{} = 1; fmt.Println(a.(string))` 会 panic，建议用 `s,ok := a.(string)`
 - 危险的 map
 
