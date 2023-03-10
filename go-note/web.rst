@@ -382,6 +382,9 @@ Go 常用命令
   # 强制重新构建(依赖包) 使用 -a。参考：http://c.biancheng.net/view/120.html
   go build -a main.go
 
+  # go mod graph
+  # 会显示出go.mod里需要的每个包,都依赖了哪些包。可以用这个工具可视化 https://github.com/PaulXu-cn/go-mod-graph-chart
+
 
 Go 数据结构与算法
 ---------------------------------------------------------------
