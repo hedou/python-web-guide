@@ -172,86 +172,6 @@ Go 循环遍历 []struct 会拷贝值
       }
     }
 
-Go 无法修改结构体的值(值接收者vs指针接收者)
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-注意如果需要修改结构体的值，必须使用指针接收者，否则无法修改结构体的值(值拷贝)。指针接收者其实也是拷贝，不过因为拷贝的是
-指针的值，所以能够修改。
-
-.. code-block:: go
-
-    type Student struct {
-        Name string
-    }
-
-    func (s Student) SetName(name string) { // NOTE: 无法修改，接收者是值拷贝
-        s.Name = name
-    }
-
-    func (s *Student) SetNameByPointer(name string) { // 指针接收者才能修改
-        s.Name = name
-    }
-
-    func testChangeName() {
-        s := &Student{Name: "lao wang"}
-        s.SetName("lao li")
-        fmt.Printf("%+v\n", s) // NOTE: 输出还是 lao wang，这里是值拷贝修改不了
-        s.SetNameByPointer("lao li")
-        fmt.Printf("%+v\n", s) // 输出 lao li，修改成功！
-    }
-
-
-总结一下何时使用值接收者或者指针接收者(《100 Go Mistakes and How to Avoid Them-2022》)：
-
-- 必须使用指针接收者
-
-  - 方法需要修改接收者
-  - 方法的接收者包含一个不能拷贝的对象，比如 sync 包的对象
-
-- 应该使用指针接收者：大对象场景，可以避免拷贝开销
-
-- 必须使用值接收者
-
-  - 保证接收者的值不会被修改
-  - 接收者是 map、function、channel，如果是指针接收者会编译错误
-
-- 应该使用值接收者
-
-  - 如果接收者是值，并且不应该被修改
-  - 如果接收者是小的 array 或者struct（仅包含值类型并且没有可修改的值比如time.Time）
-  - 如果接收者是基础类型比如 int、float64、string
-
-
-Go 无法修改值为结构体的map
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-.. code-block:: go
-
-    func testChangeMapStruct() {
-        type T struct{ Cnt int }
-        m := map[string]T{"a": T{Cnt: 1}, "b": T{Cnt: 2}}
-        for _, v := range m {
-            v.Cnt = 100
-        }
-        fmt.Println(m)
-
-        // 修改值为结构体的 map，需要使用指针
-        m2 := map[string]*T{"a": &T{Cnt: 1}, "b": &T{Cnt: 2}}
-        for _, v := range m2 {
-            v.Cnt = 100
-        }
-        fmt.Println(m2["a"], m2["b"])
-
-        // 或者使用 map[k].v 修改 (也需要value是结构体指针)
-        m3 := map[string]*T{"a": &T{Cnt: 1}, "b": &T{Cnt: 2}}
-        for k := range m3 {
-            m3[k].Cnt = 100
-        }
-        fmt.Println(m3["a"], m3["b"])
-    }
-
-    func main() {
-      testChangeMapStruct()
-    }
 
 不要并发读写map，可能导致程序崩溃
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -284,17 +204,6 @@ Go 无法修改值为结构体的map
     counter.m["some_key"]++
     counter.Unlock()
 
-
-如何判断一个空结构体(empty struct)
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-.. code-block:: go
-
-    // 注意需要加上括号，否则 syntax error
-    // https://stackoverflow.com/questions/28447297/how-to-check-for-an-empty-struct
-    if (Session{}) == session  {
-        fmt.Println("is zero value")
-    }
 
 go 如何实现函数默认值(go本身没提供)
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -944,6 +853,149 @@ An interface holding nil value is not nil. An interface equals nil only if both 
 Go rand 的坑
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 如果忘记调用 `rand.Seed(time.Now().UnixNano())` 每次重新运行返回结果是相同的，应该在程序初始化的时候比如 init 函数调用一次 seed。
+
+Go 结构体相关
+--------------------------------------------------
+
+Go 无法修改结构体的值(值接收者vs指针接收者)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+注意如果需要修改结构体的值，必须使用指针接收者，否则无法修改结构体的值(值拷贝)。指针接收者其实也是拷贝，不过因为拷贝的是
+指针的值，所以能够修改。
+
+.. code-block:: go
+
+    type Student struct {
+        Name string
+    }
+
+    func (s Student) SetName(name string) { // NOTE: 无法修改，接收者是值拷贝
+        s.Name = name
+    }
+
+    func (s *Student) SetNameByPointer(name string) { // 指针接收者才能修改
+        s.Name = name
+    }
+
+    func testChangeName() {
+        s := &Student{Name: "lao wang"}
+        s.SetName("lao li")
+        fmt.Printf("%+v\n", s) // NOTE: 输出还是 lao wang，这里是值拷贝修改不了
+        s.SetNameByPointer("lao li")
+        fmt.Printf("%+v\n", s) // 输出 lao li，修改成功！
+    }
+
+
+总结一下何时使用值接收者或者指针接收者(《100 Go Mistakes and How to Avoid Them-2022》)：
+
+- 必须使用指针接收者
+
+  - 方法需要修改接收者
+  - 方法的接收者包含一个不能拷贝的对象，比如 sync 包的对象
+
+- 应该使用指针接收者：大对象场景，可以避免拷贝开销
+
+- 必须使用值接收者
+
+  - 保证接收者的值不会被修改
+  - 接收者是 map、function、channel，如果是指针接收者会编译错误
+
+- 应该使用值接收者
+
+  - 如果接收者是值，并且不应该被修改
+  - 如果接收者是小的 array 或者struct（仅包含值类型并且没有可修改的值比如time.Time）
+  - 如果接收者是基础类型比如 int、float64、string
+
+
+Go 无法修改值为结构体的map
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+.. code-block:: go
+
+    func testChangeMapStruct() {
+        type T struct{ Cnt int }
+        m := map[string]T{"a": T{Cnt: 1}, "b": T{Cnt: 2}}
+        for _, v := range m {
+            v.Cnt = 100
+        }
+        fmt.Println(m)
+
+        // 修改值为结构体的 map，需要使用指针
+        m2 := map[string]*T{"a": &T{Cnt: 1}, "b": &T{Cnt: 2}}
+        for _, v := range m2 {
+            v.Cnt = 100
+        }
+        fmt.Println(m2["a"], m2["b"])
+
+        // 或者使用 map[k].v 修改 (也需要value是结构体指针)
+        m3 := map[string]*T{"a": &T{Cnt: 1}, "b": &T{Cnt: 2}}
+        for k := range m3 {
+            m3[k].Cnt = 100
+        }
+        fmt.Println(m3["a"], m3["b"])
+    }
+
+    func main() {
+      testChangeMapStruct()
+    }
+
+
+如何判断一个空结构体(empty struct)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+.. code-block:: go
+
+    // 注意需要加上括号，否则 syntax error
+    // https://stackoverflow.com/questions/28447297/how-to-check-for-an-empty-struct
+    if (Session{}) == session  {
+        fmt.Println("is zero value")
+    }
+
+
+如何重写结构体的方法(override)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+go 不是传统的 oop 语言，没有提供直接的支持。可以通过嵌入一个接口的方式来实现。
+
+.. code-block:: go
+
+    // https://stackoverflow.com/questions/38123911/golang-method-override
+    package main
+
+    import "fmt"
+
+    type Getter interface {
+        Get() string
+    }
+
+    type Base struct {
+        Getter
+    }
+
+    func (base *Base) Get() string {
+        return "base"
+    }
+
+    func (base *Base) GetName() string {
+        return base.Getter.Get()
+    }
+
+    // user code :
+    type Sub struct {
+        Base
+    }
+
+    func (t *Sub) Get() string {
+        return "Sub"
+    }
+    func New() *Sub {
+        userType := &Sub{}
+        userType.Getter = interface{}(userType).(Getter)
+        return userType
+    }
+
+    func main() {
+        userType := New()
+        fmt.Println(userType.GetName()) // user string
+    }
 
 
 Go 标准库相关
