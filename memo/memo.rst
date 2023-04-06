@@ -624,9 +624,9 @@ Tmux
        tmux attach-session -t $SESSION_NAME || tmux new-session -s $SESSION_NAME
    fi
 
-   # 问题：Tmux resurrect file not found! 。新版本应该是放到了 ~/.local/share/tmux/resurrect
+   # 问题：Tmux resurrect file not found! 。新版本应该是放到了 ~/.local/share/tmux/resurrect 。老版本在~/.tmux/resurrect
    function tmux-resurrect-reset-last() {
-       cd ~/.tmux/resurrect && \
+       cd ~/.local/share/tmux/resurrect && \
            ln -f -s $(/bin/ls -t tmux_resurrect_*.txt | head -n 1) last && \
            /bin/ls -l last
    }
