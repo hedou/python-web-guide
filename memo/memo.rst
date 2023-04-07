@@ -1166,6 +1166,9 @@ Ffmpeg && youbute-dl
    youtube-dl -f 22 "http://www.youtube.com/watch?v=P9pzm5b6FFY"
    youtube-dl -f bestvideo+bestaudio "http://www.youtube.com/watch?v=P9pzm5b6FFY"
 
+   # 目前youtube-dl 貌似不更新了，用 yt-dlp 代替
+   python3 -m pip install --force-reinstall https://github.com/yt-dlp/yt-dlp/archive/master.tar.gz
+
    # 转换格式，比如 flv -> mp4 https://superuser.com/questions/624565/ffmpeg-convert-flv-to-mp4-without-losing-quality
    ffmpeg -i input.flv -codec copy output.mp4
 
@@ -1208,6 +1211,13 @@ Ffmpeg && youbute-dl
 
    # pip install youtube_dl，如果报错尝试升级
    # pip install --upgrade youtube_dl
+
+   """
+   目前 youtube_dl 不再更新，可以用 yt-dlp 代替
+   python3 -m pip install --force-reinstall https://github.com/yt-dlp/yt-dlp/archive/master.tar.gz
+   import yt_dlp as youtube_dl
+   """
+
    from __future__ import unicode_literals
    import youtube_dl
 
