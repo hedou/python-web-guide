@@ -1003,6 +1003,19 @@ Git hook
     exec git diff-index --check --cached $against --
 
 
+Gitub
+------------
+克隆 Github 仓库时遇到报措 kex_exchange_identification: Connection closed by remote host。执行 `ssh -T git@github.com` 
+kex_exchange_identification: Connection closed by remote host。 可能是因为某些🪜封禁了 github 端口 22 的连接。修改端口:
+
+.. code-block:: bash
+
+  Host github.com
+      HostName ssh.github.com
+      User git
+      Port 443
+
+
 vim
 ----
 
