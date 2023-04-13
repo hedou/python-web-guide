@@ -13,3 +13,4 @@ Golang 快速入门 Go For Pythonisa ❤️
     optimize
     algorithms
     design_patterns
+    concurrency_patterns
