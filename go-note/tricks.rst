@@ -466,6 +466,7 @@ Go JSON 空值处理的一些坑，看示例
 
 - https://www.sohamkamani.com/blog/golang/2018-07-19-golang-omitempty/
 - https://ethancai.github.io/2016/06/23/bad-parts-about-json-serialization-in-Golang/
+- https://www.liwenzhou.com/posts/Go/json_tricks_in_go/
 
 Go int/int64/float 和 string 转换示例
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
