@@ -392,6 +392,7 @@ Go 数据结构与算法
 - https://golangbyexample.com/all-data-structures-golang/
 - https://github.com/emirpasic/gods
 - https://github.com/Workiva/go-datastructures
+- https://github.com/golang-collections/go-datastructures
 
 博客：
 
