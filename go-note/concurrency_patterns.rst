@@ -198,3 +198,8 @@ Future模式(也称为Promise Mode)。使用 `fire-and-forget` 方式，主进�
         res, err := f.GetResult()
         fmt.Println(res, err)
     }
+
+
+管道模式(Pipeline Mode)
+--------------------------------------------------
+也称作流水线模式
