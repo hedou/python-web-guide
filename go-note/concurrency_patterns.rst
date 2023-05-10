@@ -202,4 +202,65 @@ Future模式(也称为Promise Mode)。使用 `fire-and-forget` 方式，主进�
 
 管道模式(Pipeline Mode)
 --------------------------------------------------
-也称作流水线模式
+也称作流水线模式，一般有以下几个步骤：
+
+1. 流水线由一道道工序构成，每道工序通过通道把数据传递到下一个工序
+2. 每道工序一般会对应一个函数，函数里有协程和通道，协程一般用于处理数据并把它放入通道中，每道工序会返回这个通道以供下一道工序使用
+3. 最终要有一个组织者（示例中的main()函数）把这些工序串起来，这样就形成了一个完整的流水线，对于数据来说就是数据流
+
+.. code-block:: go
+
+    package main
+
+    import "fmt"
+
+    // 工序 1：数组生成器
+    func Generator(max int) <-chan int {
+        out := make(chan int, 100)
+        go func() {
+            for i := 1; i <= max; i++ {
+                out <- i
+            }
+            close(out)
+        }()
+        return out
+    }
+
+    // 工序 2：求整数的平方
+    func Square(in <-chan int) <-chan int {
+        out := make(chan int, 100)
+        go func() {
+            for v := range in {
+                out <- v * v
+            }
+            close(out)
+        }()
+        return out
+    }
+
+    // 工序 3：求和
+    func Sum(in <-chan int) <-chan int {
+        out := make(chan int, 100)
+        go func() {
+            var sum int
+            for v := range in {
+                sum += v
+            }
+            out <- sum
+            close(out)
+        }()
+        return out
+    }
+
+    func main() {
+        arr := Generator(5)
+        squ := Square(arr)
+        sum := <-Sum(squ)
+        fmt.Println(sum)
+    }
+
+
+扇出和扇入模式(Fan-out Fan-in)
+--------------------------------------------------
+
+参考：《Go 语言高级开发与实战》
