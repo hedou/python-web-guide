@@ -210,6 +210,51 @@ Future模式(也称为Promise Mode)。使用 `fire-and-forget` 方式，主进�
 
 .. code-block:: go
 
+    // 以组装计算机为例。三道工序：配件采购(Buy)-> 配件组装(Build) -> 打包成品(Pack)
+    func Buy(n int) <-chan string {
+        out := make(chan string)
+        go func() {
+            defer close(out)
+            for i := 1; i <= n; i++ {
+                out <- fmt.Sprintf("配件%d", i)
+            }
+        }()
+        return out
+    }
+
+    func Build(in <-chan string) <-chan string {
+        out := make(chan string)
+        go func() {
+            defer close(out)
+            for c := range in {
+                out <- fmt.Sprintf("组装(%s)", c)
+            }
+        }()
+        return out
+    }
+
+    func Pack(in <-chan string) <-chan string {
+        out := make(chan string)
+        go func() {
+            defer close(out)
+            for c := range in {
+                out <- fmt.Sprintf("打包(%s)", c)
+            }
+        }()
+        return out
+    }
+
+    func main() {
+        accessories := Buy(6)
+        computers := Build(accessories)
+        packs := Pack(computers)
+        for p := range packs {
+            fmt.Println(p)
+        }
+    }
+
+.. code-block:: go
+
     package main
 
     import "fmt"
@@ -262,5 +307,49 @@ Future模式(也称为Promise Mode)。使用 `fire-and-forget` 方式，主进�
 
 扇出和扇入模式(Fan-out Fan-in)
 --------------------------------------------------
+扇出(Fan-out)是指多个函数可以从同一个通道读取数据，直到该通道关闭。扇入(Fan-in)是指一个函数可以从多个输入中读取数据并继续进行，
+直到所有输入都关闭。扇出和扇入模式的方法是将输入通道多路复用到一个通道上，当所有输入都关闭时，该通道才关闭。
+扇出的数据流向是发散传递出去，是输出流；扇入的数据流向是汇聚进来，是输入流。
+
+.. image::  ../_image/goweb/concurrency/扇出扇入.png
+
+.. code-block:: go
+
+    // 扇入函数，把多个channel 中的数据发送到一个 channel 中
+    func Merge(ins ...<-chan string) <-chan string {
+        var wg sync.WaitGroup
+        out := make(chan string)
+
+        p := func(in <-chan string) {
+            defer wg.Done()
+            for c := range in {
+                out <- c
+            }
+        }
+
+        wg.Add(len(ins))
+        // 扇入
+        for _, cs := range ins {
+            go p(cs)
+        }
+        go func() {
+            wg.Wait()
+            close(out)
+        }()
+        return out
+    }
+
+    func main() {
+        accessories := Buy(12)
+        computers1 := Build(accessories)
+        computers2 := Build(accessories)
+        computers3 := Build(accessories)
+        computers := Merge(computers1, computers2, computers3)
+        packs := Pack(computers)
+        for p := range packs {
+            fmt.Println(p)
+        }
+    }
+
 
 参考：《Go 语言高级开发与实战》
