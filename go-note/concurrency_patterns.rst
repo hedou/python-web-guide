@@ -352,4 +352,93 @@ Future模式(也称为Promise Mode)。使用 `fire-and-forget` 方式，主进�
     }
 
 
+协程池模式
+--------------------------------------------------
+即便 go 的协程比较轻量，但是当需要操作大量 goroutine 的时候，依然有内存开销和 GC 的压力。可以考虑使用协程池减少频繁创建销毁协程的开销。
+
+.. code-block:: go
+
+    package main
+
+    import (
+        "fmt"
+        "sync"
+        "sync/atomic"
+    )
+
+    // 任务处理器
+    type TaskHandler func(interface{})
+
+    // 任务结构体
+    type Task struct {
+        Param   interface{}
+        Handler TaskHandler
+    }
+
+    // 协程池接口
+    type WorkerPoolImpl interface {
+        AddWorker()
+        SendTask(Task)
+        Release()
+    }
+
+    // 协程池
+    type WorkerPool struct {
+        wg   sync.WaitGroup
+        inCh chan Task
+    }
+
+    func (d *WorkerPool) AddWorker() {
+        d.wg.Add(1)
+        go func() {
+            defer d.wg.Done()
+            for task := range d.inCh {
+                task.Handler(task.Param)
+            }
+        }()
+    }
+
+    func (d *WorkerPool) Release() {
+        close(d.inCh)
+        d.wg.Wait()
+    }
+
+    func (d *WorkerPool) SendTask(t Task) {
+        d.inCh <- t
+    }
+
+    func NewWorkerPool(buffer int) WorkerPoolImpl {
+        return &WorkerPool{
+            inCh: make(chan Task, buffer),
+        }
+    }
+
+    func main() {
+        bufferSize := 100
+        var workerPool = NewWorkerPool(bufferSize)
+        workers := 4
+        for i := 0; i < workers; i++ {
+            workerPool.AddWorker()
+        }
+
+        var sum int32
+        testFunc := func(i interface{}) {
+            n := i.(int32)
+            atomic.AddInt32(&sum, n)
+        }
+
+        var i, n int32
+        n = 100
+        for ; i < n; i++ {
+            task := Task{
+                i,
+                testFunc,
+            }
+            workerPool.SendTask(task)
+        }
+        workerPool.Release()
+        fmt.Println(sum) // 4950
+    }
+
+
 参考：《Go 语言高级开发与实战》
