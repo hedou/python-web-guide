@@ -73,15 +73,11 @@ Go 设计模式
     var singleInstance *single
 
     func getInstance() *single {
-            if singleInstance == nil {
-                    once.Do(func() {
-                            fmt.Println("Creting Single Instance Now")
-                            singleInstance = &single{}
-                    })
-            } else {
-                    fmt.Println("Single Instance already created-2")
-            }
-            return singleInstance
+        once.Do(func() {
+            fmt.Println("Creting Single Instance Now")
+            singleInstance = &single{}
+        })
+        return singleInstance
     }
 
 参考:
