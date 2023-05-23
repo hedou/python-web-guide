@@ -19,7 +19,7 @@ Go 设计模式
 
     1. 使用 lock，为了并发安全，使用 lock + double check
     2. 使用 sync.Once (推荐👍)
-    3. 使用 init() The init function is only called once per file in a package,  so we can be sure that only a single instance will be created
+    3. 使用 init()。The init function is only called once per file in a package,  so we can be sure that only a single instance will be created
 
     参考：
 
@@ -85,3 +85,5 @@ Go 设计模式
 
 - `Go Patterns (github) <https://github.com/tmrts/go-patterns>`_
 - `All Design Patterns in Go (Golang) <https://golangbyexample.com/singleton-design-pattern-go/>`_
+- `设计模式Golang实现 <https://github.com/senghoo/golang-design-pattern/tree/master>`_
+
