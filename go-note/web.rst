@@ -49,7 +49,7 @@ Go 常用框架(工具)技术雷达 ❤️
 - mongodb: mongodb/mongo-go-driver
 - id生成器: rx/xid, beinan/fastid, bwmarrin/snowflake, sony/sonyflake, godruoyi/go-snowflake
 - uuid: gofrs/uuid, satori/go.uuid, google/uuid (注意有些会 panic)
-- hash: cespare/xxhash(快速 hash)
+- hash: cespare/xxhash(快速 hash), groupcache/consistenthash(一致性哈希)
 - cache(in memory并发安全): patrickmn/go-cache, allegro/bigcache, golang/groupcache(分布式), coocood/freecache, singleflight(防止缓存击穿), dgraph-io/ristretto, orcaman/concurrent-map(泛型)
 - cache(基于context): ag9920/go-ctxcache (基于context缓存解决重复调用放大问题)
 - cache(lru/lfu/2Q/ARC): hashicorp/golang-lru, bluele/gcache, songangweb/mcache(增强lru)
