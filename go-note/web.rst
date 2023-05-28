@@ -112,7 +112,7 @@ Go 常用框架(工具)技术雷达 ❤️
 - 时间处理：jinzhu/now
 - 金融数字格式化/定点数: leekchan/accounting, shopspring/decimal
 - 分布式事务：yedf/dtm
-- 分布式锁: go-redsync/redsync(redlock算法)
+- 分布式锁: go-redsync/redsync(redlock算法), bsm/redislock, go-zero/core/stores/redis
 - Zookeeper: go-zookeeper/zk
 - 设计模式：tmrts/go-patterns
 - 数据结构：deckarep/golang-set, emirpasic/gods
