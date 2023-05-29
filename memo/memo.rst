@@ -1039,9 +1039,13 @@ vim
    :windo diffthis
    :diffoff!
 
-   # 解决中文输入法的问题
+   # 解决mac vim 中文输入法的问题
    # https://www.jianshu.com/p/4d81b7e32bff
    # https://zhuanlan.zhihu.com/p/23939198
+   brew tap daipeihust/tap && brew install im-select # 终端下执行此命令安装 im-select
+   # 然后 vim 配置加入这一行 (ABC 是默认输入法，直接输入 im-select 可以看到你的默认值)
+   `autocmd InsertLeave * :silent !/usr/local/bin/im-select com.apple.keylayout.ABC`
+
 
    # 如果跳转到跳转之前的位置, https://vi.stackexchange.com/questions/2001/how-do-i-jump-to-the-location-of-my-last-edit
    # 使用场景：比如在当前函数里使用了logging，发现logging import，我会跳转到文件头去 import logging，编辑完后进入normal模式使用  `` 就可以跳转到之前编辑位置
@@ -1065,6 +1069,12 @@ vim
    # vim 去掉 ^M 字符（这个字符用 type CTRL-V, then CTRL-M. 打出来）。
    # 或者 brew isntall dos2unix，然后 dos2unix filename
    :s/^M$//
+
+
+   # vim 鼠标拖移窗口大小。设置鼠标支持即可。如果不生效：Iterm2->Profiles->Terminal->"Enable mouse reporting" 勾一下
+   # 参考：https://stackoverflow.com/questions/62582721/how-to-fix-restore-mouse-controls-in-tmux-on-iterm2
+   :set mouse=a
+
 
 * `《vim cheet sheet》 <https://vim.rtorr.com/lang/zh_cn/>`_
 
