@@ -120,6 +120,7 @@ Go 常用框架(工具)技术雷达 ❤️
 - 通用工具库：duke-git/lancet
 - 深拷贝：mohae/deepcopy, barkimedes/go-deepcopy
 - 采样监控：mosn/holmes(排查OOM等问题)
+- 规则引擎：govaluate, goengine, gorule
 
 工具:
 
