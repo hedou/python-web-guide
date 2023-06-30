@@ -1146,9 +1146,7 @@ keys.
 
 hash方法有个hash函数用来给key计算一个hash值，作为数组下标，放到该下标对应的槽中。当不同key根据hash函数计算得到的下标相同时，就出现了冲突。解决冲突有很多方式，比如让每个槽成为链表，每次冲突以后放到该槽链表的尾部，但是查询时间就会退化，不再是O(1)。还有一种探查方式，当key的槽冲突时候，就会根据一种计算方式去寻找下一个空的槽存放，探查方式有线性探查，二次方探查法等，cpython解释器使用的是二次方探查法。还有一个问题就是当python使用的槽数量大于预分配的2/3时候，会重新分配内存并拷贝以前的数据，所以有时候dict的add操作代价还是比较高的，牺牲空间但是可以始终保证O(1)的查询效率。如果有大量的数据，建议还是使用bloomfilter或者redis提供的HyperLogLog。
 
-如果你感兴趣，可以看看这篇文章，介绍c解释器如何实现的python
-dict对象：\ `Python dictionary
-implementation <http://www.laurentluce.com/posts/python-dictionary-implementation/>`__\ 。我们使用Python来实现一个类似的hash结构。
+如果你感兴趣，可以看看这篇文章，介绍c解释器如何实现的python dict对象： `Python dictionary implementation <http://www.laurentluce.com/posts/python-dictionary-implementation/>`__ 。我们使用Python来实现一个类似的hash结构。
 
 ::
 
