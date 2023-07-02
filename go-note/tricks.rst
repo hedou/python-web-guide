@@ -858,17 +858,20 @@ Go rand 的坑
 
 Go 循环引用(import cycle)
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-项目大了之后如果包没设计好可能会出现循环引用包的问题，导致构建的时候提示 import cycle 失败。
+项目大了之后如果包没设计好可能会出现循环引用包的问题，导致构建的时候提示 import cycle not allowed 失败。
 可以用 `go list -f '{\{join .DepsErrors "\n"\}}' <import-path>` 来获取循环引用信息。
 或者使用第三方工具： `go get github.com/kisielk/godepgraph` 安装后执行 `godepgraph -s import-cycle-example | dot -Tpng -o godepgraph.png`
 
 如何解决循环引用的问题：
 
-- 通过 interface 解耦
-- 合理设计包的内容，比如单独提出第三个包供另外两个包引入。(底层的包不要引入上层的包，否则很容易出现循环引用)
+- 通过 interface 解耦，打破循环依赖
+- 合理设计包的内容，比如单独提出第三个包供另外两个包引入(mediator design pattern)。(底层的包不要引入上层的包，否则很容易出现循环引用)
 - 使用 go:linkname (不建议)
 
-参考: https://jogendra.dev/import-cycles-in-golang-and-how-to-deal-with-them
+参考:
+
+- https://jogendra.dev/import-cycles-in-golang-and-how-to-deal-with-them
+- https://www.positioniseverything.net/import-cycle-not-allowed/
 
 Go 结构体相关
 --------------------------------------------------
