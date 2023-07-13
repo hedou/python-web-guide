@@ -36,6 +36,8 @@ highlight_language = "none"
 autodoc_member_order = "bysource"
 autoclass_content = "both"
 
+pygments_style = 'sphinx'
+
 # Without this line sphinx includes a copy of object.__init__'s docstring
 # on any class that doesn't define __init__.
 # https://bitbucket.org/birkenfeld/sphinx/issue/1337/autoclass_content-both-uses-object__init__
@@ -83,3 +85,7 @@ if not on_rtd:
     import sphinx_rtd_theme
     html_theme = 'sphinx_rtd_theme'
     html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+
+# Disable epub mimetype warnings https://github.com/sphinx-doc/sphinx/issues/10350
+suppress_warnings = ["epub.unknown_project_files"]
+

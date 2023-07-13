@@ -8,6 +8,12 @@ SPHINXOPTS=-n -W -d $(BUILD_DIR)/doctrees .
 html:
 	sphinx-build -b html $(SPHINXOPTS) $(BUILD_DIR)/html
 
+.PHONY: epub
+epub:
+	sphinx-build -b epub $(SPHINXOPTS) $(BUILD_DIR)/epub
+	@echo
+	@echo "Build finished. The epub file is in $(BUILD_DIR)/epub."
+
 .PHONY: coverage
 coverage:
 	sphinx-build -b coverage ${SPHINXOPTS} $(BUILD_DIR)/coverage
