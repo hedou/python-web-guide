@@ -960,7 +960,7 @@ dispatching来实现，以一个事件驱动系统来说明：
 ------------------------------------------------------------------------------
 
 本章我们实现一个简单的控制大门Gate类的DSL。使用\ `pyparsing <http://infohost.nmt.edu/tcc/help/pubs/pyparsing/web/index.html>`__\ 来解析我们定义的控制大门的语法命令。
-pyparsing自带了很多有用的函数和类帮助我们从文本中抽取需要的信息，比如我们方便地处理c++源文件中的注释:(`pip install pyparsing`)
+pyparsing自带了很多有用的函数和类帮助我们从文本中抽取需要的信息，比如我们方便地处理c++源文件中的注释:(``pip install pyparsing``)
 
 ::
 

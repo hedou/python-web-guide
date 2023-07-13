@@ -13,7 +13,7 @@ Go 性能优化
 
 优化建议：
 
-- 预分配内存。slice/map 如果预知容量信息，初始化应该提供，减少内存重分配和复制元素的消耗。 `make([]int, 0, cap); make(map[int]int, cap)`
+- 预分配内存。slice/map 如果预知容量信息，初始化应该提供，减少内存重分配和复制元素的消耗。 ``make([]int, 0, cap); make(map[int]int, cap)``
 - 使用 strings.Builder 拼接大量字符串
 - 使用空的结构体作为占位符，空结构体 struct{} 不占内存。 比如实现 set 使用 map[string]struct{}{}
 - 使用 atomic 代替 sync 包。atomic 包的操作指令级支持
@@ -62,7 +62,7 @@ string 与 []byte 互转
 大量字符串拼接
 ---------------------------------------------------------------
 字符串在 go 中是不可变对象。大量字符串(一般超过 5 个字符串)拼接不要用 + ，使用 bytes.Buffer 或者 strings.Builder。
-不过对于个数比较少的字符串拼接，直接用 `+` 效率也很高，比 fmt.Sprintf 更快，所以少量字符串拼接可以放心使用 `+` 。
+不过对于个数比较少的字符串拼接，直接用 + 效率也很高，比 fmt.Sprintf 更快，所以少量字符串拼接可以放心使用 + 。
 
 .. code-block:: go
 
@@ -135,5 +135,5 @@ Go 内置的 rand.Int()在生成随机数时，为了并发安全底层使用了
 正确设置容器 CPU 配额
 ---------------------------------------------------------------
 容器中运行 Go 程序需要正确设置 GOMAXPROCS，推荐使用 https://github.com/uber-go/automaxprocs 这个库，直接一行代码就可以。
-`import _ "go.uber.org/automaxprocs"`
+``import _ "go.uber.org/automaxprocs"``
 

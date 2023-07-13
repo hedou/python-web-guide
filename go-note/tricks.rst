@@ -99,7 +99,7 @@ Go 运行单个测试文件报错 undefined？
 
 执行命令时加入这个测试文件需要引用的源码文件，在命令行后方的文件都会被加载到command-line-arguments中进行编译
 
-`go test -v getinfo_test.go  lib.go`
+``go test -v getinfo_test.go  lib.go``
 
 - https://www.cnblogs.com/Detector/p/10010292.html
 - https://stackoverflow.com/questions/14723229/go-test-cant-find-function-in-a-same-package
@@ -586,7 +586,7 @@ Go没有提供内置的枚举类型，不过可以使用自定义类型和常量
 Go 如何断判非空字符串/slice
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-标准库实际上 `len(s) != 0` 和 `s != ""` 都有使用，我个人倾向于 `s != ""` 看起来更清楚，区分其他容器类型判断的方式。
+标准库实际上 ``len(s) != 0`` 和 ``s != ""`` 都有使用，我个人倾向于 ``s != ""`` 看起来更清楚，区分其他容器类型判断的方式。
 比如如果使用 slice 可以使用 len(slice) == 0 判断是否为空。
 
 同时注意空的 slice 和 nil slice 的区别，判断的时候如果是 nil 需要显示判断是否为 nil，而使用 len 判断两者都为 0.
@@ -794,7 +794,7 @@ go 官方目前仍在讨论是否要改善这个问题：https://github.com/gola
 
 解决方式：
 
-1. 创建一个临时局部变量(`v:=v`)
+1. 创建一个临时局部变量(``v:=v``)
 2. 作为参数传入(解决goroutine场景)
 3. for 循环中推荐直接只迭代下标的方式从原来的数组获取值
 
@@ -843,7 +843,7 @@ An interface holding nil value is not nil. An interface equals nil only if both 
 
 逃逸分析
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-想要知道变量在 stask 还是 heap 分配使用 `go run -gcflags -m app.go`
+想要知道变量在 stask 还是 heap 分配使用 ``go run -gcflags -m app.go``
 
 报错：go test flag: flag provided but not defined
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -853,14 +853,14 @@ An interface holding nil value is not nil. An interface equals nil only if both 
 
 Go rand 的坑
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-如果忘记调用 `rand.Seed(time.Now().UnixNano())` 每次重新运行返回结果是相同的，应该在程序初始化的时候比如 init 函数调用一次 seed。
+如果忘记调用 ``rand.Seed(time.Now().UnixNano())`` 每次重新运行返回结果是相同的，应该在程序初始化的时候比如 init 函数调用一次 seed。
 
 
 Go 循环引用(import cycle)
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 项目大了之后如果包没设计好可能会出现循环引用包的问题，导致构建的时候提示 import cycle not allowed 失败。
-可以用 `go list -f '{\{join .DepsErrors "\n"\}}' <import-path>` 来获取循环引用信息。
-或者使用第三方工具： `go get github.com/kisielk/godepgraph` 安装后执行 `godepgraph -s import-cycle-example | dot -Tpng -o godepgraph.png`
+可以用 ``go list -f '{\{join .DepsErrors "\n"\}}' <import-path>`` 来获取循环引用信息。
+或者使用第三方工具： ``go get github.com/kisielk/godepgraph`` 安装后执行 ``godepgraph -s import-cycle-example | dot -Tpng -o godepgraph.png``
 
 如何解决循环引用的问题：
 
@@ -1111,7 +1111,7 @@ Go 错误处理的一些建议
 
 1. 如果封装了原始的 error，应该使用 errors.Is(error value) 和 errors.As(error type)判断
 2. 不要多次处理错误，打日志或者返回 error 不要同时做。内层错误 wrap 之后，外层统一处理打印
-3. 不要忽略错误。如果明确可以忽略也要显示忽略并且加上注释。 `_ = func()`
+3. 不要忽略错误。如果明确可以忽略也要显示忽略并且加上注释。 ``_ = func()``
 
 
 并发编程
@@ -1200,7 +1200,7 @@ Go panic 场景 ⚠️
 在《Go 编程之旅》中总结了一些 panic 场景，写 go 的时候注意下，防止进程退出：
 
 - 数组/切片越界。确保下标在数组长度范围内；确保使用之前是否为 nil 或者空数组
-- 空指针访问。比如访问一个 nil 结构体成员或者嵌套的 nil 成员, `a.b.c` 但是 b 是一个空指针就会 panic(嵌套多了有时候不易发现)
+- 空指针访问。比如访问一个 nil 结构体成员或者嵌套的 nil 成员, ``a.b.c`` 但是 b 是一个空指针就会 panic(嵌套多了有时候不易发现)
 - 过早关闭 HTTP 响应体
 - 除以 0
 - 向已经关闭的 channel 发送消息(或者多次close同一个 channel)
@@ -1208,7 +1208,7 @@ Go panic 场景 ⚠️
 - 关闭未初始化的 channel
 - 跨协程的 panic 处理。main 协程中无法处理对子协程的 panic
 - sync 计数为负数。(比如 sync.WaitGroup 确保 Add和Done 的次数是对应一致的)
-- 类型断言不匹配。`var a interface{} = 1; fmt.Println(a.(string))` 会 panic，建议用 `s,ok := a.(string)`
+- 类型断言不匹配。``var a interface{} = 1; fmt.Println(a.(string))`` 会 panic，建议用 ``s,ok := a.(string)``
 - 危险的 map
 
   - 赋值之前必须用 make 创建。注意访问 map 不存在的 key 不会 panic，而是返回 map 类型对应的零值，但是不能直接声明就赋值，而是要用make创建
@@ -1232,7 +1232,7 @@ Go 内存泄露场景
 - time.Ticker 忘记 stop。注意Ticker 和 Timer 是不同的。Timer 只会定时一次，而 Ticker 如果不 Stop，就会一直发送定时。建议用defer 进行stop
 - channel 误用造成的泄露
 
-  - 如果接收者需要在 channel 关闭之前提前退出，为防止内存泄漏，在发送者与接收者发送次数是一对一时，应设置 channel 缓冲队列为 1；`ch := make(chan struct{}, 1)`
+  - 如果接收者需要在 channel 关闭之前提前退出，为防止内存泄漏，在发送者与接收者发送次数是一对一时，应设置 channel 缓冲队列为 1；``ch := make(chan struct{}, 1)``
   - 在发送者与接收者的发送次数是多对多时，应使用专门的 stop channel 通知发送者关闭相应 channel。
 
 - 使用了 cgo。为了不让goroutine阻塞，cgo都是单独开一个线程处理，这种场景 runtime 无法管理。如果cgo处理逻辑有阻塞，可能导致线程数保障
@@ -1259,8 +1259,8 @@ Go goroutine 泄露(堆积)
 如何发现：
 
 - 使用开源工具: github.com/uber-go/goleak
-- runtime 协程数量监控：`runtime.NumGoroutine()`
-- pprof: `pprof.Lookup("goroutine")`
+- runtime 协程数量监控：``runtime.NumGoroutine()``
+- pprof: ``pprof.Lookup("goroutine")``
 
 参考：
 

@@ -274,7 +274,7 @@ Go项目Layout
 - sqlmock: 如果依赖了数据库 mysql 等，可以使用 sqlmock 模拟数据库返回内容。（或者就在测试环境用真实的 mysql，测试完清理插入的测试数据)
 - httpmock: 用来 mock 调 http 请求
 - github.com/alicebob/miniredis 可以用来 mock redis，无需启动真实的 resdis server。试了下非常好用，也不用使用 mock 和真实的 redis 了。个人强烈推荐
-- bouk/monkey: 通过替换函数指针的方式修改任意函数的实现，如果以上都无法满足需求，可以用这种比较 hack 的方式。可能需要禁止编译器内联优化 `go test -gcflask=-l ./...`
+- bouk/monkey: 通过替换函数指针的方式修改任意函数的实现，如果以上都无法满足需求，可以用这种比较 hack 的方式。可能需要禁止编译器内联优化 ``go test -gcflask=-l ./...``
 - agiledragon/gomonkey: go 语言实现 monkey patch
 
 目前比较推荐使用 assert 做断言，使用 gomonkey 用来 mock 函数/方法等。
@@ -333,7 +333,7 @@ Go 通过两个环境变量控制跨平台编译：
 
 比如现在在用 macOS AMD64 开发，但是想要编译出 Linux AMD64 的可执行程序，只需要执行：
 
-`GOOS=linux GOARCH=amd64 go build main.go`
+``GOOS=linux GOARCH=amd64 go build main.go``
 
 Go Debug 调试工具
 ---------------------------------------------------------------

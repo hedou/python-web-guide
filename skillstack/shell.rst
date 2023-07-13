@@ -59,6 +59,6 @@ ag 搜索
 * ag <something> 在目录所有文件中寻找 something
 * ag <something> <--python> 在所有 Python 文件中搜索 something
 
-`autojump <https://github.com/joelthelion/autojump>`
+``autojump <https://github.com/joelthelion/autojump>``
 
 * j <dir> 根据最近工作目录记录跳转到最合适的位置。

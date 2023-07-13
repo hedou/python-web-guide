@@ -7,7 +7,7 @@ HG
 
 1. fetch 某个分支
 
-   `hg fetch http://xxx.xxx.xxx.xxx:8000 -r <分支名>`
+   ``hg fetch http://xxx.xxx.xxx.xxx:8000 -r <分支名>``
 
 #. 在docker中互相fetch
 
@@ -29,7 +29,7 @@ gentoo下emerge访问墙外资源
 
 1. emerge设置HTTP代理
 
-   在 `/etc/make.conf` 写入代理配置
+   在 ``/etc/make.conf`` 写入代理配置
 
    ::
       
@@ -38,7 +38,7 @@ gentoo下emerge访问墙外资源
 
 #. 安装配置HTTP代理工具polipo
 
-    `sudo emerge polipo` 即可完成安装,安装后在 `/etc/polipo/conf` 中写入
+    ``sudo emerge polipo`` 即可完成安装,安装后在 ``/etc/polipo/conf`` 中写入
 
    ::
 
@@ -87,29 +87,29 @@ vim黑科技
 
    有的时候，在插入模式下从系统粘贴板粘贴文本到vim中会出现缩进异常的情况，为了解决这种问题，在粘贴前应该设置vim为粘贴模式并在粘贴完成后取消粘贴模式
 
-   `:set paste`
+   ``:set paste``
 
-   `:set nopaste`
+   ``:set nopaste``
 
 #. 你滚开
 
    如果你在一个文件中滚动屏幕，那么另一个文件也会自动滚动以显示相同的位置。你可以使用以下命令，取消联动：
 
-   `:set noscrollbind`
+   ``:set noscrollbind``
 
    使用以下命令，将重新绑定联动：
 
-   `:set scrollbind`
+   ``:set scrollbind``
 
    利用以下命令，可以定义滚动方式：
 
-   `:set scrollopt ver,hor,jump`
+   ``:set scrollopt ver,hor,jump``
 
    其中：选项ver ，启用垂直同步滚动；选项hor ，启用水平同步滚动；而jump 选项，则在切换窗口时，使垂直滚动始终同步。
 
    如果光标停留在两个文件的不同位置，那么可以使用下面的命令同步滚动：
 
-   `:syncbind`
+   ``:syncbind``
 
 vim插件及使用
 -----------------------
@@ -129,23 +129,23 @@ iptables
 
 1. 列出所有规则
 
-   `iptables -nvL  -t nat --line-number <chain name>`
+   ``iptables -nvL  -t nat --line-number <chain name>``
 
    列出nat表的所有规则并显示行号
 
 #. 清零流量统计
 
-   `iptables -Z <Chain>`
+   ``iptables -Z <Chain>``
 
 #. 删除
 
-   `iptables -t nat -D DOCKER 13`
+   ``iptables -t nat -D DOCKER 13``
 
    删除nat表DOCKER链的第13行的规则
 
 #. 用iptables给Docker添加端口映射 
 
-   `iptables -t nat -A DOCKER --in-interface \!docker0 -p tcp --dport 6666 -j DNAT --to 172.17.0.5:6666`
+   ``iptables -t nat -A DOCKER --in-interface \!docker0 -p tcp --dport 6666 -j DNAT --to 172.17.0.5:6666``
 
    docker会在系统中创建一个叫docker0的网卡，本例中172.17.0.5就是docker0的IP地址
 
@@ -167,7 +167,7 @@ ssh客户端配置文件
         Port 端口号
         IdentityFile 公钥 
 
-在~/.ssh/目录下创建一个config文件，在config中写入相应的配置后就可以使用 `ssh \<主机别名\>` 直接连接服务器了
+在~/.ssh/目录下创建一个config文件，在config中写入相应的配置后就可以使用 ``ssh \<主机别名\>`` 直接连接服务器了
 
 保障服务器安全
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -197,9 +197,9 @@ curl和wget是单线程的，使用这货的多线程方式下载文件会显著
 
 1. 安装
 
-   gentoo下 `sudo emerge axel`
+   gentoo下 ``sudo emerge axel``
 
-   centos下 `sudo yum install axel`
+   centos下 ``sudo yum install axel``
 
 #. 使用
 
@@ -212,12 +212,12 @@ docker 的一个奇怪命令
 
 docker run -e MYSQL_ROOT_PASSWORD=rstfsgbcedh --expose 3306  --entrypoint="/entrypoint.sh" --name mysql-hg -d mush/mysql-hg mysqld
 
-如果遇到 TERM environment variable not set. 就执行 `export TERM=dumb`
+如果遇到 TERM environment variable not set. 就执行 ``export TERM=dumb``
  
 redis in docker
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-当我们在使用docker提供redis服务时, 如果我们需要执行一个redis命令就需要使用 `docker exec <option> redis <command> redis-cli` 的形式.
+当我们在使用docker提供redis服务时, 如果我们需要执行一个redis命令就需要使用 ``docker exec <option> redis <command> redis-cli`` 的形式.
 
 但是这一个问题, 如果使用-d的option, 它就会后台执行, 我们不知道其何时执行玩, 使用-i又会导致挂起, 下面是一个执行并退出的方法.
 
@@ -248,11 +248,11 @@ redis批量删除key
 
 1. 启动一个数据卷容器
  
-   `docker run -d -v /data --name \<your name\>_data pevc/data echo data_only for database`
+   ``docker run -d -v /data --name \<your name\>_data pevc/data echo data_only for database``
 
 #. 启动一个开发容器
 
-   `docker run -d -i -p 9005:80 -p 10005:22 -p 8005:8000  --volumes-from \<your name\>_data --name \<your name\>_42web mush/ac /usr/sbin/sshd -D -f /etc/ssh/sshd_config`
+   ``docker run -d -i -p 9005:80 -p 10005:22 -p 8005:8000  --volumes-from \<your name\>_data --name \<your name\>_42web mush/ac /usr/sbin/sshd -D -f /etc/ssh/sshd_config``
 
    需要注意端口号，run之前先看下别人用了哪些端口了，一般就将端口号加一就行了。
 
@@ -298,11 +298,11 @@ dnsmasq配置
 
    修改/etc/hosts,增加一行
 
-   `<some ip> b.com`
+   ``<some ip> b.com``
 
    在dnsmasq.conf中增加
 
-   `cname=a.com,b.com`
+   ``cname=a.com,b.com``
 
 不要依赖工具
 -----------------------
@@ -316,7 +316,7 @@ https://github.com/sripathikrishnan/redis-rdb-tools
 Python抽象方法
 -----------------------
 
-Python中抽象方法有两种实现,一是通过抛出 `NotImplementedError` 异常, 而是通过abc模块.
+Python中抽象方法有两种实现,一是通过抛出 NotImplementedError 异常, 而是通过abc模块.
 
 例如
 

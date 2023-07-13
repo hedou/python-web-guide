@@ -1138,7 +1138,7 @@ and thus a solution can be implemented using a iterative loop instead.
 11章：Hash Tables
 --------------------
 
-基于比较的搜索（线性搜索，有序数组的二分搜索）最好的时间复杂度只能达到O(logn)，利用hash可以实现O(1)查找，python内置dict的实现方式就是hash，你会发现dict的key必须要是实现了 `__hash__` 和 `__eq__` 方法的。
+基于比较的搜索（线性搜索，有序数组的二分搜索）最好的时间复杂度只能达到O(logn)，利用hash可以实现O(1)查找，python内置dict的实现方式就是hash，你会发现dict的key必须要是实现了 ``__hash__`` 和 ``__eq__`` 方法的。
 
 Hashing: hashing is the process of mapping a search a key to a limited
 range of array indeices with the goal of providing direct access to the

@@ -399,7 +399,7 @@ OrderedMap (类似 python collections.OrderedDict)
 
 Heap 堆
 --------------------------------------------------
-go 自带了一个 `container/heap` 模块可以用来实现堆。
+go 自带了一个 ``container/heap`` 模块可以用来实现堆。
 
 .. code-block:: go
 

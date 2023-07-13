@@ -23,7 +23,7 @@ Mysql
 
 有时候没法生成文件（权限原因），可以直接生成 sql 语句 copy 下来复制到命令行也可以，或者连接成一行方便复制：
 
-.. code-block:: sql
+.. code-block:: bash
 
     mysql > select concat('KILL ',id,';') from information_schema.processlist where db='dbname';`
 
@@ -65,7 +65,7 @@ Mysql
 删除大表(借助一个临时表)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code-block:: sql
+.. code-block:: bash
 
     # https://stackoverflow.com/questions/879327/quickest-way-to-delete-enormous-mysql-table
     CREATE TABLE new_foo LIKE foo;
@@ -89,7 +89,7 @@ Mysql
 统计数据库大小
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code-block:: sql
+.. code-block:: bash
 
    # https://stackoverflow.com/questions/1733507/how-to-get-size-of-mysql-database
    SELECT table_schema "DB Name",
@@ -122,9 +122,9 @@ Mysql
 
 纵向显示
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-有时候表字段比较多的时候，查询结果显示会很乱，可以使用竖屏显示的方式，结尾加上 `\\G`
+有时候表字段比较多的时候，查询结果显示会很乱，可以使用竖屏显示的方式，结尾加上 ``\G``
 
-.. code-block:: sql
+.. code-block:: bash
 
     mysql > select * from user limit 10 \G
 

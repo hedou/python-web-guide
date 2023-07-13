@@ -26,7 +26,7 @@ Emacs则奉行“Everything at reach”设计哲学，通过强大的扩展性�
 ------------------
 
 Vim 有两种模式——Normal 模式和 Insert 模，所有命令都是在 Normal 模式下执行。启动 Vim 后，默认进入 Normal 模式，
-可以按 `i` 键进入 Insert 模式，或者 `s` 删除当前字符并进入 Insert 模式，退出 Insert 模式进入 Normal 按 `ESC` 。 
+可以按 i 键进入 Insert 模式，或者 s 删除当前字符并进入 Insert 模式，退出 Insert 模式进入 Normal 按 ESC 。 
 
 下面的教程中约定 + 表示同时按其左右的按键，小写字母（如 i）表示按该字母一次，大写字母（如 G）表示同时按 shift+g。
 
@@ -59,7 +59,7 @@ Vim 有两种模式——Normal 模式和 Insert 模，所有命令都是在 Nor
 * u 撤销上一步操作
 * zo/zn/zc 折叠/展开代码块
 * :vsp 新建工作区
-* ctrl+w 松手后再按 `方向键` 切换工作区
+* ctrl+w 松手后再按 方向键 切换工作区
 * :MR 选择最近打开的文件（需安装插件）
 * F12 运行当前文件 
 * # 搜索光标处短语
@@ -75,7 +75,7 @@ Vim 有两种模式——Normal 模式和 Insert 模，所有命令都是在 Nor
 * 光标移至行首
 * I 进入插入模式
 * 输入注释符号
-* 双击 `ESC`
+* 双击 ESC
 
 如何配置
 ------------------

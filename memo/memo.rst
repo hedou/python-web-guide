@@ -59,8 +59,8 @@ pip/easy_install
 
 有时候 pip 安装会比较慢可以更换为豆瓣的源，两种方式
 
-1. `pip install redis -i https://pypi.doubanio.com/simple`
-2. 或者修改全局 `vi ~/.pip/pip.conf`
+1. ``pip install redis -i https://pypi.doubanio.com/simple``
+2. 或者修改全局 ``vi ~/.pip/pip.conf``
 
 .. code-block:: shell
 
@@ -83,7 +83,7 @@ IPython
    In [2]: %autoreload 2
 
 
-.. code-block:: python
+.. code-block:: python3
 
    # -*- coding: utf-8 -*-
 
@@ -129,6 +129,8 @@ IPython
    pp = pprint.pprint
    json_dumps = _json_dumps
 
+.. code-block:: sh
+
    # http://shawnleezx.github.io/blog/2015/08/03/some-notes-on-ipython-startup-script/
    """
    !!! 注意，如果遇到了 TypeError: super(type, obj): obj must be an instance or subtype of type
@@ -150,7 +152,7 @@ IPython
 
 Ipdb
 ---------------------------------------------------------------
-.. code-block:: python
+.. code-block:: sh
 
    # ~/.pdbrc
    # https://github.com/gotcha/ipdb/issues/111
@@ -514,7 +516,7 @@ crontab
 
 可以用如下方式执行依赖其他模块的python脚本，用run.sh执行run.py，记得chmod +x可执行权限，运行前执行下sh脚本测试能否成功
 
-.. code-block:: python
+.. code-block:: sh
 
     #!/usr/bin/env bash
     PREFIX=$(cd "$(dirname "$0")"; pwd)
@@ -1005,7 +1007,7 @@ Git hook
 
 Gitub
 ------------
-克隆 Github 仓库时遇到报措 kex_exchange_identification: Connection closed by remote host。执行 `ssh -T git@github.com` 
+克隆 Github 仓库时遇到报措 kex_exchange_identification: Connection closed by remote host。执行 ``ssh -T git@github.com``
 kex_exchange_identification: Connection closed by remote host。 可能是因为某些🪜封禁了 github 端口 22 的连接。修改端口:
 
 .. code-block:: bash
@@ -1359,7 +1361,7 @@ Capture -> Options -> lo0 抓本地 127.0.0.1 包。筛选 tcp.port == 6379 抓 
 抓包后点击一条选择右键 Follow -> TCP Stream 就可以查看 tcp 包发送的文本内容。
 
 抓包iOS: 输入 rvictl -s 设备[udid]。格式是rvictl -s [设备udid]，设备的udid可以通过itunes或者itools获取
-`system_profiler SPUSBDataType | grep "Serial Number:.*" | sed s#".*Serial Number: "##`
+``system_profiler SPUSBDataType | grep "Serial Number:.*" | sed s#".*Serial Number: "##``
 
 
 - https://serverfault.com/questions/22990/is-there-a-way-to-get-wireshark-to-capture-packets-sent-from-to-localhost-on-win

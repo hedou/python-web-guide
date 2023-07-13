@@ -77,25 +77,25 @@ hg 基本流程
 Tips
 ----------------------
 
-* 向版本库添加/删除文件 `hg add/rm <path>`
+* 向版本库添加/删除文件 ``hg add/rm <path>``
 
-* 移动版本库中的文件 `hg mv`
+* 移动版本库中的文件 ``hg mv``
 
-* 查找某段代码的责任人 `hg blame`
+* 查找某段代码的责任人 ``hg blame``
 
-* 从现有代码初始化版本仓库 `hg init`
+* 从现有代码初始化版本仓库 ``hg init``
 
-* 建立 hg 服务器 `hg serve`
+* 建立 hg 服务器 ``hg serve``
 
-* 更新代码库至最新提交 `hg update`
+* 更新代码库至最新提交 ``hg update``
 
-* 切换至分支 `hg update -r <branch>`
+* 切换至分支 ``hg update -r <branch>``
 
-* 放弃所有修改，返回至上一个提交 `hg update -C`
+* 放弃所有修改，返回至上一个提交 ``hg update -C``
 
-* 搜索 `hg grep`
+* 搜索 ``hg grep``
 
-* 放弃某个文件的修改 `hg revert`
+* 放弃某个文件的修改 ``hg revert``
 
 
 分支命名规则
@@ -134,7 +134,7 @@ Tips
 
     pip install mercurial_keyring
 
-在 `~/.hgrc` 文件后写入：
+在 ``~/.hgrc`` 文件后写入：
 
 .. code-block:: shell
 
