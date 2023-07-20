@@ -40,7 +40,7 @@ Go 常用框架(工具)技术雷达 ❤️
 - panic处理：thepkg/recover
 - 重试：avast/retry-go
 - json处理转换：go-simplejson/mapstructure，json-iterator/go (比内置的 json 解析快很多), tidwall/gjson(获取 json 值), bytedance/sonic
-- 字典/结构体合并/结构体拷贝：imdario/mergo, jinzhu/copier
+- 字典/结构体合并/结构体拷贝/类型转换：imdario/mergo, jinzhu/copier, jmattheis/goverter
 - 配置解析: viper(兼容很多格式)
 - mysql orm: gorm, xorm, sqlx, ent/ent(实体框架), doug-martin/goqu(生成sql)
 - redis: go-redis, redigo
