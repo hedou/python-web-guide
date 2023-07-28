@@ -392,6 +392,8 @@ Go 常用命令
 
   # go mod graph
   # 会显示出go.mod里需要的每个包,都依赖了哪些包。可以用这个工具可视化 https://github.com/PaulXu-cn/go-mod-graph-chart
+  go get -u github.com/PaulXu-cn/go-mod-graph-chart/gmchart
+  go mod graph | gmchart
 
 
 Go 数据结构与算法
