@@ -1368,13 +1368,14 @@ Capture -> Options -> lo0 抓本地 127.0.0.1 包。筛选 tcp.port == 6379 抓 
 - https://www.jianshu.com/p/62f00db7be68
 - http://mrpeak.cn/blog/wireshark/  Wireshark抓包iOS入门教程
 
-HHKB 静电容键盘。Karabiner 修改 mac 键位配置
+Niz/HHKB 静电容键盘。Karabiner 修改 mac 键位配置
 -------------------------------------------------------------
 
 - HHKB 开关我只打开了 2 （mac 模式），貌似网上有说打开开关 6 会出现无法唤醒的问题。
 - Mac 模式 HHKB 可以用使用 Fn+Esc 休眠。
 - 如何禁用内置键盘： Karabiner-Elements 同时可以禁用内置键盘，配置在 Devices -> Advanced， 勾选 Disable the built-in keyboard.
 - 网易云音乐切歌：使用 Fn + 7/8/9 分别是上一首，暂停和下一首
+- Niz 键盘可以用 Fn+Option+Command 切换mac和win模式
 
 如何使用 mac 使用 Karabiner-Elements  改键配置
 
