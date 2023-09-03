@@ -94,7 +94,7 @@ Go 常用框架(工具)技术雷达 ❤️
 
 - 热编译工具：gowatch
 - 网络代理：goproxy
-- 命令行处理: spf13/cobra
+- 命令行处理: spf13/pflag, spf13/cobra
 - 字符串处理工具：huandu/xstrings
 - 通用数据类型转换：spf13/cast
 - HTML 处理/过滤: PuerkitoBio/goquery, microcosm-cc/bluemonday
