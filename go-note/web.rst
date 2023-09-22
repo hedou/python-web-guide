@@ -63,7 +63,7 @@ Go 常用框架(工具)技术雷达 ❤️
 
 - 原子访问：uber-go/atomic
 - 异步任务队列框架: machinery, gocelery, hibiken/asynq, LMSTFY(美图开源)
-- 定时任务：robfig/cron, ouiqiang/gocron
+- 分布式/定时任务: robfig/cron, ouiqiang/gocron, distribworks/dkon, shunfei/cronsun
 - 熔断：hystrix-go, eapache/go-resiliency, cep21/circuit, alibaba/sentinel-golang
 - 限流库:
 
