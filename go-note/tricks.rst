@@ -1214,6 +1214,13 @@ Go panic 场景 ⚠️
   - 赋值之前必须用 make 创建。注意访问 map 不存在的 key 不会 panic，而是返回 map 类型对应的零值，但是不能直接声明就赋值，而是要用make创建
   - 不要并发写原生 map。需要加锁、使用 sync.Map 或者第三方并发安全的 map 比如 patrickmn/go-cache。当你声明一个全局map时，确认它是只读的，如果意外不同携程的函数同时修改它就可能偶现 panic
 
+
+一般禁止业务代码里直接使用 panic，除非以下一些场景：
+
+- 启动阶段的强依赖初始化，比如init, main 可以使用 panic
+- Must 函数。比如 MustMarshal 等
+- 未实现方法标记。 ``panic("need implement")``
+
 参考：
 
 - https://xiaomi-info.github.io/2020/01/20/go-trample-panic-recover/
