@@ -1375,7 +1375,8 @@ Niz/HHKB 静电容键盘。Karabiner 修改 mac 键位配置
 - Mac 模式 HHKB 可以用使用 Fn+Esc 休眠。
 - 如何禁用内置键盘： Karabiner-Elements 同时可以禁用内置键盘，配置在 Devices -> Advanced， 勾选 Disable the built-in keyboard.
 - 网易云音乐切歌：使用 Fn + 7/8/9 分别是上一首，暂停和下一首
-- Niz 键盘可以用 Fn+Option+Command 切换mac和win模式
+
+- Niz 键盘(Atom66)可以用 Fn+Option+Command 切换mac和win模式。左下角ctrl 右边三个键一起按闪灯两次即是 mac 模式
 - Niz 键盘如果感觉不灵敏了，可能是误调整了键程。niz66 可以通过 fn+7 调节，亮灯一下键程最短最灵敏
 
 如何使用 mac 使用 Karabiner-Elements  改键配置
