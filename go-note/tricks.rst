@@ -1425,3 +1425,12 @@ Go Web
     func main() {
         Logger.Info("hello go!")
     }
+
+
+静态检查
+--------------------------------------------------
+
+检查未使用代码
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+安装 golangci-lint ``go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.47.3`` (目前用的go.1.18)。
+执行 ``golangci-lint run code_dir --disable-all -E unused``
