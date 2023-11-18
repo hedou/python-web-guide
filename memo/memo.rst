@@ -1077,6 +1077,9 @@ vim
    # 参考：https://stackoverflow.com/questions/62582721/how-to-fix-restore-mouse-controls-in-tmux-on-iterm2
    :set mouse=a
 
+   # 如何全局替换多个文件的字符串。使用 far.vim 或者如果安装了 coc.nvim 可以使用 CocSearch 命令
+   :Far foo bar **/*.py
+
 
 * `《vim cheet sheet》 <https://vim.rtorr.com/lang/zh_cn/>`_
 
