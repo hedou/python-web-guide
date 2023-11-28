@@ -1387,6 +1387,7 @@ Niz/HHKB 静电容键盘。Karabiner 修改 mac 键位配置
 - https://github.com/tekezo/Karabiner-Elements
 - https://www.jianshu.com/p/47d5de7f12bc
 - https://madogiwa.github.io/KE-complex_modifications/
+- https://zhuanlan.zhihu.com/p/391173661 niz66说明书
 
 配置文件放置位置在 https://github.com/PegasusWang/linux_config/blob/master/mac_karabiner/wasd.json
 
