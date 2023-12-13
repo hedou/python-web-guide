@@ -395,6 +395,9 @@ Go 常用命令
   go get -u github.com/PaulXu-cn/go-mod-graph-chart/gmchart
   go mod graph | gmchart
 
+  # remove any unused package
+  go mod tidy -v
+
 
 Go 数据结构与算法
 ---------------------------------------------------------------
