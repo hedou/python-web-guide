@@ -1322,6 +1322,8 @@ Pandoc 转换文档格式
   pandoc -o output.docx -f markdown -t docx filename.md
   # rst -> github markdown
   pandoc file.rst -f rst -t gfm -o filename.md
+  # markdown -> epub
+  pandoc xxx.md -o xxx.epub
 
 Calibre 电子书管理工具
 -------------------------------------------------------------
@@ -1332,6 +1334,12 @@ Calibre 电子书管理工具
   # https://snowdreams1006.github.io/myGitbook/advance/export.html
   # 通过 calibre 提供的二进制工具抓取并且生成电子书
   ebook-convert draveness.recipe draveness.mobi --output-profile kindle
+
+  # 如何合并多个epub文件
+  # https://www.mobileread.com/forums/showthread.php?t=121691
+  # https://github.com/JimmXinu/EpubMerge/blob/main/epubmerge.py
+  python3 epubmerge.py -o all.epub a.epub b.epub c.epub
+
 
 Gitbook
 -------------------------------------------------------------
