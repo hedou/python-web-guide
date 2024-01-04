@@ -1018,8 +1018,8 @@ kex_exchange_identification: Connection closed by remote host。 可能是因为
       Port 443
 
 
-vim
-----
+vim/neovim
+-------------
 
 .. code-block:: vim
 
@@ -1079,6 +1079,9 @@ vim
 
    # 如何全局替换多个文件的字符串。使用 far.vim 或者如果安装了 coc.nvim 可以使用 CocSearch 命令
    :Far foo bar **/*.py
+
+   # iterm2 下 set mouse=a 之后vim/neovim不生效，无法鼠标拖动窗口大小
+   Settings -> Profiles -> Terminal -> Enable mouse reporting
 
 
 * `《vim cheet sheet》 <https://vim.rtorr.com/lang/zh_cn/>`_
