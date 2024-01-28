@@ -822,8 +822,8 @@ Failed Type Assertions
             }
     }
 
-An interface holding a nil value is not nil
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+interface 和 nil 比较的坑。An interface holding a nil value is not nil
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 An interface holding nil value is not nil. An interface equals nil only if both type and value are nil.
 
 .. code-block:: go
@@ -840,6 +840,33 @@ An interface holding nil value is not nil. An interface equals nil only if both 
         // 在一些场景中如果需要返回 nil，直接显示返回 nil 不容易出错
     }
 
+    func testInterfaceNilWrong() {
+        doit := func(arg int) interface{} {
+            var result *struct{} = nil
+            if arg > 0 {
+                result = &struct{}{}
+            } // WRONG 错误写法！必须显示返回 nil
+            return result
+        }
+        if res := doit(-1); res != nil {
+            fmt.Println("good result:", res)
+        }
+    }
+
+    func testInterfaceNilRight() {
+        doit := func(arg int) interface{} {
+            var result *struct{} = nil
+            if arg > 0 {
+                result = &struct{}{}
+            } else{
+                return nil // CORRECT 必须显示返回 nil
+            }
+            return result
+        }
+        if res := doit(-1); res != nil {
+            fmt.Println("good result:", res)
+        }
+    }
 
 逃逸分析
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
