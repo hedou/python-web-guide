@@ -372,3 +372,4 @@ RPC/Web 框架
 - `50 Shades of Go: Traps, Gotchas, and Common Mistakes for New Golang Devs  <http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/>`_
 - `《开发更高质量的服务》 <http://vearne.cc/archives/39164>`_
 - `《Go101 内存内泄漏场景》 <https://gfw.go101.org/article/memory-leaking.html>`_
+- `《SRE实战 实践》 <https://developer.aliyun.com/article/1277547>`_
