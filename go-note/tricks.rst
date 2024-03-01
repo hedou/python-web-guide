@@ -1000,10 +1000,12 @@ Go 无法修改值为结构体的map
 如何重写结构体的方法(override)
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 go 不是传统的 oop 语言，没有提供直接的支持。可以通过嵌入一个接口的方式来实现。
+go 的匿名嵌入是一种 Pseudo is-a 关系(伪is a)，不能完全等价于子类，没有多态的功能(c++等语言通过虚函数表实现)。go只能通过接口实现多态
 
 .. code-block:: go
 
     // https://stackoverflow.com/questions/38123911/golang-method-override
+    // golang面向对象分析 https://www.cnblogs.com/457220157-FTD/p/14703692.html
     package main
 
     import "fmt"
