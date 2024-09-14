@@ -390,6 +390,9 @@ Go 常用命令
   # 强制重新构建(依赖包) 使用 -a。参考：http://c.biancheng.net/view/120.html
   go build -a main.go
 
+  # go mod why 加上包名查看特定模块被引入的原因，用于查询依赖关系
+  go mod why pakage_name
+
   # go mod graph
   # 会显示出go.mod里需要的每个包,都依赖了哪些包。可以用这个工具可视化 https://github.com/PaulXu-cn/go-mod-graph-chart
   go get -u github.com/PaulXu-cn/go-mod-graph-chart/gmchart
