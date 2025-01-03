@@ -1050,8 +1050,8 @@ go 的匿名嵌入是一种 Pseudo is-a 关系(伪is a)，不能完全等价于�
 Go 标准库相关
 --------------------------------------------------
 
-Json 序列化的坑
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Json 序列化/反序列化的坑
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 1. 类型嵌入导致序列化字段丢失问题
 
 .. code-block:: go
@@ -1075,6 +1075,32 @@ go 的 time.Time 对象包含日历时钟(Wall time)和单调时钟(Monitonic ti
 - 使用 time.Truncate(0) 去掉单调时钟后再序列化
 
 3. 如果序列化 map 的值是 any，序列化后的数字类型都是 float64
+
+4. Unmarshal 精度丢失问题
+
+.. code-block:: go
+
+    // interface 接收 int64 的unmarshal结果，会丢失精度
+    func testUnmarshalInt64() {
+        res := map[string]interface{}{}
+        data := `{"id": 7444023959772728345}`
+        if err := json.Unmarshal([]byte(data), &res); err != nil {
+            panic(err)
+        }
+        fmt.Printf("%d\n", int64(res["id"].(float64))) // 输出 7444023959772728320
+    }
+
+    // 解决方式： 1. 使用 decoder.UseNumber  2. 使用 string 字段
+    func testUnmarshalInt64RightWay() {
+        res := map[string]interface{}{}
+        data := `{"id": 7444023959772728345}`
+        decoder := json.NewDecoder(strings.NewReader(data))
+        decoder.UseNumber()
+        if err := decoder.Decode(&res); err != nil {
+            panic(err)
+        }
+        fmt.Println(res["id"]) // 输出 7444023959772728345
+    }
 
 
 网络相关
