@@ -1199,6 +1199,9 @@ Ffmpeg && youbute-dl
 
    # 目前youtube-dl 貌似不更新了，用 yt-dlp 代替
    python3 -m pip install --force-reinstall https://github.com/yt-dlp/yt-dlp/archive/master.tar.gz
+   # 比如映射了俩命令下载 MP3 或者 mp4
+   alias download_youtube_mp3='yt-dlp --cookies-from-browser chrome  -x --audio-format mp3'
+   alias download_youtube='yt-dlp --cookies-from-browser chrome -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]" '
 
    # 转换格式，比如 flv -> mp4 https://superuser.com/questions/624565/ffmpeg-convert-flv-to-mp4-without-losing-quality
    ffmpeg -i input.flv -codec copy output.mp4
