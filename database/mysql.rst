@@ -160,7 +160,8 @@ Sqlalchemy 示例
     """
     sqlalchemy 快速读取 mysql 数据示例
 
-    pip install SQLAlchemy -i https://pypi.doubanio.com/simple --user
+    # pip install SQLAlchemy -i https://pypi.doubanio.com/simple --user
+    pip install SQLAlchemy==1.3.20 -i https://pypi.doubanio.com/simple --user
     pip install pymysql -i https://pypi.doubanio.com/simple --user
     """
 
