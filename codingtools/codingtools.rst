@@ -456,10 +456,11 @@ APM (Application Performance Management)
 - excalidraw: 手写风格绘图 https://excalidraw.com/
 - onemodel: 程序员绘图，有很多编程图标 https://www.onemodel.app/
 
-量化投资
+量化投资(偏向python量化)
 --------------------------------------
 - tushare: https://github.com/waditu/tushare 有本小白参考书: https://wizardforcel.gitbooks.io/python-quant-uqer/
-
+- efinance: https://github.com/Micro-sheep/efinance efinance 是一个可以快速获取基金、股票、债券、期货数据的 Python 库，回测以及量化交易的好帮手
+- akshare: https://github.com/akfamily/akshare  开源财经数据接口库
 
 效率，时间管理工具
 --------------------------------------
