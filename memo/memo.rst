@@ -183,6 +183,9 @@ Chrome(Mac)
    # 黑科技：如何chrome 证书认证（不推荐）
    在网页中输入 thisisunsafe 或者 badidea 就可以了
 
+   # surfingkeys 插件可以通过T 搜索当前打开的标签，但是打开数量在 tabsThreshold 以下的时候只会高亮 tab 不会打开搜索框
+   # 可以设置这个值 tabsThreshold 只要打开超过该数量的标签就可以使用搜索浏览器标签的功能
+   settings.tabsThreshold = 5;
 
 MacOS
 ---------------------------------------------------------------
