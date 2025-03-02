@@ -432,7 +432,7 @@ APM (Application Performance Management)
 --------------------------------------
 - mycli: mysql 命令行补全等。https://github.com/dbcli/mycli
 - MysqlWorkbench/Sequel Pro: mysql 客户端工具。也可以用来生成生成 ER 图
-- Dbeaver 跨平台的mysql/sqllite等可视化工具。mac可以通过 `brew install --cask dbeaver-community` 安装
+- Dbeaver 跨平台的mysql/sqllite等可视化工具。mac可以通过 ``brew install --cask dbeaver-community`` 安装
 - Navicat Premium: 强大的数据库管理工具，收费
 - pt-online-schema-change: mysql数据库变更工具
 - Medis: redis client 工具

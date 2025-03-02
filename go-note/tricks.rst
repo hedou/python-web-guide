@@ -826,6 +826,7 @@ Failed Type Assertions
 interface 和 nil 比较的坑。An interface holding a nil value is not nil
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 An interface holding nil value is not nil. An interface equals nil only if both type and value are nil.
+接口的底层实现包含两个部分：type 和 data。type 表示接口存储值的具体类型，data 则存储实际的值。只有当 type 和 data 都为 nil 时，接口才被认为是 nil。
 
 .. code-block:: go
 
@@ -837,7 +838,7 @@ An interface holding nil value is not nil. An interface equals nil only if both 
         var b interface{}
         var p *int = nil
         b = p
-        fmt.Printf("b == nil is %t\n", b == nil) // b == nil is false
+        fmt.Printf("b == nil is %t\n", b == nil) // b == nil is false。这里接口的类型并不是空，所以判断不是nil
         // 在一些场景中如果需要返回 nil，直接显示返回 nil 不容易出错
     }
 
