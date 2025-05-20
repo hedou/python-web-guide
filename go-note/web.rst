@@ -278,9 +278,45 @@ Go项目Layout
 - agiledragon/gomonkey: go 语言实现 monkey patch
 - mockey: 字节开源的 go mock 工具库。 https://juejin.cn/post/7159568574699274248
 
-目前比较推荐使用 assert 做断言，使用 gomonkey 用来 mock 函数/方法等。
+目前项目推荐使用 mockey 和 convey 库，可以方便地实现 mock 和 bdd 行为驱动测试，一个简单的示例如下。
 
-参考：
+.. code-block:: shell
+
+  // https://juejin.cn/post/7159568574699274248
+  import (
+      "fmt"
+      "testing"
+
+      . "github.com/bytedance/mockey"
+      . "github.com/smartystreets/goconvey/convey"
+  )
+
+  func Foo(in string) string {
+      return in
+  }
+
+  type A struct{}
+
+  func (a A) Foo(in string) string { return in }
+
+  var Bar = 0
+
+  func TestMockXXX(t *testing.T) {
+      PatchConvey("TestMockXXX", t, func() { // 推荐用 PatchConvey 方法，它会帮我们自动释放掉 mock
+          Mock(Foo).Return("c").Build()   // mock函数 (一般对于下游调用、数据库调用、缓存调用等需要 mock 掉，方便测试且跑单测无需依赖下游部署)
+          Mock(A.Foo).Return("c").Build() // mock方法
+          MockValue(&Bar).To(1)           // mock变量
+
+          // convey 提供了 ShouldEqual 等诸多方法用来比对单测结果和各种数据结构
+          So(Foo("a"), ShouldEqual, "c")        // 断言`Foo`成功mock
+          So(new(A).Foo("b"), ShouldEqual, "c") // 断言`A.Foo`成功mock
+          So(Bar, ShouldEqual, 1)               // 断言`Bar`成功mock
+      })
+      // `PatchConvey`外自动释放mock
+      fmt.Println(Foo("a"))        // a
+      fmt.Println(new(A).Foo("b")) // b
+      fmt.Println(Bar)             // 0
+  }
 
 - https://medium.com/@rosaniline/unit-testing-gorm-with-go-sqlmock-in-go-93cbce1f6b5b  (medium.com有阅读次数限制，隐身模式打开似乎就可以了)
 
