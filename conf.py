@@ -17,7 +17,7 @@ sphinx.environment.BuildEnvironment.warn_node = _warn_node
 master_doc = "index"
 
 project = "python-golang-web-guide"
-copyright = "2023, 公众号|知乎|B站 PegasusWang"
+copyright = "2025, 公众号|知乎|B站 PegasusWang"
 
 version = release = "0.1"
 

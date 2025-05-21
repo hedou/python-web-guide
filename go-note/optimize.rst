@@ -137,3 +137,64 @@ Go 内置的 rand.Int()在生成随机数时，为了并发安全底层使用了
 容器中运行 Go 程序需要正确设置 GOMAXPROCS，推荐使用 https://github.com/uber-go/automaxprocs 这个库，直接一行代码就可以。
 ``import _ "go.uber.org/automaxprocs"``
 
+
+日志延迟序列化
+---------------------------------------------------------------
+经常需要在日志里打印 json 数据，但是免不了序列化的开销。即使你只在 debug 级别下打印，还是要先序列化参数之后传入数据。
+可以使用延迟序列化的方式，这样正式环境下的 debug 日志不会真正序列化，减少 cpu 开销。
+
+.. code-block:: go
+
+    package main
+
+    import (
+        "time"
+
+        "xxxx/logs" // 你们用的日志库
+        "github.com/bytedance/sonic"
+    )
+
+    func GetLog(data interface{}) string {
+        if log, err := sonic.MarshalString(data); err == nil {
+            return log
+        }
+        return ""
+    }
+
+    // 延迟序列化，避免 debug 模式下序列化 json 开销
+    type LazyInfo struct {
+        Data any
+    }
+
+    func (l *LazyInfo) String() string {
+        dataStr, err := sonic.MarshalString(l.Data)
+        if err != nil {
+            panic(err)
+        }
+        return dataStr
+    }
+
+    func NewLazyInfo(d any) *LazyInfo {
+        return &LazyInfo{Data: d}
+    }
+
+    type S struct {
+        a string
+        b string
+    }
+
+    func init() {
+        // logs.SetLevel(logs.LevelDebug) // 测试环境
+        logs.SetLevel(logs.LevelInfo) // 正式环境
+    }
+
+    func main() {
+        s := S{a: "a", b: "b"}
+        logs.Info("info getLog:%s", GetLog(s))
+        logs.Debug("debug getLog:%s", GetLog(s))
+
+        logs.Info("info lazyInfo:%s", NewLazyInfo(s))   // 正式环境使用info
+        logs.Debug("debug lazyInfo:%s", NewLazyInfo(s)) // 正式环境使用 info 级别后，debug 函数参数不会真序列化，减少开销
+
+        time.Sleep(time.Second)
+    }
