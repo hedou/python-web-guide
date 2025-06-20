@@ -648,15 +648,20 @@ go 的返回值可以命名，使用命名返回值有几个用处：
     }
 
 
-defer 语句参数是立即计算
+defer 的一些坑
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+1. defer 语句的参数是立即计算
+2. defer for 循环中使用注意循环的量级，避免内存泄露
+3. defer 碰到panic也能执行，但是如果直接执行了 os.Exit 退出而不是正常的 return/panic 退出，程序会立刻终止不会执行 defer。遇到服务升级 defer 可能失效
+
 来看一个例子，通过 defer 计算一下执行的时间，错误写法因为 defer 的参数是立即计算的，所以不生效。
 
 .. code-block:: go
 
     func testDeferLogTime() { // 记录执行的毫秒数
         start := time.Now()
-        defer func() { fmt.Println(time.Since(start).Milliseconds()) }() // 正确写法输入 1s
+        defer func() { fmt.Println(time.Since(start).Milliseconds()) }() // 正确写法输入 1s 。需要用匿名函数包一层
         // defer fmt.Println(time.Since(start).Milliseconds()) // NOTE: 写法错误，defer 参数及时计算，这样写结果是 0
         time.Sleep(1 * time.Second)
     }
