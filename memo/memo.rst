@@ -287,6 +287,8 @@ MacOS
    osascript -e 'id of app "ebook-viewer.app"' # 安装 calibre 之后，找到附带的电子书浏览软件 id
    duti -s com.calibre-ebook.ebook-viewer .mobi all # 用 ebook-viewer 打开所有的 mobi
 
+   # legacyScreenSaver memory 内存占用高。装了 fliqlo 翻页时钟屏保， 尝试重新装下 https://fliqlo.com/screensaver/ 最新版
+
 如何发送 mac 通知，可以用来做提示
 
 .. code-block:: python
