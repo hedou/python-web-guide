@@ -1422,3 +1422,4 @@ Goland IDE
 代码可以正常运行，但是打开项目飘红:
 
 - 可能是缓存已满。File->Invalidate Caches -> Invalidate and Restart
+- 项目设置问题。设置->Go -> Go modules -> 勾选 Enable Go modules integration
