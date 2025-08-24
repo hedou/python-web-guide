@@ -47,7 +47,7 @@ MacOS 开发效率工具
 - Be Focused: mac 下番茄工作法工具，可以用来给任务计时，或者提醒该休息下了
 - Qbserve: https://qotoqot.com/qbserve/ 一个 mac 下的时间追踪软件，可以查看自己在不同软件耗时，改善时间和工作管理
 - xbar: 一款可以在 macos 菜单栏显示任意信息的 App，可以通过脚本扩展功能。有插件商店
-- vimac: 用 vim 的方式操作 mac，彻底抛弃鼠标提升效率！ https://github.com/dexterleng/vimac
+- vimac/homerow: 用 vim 的方式操作 mac，彻底抛弃鼠标提升效率！新款叫做 homerow。 https://github.com/dexterleng/vimac
 
 网址 https://gist.github.com/lornajane/3892c39098cf70baa9c7a1874cddf233  列举了使用纯键盘操作 mac 的建议和所用软件
 
