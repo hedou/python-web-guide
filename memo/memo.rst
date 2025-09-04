@@ -1401,6 +1401,7 @@ Niz/HHKB 静电容键盘。Karabiner 修改 mac 键位配置
 - Niz 键盘(Atom66)可以用 Fn+Option+Command 切换mac和win模式。左下角ctrl 的右边三个键一起按闪灯两次即是 mac 模式
 - Niz 键盘如果感觉不灵敏了比如按键按下去有时候没有出来字符，可能是误调整了键程。niz66 可以通过 fn+7 调节，亮灯一下键程最短最灵敏
 - Niz L84 键盘，有时候会误触 command+f1 导致外置显示器屏幕镜像，可以重新按一下恢复。
+- 如何锁定键盘？ niz atom66 可以使用 Fn+Esc 临时禁用键盘(再次按下恢复)，niz L84 在键盘 F1 位置上方边框有一个键盘锁按钮按下即可。
 
 如何使用 mac 使用 Karabiner-Elements  改键配置
 
