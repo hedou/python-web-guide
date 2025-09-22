@@ -640,6 +640,9 @@ Tmux
 
    # use prefix + m zoom and unzoom panes. https://tao-of-tmux.readthedocs.io/en/latest/manuscript/07-pane.html
    bind-key -T prefix m resize-pane -Z
+   # 清理 tmux 备份文件(超过 1 天)
+   cd ~/.local/share/tmux/resurrect
+   find . -type f -mmin +1440 -name 'tmux_resurrect_*.txt' -exec rm {} \;
 
 
 SSH
