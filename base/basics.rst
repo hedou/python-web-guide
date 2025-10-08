@@ -48,6 +48,7 @@ python，ruby之类的动态语言优势在于其生产力，你能在极短时�
 * `《算法图解》 <https://book.douban.com/subject/26979890/>`_
 * `《算法导论》 <https://book.douban.com/subject/20432061/>`_  你可以挑选感兴趣的章节啃一啃，也可以去网易公开课看下视频教程。如果不是计算机专业的可以看下《计算机科学导论》这门公开课，正好也是以Python语言讲解的。
 * `《awesome-algorithm》 <https://github.com/PegasusWang/awesome-algorithm>`_
+* `《每个程序员应该知道的 50 个算法（全）》 <https://www.cnblogs.com/apachecn/p/18992948>`_
 
 
 计算机网络
