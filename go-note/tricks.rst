@@ -1090,7 +1090,7 @@ go 的 time.Time 对象包含日历时钟(Wall time)和单调时钟(Monitonic ti
 
 3. 如果序列化 map 的值是 any，序列化后的数字类型都是 float64
 
-4. Unmarshal 精度丢失问题
+4. JSON Unmarshal 到 interface{} 精度丢失问题! https://forum.golangbridge.org/t/preserve-int64-value-for-map-string-interface/26374
 
 .. code-block:: go
 
@@ -1105,6 +1105,7 @@ go 的 time.Time 对象包含日历时钟(Wall time)和单调时钟(Monitonic ti
     }
 
     // 解决方式： 1. 使用 decoder.UseNumber  2. 使用 string 字段
+    // 如果你使用 sonic 库，可以设置 sonic 的参数 UseInt64 为 true
     func testUnmarshalInt64RightWay() {
         res := map[string]interface{}{}
         data := `{"id": 7444023959772728345}`
