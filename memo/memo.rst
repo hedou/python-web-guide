@@ -1430,3 +1430,28 @@ Goland IDE
 
 - 可能是缓存已满。File->Invalidate Caches -> Invalidate and Restart
 - 项目设置问题。设置->Go -> Go modules -> 勾选 Enable Go modules integration
+- Mac M1 芯片 IDEA GoLand 卡顿解决方式。 Help -> 选择 Edit Custom VM Options 然后粘贴以下代码：
+
+.. code-block:: shell
+
+    -XX:+UseNUMA
+    -Xms2048m
+    -Xmn2048m
+    -XX:MaxMetaspaceSize=2048m
+    -XX:ReservedCodeCacheSize=2048m
+    -Xmx8192m
+    -Dfile.encoding=UTF-8
+    -XX:SoftRefLRUPolicyMSPerMB=500
+    -XX:CICompilerCount=2
+    -XX:+HeapDumpOnOutOfMemoryError
+    -XX:-OmitStackTraceInFastThrow
+    -ea
+    -Dsum.io.useCanonCaches=false
+    -Djdk.http.auth.tunneling.disabledSchemes=""
+    -Djdk.attach.allowAttachSelf=true
+    -Djdk.module.illegalAccess.silent=true
+    -Dkotlinx.coroutines.debug=off
+    -XX:ErrorFile=$USER_HOME/java_error_in_idea_%p.log
+    -XX:HeapDumpPath=$USER_HOME/java_error_in_idea.hprof
+    -XX:+IgnoreUnrecognizedVMOptions
+    -Dide.no.platform.update=true
