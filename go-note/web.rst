@@ -418,8 +418,11 @@ Go 常用命令
   go list -f '{{range $imp := .Imports}}{{printf "%s\n" $imp}}{{end}}' | sort
   go list -f '{{range $dep := .Deps}}{{printf "%s\n" $dep}}{{end}}' | xargs go list -f '{{if not .Standard}}{{.ImportPath}}{{end}}'
 
-  # 清理模块缓存, GO111MODULE=on 以后，下载的模块内容会缓存在$GOPATH/pkg/mod 目录中： 使用以下命令可清空缓存：
-  go clean --modcache
+  # 清理模块缓存, GO111MODULE=on 以后，下载的模块内容会缓存在$GOPATH/pkg/mod 目录中： 使用以下命令可清空缓存(重新下载很久注意是否要清理)：
+  # https://zhuanlan.zhihu.com/p/668274139
+  go clean --modcache  # 清理模块缓存。模块缓存包括在模块管理过程中下载的模块文件和依赖项信息
+  go clean -cache  # 清理构建缓存，但不会删除无用文件。构建缓存包括编译过程中生成的中间文件和对象文件
+  go clean -testcache  # 清理测试缓存。测试缓存包括在测试运行过程中生成的文件和状态
 
   # 跨平台编译
   `GOOS=linux GOARCH=amd64 go build main.go`
