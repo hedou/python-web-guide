@@ -1378,6 +1378,16 @@ Mac 微信
   # 支持微信多开、消息防撤回、微信皮肤等多种功能。懒人安装
   curl -o- -L https://omw.limingkai.cn/install.sh | bash -s
 
+iphone telegram 新设备迁移
+-------------------------------------------------------------
+
+.. code-block:: shell
+
+    1. 新的 ios 设备上用 chrome 登录网页版telegram，可以选择扫描二维码登录。
+    2. 老的ios机器登录app->设置->设备->扫描二维码，此时新设备登录上网页版
+    3. 新设备左上角网页版设置->隐私和安全->Passkeys 点击创建，此时可以创建一个新的 passkey，且新设备会保存这个passkey。
+    4. 新设备重启一下app版本的telegram ，选择这个passkey登录即可
+
 
 Wireshark(mac tcp 抓包)
 -------------------------------------------------------------
