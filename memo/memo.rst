@@ -70,6 +70,27 @@ pip/easy_install
   trusted-host = pypi.douban.com
 
 
+uv 一个用 Rust 编写的极速 Python 包和项目管理器。
+---------------------------------------------------------------
+
+.. code-block:: sh
+
+   # 安装(linux/mac)
+   curl --proto '=https' --tlsv1.2 -LsSf https://gh-proxy.com/https://github.com/astral-sh/uv/releases/download/0.9.11/uv-installer.sh | sh
+   # 初始化项目
+   uv init .
+   # 创建虚拟环境
+   uv venv
+   # 导入 requirements.txt 依赖
+   uv add -r requirements.txt
+   # 添加新的依赖
+   uv add requests
+   # 删除依赖
+   uv remove requests
+   # 运行
+   uv run main.py
+
+
 IPython
 ---------------------------------------------------------------
 
