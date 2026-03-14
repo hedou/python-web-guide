@@ -1427,18 +1427,26 @@ Capture -> Options -> lo0 抓本地 127.0.0.1 包。筛选 tcp.port == 6379 抓 
 Niz/HHKB 静电容键盘。Karabiner 修改 mac 键位配置
 -------------------------------------------------------------
 
+HHKB 静电容:
+
 - HHKB 开关我只打开了 2 （mac 模式），貌似网上有说打开开关 6 会出现无法唤醒的问题。
 - Mac 模式 HHKB 可以用使用 Fn+Esc 休眠。
 - 如何禁用内置键盘： Karabiner-Elements 可以在插入外置键盘的时候禁用内置键盘，配置在 Devices -> Advanced， 勾选 Disable the built-in keyboard.
 - 网易云音乐切歌：使用 Fn + 7/8/9 分别是上一首，暂停和下一首
 
+Niz Atom66 静电容:
+
 - Niz 键盘(Atom66)可以用 Fn+Option+Command 切换mac和win模式。左下角ctrl 的右边三个键一起按闪灯两次即是 mac 模式
 - Niz 键盘如果感觉不灵敏了比如按键按下去有时候没有出来字符，可能是误调整了键程。niz66 可以通过 fn+7 调节，亮灯一下键程最短最灵敏
 - 如何锁定键盘？ niz atom66 可以使用 Fn+Esc 临时禁用键盘(再次按下恢复)，niz L84 在键盘 F1 位置上方边框有一个键盘锁按钮按下即可。
 
+Niz L84 矮轴静电容:
+
 - Niz L84 键盘，有时候会误触 command+f1 导致外置显示器屏幕镜像，可以重新按一下恢复。
-- Niz L84 键盘，左空格失灵了。可以长按 Fn+左空格恢复。 "晓览外设" 可以关注公众号有niz宁芝键盘系列说明书。
+- Niz L84 键盘，左空格失灵了。可以长按 Fn+左空格恢复。 "晓览外设" 可以关注公众号有niz宁芝键盘系列说明书。https://mp.weixin.qq.com/s/S8dpXg6h4WHEUFOPg4Kv5A
 - Niz L84 键盘有线版除了自带的数据线，还可以直接用苹果的双头typec充电线使用
+- 如果键盘失灵了，尝试 Esc+左Ctrl+Delete+方向右键 (四角的四个键) 5 秒后重置。
+- L84初始化：``Fn+左Alt(左下角第三个) 同时按住三秒切到mac模式(状态等闪2次); Fn+\同时按住 3 秒切换 \ 和BackSpace``
 
 如何使用 mac 使用 Karabiner-Elements  改键配置
 
