@@ -1008,26 +1008,38 @@ Git Worktree
 
 .. code-block:: shell
 
+   # 参考 https://zhuanlan.zhihu.com/p/1938293629455152167
    # git Worktree 让一个 git 分支仓库对应多个本地目录，每个目录不同分支。不用反复切分支，多分支并行。结合 claude code 并行开发
    # 格式：git worktree add <新目录路径> <分支名>
    # 示例1：给bug-fix分支创建独立目录（同级目录）。创建目录并且关联分支
-   git worktree add ../my-project-fix bug-fix
+   # 先在当前项目创建一个 .wt 目录用作作为 worktree 的容器。可以写到全局  ~/.gitignore_global  忽略这个目录
+   # 注意：先切到你的项目代码目录后执行
+   mkdir .wt
+   # 如果现有了 bugfix 分支直接执行
+   git worktree add .wt/bugfix bugfix
+   # 否则，使用 -b 参数同时创建分支，比如这里创建两个目录跟踪两个不同分支开发
+   git worktree add .wt/bugfix -b bugfix
+   git worktree add .wt/feat -b feat
+   # 此时 cd .wt 目录下可以看到这两个目录 bugfix 和 feat
 
    # 查看所有创建目录
    git worktree list
 
-   # 使用
-   cd ../my-project-fix
+   # 使用方式，直接切到新建的 worktree 某个目录下开发即可
+   cd .wt/bugfix
    git add . && git commit -m "修复登录Bug" && git push
 
-   # 清理
-   # 1. 删除目录文件
-   rm -rf ../my-project-fix
+   # 删除某个工作区目录（先确保其中无未跟踪变更）
+   git worktree remove .wt/feat
+   git worktree remove -f .wt/feat # 强制删除，可能有风险
 
-   # 2. 清理Git缓存记录（关键！）
+   # 预演清理（只显示将被清理的内容），安全起见先执行这个之后再去掉参数实际执行清理
+   git worktree prune -n -v # 先执行
    git worktree prune
-   # 或直接删除记录（更精准）
-   git worktree remove ../my-project-fix
+
+   # 收尾：先 remove 再 prune
+   git worktree remove .wt/feat
+   git worktree prune
 
 
 Git hook
