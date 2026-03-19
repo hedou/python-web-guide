@@ -1003,6 +1003,32 @@ Git工作流
    # 压缩提交
    git rebase -i HEAD~~    # 最近两次提交
 
+Git Worktree
+----------------------
+
+.. code-block:: shell
+
+   # git Worktree 让一个 git 分支仓库对应多个本地目录，每个目录不同分支。不用反复切分支，多分支并行。结合 claude code 并行开发
+   # 格式：git worktree add <新目录路径> <分支名>
+   # 示例1：给bug-fix分支创建独立目录（同级目录）。创建目录并且关联分支
+   git worktree add ../my-project-fix bug-fix
+
+   # 查看所有创建目录
+   git worktree list
+
+   # 使用
+   cd ../my-project-fix
+   git add . && git commit -m "修复登录Bug" && git push
+
+   # 清理
+   # 1. 删除目录文件
+   rm -rf ../my-project-fix
+
+   # 2. 清理Git缓存记录（关键！）
+   git worktree prune
+   # 或直接删除记录（更精准）
+   git worktree remove ../my-project-fix
+
 
 Git hook
 ------------
