@@ -310,6 +310,8 @@ MacOS
 
    # legacyScreenSaver memory 内存占用高。装了 fliqlo 翻页时钟屏保， 尝试重新装下 https://fliqlo.com/screensaver/ 最新版
 
+   # 如何恢复删除的 dot file。 打开废纸篓，使用 command+shift+. 可以显示，然后恢复到原处即可
+
 如何发送 mac 通知，可以用来做提示
 
 .. code-block:: python
