@@ -655,6 +655,7 @@ Tmux
    fi
 
    # 问题：Tmux resurrect file not found! 。新版本应该是放到了 ~/.local/share/tmux/resurrect 。老版本在~/.tmux/resurrect
+   # 如果不生效直接用脚本恢复 ~/.tmux/plugins/tmux-resurrect/scripts/restore.sh
    function tmux-resurrect-reset-last() {
        cd ~/.local/share/tmux/resurrect && \
            ln -f -s $(/bin/ls -t tmux_resurrect_*.txt | head -n 1) last && \
